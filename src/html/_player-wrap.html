@@ -1,0 +1,63 @@
+<div class="player-wrap" data-pid="' + roster[i].pid + '">
+	<!--==============================
+	=            TOP WRAP            =
+	===============================-->
+	<div class="player-top-wrap">
+		<div class="player-top">
+			<img src="http://io.cnn.net/nba/nba/.element/media/2.0/teamsites/celtics/media/silo-trimmed-' + roster[i].pid + '.jpg"/>
+			<div class="top">
+				<p class="player-name"><span>' + roster[i].fn.toUpperCase() + '&nbsp;</span><br> ' + roster[i].ln.toUpperCase() + '</p>
+				<p class="player-number">' + roster[i].num + '</br>
+					<span>' + roster[i].pos + '</span>
+				</p>
+			</div>
+
+
+			<div class="middle">
+				<ul class="info clearfix">
+					<li><p>AGE<span class="sm-hide">:&nbsp;</span></br><span class="info-value">' + playerAge(roster[i].dob)  + '</span></p></li>
+					<li><p>HT<span class="sm-hide">:&nbsp;</span></br><span class="info-value">' + roster[i].ht + '</span></p></li>
+					<li><p>WT<span class="sm-hide">:&nbsp;</span></br><span class="info-value">' + roster[i].wt + '</span></p></li>
+				</ul>
+			</div>
+
+
+			<div class="bottom full clearfix sm-hide">
+				<table class="averages">
+					<tr class="averages-labels">
+						<td>
+							<p>GP</p>
+						</td>
+						<td>
+							<p>PPG</p>
+						</td>
+						<td>
+							<p>RPG</p>
+						</td>
+						<td>
+							<p>APG</p>
+						</td>
+					</tr>
+					<tr class="averages-season">
+						<td class="gp">
+							<p></p>
+						</td>
+						<td class="pts">
+							<p></p>
+						</td>
+						<td class="reb">
+							<p></p>
+						</td>
+						<td class="ast">
+							<p></p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!--==============================
+	=            TOP WRAP            =
+	===============================-->
+	<div class="player-bottom-wrap"></div>
+</div>

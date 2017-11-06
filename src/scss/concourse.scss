@@ -1,0 +1,238 @@
+@import 'mixins';
+@import 'variables';
+
+/*=================================
+=            CONCOURSE            =
+=================================*/
+
+.screen-outline {
+	position: absolute;
+	width: 1920px;
+	height: 2160px;
+	border: 1px solid gray;
+}
+
+
+ body {
+ 	margin: 0;
+ }
+
+.screen-wrap {
+	@include aspect-ratio(16, 9);
+	width: 100%;
+	border:1px solid gray;
+}
+
+/*============================
+=            LEFT            =
+============================*/
+
+.left-wrap {
+	width: 50%;
+	height:100%;
+	float: left;
+	position: relative;
+	z-index: 50;
+	background: url(http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/celtics-mobile-tile-2.png);
+}
+
+/*=============================
+=            RIGHT            =
+=============================*/
+
+.right-wrap {
+	width: 50%;
+	height: 100%;
+	float: right
+}
+
+.block-wrap.player-spotlight {
+	height: 100%;
+	position: relative;
+	right: -100%;
+	-webkit-transition: all 0.7s ease-out;
+	   -moz-transition: all 0.7s ease-out;
+	    -ms-transition: all 0.7s ease-out;
+	     -o-transition: all 0.7s ease-out;
+	        transition: all 0.7s ease-out;
+
+	.player-wrap {
+		height: 100%;
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+	.player-top-wrap {
+		height: 50%;
+		background: #FFF;
+		box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+		width: 100%;
+		z-index: 10;
+		position: relative;
+
+		p {
+			margin: 0;
+			font-family: "futura-pt",Helvetica,Arial,sans-serif !important;
+		}
+
+		.player-top {
+			display: flex;
+			flex-direction: column;
+
+			img {
+				position: absolute;
+				height: 90%;
+				right: 30px;
+				bottom: 5px;
+				z-index: -10;
+			}
+
+			.top, .middle, .bottom {
+				display: flex;
+				flex-direction: row;
+			}
+
+			.top {
+				justify-content: space-between;
+				padding: 25px;
+				p {
+				    display: inline;
+				    font-family: "futura-pt",Helvetica,Arial,sans-serif !important;
+				    font-weight: 600;
+				    color: #008348;
+
+				    &.player-name {
+				    	font-size: 2.8em;
+				    	line-height: 1.1em;
+				    }
+
+				    &.player-number {
+				    	font-size: 2em;
+				    }
+
+				    span {
+				        font-weight: 200;
+				    }
+				}
+			}
+
+			.middle {
+				padding: 0px 25px;
+			    .info {
+			    	font-size: 1.5em;
+			        float: right;
+			        margin: 0;
+			        padding: 0px;
+			        white-space: nowrap;
+			        list-style-type: none !important;
+			        font-weight: bold;
+			        -webkit-font-smoothing: antialiased;
+			        text-rendering: optimizeLegibility;
+
+			        br {
+			            display: none;
+
+			        }
+
+			        li {
+			            float: left;
+			            white-space: nowrap;
+			            padding-right: 20px;
+
+			            &:last-child {
+			                padding-right: 0px;
+			            }
+
+			            p {
+			                font-weight: 500 !important;
+			                color: #939393;
+
+			                span {
+			                    color: black;
+			                    font-weight: 400 !important;
+
+			                    &.info-value {}
+			                }
+			            }
+			        }
+			    }
+			}
+
+			.bottom {
+				padding: 0px 25px;
+				font-size: 1.3em;
+				padding-top: 55px;
+
+			    .averages {
+			        width: 50%;
+			        table-layout: fixed;
+			        float: right;
+			        margin-bottom: 10px;
+
+			        p {
+			        	margin: 20px;
+			        }
+
+			        td {
+			            border: 1px solid #dddddd;
+			            background-color: #f2f2f2;
+			            color: black;
+
+			            &:first-child {
+			                @media (max-width: 550px) {
+			                    display: none;
+			                }
+			            }
+			        }
+
+			        th {
+			            background-color: #dddddd !important;
+			            color: black;
+			            font-weight: 800px;
+			            text-align: left;
+			            width: 20%;
+			            min-width: 100px;
+			        }
+
+			        &-labels {
+			            border-bottom: none;
+			            font-size: .8em;
+
+			            td {
+			                text-align: center;
+			                padding: 0;
+			                border-bottom: none;
+
+			                p {
+			                    margin: 0;
+			                    color: #8a8d8f;
+			                }
+			            }
+			        }
+
+			        &-season {
+			            td {
+			                text-align: center;
+			                border-top: none;
+			            }
+			        }
+			    }
+			}
+		}
+	}
+
+	.player-bottom-wrap {
+		height: 50%;
+		width: 100%;
+		background: url(https://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/gameday-jersey-bg-1400x600.jpg);
+		background-size: cover;
+		position: relative;
+		-webkit-transition: all 0.8s ease-out;
+		   -moz-transition: all 0.8s ease-out;
+		    -ms-transition: all 0.8s ease-out;
+		     -o-transition: all 0.8s ease-out;
+		        transition: all 0.8s ease-out;
+	}
+}

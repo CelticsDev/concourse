@@ -1,0 +1,347 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://use.typekit.net/mln1ggb.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script>
+jQuery(document).ready(function() {
+    /*========================================
+    =            LOAD STATIC DATA            =
+    ========================================*/
+    var roster = '';
+    var teamStats = {};
+    var bioData = {};
+    var date = new Date();
+    var rosterYear = date.getFullYear();
+    // LOAD ROSTER (AND GET YEAR)
+    jQuery.ajax({
+        url: 'http://data.nba.com/data/v2015/json/mobile_teams/nba/' + rosterYear + '/teams/celtics_roster.json',
+        async: false,
+        success: function(data) {
+            roster = data.t.pl;
+        },
+        error: function() {
+            rosterYear--;
+            jQuery.ajax({
+                url: "http://data.nba.com/data/v2015/json/mobile_teams/nba/" + rosterYear + "/teams/celtics_roster.json",
+                async: false,
+                success: function(data) {
+                    roster = data.t.pl;
+                }
+            });
+        }
+    });
+    // LOAD TEAM STATS
+    jQuery.ajax({
+        url: 'http://data.nba.com/data/v2015/json/mobile_teams/nba/' + rosterYear + '/teams/celtics/player_averages_02.json',
+        async: false,
+        success: function(data) {
+            for (var i = 0; i < data.tpsts.pl.length; i++) {
+                teamStats[data.tpsts.pl[i].pid] = data.tpsts.pl[i]
+            }
+        },
+        error: function() {
+            rosterYear--;
+            jQuery.ajax({
+                url: 'http://data.nba.com/data/v2015/json/mobile_teams/nba/' + rosterYear + '/teams/celtics/player_averages_02.json',
+                async: false,
+                success: function(data) {
+                    for (var i = 0; i < data.tpsts.pl.length; i++) {
+                        teamStats[data.tpsts.pl[i].pid] = data.tpsts.pl[i]
+                    }
+                }
+            });
+        }
+    });
+    // LOAD BIO OBJECT
+    bioData = '';
+    /*	jQuery.getJSON('http://io.cnn.net/nba/nba/.element/media/2.0/teamsites/celtics/misc/bioObj.json?', function(data) {
+    	    bioData = data;
+    	});*/
+    playerSpotlight(roster, bioData, teamStats);
+    var playerCounter = 2;
+    setInterval(function() {
+        jQuery('.player-spotlight').css('right', '0%');
+        setTimeout(function() {
+            jQuery('.player-spotlight').css('right', '100%');
+        }, 2000);
+        setTimeout(function() {
+            jQuery('.player-spotlight').hide();
+            jQuery('.player-spotlight').css('right', '-100%');
+        }, 5000);
+        setTimeout(function() {
+            jQuery('.player-spotlight').show();
+            jQuery('.player-spotlight .player-wrap').removeClass("active");
+            jQuery('.player-spotlight .player-wrap:nth-child(' + playerCounter + ')').addClass("active");
+            if (playerCounter == roster.length) {
+                playerCounter = 1;
+            } else {
+                playerCounter++;
+            }
+        }, 9000)
+    }, 10000);
+});
+/*======================================
+=            MISC FUNCTIONS            =
+======================================*/
+function playerAge(dob) {
+    var today = new Date();
+    var birthDate = new Date(dob);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    return age;
+}
+/*========================================
+=            PLAYER SPOTLIGHT            =
+========================================*/
+function playerSpotlight(roster, bioObj, teamStats) {
+    // GENERATE PLAYER-WRAPS
+    for (i = 0; i < roster.length; i++) {
+        var playerWrapHTML = '<div class="player-wrap" data-pid="' + roster[i].pid + '"><div class="player-top-wrap"><div class="player-top"><img src="http://io.cnn.net/nba/nba/.element/media/2.0/teamsites/celtics/media/silo-trimmed-' + roster[i].pid + '.jpg"><div class="top"><p class="player-name"><span>' + roster[i].fn.toUpperCase() + '&nbsp;</span><br>' + roster[i].ln.toUpperCase() + '</p><p class="player-number">' + roster[i].num + '<br><span>' + roster[i].pos + '</span></p></div><div class="middle"><ul class="info clearfix"><li><p>AGE<span class="sm-hide">:&nbsp;</span><br><span class="info-value">' + playerAge(roster[i].dob) + '</span></p></li><li><p>HT<span class="sm-hide">:&nbsp;</span><br><span class="info-value">' + roster[i].ht + '</span></p></li><li><p>WT<span class="sm-hide">:&nbsp;</span><br><span class="info-value">' + roster[i].wt + '</span></p></li></ul></div><div class="bottom full clearfix sm-hide"><table class="averages"><tr class="averages-labels"><td><p>GP</p></td><td><p>PPG</p></td><td><p>RPG</p></td><td><p>APG</p></td></tr><tr class="averages-season"><td class="gp"><p></p></td><td class="pts"><p></p></td><td class="reb"><p></p></td><td class="ast"><p></p></td></tr></table></div></div></div><div class="player-bottom-wrap"></div></div>';
+        jQuery('.player-spotlight').append(playerWrapHTML);
+        jQuery("div[data-pid='" + roster[i].pid + "'] .averages-season").html('<td><p>' + teamStats[roster[i].pid].avg.gp + '</p></td><td><p>' + teamStats[roster[i].pid].avg.pts + '</p></td><td><p>' + teamStats[roster[i].pid].avg.reb + '</p></td><td><p>' + teamStats[roster[i].pid].avg.ast + '</p></td>')
+    }
+    jQuery('.player-spotlight .player-wrap:nth-child(1)').addClass("active");
+    // CHANGE THE DID YOU KNOW THING
+}
+/*==================================
+=            HIGHLIGHTS            =
+==================================*/
+function highlights() {};
+/*====================================
+=            STAT LEADERS            =
+====================================*/
+function statLeaders() {};
+/*==============================
+=            SOCIAL            =
+==============================*/
+function social() {};
+/*==================================
+=            MOBILE APP            =
+==================================*/
+function mobileApp() {};
+/*=================================
+=            STANDINGS            =
+=================================*/
+function standings() {};
+/*=========================================
+=            AROUND THE LEAGUE            =
+=========================================*/
+function aroundTheLeague() {};
+</script>
+<style>
+/***** USAGE *****
+
+.example {
+  @include breakpoint(md) {
+    float: right;
+    width: 350px;
+  }
+  @include breakpoint(480px) {
+    display: none;
+  }
+  @include breakpoint($min: 640px, $max: 767px) {
+    text-align: center;
+    font-style: italic;
+  }
+} 
+
+*/
+/***** USAGE *****
+	.example {
+	  @include aspect-ratio(16, 9);
+	} 
+*/
+/*=================================
+=            CONCOURSE            =
+=================================*/
+.screen-outline {
+  position: absolute;
+  width: 1920px;
+  height: 2160px;
+  border: 1px solid gray; }
+
+body {
+  margin: 0; }
+
+.screen-wrap {
+  position: relative;
+  width: 100%;
+  border: 1px solid gray; }
+  .screen-wrap:before {
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: 56.25%; }
+  .screen-wrap > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
+/*============================
+=            LEFT            =
+============================*/
+.left-wrap {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+  z-index: 50;
+  background: url(http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/celtics-mobile-tile-2.png); }
+
+/*=============================
+=            RIGHT            =
+=============================*/
+.right-wrap {
+  width: 50%;
+  height: 100%;
+  float: right; }
+
+.block-wrap.player-spotlight {
+  height: 100%;
+  position: relative;
+  right: -100%;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out; }
+  .block-wrap.player-spotlight .player-wrap {
+    height: 100%;
+    display: none; }
+    .block-wrap.player-spotlight .player-wrap.active {
+      display: block; }
+  .block-wrap.player-spotlight .player-top-wrap {
+    height: 50%;
+    background: #FFF;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    z-index: 10;
+    position: relative; }
+    .block-wrap.player-spotlight .player-top-wrap p {
+      margin: 0;
+      font-family: "futura-pt",Helvetica,Arial,sans-serif !important; }
+    .block-wrap.player-spotlight .player-top-wrap .player-top {
+      display: flex;
+      flex-direction: column; }
+      .block-wrap.player-spotlight .player-top-wrap .player-top img {
+        position: absolute;
+        height: 90%;
+        right: 30px;
+        bottom: 5px;
+        z-index: -10; }
+      .block-wrap.player-spotlight .player-top-wrap .player-top .top, .block-wrap.player-spotlight .player-top-wrap .player-top .middle, .block-wrap.player-spotlight .player-top-wrap .player-top .bottom {
+        display: flex;
+        flex-direction: row; }
+      .block-wrap.player-spotlight .player-top-wrap .player-top .top {
+        justify-content: space-between;
+        padding: 25px; }
+        .block-wrap.player-spotlight .player-top-wrap .player-top .top p {
+          display: inline;
+          font-family: "futura-pt",Helvetica,Arial,sans-serif !important;
+          font-weight: 600;
+          color: #008348; }
+          .block-wrap.player-spotlight .player-top-wrap .player-top .top p.player-name {
+            font-size: 2.8em;
+            line-height: 1.1em; }
+          .block-wrap.player-spotlight .player-top-wrap .player-top .top p.player-number {
+            font-size: 2em; }
+          .block-wrap.player-spotlight .player-top-wrap .player-top .top p span {
+            font-weight: 200; }
+      .block-wrap.player-spotlight .player-top-wrap .player-top .middle {
+        padding: 0px 25px; }
+        .block-wrap.player-spotlight .player-top-wrap .player-top .middle .info {
+          font-size: 1.5em;
+          float: right;
+          margin: 0;
+          padding: 0px;
+          white-space: nowrap;
+          list-style-type: none !important;
+          font-weight: bold;
+          -webkit-font-smoothing: antialiased;
+          text-rendering: optimizeLegibility; }
+          .block-wrap.player-spotlight .player-top-wrap .player-top .middle .info br {
+            display: none; }
+          .block-wrap.player-spotlight .player-top-wrap .player-top .middle .info li {
+            float: left;
+            white-space: nowrap;
+            padding-right: 20px; }
+            .block-wrap.player-spotlight .player-top-wrap .player-top .middle .info li:last-child {
+              padding-right: 0px; }
+            .block-wrap.player-spotlight .player-top-wrap .player-top .middle .info li p {
+              font-weight: 500 !important;
+              color: #939393; }
+              .block-wrap.player-spotlight .player-top-wrap .player-top .middle .info li p span {
+                color: black;
+                font-weight: 400 !important; }
+      .block-wrap.player-spotlight .player-top-wrap .player-top .bottom {
+        padding: 0px 25px;
+        font-size: 1.3em;
+        padding-top: 55px; }
+        .block-wrap.player-spotlight .player-top-wrap .player-top .bottom .averages {
+          width: 50%;
+          table-layout: fixed;
+          float: right;
+          margin-bottom: 10px; }
+          .block-wrap.player-spotlight .player-top-wrap .player-top .bottom .averages p {
+            margin: 20px; }
+          .block-wrap.player-spotlight .player-top-wrap .player-top .bottom .averages td {
+            border: 1px solid #dddddd;
+            background-color: #f2f2f2;
+            color: black; }
+            @media (max-width: 550px) {
+              .block-wrap.player-spotlight .player-top-wrap .player-top .bottom .averages td:first-child {
+                display: none; } }
+          .block-wrap.player-spotlight .player-top-wrap .player-top .bottom .averages th {
+            background-color: #dddddd !important;
+            color: black;
+            font-weight: 800px;
+            text-align: left;
+            width: 20%;
+            min-width: 100px; }
+          .block-wrap.player-spotlight .player-top-wrap .player-top .bottom .averages-labels {
+            border-bottom: none;
+            font-size: .8em; }
+            .block-wrap.player-spotlight .player-top-wrap .player-top .bottom .averages-labels td {
+              text-align: center;
+              padding: 0;
+              border-bottom: none; }
+              .block-wrap.player-spotlight .player-top-wrap .player-top .bottom .averages-labels td p {
+                margin: 0;
+                color: #8a8d8f; }
+          .block-wrap.player-spotlight .player-top-wrap .player-top .bottom .averages-season td {
+            text-align: center;
+            border-top: none; }
+  .block-wrap.player-spotlight .player-bottom-wrap {
+    height: 50%;
+    width: 100%;
+    background: url(https://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/gameday-jersey-bg-1400x600.jpg);
+    background-size: cover;
+    position: relative;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    -ms-transition: all 0.8s ease-out;
+    -o-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out; }
+
+</style>
+<!-- <div class="screen-outline"></div> -->
+<div class="screen-wrap">
+  <div class="content screen">
+    <!--==========================
+    =            LEFT            =
+    ===========================-->
+    <div class="left-wrap">
+      <!-- STANDINGS -->
+      <div class="block-wrap standings"></div>
+    </div>
+    <!--===========================
+    =            RIGHT            =
+    ============================-->
+    <div class="right-wrap">
+      <!-- PLAYER SPOTLIGHT -->
+      <div class="block-wrap player-spotlight"></div>
+      <div class="block-wrap highlights">
+      </div>
+    </div>
+  </div>
+</div>
