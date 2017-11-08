@@ -52,28 +52,37 @@ jQuery(document).ready(function() {
     /*	jQuery.getJSON('http://io.cnn.net/nba/nba/.element/media/2.0/teamsites/celtics/misc/bioObj.json?', function(data) {
     	    bioData = data;
     	});*/
-    playerSpotlight(roster, bioData, teamStats);
-    var playerCounter = 2;
-    setInterval(function() {
-        jQuery('.player-spotlight').css('right', '0%');
-        setTimeout(function() {
-            jQuery('.player-spotlight').css('right', '100%');
-        }, 2000);
-        setTimeout(function() {
-            jQuery('.player-spotlight').hide();
-            jQuery('.player-spotlight').css('right', '-100%');
-        }, 5000);
-        setTimeout(function() {
-            jQuery('.player-spotlight').show();
-            jQuery('.player-spotlight .player-wrap').removeClass("active");
-            jQuery('.player-spotlight .player-wrap:nth-child(' + playerCounter + ')').addClass("active");
-            if (playerCounter == roster.length) {
-                playerCounter = 1;
-            } else {
-                playerCounter++;
-            }
-        }, 9000)
-    }, 10000);
+    /*    playerSpotlight(roster, bioData, teamStats);
+        var playerCounter = 2;
+        setInterval(function() {
+            jQuery('.player-spotlight').css('right', '0%');
+            setTimeout(function() {
+                jQuery('.player-spotlight').css('right', '100%');
+            }, 2000);
+            setTimeout(function() {
+                jQuery('.player-spotlight').hide();
+                jQuery('.player-spotlight').css('right', '-100%');
+            }, 5000);
+            setTimeout(function() {
+                jQuery('.player-spotlight').show();
+                jQuery('.player-spotlight .player-wrap').removeClass("active");
+                jQuery('.player-spotlight .player-wrap:nth-child(' + playerCounter + ')').addClass("active");
+                if (playerCounter == roster.length) {
+                    playerCounter = 1;
+                } else {
+                    playerCounter++;
+                }
+            }, 9000)
+        }, 10000);*/
+    setTimeout(function() {
+        jQuery('.social .top-wrap, .social .bottom-wrap, .social-top, .social-bottom').addClass('transition');
+        jQuery('.player-spotlight .player-wrap:nth-child(' + playerCounter + ')').addClass("active");
+        if (playerCounter == roster.length) {
+            playerCounter = 1;
+        } else {
+            playerCounter++;
+        }
+    }, 1500)
 });
 /*======================================
 =            MISC FUNCTIONS            =

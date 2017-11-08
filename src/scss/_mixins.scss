@@ -26,6 +26,13 @@
     }
 }
 
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
 /***** USAGE *****
 	.example {
 	  @include aspect-ratio(16, 9);

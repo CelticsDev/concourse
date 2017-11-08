@@ -1,6 +1,10 @@
 @import 'mixins';
 @import 'variables';
 
+* {
+	box-sizing: border-box;
+}
+
 /*=================================
 =            CONCOURSE            =
 =================================*/
@@ -23,9 +27,6 @@
 	border:1px solid gray;
 }
 
-/*============================
-=            LEFT            =
-============================*/
 
 .left-wrap {
 	width: 50%;
@@ -36,25 +37,90 @@
 	background: url(http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/celtics-mobile-tile-2.png);
 }
 
-/*=============================
-=            RIGHT            =
-=============================*/
-
 .right-wrap {
 	width: 50%;
 	height: 100%;
 	float: right
 }
 
-.block-wrap.player-spotlight {
+.block-wrap {
+	position: absolute;
+	width: 50%;
 	height: 100%;
-	position: relative;
+}
+
+.top-wrap, .bottom-wrap {
+	height: 50%;
+	width: 100%;
+}
+
+/*==============================
+=            SOCIAL            =
+==============================*/
+
+.social {
+	z-index: -100;
+
+	#video-background {
+	/*  making the video fullscreen  */
+	  right: 0; 
+	  bottom: 0;
+	  width: 100%; 
+	  height: 100%;
+	  position: absolute;
+	  z-index: -100;
+	}
+
+	.top-wrap {
+		padding: 5% 5% 2.5% 5%;
+		@include transition(all 1s ease);
+		position: relative;
+
+		&.transition {
+			padding: 0;
+			box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+		}
+	}
+
+	.bottom-wrap {
+		padding: 2.5% 5% 5% 5%;
+		@include transition(all 1s ease);
+
+		&.transition {
+			padding: 0;
+		}
+	}
+
+	.social-top, .social-bottom {
+		border: 1px solid #e7e7e7;
+		background-color: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100%;
+		@include transition(all 1s ease);
+		&.transition {
+			padding: 0;
+		}
+	}
+
+	.social-top.transition {
+		background-color: #fff;
+	}
+
+	.social-bottom.transition {
+		padding: 0;
+		background: url(https://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/gameday-jersey-bg-1400x600.jpg);
+		background-size: cover;
+	}
+}
+
+/*========================================
+=            PLAYER SPOTLIGHT            =
+========================================*/
+
+
+.block-wrap.player-spotlight {
 	right: -100%;
-	-webkit-transition: all 0.7s ease-out;
-	   -moz-transition: all 0.7s ease-out;
-	    -ms-transition: all 0.7s ease-out;
-	     -o-transition: all 0.7s ease-out;
-	        transition: all 0.7s ease-out;
+	@include transition(all 0.7s ease-out);
 
 	.player-wrap {
 		height: 100%;
@@ -64,7 +130,7 @@
 			display: block;
 		}
 	}
-	.player-top-wrap {
+	.top-wrap {
 		height: 50%;
 		background: #FFF;
 		box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
@@ -223,16 +289,16 @@
 		}
 	}
 
-	.player-bottom-wrap {
+	.bottom-wrap {
 		height: 50%;
 		width: 100%;
 		background: url(https://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/gameday-jersey-bg-1400x600.jpg);
 		background-size: cover;
 		position: relative;
-		-webkit-transition: all 0.8s ease-out;
-		   -moz-transition: all 0.8s ease-out;
-		    -ms-transition: all 0.8s ease-out;
-		     -o-transition: all 0.8s ease-out;
-		        transition: all 0.8s ease-out;
+		@include transition (all 0.8s ease);
 	}
+
+
+
+
 }
