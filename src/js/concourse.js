@@ -74,15 +74,26 @@ jQuery(document).ready(function() {
                 }
             }, 9000)
         }, 10000);*/
+    /*    setTimeout(function() {
+            jQuery('.social .top-wrap, .social .bottom-wrap, .social-top, .social-bottom').addClass('transition');
+            jQuery('.player-spotlight .player-wrap:nth-child(' + playerCounter + ')').addClass("active");
+            if (playerCounter == roster.length) {
+                playerCounter = 1;
+            } else {
+                playerCounter++;
+            }
+        }, 1500)*/
     setTimeout(function() {
-        jQuery('.social .top-wrap, .social .bottom-wrap, .social-top, .social-bottom').addClass('transition');
-        jQuery('.player-spotlight .player-wrap:nth-child(' + playerCounter + ')').addClass("active");
-        if (playerCounter == roster.length) {
-            playerCounter = 1;
-        } else {
-            playerCounter++;
-        }
+        jQuery('.white-line.horizontal').addClass('transition');
     }, 1500)
+    setTimeout(function() {
+        jQuery('.social-top .white-line.vertical:nth-child(odd)').addClass('transition');
+        jQuery('.social-bottom .white-line.vertical:nth-child(even)').addClass('transition');
+    }, 2000)
+    setTimeout(function() {
+        jQuery('.social-top .white-line.vertical:nth-child(even)').addClass('transition');
+        jQuery('.social-bottom .white-line.vertical:nth-child(odd)').addClass('transition');
+    }, 2300)
 });
 /*======================================
 =            MISC FUNCTIONS            =

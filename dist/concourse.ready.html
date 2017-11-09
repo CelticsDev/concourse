@@ -78,15 +78,26 @@ jQuery(document).ready(function() {
                 }
             }, 9000)
         }, 10000);*/
+    /*    setTimeout(function() {
+            jQuery('.social .top-wrap, .social .bottom-wrap, .social-top, .social-bottom').addClass('transition');
+            jQuery('.player-spotlight .player-wrap:nth-child(' + playerCounter + ')').addClass("active");
+            if (playerCounter == roster.length) {
+                playerCounter = 1;
+            } else {
+                playerCounter++;
+            }
+        }, 1500)*/
     setTimeout(function() {
-        jQuery('.social .top-wrap, .social .bottom-wrap, .social-top, .social-bottom').addClass('transition');
-        jQuery('.player-spotlight .player-wrap:nth-child(' + playerCounter + ')').addClass("active");
-        if (playerCounter == roster.length) {
-            playerCounter = 1;
-        } else {
-            playerCounter++;
-        }
+        jQuery('.white-line.horizontal').addClass('transition');
     }, 1500)
+    setTimeout(function() {
+        jQuery('.social-top .white-line.vertical:nth-child(odd)').addClass('transition');
+        jQuery('.social-bottom .white-line.vertical:nth-child(even)').addClass('transition');
+    }, 2000)
+    setTimeout(function() {
+        jQuery('.social-top .white-line.vertical:nth-child(even)').addClass('transition');
+        jQuery('.social-bottom .white-line.vertical:nth-child(odd)').addClass('transition');
+    }, 2300)
 });
 /*======================================
 =            MISC FUNCTIONS            =
@@ -207,15 +218,19 @@ body {
   width: 50%;
   height: 100%; }
 
-.top-wrap, .bottom-wrap {
-  height: 50%;
-  width: 100%; }
-
 /*==============================
 =            SOCIAL            =
 ==============================*/
 .social {
-  z-index: -100; }
+  z-index: -100;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .social .top-wrap, .social .bottom-wrap {
+    height: 48%;
+    width: 100%; }
   .social #video-background {
     /*  making the video fullscreen  */
     right: 0;
@@ -225,7 +240,6 @@ body {
     position: absolute;
     z-index: -100; }
   .social .top-wrap {
-    padding: 5% 5% 2.5% 5%;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     -webkit-transition: all 1s ease;
@@ -235,7 +249,6 @@ body {
       padding: 0;
       box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25); }
   .social .bottom-wrap {
-    padding: 2.5% 5% 5% 5%;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     -webkit-transition: all 1s ease;
@@ -244,17 +257,62 @@ body {
       padding: 0; }
   .social .social-top, .social .social-bottom {
     border: 1px solid #e7e7e7;
-    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease; }
+    position: relative; }
     .social .social-top.transition, .social .social-bottom.transition {
       padding: 0; }
-  .social .social-top.transition {
-    background-color: #fff; }
+    .social .social-top .white-line, .social .social-bottom .white-line {
+      position: absolute;
+      background-color: white; }
+      .social .social-top .white-line.vertical, .social .social-bottom .white-line.vertical {
+        height: 0%;
+        width: 1px;
+        -moz-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        -webkit-transition: all 0.3s linear;
+        transition: all 0.3s linear; }
+        .social .social-top .white-line.vertical.transition, .social .social-bottom .white-line.vertical.transition {
+          height: 100%;
+          width: 1px; }
+      .social .social-top .white-line.horizontal, .social .social-bottom .white-line.horizontal {
+        -moz-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        -webkit-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+        height: 1px;
+        width: 0%; }
+        .social .social-top .white-line.horizontal.transition, .social .social-bottom .white-line.horizontal.transition {
+          height: 1px;
+          width: 100%; }
+      .social .social-top .white-line:nth-child(1), .social .social-bottom .white-line:nth-child(1) {
+        left: 25%; }
+      .social .social-top .white-line:nth-child(2), .social .social-bottom .white-line:nth-child(2) {
+        left: 50%;
+        bottom: 0; }
+      .social .social-top .white-line:nth-child(3), .social .social-bottom .white-line:nth-child(3) {
+        left: 75%; }
+      .social .social-top .white-line:nth-child(4), .social .social-bottom .white-line:nth-child(4) {
+        top: 50%; }
+  .social .social-top .white-line.vertical:nth-child(even) {
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+  .social .social-bottom .white-line.vertical:nth-child(odd) {
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+  .social .player-box {
+    width: 25%;
+    height: 24%;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+    float: left;
+    align-self: bottom; }
+    .social .player-box.transition {
+      opacity: .77; }
   .social .social-bottom.transition {
     padding: 0;
     background: url(https://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/gameday-jersey-bg-1400x600.jpg);
@@ -409,14 +467,32 @@ body {
       <div class="block-wrap highlights"></div>
       <!-- SOCIAL -->
       <div class="block-wrap social"> 
-        <div class="top-wrap">
+        <
+        <div class="player-box"></div>
+        <div class="player-box"></div>
+        <div class="player-box"></div>
+        <div class="player-box"></div>
+        <div class="player-box"></div>
+        <div class="player-box"></div>
+        <div class="player-box"></div>
+        <div class="player-box"></div>
+
+<!--         <div class="top-wrap">
           <div class="social-top">
-            
+            <div class="white-line vertical"></div>
+            <div class="white-line vertical"></div>
+            <div class="white-line vertical"></div>
+            <div class="white-line horizontal"></div>
           </div>
         </div>
         <div class="bottom-wrap">
-          <div class="social-bottom"></div>
-        </div>
+          <div class="social-bottom">
+            <div class="white-line vertical"></div>
+            <div class="white-line vertical"></div>
+            <div class="white-line vertical"></div>
+            <div class="white-line horizontal"></div>
+          </div>
+        </div> -->
         <video autoplay loop id="video-background" muted plays-inline>
           <source src="https://pmd.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/concourse-arena-bg_1920x2160.mp4" type="video/mp4">
         </video>
