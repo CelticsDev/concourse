@@ -48,7 +48,6 @@ body {
     height: 100%;
 }
 
-
 /*==============================
 =            SOCIAL            =
 ==============================*/
@@ -60,6 +59,10 @@ body {
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    &.transition-3 {
+        padding: 0;
+    }
 
     .block-inner {
         position: relative;
@@ -86,7 +89,6 @@ body {
     }
 
     .top-wrap {
-
         @include transition(all 1s ease);
 
         position: relative;
@@ -98,7 +100,6 @@ body {
     }
 
     .bottom-wrap {
-
         @include transition(all 1s ease);
 
         &.transition {
@@ -121,10 +122,10 @@ body {
             position: absolute;
             background-color: white;
 
-
             &.vertical {
                 height: 0%;
                 width: 2px;
+
                 @include transition(all 0.2s linear);
 
                 &.transition {
@@ -134,7 +135,8 @@ body {
             }
 
             &.horizontal {
-            	@include transition(all 0.3s ease-out);
+                @include transition(all 0.3s ease-out);
+
                 height: 2px;
                 width: 0%;
 
@@ -164,19 +166,19 @@ body {
     }
 
     .social-top {
-    	.white-line {
-    		&.vertical:nth-child(even) {
-    			@include transition(all 0.2s ease-out);
-    		}
-    	}
+        .white-line {
+            &.vertical:nth-child(even) {
+                @include transition(all 0.2s ease-out);
+            }
+        }
     }
 
     .social-bottom {
-    	.white-line {
-    		&.vertical:nth-child(odd) {
-    			@include transition(all 0.2s ease-out);
-    		}
-    	}
+        .white-line {
+            &.vertical:nth-child(odd) {
+                @include transition(all 0.2s ease-out);
+            }
+        }
     }
 
     .player-box-wrap {
@@ -202,143 +204,159 @@ body {
             align-content: center;
         }
 
-        .player-box {
-            width: 25%;
-            height: 24%;
-            border: 1px solid #dddddd;
-            background-color: rgba(0, 0, 0, 0.5);
-            float:left;
-            align-self: bottom;
-            overflow: hidden;
-            position:relative;
+        &.transition-3 {
+            padding: 0;
+        }
+    }
 
-            img {
-                height: 100%;
-                position: absolute;
-                transform: translateX(-18%);
-                opacity: 0;
-            }
+    .player-box {
+        @include transition(all 0.3s ease);
 
-            &:nth-child(5) {
-                margin-bottom: 4.42%;
-            }
+        width: 25%;
+        height: 24%;
+        border: 1px solid #dddddd;
+        background-color: rgba(0, 0, 0, 0.5);
+        float: left;
+        align-self: bottom;
+        overflow: hidden;
+        position: relative;
 
+        img {
+            height: 100%;
+            position: absolute;
+            transform: translateX(-18%);
+            opacity: 0;
+        }
 
-            &.transition {
-                width: 23%;
-                height: 24%;
-                margin: 1%;
-                @include transition(all 0.3s ease-out);
-
-                &:nth-child(5) {
-                    margin-bottom: 0;
-                }
-            }
-
-            &.transition-2 {
-                opacity: .7;
-
-                &.selected {
-                    background-color: rgba(255, 255, 255, .9);
-                    border-color: #008348;
-                    opacity: 1;
-                }
-            }
+        &:nth-child(5) {
+            margin-bottom: 4.42%;
         }
 
         &.replacement {
-            display: none;
-            .player-box {
-                position: absolute;
+            opacity: 0;
+            position: absolute;
 
-                // ROW 1
+            // ROW 1
 
-                &:nth-child(1){
-                    left: 0%;
-                    top:-1.5%;
-                }
-
-                &:nth-child(2){
-                    left: 25%;
-                    top:-1.5%;
-                }
-
-                &:nth-child(3){
-                    left: 50%;
-                    top:-1.5%;
-                }
-
-                &:nth-child(4){
-                    left: 75%;
-                    top:-1.5%;
-                }
-
-                // ROW 2
-
-                &:nth-child(5){
-                    left: 0%;
-                    top:24.2%;
-                }
-
-                &:nth-child(6){
-                    left: 25%;
-                    top:24.2%;
-                }
-
-                &:nth-child(7){
-                    left: 50%;
-                    top:24.2%;
-                }
-
-                &:nth-child(8){
-                    left: 75%;
-                    top:24.2%;
-                }
-
-                // ROW 3
-
-                &:nth-child(9){
-                    left: 0%;
-                    top:50%;
-                }
-
-                &:nth-child(10){
-                    left: 25%;
-                    top:50%;
-                }
-
-                &:nth-child(11){
-                    left: 50%;
-                    top:50%;
-                }
-
-                &:nth-child(12){
-                    left: 75%;
-                    top:50%;
-                }
-
-                // ROW 4
-
-                &:nth-child(13){
-                    left: 0%;
-                    top:75.8%;
-                }
-
-                &:nth-child(14){
-                    left: 25%;
-                    top:75.8%;
-                }
-
-                &:nth-child(15){
-                    left: 50%;
-                    top:75.8%;
-                }
-
-                &:nth-child(16){
-                    left: 75%;
-                    top:75.8%;
-                }
+            &:nth-child(1) {
+                left: 0%;
+                top: -1.5%;
             }
+
+            &:nth-child(2) {
+                left: 25%;
+                top: -1.5%;
+            }
+
+            &:nth-child(3) {
+                left: 50%;
+                top: -1.5%;
+            }
+
+            &:nth-child(4) {
+                left: 75%;
+                top: -1.5%;
+            }
+
+            // ROW 2
+
+            &:nth-child(5) {
+                left: 0%;
+                top: 24.2%;
+            }
+
+            &:nth-child(6) {
+                left: 25%;
+                top: 24.2%;
+            }
+
+            &:nth-child(7) {
+                left: 50%;
+                top: 24.2%;
+            }
+
+            &:nth-child(8) {
+                left: 75%;
+                top: 24.2%;
+            }
+
+            // ROW 3
+
+            &:nth-child(9) {
+                left: 0%;
+                top: 50%;
+            }
+
+            &:nth-child(10) {
+                left: 25%;
+                top: 50%;
+            }
+
+            &:nth-child(11) {
+                left: 50%;
+                top: 50%;
+            }
+
+            &:nth-child(12) {
+                left: 75%;
+                top: 50%;
+            }
+
+            // ROW 4
+
+            &:nth-child(13) {
+                left: 0%;
+                top: 75.8%;
+            }
+
+            &:nth-child(14) {
+                left: 25%;
+                top: 75.8%;
+            }
+
+            &:nth-child(15) {
+                left: 50%;
+                top: 75.8%;
+            }
+
+            &:nth-child(16) {
+                left: 75%;
+                top: 75.8%;
+            }
+        }
+
+        &.selected {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-color: #008348;
+            opacity: 1;
+        }
+
+        &.transition {
+            width: 23%;
+            height: 24%;
+            margin: 1%;
+
+            @include transition(all 0.3s ease-out);
+
+            &:nth-child(5) {
+                margin-bottom: 0;
+            }
+        }
+
+        &.transition-2 {
+            opacity: .7;
+
+            &.selected {
+                opacity: 1;
+            }
+        }
+
+        &.transition-3 {
+            top: 0% !important;
+            left: 0% !important;
+            width: 100%;
+            height: 50%;
+            margin: 0;
         }
     }
 
@@ -355,6 +373,7 @@ body {
 
 .block-wrap.player-spotlight {
     right: -100%;
+
     @include transition(all 0.7s ease-out);
 
     .player-wrap {

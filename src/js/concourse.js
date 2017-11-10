@@ -989,7 +989,7 @@ function playerSpotlight(roster, bioObj, teamStats, playerSpotlightCounter) {
     setTimeout(function() {
         jQuery('.player-box').addClass('transition-2');
         jQuery('.player-box:nth-child(' + playerSpotlightCounter + ')').addClass('selected');
-/*        jQuery('.player-box').not('.selected').delay(500).fadeTo(100,0);*/
+        jQuery('.player-box').not('.replacement.selected').delay(500).fadeTo(100,0);
         if (selectedPlayerCouner < 16){
                 playerSpotlightCounter++;
             }
@@ -997,6 +997,10 @@ function playerSpotlight(roster, bioObj, teamStats, playerSpotlightCounter) {
                 playerSpotlightCounter = 0;
             }
         }, 2000)
+    setTimeout(function() {
+        jQuery('.block-wrap.social').addClass('transition-3');
+        jQuery('.player-box.replacement.selected').addClass('transition-3');
+        }, 3000)
 }
 /*==================================
 =            HIGHLIGHTS            =
