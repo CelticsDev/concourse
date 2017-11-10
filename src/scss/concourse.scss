@@ -61,6 +61,15 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
 
+    .block-inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+
     .top-wrap, .bottom-wrap {
         height: 48%;
         width: 100%;
@@ -99,6 +108,7 @@ body {
 
     .social-top, .social-bottom {
         border: 1px solid #e7e7e7;
+        background-color: rgba(0, 0, 0, 0.5);
         width: 100%;
         height: 100%;
         position: relative;
@@ -114,22 +124,22 @@ body {
 
             &.vertical {
                 height: 0%;
-                width: 1px;
-                @include transition(all 0.3s linear);
+                width: 2px;
+                @include transition(all 0.2s linear);
 
                 &.transition {
                     height: 100%;
-                    width: 1px;
+                    width: 2px;
                 }
             }
 
             &.horizontal {
-            	@include transition(all 0.5s ease-out);
-                height: 1px;
+            	@include transition(all 0.3s ease-out);
+                height: 2px;
                 width: 0%;
 
                 &.transition {
-                    height: 1px;
+                    height: 2px;
                     width: 100%;
                 }
             }
@@ -156,7 +166,7 @@ body {
     .social-top {
     	.white-line {
     		&.vertical:nth-child(even) {
-    			@include transition(all 0.3s ease-out);
+    			@include transition(all 0.2s ease-out);
     		}
     	}
     }
@@ -164,25 +174,171 @@ body {
     .social-bottom {
     	.white-line {
     		&.vertical:nth-child(odd) {
-    			@include transition(all 0.3s ease-out);
+    			@include transition(all 0.2s ease-out);
     		}
     	}
     }
 
-    .player-box {
-        width: 25%;
-        height: 24%;
-        border: 1px solid white;
-        background-color: rgba(0, 0, 0, 0.5);
-        float:left;
-        align-self: bottom;
+    .player-box-wrap {
+        width: 100%;
+        opacity: 0;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        position: absolute;
+        align-content: flex-start;
 
-        &.transition {
-            opacity: .77;
+        &-top {
+            align-content: flex-start;
         }
 
-        &.transition-2 {
+        &-bottom {
+            align-content: flex-end;
+        }
 
+        &.transition {
+            justify-content: center;
+            align-content: center;
+        }
+
+        .player-box {
+            width: 25%;
+            height: 24%;
+            border: 1px solid #dddddd;
+            background-color: rgba(0, 0, 0, 0.5);
+            float:left;
+            align-self: bottom;
+            overflow: hidden;
+            position:relative;
+
+            img {
+                height: 100%;
+                position: absolute;
+                transform: translateX(-18%);
+                opacity: 0;
+            }
+
+            &:nth-child(5) {
+                margin-bottom: 4.42%;
+            }
+
+
+            &.transition {
+                width: 23%;
+                height: 24%;
+                margin: 1%;
+                @include transition(all 0.3s ease-out);
+
+                &:nth-child(5) {
+                    margin-bottom: 0;
+                }
+            }
+
+            &.transition-2 {
+                opacity: .7;
+
+                &.selected {
+                    background-color: rgba(255, 255, 255, .9);
+                    border-color: #008348;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &.replacement {
+            display: none;
+            .player-box {
+                position: absolute;
+
+                // ROW 1
+
+                &:nth-child(1){
+                    left: 0%;
+                    top:-1.5%;
+                }
+
+                &:nth-child(2){
+                    left: 25%;
+                    top:-1.5%;
+                }
+
+                &:nth-child(3){
+                    left: 50%;
+                    top:-1.5%;
+                }
+
+                &:nth-child(4){
+                    left: 75%;
+                    top:-1.5%;
+                }
+
+                // ROW 2
+
+                &:nth-child(5){
+                    left: 0%;
+                    top:24.2%;
+                }
+
+                &:nth-child(6){
+                    left: 25%;
+                    top:24.2%;
+                }
+
+                &:nth-child(7){
+                    left: 50%;
+                    top:24.2%;
+                }
+
+                &:nth-child(8){
+                    left: 75%;
+                    top:24.2%;
+                }
+
+                // ROW 3
+
+                &:nth-child(9){
+                    left: 0%;
+                    top:50%;
+                }
+
+                &:nth-child(10){
+                    left: 25%;
+                    top:50%;
+                }
+
+                &:nth-child(11){
+                    left: 50%;
+                    top:50%;
+                }
+
+                &:nth-child(12){
+                    left: 75%;
+                    top:50%;
+                }
+
+                // ROW 4
+
+                &:nth-child(13){
+                    left: 0%;
+                    top:75.8%;
+                }
+
+                &:nth-child(14){
+                    left: 25%;
+                    top:75.8%;
+                }
+
+                &:nth-child(15){
+                    left: 50%;
+                    top:75.8%;
+                }
+
+                &:nth-child(16){
+                    left: 75%;
+                    top:75.8%;
+                }
+            }
         }
     }
 

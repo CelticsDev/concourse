@@ -79,6 +79,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap; }
+  .social .block-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%; }
   .social .top-wrap, .social .bottom-wrap {
     height: 48%;
     width: 100%; }
@@ -108,6 +115,7 @@ body {
       padding: 0; }
   .social .social-top, .social .social-bottom {
     border: 1px solid #e7e7e7;
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
     position: relative; }
@@ -118,23 +126,23 @@ body {
       background-color: white; }
       .social .social-top .white-line.vertical, .social .social-bottom .white-line.vertical {
         height: 0%;
-        width: 1px;
-        -moz-transition: all 0.3s linear;
-        -o-transition: all 0.3s linear;
-        -webkit-transition: all 0.3s linear;
-        transition: all 0.3s linear; }
+        width: 2px;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear; }
         .social .social-top .white-line.vertical.transition, .social .social-bottom .white-line.vertical.transition {
           height: 100%;
-          width: 1px; }
+          width: 2px; }
       .social .social-top .white-line.horizontal, .social .social-bottom .white-line.horizontal {
-        -moz-transition: all 0.5s ease-out;
-        -o-transition: all 0.5s ease-out;
-        -webkit-transition: all 0.5s ease-out;
-        transition: all 0.5s ease-out;
-        height: 1px;
+        -moz-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+        height: 2px;
         width: 0%; }
         .social .social-top .white-line.horizontal.transition, .social .social-bottom .white-line.horizontal.transition {
-          height: 1px;
+          height: 2px;
           width: 100%; }
       .social .social-top .white-line:nth-child(1), .social .social-bottom .white-line:nth-child(1) {
         left: 25%; }
@@ -146,24 +154,115 @@ body {
       .social .social-top .white-line:nth-child(4), .social .social-bottom .white-line:nth-child(4) {
         top: 50%; }
   .social .social-top .white-line.vertical:nth-child(even) {
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out; }
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
   .social .social-bottom .white-line.vertical:nth-child(odd) {
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out; }
-  .social .player-box {
-    width: 25%;
-    height: 24%;
-    border: 1px solid white;
-    background-color: rgba(0, 0, 0, 0.5);
-    float: left;
-    align-self: bottom; }
-    .social .player-box.transition {
-      opacity: .77; }
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
+  .social .player-box-wrap {
+    width: 100%;
+    opacity: 0;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: absolute;
+    align-content: flex-start; }
+    .social .player-box-wrap-top {
+      align-content: flex-start; }
+    .social .player-box-wrap-bottom {
+      align-content: flex-end; }
+    .social .player-box-wrap.transition {
+      justify-content: center;
+      align-content: center; }
+    .social .player-box-wrap .player-box {
+      width: 25%;
+      height: 24%;
+      border: 1px solid #dddddd;
+      background-color: rgba(0, 0, 0, 0.5);
+      float: left;
+      align-self: bottom;
+      overflow: hidden;
+      position: relative; }
+      .social .player-box-wrap .player-box img {
+        height: 100%;
+        position: absolute;
+        transform: translateX(-18%);
+        opacity: 0; }
+      .social .player-box-wrap .player-box:nth-child(5) {
+        margin-bottom: 4.42%; }
+      .social .player-box-wrap .player-box.transition {
+        width: 23%;
+        height: 24%;
+        margin: 1%;
+        -moz-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out; }
+        .social .player-box-wrap .player-box.transition:nth-child(5) {
+          margin-bottom: 0; }
+      .social .player-box-wrap .player-box.transition-2 {
+        opacity: .7; }
+        .social .player-box-wrap .player-box.transition-2.selected {
+          background-color: rgba(255, 255, 255, 0.9);
+          border-color: #008348;
+          opacity: 1; }
+    .social .player-box-wrap.replacement {
+      display: none; }
+      .social .player-box-wrap.replacement .player-box {
+        position: absolute; }
+        .social .player-box-wrap.replacement .player-box:nth-child(1) {
+          left: 0%;
+          top: -1.5%; }
+        .social .player-box-wrap.replacement .player-box:nth-child(2) {
+          left: 25%;
+          top: -1.5%; }
+        .social .player-box-wrap.replacement .player-box:nth-child(3) {
+          left: 50%;
+          top: -1.5%; }
+        .social .player-box-wrap.replacement .player-box:nth-child(4) {
+          left: 75%;
+          top: -1.5%; }
+        .social .player-box-wrap.replacement .player-box:nth-child(5) {
+          left: 0%;
+          top: 24.2%; }
+        .social .player-box-wrap.replacement .player-box:nth-child(6) {
+          left: 25%;
+          top: 24.2%; }
+        .social .player-box-wrap.replacement .player-box:nth-child(7) {
+          left: 50%;
+          top: 24.2%; }
+        .social .player-box-wrap.replacement .player-box:nth-child(8) {
+          left: 75%;
+          top: 24.2%; }
+        .social .player-box-wrap.replacement .player-box:nth-child(9) {
+          left: 0%;
+          top: 50%; }
+        .social .player-box-wrap.replacement .player-box:nth-child(10) {
+          left: 25%;
+          top: 50%; }
+        .social .player-box-wrap.replacement .player-box:nth-child(11) {
+          left: 50%;
+          top: 50%; }
+        .social .player-box-wrap.replacement .player-box:nth-child(12) {
+          left: 75%;
+          top: 50%; }
+        .social .player-box-wrap.replacement .player-box:nth-child(13) {
+          left: 0%;
+          top: 75.8%; }
+        .social .player-box-wrap.replacement .player-box:nth-child(14) {
+          left: 25%;
+          top: 75.8%; }
+        .social .player-box-wrap.replacement .player-box:nth-child(15) {
+          left: 50%;
+          top: 75.8%; }
+        .social .player-box-wrap.replacement .player-box:nth-child(16) {
+          left: 75%;
+          top: 75.8%; }
   .social .social-bottom.transition {
     padding: 0;
     background: url(https://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/gameday-jersey-bg-1400x600.jpg);
