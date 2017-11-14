@@ -37,8 +37,7 @@ body {
 
 .screen-wrap {
   position: relative;
-  width: 100%;
-  border: 1px solid gray; }
+  width: 100%; }
   .screen-wrap:before {
     display: block;
     content: " ";
@@ -50,30 +49,30 @@ body {
     left: 0;
     right: 0;
     bottom: 0; }
+  .screen-wrap .screen {
+    display: flex; }
 
 .left-wrap {
   width: 50%;
   height: 100%;
-  float: left;
-  position: relative;
   z-index: 50;
+  position: relative;
   background: url(http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/celtics-mobile-tile-2.png); }
 
 .right-wrap {
   width: 50%;
   height: 100%;
-  float: right; }
+  position: relative; }
 
 .block-wrap {
   position: absolute;
-  width: 50%;
+  width: 100%;
   height: 100%; }
 
 /*==============================
 =            SOCIAL            =
 ==============================*/
 .social {
-  z-index: -100;
   padding: 2%;
   display: flex;
   flex-direction: column;
@@ -91,14 +90,6 @@ body {
   .social .top-wrap, .social .bottom-wrap {
     height: 48%;
     width: 100%; }
-  .social #video-background {
-    /*  making the video fullscreen  */
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -100; }
   .social .top-wrap {
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -196,7 +187,7 @@ body {
     align-self: bottom;
     overflow: hidden;
     position: relative; }
-    .social .player-box img {
+    .social .player-box .headshot {
       height: 100%;
       position: absolute;
       transform: translateX(-18%);
@@ -256,7 +247,8 @@ body {
         top: 75.8%; }
     .social .player-box.selected {
       background-color: rgba(255, 255, 255, 0.9);
-      border-color: #008348;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+      border-color: #fff;
       opacity: 1; }
     .social .player-box.transition {
       width: 23%;
@@ -277,7 +269,9 @@ body {
       left: 0% !important;
       width: 100%;
       height: 50%;
-      margin: 0; }
+      margin: 0;
+      border: none;
+      background-color: #fff; }
   .social .social-bottom.transition {
     padding: 0;
     background: url(https://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/gameday-jersey-bg-1400x600.jpg);
@@ -287,11 +281,30 @@ body {
 =            PLAYER SPOTLIGHT            =
 ========================================*/
 .block-wrap.player-spotlight {
-  right: -100%;
+  display: none;
   -moz-transition: all 0.7s ease-out;
   -o-transition: all 0.7s ease-out;
   -webkit-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out; }
+  .block-wrap.player-spotlight .player-box {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: none; }
+    .block-wrap.player-spotlight .player-box .headshot {
+      -moz-transition: all 0.7s ease;
+      -o-transition: all 0.7s ease;
+      -webkit-transition: all 0.7s ease;
+      transition: all 0.7s ease;
+      height: 100%;
+      position: absolute;
+      transform: translateX(-18%);
+      opacity: 0;
+      z-index: 10; }
+      .block-wrap.player-spotlight .player-box .headshot.transition-1 {
+        transform: translateX(-200%); }
   .block-wrap.player-spotlight .player-wrap {
     height: 100%;
     display: none; }
@@ -310,42 +323,85 @@ body {
     .block-wrap.player-spotlight .top-wrap .player-top {
       display: flex;
       flex-direction: column; }
-      .block-wrap.player-spotlight .top-wrap .player-top img {
+      .block-wrap.player-spotlight .top-wrap .player-top .silo {
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
         position: absolute;
         height: 90%;
-        right: 30px;
-        bottom: 5px;
-        z-index: -10; }
+        z-index: -10;
+        top: 5%;
+        right: -35%; }
+        .block-wrap.player-spotlight .top-wrap .player-top .silo.transition-1 {
+          right: 5%; }
       .block-wrap.player-spotlight .top-wrap .player-top .top, .block-wrap.player-spotlight .top-wrap .player-top .middle, .block-wrap.player-spotlight .top-wrap .player-top .bottom {
         display: flex;
         flex-direction: row; }
       .block-wrap.player-spotlight .top-wrap .player-top .top {
+        padding: 0px 5%;
         justify-content: space-between;
-        padding: 25px; }
+        height: 45%; }
         .block-wrap.player-spotlight .top-wrap .player-top .top p {
           display: inline;
           font-family: "futura-pt",Helvetica,Arial,sans-serif !important;
           font-weight: 600;
           color: #008348; }
           .block-wrap.player-spotlight .top-wrap .player-top .top p.player-name {
-            font-size: 2.8em;
-            line-height: 1.1em; }
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            font-size: 4.6vw;
+            line-height: 1.1em;
+            text-align: right;
+            position: absolute;
+            width: 35%;
+            right: 5%;
+            top: 5%;
+            display: none; }
+            .block-wrap.player-spotlight .top-wrap .player-top .top p.player-name.transition-1 {
+              width: 0%;
+              right: auto;
+              right: 95%; }
           .block-wrap.player-spotlight .top-wrap .player-top .top p.player-number {
-            font-size: 2em; }
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            position: absolute;
+            right: -10%;
+            top: 5%;
+            text-align: center;
+            font-size: 3vw; }
+            .block-wrap.player-spotlight .top-wrap .player-top .top p.player-number.transition-1 {
+              right: 5%; }
           .block-wrap.player-spotlight .top-wrap .player-top .top p span {
             font-weight: 200; }
       .block-wrap.player-spotlight .top-wrap .player-top .middle {
-        padding: 0px 25px; }
+        padding: 0px 5%;
+        height: 10%; }
         .block-wrap.player-spotlight .top-wrap .player-top .middle .info {
-          font-size: 1.5em;
-          float: right;
+          -moz-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+          -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
           margin: 0;
           padding: 0px;
           white-space: nowrap;
           list-style-type: none !important;
           font-weight: bold;
           -webkit-font-smoothing: antialiased;
-          text-rendering: optimizeLegibility; }
+          text-rendering: optimizeLegibility;
+          justify-content: flex-end;
+          display: flex;
+          position: absolute;
+          right: -100%;
+          width: 100%;
+          font-size: 1.8vw; }
+          .block-wrap.player-spotlight .top-wrap .player-top .middle .info.transition-1 {
+            justify-content: flex-start;
+            right: -5%; }
           .block-wrap.player-spotlight .top-wrap .player-top .middle .info br {
             display: none; }
           .block-wrap.player-spotlight .top-wrap .player-top .middle .info li {
@@ -361,16 +417,21 @@ body {
                 color: black;
                 font-weight: 400 !important; }
       .block-wrap.player-spotlight .top-wrap .player-top .bottom {
-        padding: 0px 25px;
-        font-size: 1.3em;
-        padding-top: 55px; }
+        padding: 5% 5%; }
         .block-wrap.player-spotlight .top-wrap .player-top .bottom .averages {
+          -moz-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+          -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
           width: 50%;
-          table-layout: fixed;
-          float: right;
-          margin-bottom: 10px; }
+          position: absolute;
+          right: -50%;
+          table-layout: fixed; }
+          .block-wrap.player-spotlight .top-wrap .player-top .bottom .averages.transition-1 {
+            right: 45%; }
           .block-wrap.player-spotlight .top-wrap .player-top .bottom .averages p {
-            margin: 20px; }
+            text-align: center;
+            margin: 15%; }
           .block-wrap.player-spotlight .top-wrap .player-top .bottom .averages td {
             border: 1px solid #dddddd;
             background-color: #f2f2f2;
@@ -387,7 +448,7 @@ body {
             min-width: 100px; }
           .block-wrap.player-spotlight .top-wrap .player-top .bottom .averages-labels {
             border-bottom: none;
-            font-size: .8em; }
+            font-size: 1.4vw; }
             .block-wrap.player-spotlight .top-wrap .player-top .bottom .averages-labels td {
               text-align: center;
               padding: 0;
@@ -397,14 +458,27 @@ body {
                 color: #8a8d8f; }
           .block-wrap.player-spotlight .top-wrap .player-top .bottom .averages-season td {
             text-align: center;
+            font-size: 1.8vw;
             border-top: none; }
   .block-wrap.player-spotlight .bottom-wrap {
     height: 50%;
     width: 100%;
+    opacity: 0;
     background: url(https://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/gameday-jersey-bg-1400x600.jpg);
     background-size: cover;
     position: relative;
-    -moz-transition: all 0.8s ease;
-    -o-transition: all 0.8s ease;
-    -webkit-transition: all 0.8s ease;
-    transition: all 0.8s ease; }
+    -moz-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in; }
+    .block-wrap.player-spotlight .bottom-wrap.transition-1 {
+      opacity: 1; }
+
+#video-background {
+  /*  making the video fullscreen  */
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -100; }

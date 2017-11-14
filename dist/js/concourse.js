@@ -949,8 +949,6 @@ function playerAge(dob) {
 /*========================================
 =            PLAYER SPOTLIGHT            =
 ========================================*/
-
-
 function playerSpotlight(roster, bioObj, teamStats, playerSpotlightCounter) {
     /* 1 - WHITE LINE HORIZTONAL */
     setTimeout(function() {
@@ -976,8 +974,8 @@ function playerSpotlight(roster, bioObj, teamStats, playerSpotlightCounter) {
             var delay = 0;
             for (i = 0; i < roster.length; i++) {
                 var headshot = 'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/1040x760/' + roster[i].pid + '.png';
-                jQuery('.player-box:nth-child(' + (i + 1) + ')').append('<img src="' + headshot + '"/>');
-                jQuery('.player-box:nth-child(' + (i + 1) + ')').data('data-pid',roster[i].pid);
+                jQuery('.player-box:nth-child(' + (i + 1) + ')').append('<img class="headshot" src="' + headshot + '"/>');
+                jQuery('.player-box:nth-child(' + (i + 1) + ')').attr('data-pid', roster[i].pid);
                 jQuery('.player-box img').on("error", function() {
                     jQuery(this).attr('src', 'https://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/generic-player-light_600x438.png');
                 });
@@ -988,19 +986,37 @@ function playerSpotlight(roster, bioObj, teamStats, playerSpotlightCounter) {
         /* 5 - SELECT A PLAYER */
     setTimeout(function() {
         jQuery('.player-box').addClass('transition-2');
-        jQuery('.player-box:nth-child(' + playerSpotlightCounter + ')').addClass('selected');
-        jQuery('.player-box').not('.replacement.selected').delay(500).fadeTo(100,0);
-        if (selectedPlayerCouner < 16){
-                playerSpotlightCounter++;
-            }
-            else {
-                playerSpotlightCounter = 0;
-            }
-        }, 2000)
+        jQuery('.player-box:nth-child(' + (playerSpotlightCounter + 1) + ')').addClass('selected');
+        jQuery('.player-box').not('.replacement.selected').delay(500).fadeTo(100, 0);
+    }, 2000)
     setTimeout(function() {
         jQuery('.block-wrap.social').addClass('transition-3');
         jQuery('.player-box.replacement.selected').addClass('transition-3');
-        }, 3000)
+    }, 3000)
+    setTimeout(function() {
+        jQuery('.player-box.replacement.selected').clone().appendTo('.block-wrap.player-spotlight .top-wrap');
+        jQuery('.block-wrap.player-spotlight').show();
+        jQuery('.block-wrap.social').hide();
+        var stats = teamStats.tpsts.pl.filter(function (player){
+            return player.pid  == roster[playerSpotlightCounter].pid;
+        });
+        console.log(stats);
+        jQuery('.player-spotlight .top-wrap .player-top').append(' <img class="silo" src="http://io.cnn.net/nba/nba/.element/media/2.0/teamsites/celtics/media/silo-trimmed-' + roster[playerSpotlightCounter].pid + '.jpg"/><div class="top"><p class="player-name"><span>' + roster[playerSpotlightCounter].fn.toUpperCase() + '</span><br> ' + roster[playerSpotlightCounter].ln.toUpperCase() + '</p><p class="player-number">' + roster[playerSpotlightCounter].num + '</br><span>' + roster[playerSpotlightCounter].pos + '</span></p></div>   <div class="middle"><ul class="info clearfix"><li><p>AGE<span class="sm-hide">:&nbsp;</span></br><span class="info-value">' + playerAge(roster[playerSpotlightCounter].dob) + '</span></p></li><li><p>HT<span class="sm-hide">:&nbsp;</span></br><span class="info-value">' + roster[playerSpotlightCounter].ht + '</span></p></li><li><p>WT<span class="sm-hide">:&nbsp;</span></br><span class="info-value">' + roster[playerSpotlightCounter].wt + '</span></p></li></ul></div><div class="bottom full clearfix sm-hide"><table class="averages"><tr class="averages-labels"><td><p>GP</p></td><td><p>PPG</p></td><td><p>RPG</p></td><td><p>APG</p></td></tr><tr class="averages-season"><td class="gp"><p></p></td><td class="pts"><p></p></td><td class="reb"><p></p></td><td class="ast"><p></p></td></tr></table></div>');
+        jQuery(".player-spotlight .averages-season").html('<td><p>' + stats[0].avg.gp + '</p></td><td><p>' + stats[0].avg.pts + '</p></td><td><p>' + stats[0].avg.reb + '</p></td><td><p>' + stats[0].avg.ast + '</p></td>')
+        jQuery('.player-spotlight .player-name').fadeTo(200,1);
+        jQuery('.player-spotlight .bottom-wrap').addClass('transition-1')
+    }, 3600)
+    setTimeout(function() {
+        jQuery('.player-spotlight .player-top .player-name, .player-spotlight .headshot, .player-spotlight .info, .player-spotlight .silo, .player-spotlight .averages, .player-spotlight .player-number').addClass('transition-1');
+        if (playerSpotlightCounter < 16) {
+            playerSpotlightCounter++;
+        } else {
+            playerSpotlightCounter = 0;
+        }
+    }, 4100)
+    setTimeout(function() {
+        jQuery('.block-wrap.player-spotlight .player-box').remove();
+    }, 4600)
 }
 /*==================================
 =            HIGHLIGHTS            =
