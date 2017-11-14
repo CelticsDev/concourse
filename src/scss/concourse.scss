@@ -215,7 +215,7 @@ body {
         .headshot {
             height: 100%;
             position: absolute;
-            transform: translateX(-18%);
+            transform: translate3d(-18%, 0, 0);
             opacity: 0;
         }
 
@@ -380,14 +380,15 @@ body {
 
         .headshot {
             @include transition(all 0.7s ease);
+
             height: 100%;
             position: absolute;
-            transform: translateX(-18%);
+            transform: translate3d(-18%, 0, 0);
             opacity: 0;
             z-index: 10;
 
             &.transition-1 {
-                transform: translateX(-200%);
+                transform: translate3d(-200%, 0, 0);
             }
         }
     }
@@ -418,16 +419,17 @@ body {
             display: flex;
             flex-direction: column;
 
-           .silo {
+            .silo {
                 @include transition(all 0.5s ease);
+
                 position: absolute;
                 height: 90%;
                 z-index: -10;
                 top: 5%;
-                right: -35%;
+                transform: translate3d(280%, 0px, 0px);
 
                 &.transition-1 {
-                    right: 5%;
+                    transform: translate3d(130%, 0px, 0px);
                 }
             }
 
@@ -441,6 +443,19 @@ body {
                 justify-content: space-between;
                 height: 45%;
 
+                .player-name-wrap {
+                    @include transition(all 0.5s ease);
+
+                    width: 35%;
+                    transform: translate3d(160%, 0px, 0px);
+                    top: 5%;
+                    position: absolute;
+
+                    &.transition-1 {
+                        transform: translate3d(0%, 0px, 0px);
+                    }
+                }
+
                 p {
                     display: inline;
                     font-family: "futura-pt",Helvetica,Arial,sans-serif !important;
@@ -449,32 +464,32 @@ body {
 
                     &.player-name {
                         @include transition(all 0.5s ease);
-                        font-size: 4.6vw;
+
+                        font-size: 4vw;
                         line-height: 1.1em;
                         text-align: right;
                         position: absolute;
-                        width: 35%;
-                        right: 5%;
+                        width: 100%;
                         top: 5%;
                         display: none;
 
                         &.transition-1 {
-                            width: 0%;
-                            right: auto;
-                            right: 95%;
+                            width: 25%;
                         }
                     }
 
                     &.player-number {
                         @include transition(all 0.5s ease);
+
                         position: absolute;
-                        right: -10%;
                         top: 5%;
+                        width: 10%;
                         text-align: center;
                         font-size: 3vw;
+                        transform: translate3d(1000%, 0, 0);
 
                         &.transition-1 {
-                            right: 5%;
+                            transform: translate3d(825%, 0, 0);
                         }
                     }
 
@@ -490,6 +505,7 @@ body {
 
                 .info {
                     @include transition(all 0.5s ease);
+
                     margin: 0;
                     padding: 0px;
                     white-space: nowrap;
@@ -500,13 +516,13 @@ body {
                     justify-content: flex-end;
                     display: flex;
                     position: absolute;
-                    right: -100%;
-                    width:100%;
                     font-size: 1.8vw;
+                    transform: translate3d(170%, 0, 0);
+                    width: 60%;
 
                     &.transition-1 {
                         justify-content: flex-start;
-                        right: -5%;
+                        transform: translate3d(0, 0, 0);
                     }
 
                     br {
@@ -542,13 +558,15 @@ body {
 
                 .averages {
                     @include transition(all 0.5s ease);
-                    width: 50%;
+
+                    width: 45%;
                     position: absolute;
-                    right: -50%;
                     table-layout: fixed;
+                    border-collapse: collapse;
+                    transform: translate3d(215%, 0, 0);
 
                     &.transition-1 {
-                        right: 45%;
+                        transform: translate3d(0%, 0, 0);
                     }
 
                     p {
@@ -617,6 +635,28 @@ body {
 
         &.transition-1 {
             opacity: 1;
+        }
+
+        .dyk-title {
+            font-style: italic;
+            font-size: 2vw;
+        }
+
+        .dyk-box {
+            border-radius: 5px;
+            border: 1px solid #dddddd;
+            background-color: white;
+            width: 85%;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.6vw;
+            text-align: center;
+            font-family: 'Roboto', Helvetica, sans-serif;
         }
     }
 }

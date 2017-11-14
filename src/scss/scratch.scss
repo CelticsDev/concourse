@@ -455,7 +455,6 @@ body {
 
                 .info {
                     font-size: 1.5em;
-                    float: right;
                     margin: 0;
                     padding: 0px;
                     white-space: nowrap;
@@ -463,6 +462,7 @@ body {
                     font-weight: bold;
                     -webkit-font-smoothing: antialiased;
                     text-rendering: optimizeLegibility;
+                    transform: translate3d(0,,0,0);
 
                     br {
                         display: none;
