@@ -643,13 +643,24 @@ body {
         }
 
         .dyk-box {
+            @include transition(all 0.5s ease-in);
+
             border-radius: 5px;
             border: 1px solid #dddddd;
             background-color: white;
             width: 85%;
-            position: relative;
+            position: absolute;
             left: 50%;
-            transform: translate(-50%, 0%);
+            padding: 2% 4%;
+            transform: translate3d(65%, 0, 0);
+
+            &:first-of-type {
+                transform: translate3d(-50%, 0, 0);
+            }
+
+            &.transition-1 {
+                transform: translate3d(-50%, 0, 0);
+            }
         }
 
         p {
@@ -657,6 +668,73 @@ body {
             font-size: 1.6vw;
             text-align: center;
             font-family: 'Roboto', Helvetica, sans-serif;
+        }
+
+        .timeline-outer-wrap {
+            h3 {
+                border: none;
+                margin-top: 0;
+            }
+        }
+
+        .timeline-wrap {
+            display: flex;
+            -js-display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100px;
+
+            div {
+                display: flex;
+                -js-display: flex;
+                height: 50%;
+
+                .segment {
+                    flex-grow: 1;
+                    border: 1px solid #cbcbcb;
+                    display: flex;
+                    -js-display: flex;
+                    height: 50px;
+                    align-items: center;
+                    justify-content: center;
+
+                    &-inner {
+                        flex-grow: 1;
+                        position: relative;
+                        display: flex;
+                        -js-display: flex;
+                        height: 100%;
+                        align-items: center;
+                        opacity: 1;
+                        flex-basis: auto;
+                        justify-content: center;
+
+                        &:hover {
+                            opacity: .8;
+                        }
+
+                        p {
+                            position: absolute;
+                            width: 100%;
+                            text-align: center;
+                            color: white;
+                            font-family: 'futura-pt';
+                            font-weight: bold;
+                        }
+                    }
+
+                    p {
+                        text-align: center;
+                    }
+                }
+            }
+
+            .season-year {
+                .segment {
+                    border: 1px solid transparent;
+                    flex-basis: auto;
+                }
+            }
         }
     }
 }

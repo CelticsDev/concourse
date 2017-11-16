@@ -487,18 +487,72 @@ body {
       font-style: italic;
       font-size: 2vw; }
     .block-wrap.player-spotlight .bottom-wrap .dyk-box {
+      -moz-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      -webkit-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in;
       border-radius: 5px;
       border: 1px solid #dddddd;
       background-color: white;
       width: 85%;
-      position: relative;
+      position: absolute;
       left: 50%;
-      transform: translate(-50%, 0%); }
+      padding: 2% 4%;
+      transform: translate3d(65%, 0, 0); }
+      .block-wrap.player-spotlight .bottom-wrap .dyk-box:first-of-type {
+        transform: translate3d(-50%, 0, 0); }
+      .block-wrap.player-spotlight .bottom-wrap .dyk-box.transition-1 {
+        transform: translate3d(-50%, 0, 0); }
     .block-wrap.player-spotlight .bottom-wrap p {
       margin: 0;
       font-size: 1.6vw;
       text-align: center;
       font-family: 'Roboto', Helvetica, sans-serif; }
+    .block-wrap.player-spotlight .bottom-wrap .timeline-outer-wrap h3 {
+      border: none;
+      margin-top: 0; }
+    .block-wrap.player-spotlight .bottom-wrap .timeline-wrap {
+      display: flex;
+      -js-display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100px; }
+      .block-wrap.player-spotlight .bottom-wrap .timeline-wrap div {
+        display: flex;
+        -js-display: flex;
+        height: 50%; }
+        .block-wrap.player-spotlight .bottom-wrap .timeline-wrap div .segment {
+          flex-grow: 1;
+          border: 1px solid #cbcbcb;
+          display: flex;
+          -js-display: flex;
+          height: 50px;
+          align-items: center;
+          justify-content: center; }
+          .block-wrap.player-spotlight .bottom-wrap .timeline-wrap div .segment-inner {
+            flex-grow: 1;
+            position: relative;
+            display: flex;
+            -js-display: flex;
+            height: 100%;
+            align-items: center;
+            opacity: 1;
+            flex-basis: auto;
+            justify-content: center; }
+            .block-wrap.player-spotlight .bottom-wrap .timeline-wrap div .segment-inner:hover {
+              opacity: .8; }
+            .block-wrap.player-spotlight .bottom-wrap .timeline-wrap div .segment-inner p {
+              position: absolute;
+              width: 100%;
+              text-align: center;
+              color: white;
+              font-family: 'futura-pt';
+              font-weight: bold; }
+          .block-wrap.player-spotlight .bottom-wrap .timeline-wrap div .segment p {
+            text-align: center; }
+      .block-wrap.player-spotlight .bottom-wrap .timeline-wrap .season-year .segment {
+        border: 1px solid transparent;
+        flex-basis: auto; }
 
 #video-background {
   /*  making the video fullscreen  */
