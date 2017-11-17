@@ -1,42 +1,48 @@
 jQuery(document).ready(function() {
-    /*========================================
-    =            LOAD STATIC DATA            =
-    ========================================*/
-    var rosterObj = '';
-    var playerSpotlightCounter = 10;
+    rosterObj = '';
+    var playerSpotlightCounter = 15;
     var date = new Date();
-    /* beautify preserve:start */
-    var roster =
-        @import "../js/data/rosterObj.js";
-    var teamStats =
-        @import "../js/data/teamStats.js";
-    var bioObj =
-        @import "../js/data/bioObj.js";
-    /* beautify preserve:end */
+    loadRosterInfo();
+    console.log(rosterObj);
+    //setINTERVAL
+    setInterval(function(){
+        playerSpotlight(rosterObj, playerSpotlightCounter);
+    }, 10000);
+});
+/*======================================
+=            MISC FUNCTIONS            =
+======================================*/
+function playerAge(dob) {
+    var today = new Date();
+    var birthDate = new Date(dob);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    return age;
+}
 
+function generateTimeline(selectedPlayer) {
     // APPEND: TIMELINE
-    var seasonsPlayed = rosterObj[pid].stats.seasonAvg.length;
+    var seasonsPlayed = rosterObj[selectedPlayer].stats.seasonAvg.length;
     var timelineHTML = '';
     var seasonYearHTML = '';
     for (i = 0; i < seasonsPlayed; i++) {
-        var teamAbbreviation = rosterObj[pid].stats.seasonAvg[i].ta;
-        var traded = rosterObj[pid].stats.seasonAvg[i].spl.length;
+        var teamAbbreviation = rosterObj[selectedPlayer].stats.seasonAvg[i].ta;
+        var traded = rosterObj[selectedPlayer].stats.seasonAvg[i].spl.length;
         var segmentInner = "";
         var title = "";
-        var seasonYearText = rosterObj[pid].stats.seasonAvg[i].val;
-        if (rosterObj[pid].stats.hasStats == false) {
+        var seasonYearText = rosterObj[selectedPlayer].stats.seasonAvg[i].val;
+        if (rosterObj[selectedPlayer].stats.hasStats == false) {
             seasonYearText = "";
         }
-        if (i === 0 || teamAbbreviation !== rosterObj[pid].stats.seasonAvg[i - 1].ta) { // If this is a new team, start the team wrap.
+        if (i === 0 || teamAbbreviation !== rosterObj[selectedPlayer].stats.seasonAvg[i - 1].ta) { // If this is a new team, start the team wrap.
             title = teamAbbreviation;
         }
         if (traded) {
             for (var x = 0; x < traded; x++) {
-                var gpTot = rosterObj[pid].stats.seasonAvg[i].gp;
-                var gp = rosterObj[pid].stats.seasonAvg[i].spl[x].gp;
+                var gpTot = rosterObj[selectedPlayer].stats.seasonAvg[i].gp;
+                var gp = rosterObj[selectedPlayer].stats.seasonAvg[i].spl[x].gp;
                 var gpPercentage = Math.round((gp / gpTot) * 100);
-                teamAbbreviation = rosterObj[pid].stats.seasonAvg[i].spl[x].ta;
-                if (i === 0 || teamAbbreviation !== rosterObj[pid].stats.seasonAvg[i - 1].ta && teamAbbreviation !== rosterObj[pid].stats.seasonAvg[i + 1].ta) { // If this is a new team, start the team wrap.
+                teamAbbreviation = rosterObj[selectedPlayer].stats.seasonAvg[i].spl[x].ta;
+                if (i === 0 || teamAbbreviation !== rosterObj[selectedPlayer].stats.seasonAvg[i - 1].ta && teamAbbreviation !== rosterObj[selectedPlayer].stats.seasonAvg[i + 1].ta) { // If this is a new team, start the team wrap.
                     title = teamAbbreviation;
                 } else {
                     title = "";
@@ -49,26 +55,12 @@ jQuery(document).ready(function() {
         timelineHTML += '<div class="segment">' + segmentInner + '</div>';
         seasonYearHTML += '<div class="segment"><p>' + seasonYearText + '</p></div>';
     }
-    jQuery("." + pid + " .timeline-wrap").html('<div class="timeline">' + timelineHTML + '</div><div class="season-year">' + seasonYearHTML + '</div>')
-
-    /*=================================================
-    =            SOCIAL => PLAYERSPOTLIGHT            =
-    =================================================*/
-    playerSpotlight(roster, bioObj, teamStats, playerSpotlightCounter);
-});
-/*======================================
-=            MISC FUNCTIONS            =
-======================================*/
-function playerAge(dob) {
-    var today = new Date();
-    var birthDate = new Date(dob);
-    var age = today.getFullYear() - birthDate.getFullYear();
-    return age;
+    jQuery(".timeline-wrap").html('<div class="timeline">' + timelineHTML + '</div><div class="season-year">' + seasonYearHTML + '</div>')
 }
 /*========================================
 =            PLAYER SPOTLIGHT            =
 ========================================*/
-function playerSpotlight(roster, bioObj, teamStats, playerSpotlightCounter) {
+function playerSpotlight(rosterObj, playerSpotlightCounter) {
     /* 1 - WHITE LINE HORIZTONAL */
     setTimeout(function() {
         jQuery('.white-line.horizontal').addClass('transition');
@@ -90,21 +82,26 @@ function playerSpotlight(roster, bioObj, teamStats, playerSpotlightCounter) {
     setTimeout(function() {
         jQuery('.player-box-wrap, .player-box').addClass("transition");
         var delay = 0;
-        for (i = 0; i < roster.length; i++) {
-            var headshot = 'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/1040x760/' + roster[i].pid + '.png';
-            jQuery('.player-box:nth-child(' + (i + 1) + ')').append('<img class="headshot" src="' + headshot + '"/>');
-            jQuery('.player-box:nth-child(' + (i + 1) + ')').attr('data-pid', roster[i].pid);
+        var forinCounter = 0;
+        for (var player in rosterObj) {
+            console.log(player);
+            var headshot = 'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/1040x760/' + rosterObj[player].pid + '.png';
+            jQuery('.player-box:nth-child(' + (forinCounter + 1) + ')').append('<img class="headshot" src="' + headshot + '"/>');
+            jQuery('.player-box:nth-child(' + (forinCounter + 1) + ')').attr('data-pid', rosterObj[player].pid);
             jQuery('.player-box img').on("error", function() {
                 jQuery(this).attr('src', 'https://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/generic-player-light_600x438.png');
             });
-            jQuery('.player-box:nth-child(' + (i + 1) + ') img').delay(delay).fadeTo(300, 1);
+            jQuery('.player-box:nth-child(' + (forinCounter + 1) + ') img').delay(delay).fadeTo(300, 1);
             delay += 30;
+            forinCounter++;
         }
     }, 1300);
     /* 5 - PLAYER SELECT */
+    var selectedPlayer = '';
     setTimeout(function() {
         jQuery('.player-box').addClass('transition-2');
         jQuery('.player-box:nth-child(' + (playerSpotlightCounter + 1) + ')').addClass('selected');
+        selectedPlayer = jQuery('.player-box:nth-child(' + (playerSpotlightCounter + 1) + ')').attr('data-pid');
         jQuery('.player-box').not('.replacement.selected').delay(500).fadeTo(100, 0);
     }, 2000);
     /* 6 - PLAYER BOX EXPAND */
@@ -114,26 +111,27 @@ function playerSpotlight(roster, bioObj, teamStats, playerSpotlightCounter) {
     }, 3000);
     /* 7 - SPOTLIGHT HTML */
     setTimeout(function() {
+        generateTimeline(selectedPlayer)
         jQuery('.player-box.replacement.selected').clone().appendTo('.block-wrap.player-spotlight .top-wrap');
         jQuery('.block-wrap.player-spotlight').show();
         jQuery('.block-wrap.social').hide();
-        var stats = teamStats.tpsts.pl.filter(function(player) {
-            return player.pid == roster[playerSpotlightCounter].pid;
-        });
-        jQuery('.player-spotlight .top-wrap .player-top').append(' <img class="silo" src="http://io.cnn.net/nba/nba/.element/media/2.0/teamsites/celtics/media/silo-466x591-' + roster[playerSpotlightCounter].pid + '.png"/><div class="top"><div class="player-name-wrap"><p class="player-name"><span>' + roster[playerSpotlightCounter].fn.toUpperCase() + '</span><br> ' + roster[playerSpotlightCounter].ln.toUpperCase() + '</p></div><p class="player-number">' + roster[playerSpotlightCounter].num + '</br><span>' + roster[playerSpotlightCounter].pos + '</span></p></div>   <div class="middle"><ul class="info clearfix"><li><p>AGE<span class="sm-hide">:&nbsp;</span></br><span class="info-value">' + playerAge(roster[playerSpotlightCounter].dob) + '</span></p></li><li><p>HT<span class="sm-hide">:&nbsp;</span></br><span class="info-value">' + roster[playerSpotlightCounter].ht + '</span></p></li><li><p>WT<span class="sm-hide">:&nbsp;</span></br><span class="info-value">' + roster[playerSpotlightCounter].wt + '</span></p></li></ul></div><div class="bottom full clearfix sm-hide"><table class="averages"><tr class="averages-labels"><td><p>GP</p></td><td><p>PPG</p></td><td><p>RPG</p></td><td><p>APG</p></td></tr><tr class="averages-season"><td class="gp"><p></p></td><td class="pts"><p></p></td><td class="reb"><p></p></td><td class="ast"><p></p></td></tr></table></div>');
-        jQuery(".player-spotlight .averages-season").html('<td><p>' + stats[0].avg.gp + '</p></td><td><p>' + stats[0].avg.pts + '</p></td><td><p>' + stats[0].avg.reb + '</p></td><td><p>' + stats[0].avg.ast + '</p></td>')
+        var stats = rosterObj[selectedPlayer].stats;
+        jQuery('.player-spotlight .top-wrap .player-top').append(' <img class="silo" src="http://io.cnn.net/nba/nba/.element/media/2.0/teamsites/celtics/media/silo-466x591-' + rosterObj[selectedPlayer].pid + '.png"/><div class="top"><div class="player-name-wrap"><p class="player-name"><span>' + rosterObj[selectedPlayer].fn.toUpperCase() + '</span><br> ' + rosterObj[selectedPlayer].ln.toUpperCase() + '</p></div><p class="player-number">' + rosterObj[selectedPlayer].num + '</br><span>' + rosterObj[selectedPlayer].pos + '</span></p></div>   <div class="middle"><ul class="info clearfix"><li><p>AGE<span class="sm-hide">:&nbsp;</span></br><span class="info-value">' + playerAge(rosterObj[selectedPlayer].dob) + '</span></p></li><li><p>HT<span class="sm-hide">:&nbsp;</span></br><span class="info-value">' + rosterObj[selectedPlayer].ht + '</span></p></li><li><p>WT<span class="sm-hide">:&nbsp;</span></br><span class="info-value">' + rosterObj[selectedPlayer].wt + '</span></p></li></ul></div><div class="bottom full clearfix sm-hide"><table class="averages"><tr class="averages-labels"><td><p>GP</p></td><td><p>PPG</p></td><td><p>RPG</p></td><td><p>APG</p></td></tr><tr class="averages-season"><td class="gp"><p></p></td><td class="pts"><p></p></td><td class="reb"><p></p></td><td class="ast"><p></p></td></tr></table></div>');
+        jQuery(".player-spotlight .averages-season").html('<td><p>' + stats.seasonAvg[0].gp + '</p></td><td><p>' + stats.seasonAvg[0].pts + '</p></td><td><p>' + stats.seasonAvg[0].reb + '</p></td><td><p>' + stats.seasonAvg[0].ast + '</p></td>')
         jQuery('.player-spotlight .player-name').fadeTo(200, 1);
-        var playerFacts = bioObj[roster[playerSpotlightCounter].pid].personal;
+        var playerFacts = rosterObj[selectedPlayer].bio.personal;
         for (var i = 0; i < 3; i ++){
             var factIndex = Math.floor(Math.random() * playerFacts.length);
             jQuery('.player-spotlight .bottom-wrap').append('<div class="dyk-box"><p>' + playerFacts[factIndex] + '</p></div>');
         };
         jQuery('.player-spotlight .bottom-wrap').addClass('transition-1');
         setTimeout(function(){
-            jQuery('.player-spotlight .bottom-wrap .dyk-box:nth-of-type(2)').addClass('transition-1');
+            jQuery('.player-spotlight .bottom-wrap .dyk-box:nth-of-type(2)').addClass('transition-2');
+            jQuery('.player-spotlight .bottom-wrap .dyk-box:nth-of-type(3)').addClass('transition-1');
         },8000)
         setTimeout(function(){
-            jQuery('.player-spotlight .bottom-wrap .dyk-box:nth-of-type(3)').addClass('transition-1');
+            jQuery('.player-spotlight .bottom-wrap .dyk-box:nth-of-type(3)').addClass('transition-2');
+            jQuery('.player-spotlight .bottom-wrap .dyk-box:nth-of-type(4)').addClass('transition-1');
         },16000)
     }, 3600);
     /* 8 - SPOTLIGHT SLIDE IN */
@@ -148,7 +146,49 @@ function playerSpotlight(roster, bioObj, teamStats, playerSpotlightCounter) {
             playerSpotlightCounter = 0;
         }
     }, 4100);
+    /* 9 - SPOTLIGHT SLIDE OUT */
+    setTimeout(function() {
+        jQuery('.player-spotlight .bottom-wrap, .player-spotlight .top-wrap').addClass('transition-2');
+    }, 6000);
 }
+
+/*=====================================================
+=            LOAD ROSTER INFO => rosterObj            =
+=====================================================*/
+
+
+function loadRosterInfo() {
+    /********** HARDCODED FOR LOCAL DEV **********/
+    /* beautify preserve:start */
+    rosterObj =
+        @import "../js/data/rosterObj.js";
+    /* beautify preserve:end */
+    /********** ---------------------- **********/
+
+    /*********** ONCE LIVE, GET... Roster, all Playercards, bioObject. ***********/
+/*    var roster = '';
+    var playerCards = '';
+    var bioObj = '';
+    jQuery.ajax({ // CHECK IF PLAYERCARDS ARE AVAILABLE FOR CURRENT YEAR. IF NOT, RETURN PREVIOUS YEAR.
+        url: "http://data.nba.com/data/v2015/json/mobile_teams/nba/" + playerCardYear + "/players/playercard_" + pid + "_02.json",
+        async: false,
+        success: function(data) {
+            playerCard = data.pl;
+            rosterObj[pid].hasStats = true;
+            rosterObj[pid].info.draftYear = playerCard.dy;
+            rosterObj[pid].stats.careerAvg = playerCard.ca;
+            if (rosterObj[pid].stats.careerAvg.hasOwnProperty("sa")) {
+                rosterObj[pid].stats.seasonAvg = playerCard.ca.sa;
+            } else {
+                statsNotAvailable(pid);
+            }
+        },
+        error: function() {
+            statsNotAvailable(pid);
+        }
+    })*/
+    return rosterObj;
+};
 
 function statsNotAvailable(pid) {
     rosterObj[pid].stats.careerAvg = {};
@@ -174,35 +214,8 @@ function statsNotAvailable(pid) {
             rosterObj[pid].stats.careerAvg[caIndex[i]] = true;
         }
     }
-}
-
-/*=====================================================
-=            LOAD PLAYER INFO => rosterObj            =
-=====================================================*/
-
-
-function loadPlayerInfo(pid) {
-    var playerCard = '';
-    var roster = '';
-    jQuery.ajax({ // CHECK IF PLAYERCARDS ARE AVAILABLE FOR CURRENT YEAR. IF NOT, RETURN PREVIOUS YEAR.
-        url: "http://data.nba.com/data/v2015/json/mobile_teams/nba/" + playerCardYear + "/players/playercard_" + pid + "_02.json",
-        async: false,
-        success: function(data) {
-            playerCard = data.pl;
-            rosterObj[pid].stats.hasStats = true;
-            rosterObj[pid].info.draftYear = playerCard.dy;
-            rosterObj[pid].stats.careerAvg = playerCard.ca;
-            if (rosterObj[pid].stats.careerAvg.hasOwnProperty("sa")) {
-                rosterObj[pid].stats.seasonAvg = playerCard.ca.sa;
-            } else {
-                statsNotAvailable(pid);
-            }
-        },
-        error: function() {
-            statsNotAvailable(pid);
-        }
-    })
 };
+
 /*==================================
 =            HIGHLIGHTS            =
 ==================================*/

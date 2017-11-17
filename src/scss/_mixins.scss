@@ -1,4 +1,5 @@
 @import 'mixins/media-queries';
+@import "mixins/team-colors";
 
 @mixin clearfix {
   &:after {
@@ -36,5 +37,5 @@
 /***** USAGE *****
 	.example {
 	  @include aspect-ratio(16, 9);
-	} 
+	}
 */
