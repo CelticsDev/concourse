@@ -4218,7 +4218,7 @@ function loadRosterInfo() {
     /* beautify preserve:end */
     /********** ---------------------- **********/
 
-    /*********** ONCE LIVE, GET... Roster, all Playercards, bioObject. ***********/
+    /*********** ONCE LIVE, GET... ROSTER, PLAYERCARDS, BIOOBJ => BUILD ROSTEROBJ the***********/
 /*    var roster = '';
     var playerCards = '';
     var bioObj = '';
@@ -4240,7 +4240,6 @@ function loadRosterInfo() {
             statsNotAvailable(pid);
         }
     })*/
-    return rosterObj;
 };
 
 function statsNotAvailable(pid) {

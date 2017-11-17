@@ -74,6 +74,7 @@ function playerSpotlight(rosterObj, playerSpotlightCounter) {
         jQuery('.social-top .white-line.vertical:nth-child(even)').addClass('transition');
         jQuery('.social-bottom .white-line.vertical:nth-child(odd)').addClass('transition');
     }, 1000);
+    /* 3 - GENERATE AND REVEAL PLAYER BOXES */
     setTimeout(function() {
         jQuery('.social-top, .social-bottom').fadeOut(100);
         jQuery('.player-box-wrap').fadeTo(100, 1);
@@ -165,7 +166,7 @@ function loadRosterInfo() {
     /* beautify preserve:end */
     /********** ---------------------- **********/
 
-    /*********** ONCE LIVE, GET... Roster, all Playercards, bioObject. ***********/
+    /*********** ONCE LIVE, GET... ROSTER, PLAYERCARDS, BIOOBJ => BUILD ROSTEROBJ the***********/
 /*    var roster = '';
     var playerCards = '';
     var bioObj = '';
@@ -187,7 +188,6 @@ function loadRosterInfo() {
             statsNotAvailable(pid);
         }
     })*/
-    return rosterObj;
 };
 
 function statsNotAvailable(pid) {
