@@ -327,66 +327,20 @@
 	  @include aspect-ratio(16, 9);
 	}
 */
-* {
-  box-sizing: border-box; }
-
-/*=================================
-=            CONCOURSE            =
-=================================*/
-.screen-outline {
-  position: absolute;
-  width: 1920px;
-  height: 2160px;
-  border: 1px solid gray; }
-
-body {
-  margin: 0; }
-
-.screen-wrap {
-  position: relative;
-  width: 100%; }
-  .screen-wrap:before {
-    display: block;
-    content: " ";
-    width: 100%;
-    padding-top: 56.25%; }
-  .screen-wrap > .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; }
-  .screen-wrap .screen {
-    display: flex; }
-
-.left-wrap {
-  width: 50%;
-  height: 100%;
-  z-index: 50;
-  position: relative;
-  background: url(http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/celtics-mobile-tile-2.png); }
-
-.right-wrap {
-  width: 50%;
-  height: 100%;
-  position: relative; }
-
-.block-wrap {
-  position: absolute;
-  width: 100%;
-  height: 100%; }
-
 /*==============================
 =            SOCIAL            =
 ==============================*/
 .social {
-  padding: 2%;
+  padding: 4%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  display: none; }
   .social.transition-3 {
     padding: 0; }
+  .social.transition-1 {
+    display: none; }
   .social .block-inner {
     position: relative;
     display: flex;
@@ -403,7 +357,7 @@ body {
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
     position: relative; }
-    .social .top-wrap.transition {
+    .social .top-wrap.transition-1 {
       padding: 0;
       box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25); }
   .social .bottom-wrap {
@@ -411,16 +365,92 @@ body {
     -o-transition: all 1s ease;
     -webkit-transition: all 1s ease;
     transition: all 1s ease; }
-    .social .bottom-wrap.transition {
+    .social .bottom-wrap.transition-1 {
       padding: 0; }
+  .social .social-top p {
+    color: white;
+    font-size: 3.3vw;
+    text-align: left;
+    white-space: nowrap;
+    margin: 0; }
+    .social .social-top p.underline {
+      border-bottom: 1px solid #dddddd;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      top: 3%;
+      font-size: 2.7vw; }
+      .social .social-top p.underline span {
+        color: #62d785; }
+  .social .social-top .text-wrap {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    top: 27%; }
+  .social .social-top .text-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding-right: 3%; }
+    .social .social-top .text-right p {
+      align-self: flex-end;
+      color: #00da7c; }
+  .social .social-top .text-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 3; }
+  .social .social-bottom p {
+    color: white;
+    font-size: 3.3vw;
+    text-align: left;
+    white-space: nowrap;
+    margin: 0; }
+    .social .social-bottom p span {
+      color: #62d785; }
+    .social .social-bottom p.underline {
+      font-size: 2.7vw;
+      border-bottom: 1px solid #dddddd;
+      display: inline-block; }
+    .social .social-bottom p.url {
+      font-size: 1.5vw; }
+  .social .social-bottom .text-wrap {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+    padding: 4%; }
+  .social .social-bottom .text-top {
+    display: flex;
+    flex-direction: column; }
+    .social .social-bottom .text-top .underline {
+      width: 60%; }
+  .social .social-bottom .text-bottom {
+    display: flex;
+    flex-direction: column; }
+    .social .social-bottom .text-bottom .underline {
+      width: 80%; }
   .social .social-top, .social .social-bottom {
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    transition: all 0.1s ease;
     border: 1px solid #e7e7e7;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
     position: relative; }
-    .social .social-top.transition, .social .social-bottom.transition {
-      padding: 0; }
+    .social .social-top.transition-1, .social .social-bottom.transition-1 {
+      opacity: 0; }
     .social .social-top .white-line, .social .social-bottom .white-line {
       position: absolute;
       background-color: white; }
@@ -431,7 +461,7 @@ body {
         -o-transition: all 0.2s linear;
         -webkit-transition: all 0.2s linear;
         transition: all 0.2s linear; }
-        .social .social-top .white-line.vertical.transition, .social .social-bottom .white-line.vertical.transition {
+        .social .social-top .white-line.vertical.transition-1, .social .social-bottom .white-line.vertical.transition-1 {
           height: 100%;
           width: 2px; }
       .social .social-top .white-line.horizontal, .social .social-bottom .white-line.horizontal {
@@ -441,7 +471,7 @@ body {
         transition: all 0.3s ease-out;
         height: 2px;
         width: 0%; }
-        .social .social-top .white-line.horizontal.transition, .social .social-bottom .white-line.horizontal.transition {
+        .social .social-top .white-line.horizontal.transition-1, .social .social-bottom .white-line.horizontal.transition-1 {
           height: 2px;
           width: 100%; }
       .social .social-top .white-line:nth-child(1), .social .social-bottom .white-line:nth-child(1) {
@@ -471,12 +501,18 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     position: absolute;
-    align-content: flex-start; }
+    align-content: flex-start;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
     .social .player-box-wrap-top {
       align-content: flex-start; }
     .social .player-box-wrap-bottom {
       align-content: flex-end; }
-    .social .player-box-wrap.transition {
+    .social .player-box-wrap.transition-1 {
+      opacity: 1; }
+    .social .player-box-wrap.transition-2 {
       justify-content: center;
       align-content: center; }
     .social .player-box-wrap.transition-3 {
@@ -557,7 +593,7 @@ body {
       box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
       border-color: #fff;
       opacity: 1; }
-    .social .player-box.transition {
+    .social .player-box.transition-1 {
       width: 23%;
       height: 24%;
       margin: 1%;
@@ -565,7 +601,7 @@ body {
       -o-transition: all 0.3s ease-out;
       -webkit-transition: all 0.3s ease-out;
       transition: all 0.3s ease-out; }
-      .social .player-box.transition:nth-child(5) {
+      .social .player-box.transition-1:nth-child(5) {
         margin-bottom: 0; }
     .social .player-box.transition-2 {
       opacity: .7; }
@@ -579,7 +615,9 @@ body {
       margin: 0;
       border: none;
       background-color: #fff; }
-  .social .social-bottom.transition {
+    .social .player-box.transition-4 {
+      opacity: 0 !important; }
+  .social .social-bottom.transition-1 {
     padding: 0;
     background: url(https://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/gameday-jersey-bg-1400x600.jpg);
     background-size: cover; }
@@ -589,10 +627,13 @@ body {
 ========================================*/
 .block-wrap.player-spotlight {
   display: none;
+  z-index: 50;
   -moz-transition: all 0.7s ease-out;
   -o-transition: all 0.7s ease-out;
   -webkit-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out; }
+  .block-wrap.player-spotlight.transition-1 {
+    display: block; }
   .block-wrap.player-spotlight .player-box {
     position: absolute;
     top: 0%;
@@ -884,6 +925,197 @@ body {
           flex-basis: auto; }
           .block-wrap.player-spotlight .bottom-wrap .timeline-wrap .season-year .segment p {
             font-size: 1.2vw; }
+
+/*===========================
+=            APP            =
+===========================*/
+.app {
+  display: none;
+  padding: 4%; }
+  .app .block-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #e7e7e7;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; }
+    .app .block-inner > p {
+      text-align: center;
+      font-size: 4vw;
+      color: white;
+      font-weight: bold;
+      margin: 0;
+      line-height: 90%; }
+      .app .block-inner > p:nth-of-type(1) {
+        margin-top: 5%;
+        margin-bottom: 1%; }
+      .app .block-inner > p:nth-of-type(2) {
+        font-size: 6.5vw;
+        color: #00da7c;
+        margin-bottom: 3%; }
+  .app .app-icon-wrap {
+    display: flex;
+    height: 8%;
+    justify-content: space-between;
+    padding: 0% 8%; }
+    .app .app-icon-wrap img {
+      height: 100%;
+      align-self: center; }
+  .app .phone-wrap {
+    width: 35%;
+    position: relative; }
+    .app .phone-wrap .phone {
+      height: 90%;
+      align-self: center;
+      opacity: 0;
+      position: absolute;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+      -webkit-transform: translateZ(0); }
+      .app .phone-wrap .phone.active {
+        opacity: 1; }
+  .app .bottom-wrap {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    align-self: flex-end;
+    margin-top: auto;
+    width: 100%; }
+    .app .bottom-wrap .feature-list {
+      width: 65%;
+      color: white;
+      font-style: italic;
+      display: flex;
+      flex-direction: column; }
+      .app .bottom-wrap .feature-list p {
+        margin: 3% 0px;
+        font-size: 2vw;
+        padding-left: 15%;
+        opacity: .8;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease; }
+        .app .bottom-wrap .feature-list p.active {
+          font-weight: bold;
+          opacity: 1; }
+
+/*===============================
+=            LEADERS            =
+===============================*/
+.leaders {
+  padding: 4%;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease; }
+  .leaders.transition-1 {
+    padding: 0%; }
+  .leaders .block-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #e7e7e7;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease; }
+    .leaders .block-inner.transition-1 {
+      background-color: rgba(255, 255, 255, 0.85); }
+    .leaders .block-inner .leader-section {
+      flex-grow: 1;
+      border: 1px solid #a2a2a2;
+      position: relative;
+      display: flex;
+      flex-direction: column; }
+      .leaders .block-inner .leader-section.transition-1 {
+        top: 0% !important; }
+      .leaders .block-inner .leader-section:nth-child(1) {
+        background-color: white;
+        top: -25%;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease; }
+      .leaders .block-inner .leader-section:nth-child(2) {
+        top: -50%;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease; }
+      .leaders .block-inner .leader-section:nth-child(3) {
+        top: -75%;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease; }
+      .leaders .block-inner .leader-section:nth-child(4) {
+        top: -100%;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease; }
+      .leaders .block-inner .leader-section .leader-subsection {
+        flex-grow: 1;
+        border: 1px solid black; }
+
+* {
+  box-sizing: border-box;
+  font-family: 'futura-pt', Helvetica, Arial, sans-serif; }
+
+/*=================================
+=            CONCOURSE            =
+=================================*/
+.screen-outline {
+  position: absolute;
+  width: 1920px;
+  height: 2160px;
+  border: 1px solid gray; }
+
+body {
+  margin: 0; }
+
+.screen-wrap {
+  position: relative;
+  width: 100%; }
+  .screen-wrap:before {
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: 56.25%; }
+  .screen-wrap > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .screen-wrap .screen {
+    display: flex; }
+
+.left-wrap {
+  width: 50%;
+  height: 100%;
+  z-index: 100;
+  position: relative;
+  background: url(http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/celtics-mobile-tile-2.png); }
+
+.right-wrap {
+  width: 50%;
+  height: 100%;
+  position: relative; }
+
+.block-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
 
 #video-background {
   /*  making the video fullscreen  */

@@ -1,0 +1,66 @@
+/*===============================
+=            LEADERS            =
+===============================*/
+
+.leaders {
+	padding: 4%;
+	@include transition(all 1s ease);
+
+	&.transition-1 {
+		padding: 0%;
+	}
+
+    .block-inner {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        border: 1px solid #e7e7e7;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        @include transition(all 1s ease);
+
+        &.transition-1 {
+        	background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        .leader-section {
+        	flex-grow: 1;
+        	border: 1px solid #a2a2a2;
+        	position: relative;
+        	display: flex;
+        	flex-direction: column;
+
+        	&.transition-1 {
+        		top: 0% !important;
+        	}
+
+        	&:nth-child(1) {
+        		background-color: white;
+        		top: -25%;
+        		@include transition(all 1s ease);
+        	}
+
+        	&:nth-child(2) {
+        		top: -50%;
+        		@include transition(all 1s ease);
+        	}
+
+        	&:nth-child(3) {
+        		top: -75%;
+        		@include transition(all 1s ease);
+        	}
+
+        	&:nth-child(4) {
+        		top: -100%;
+        		@include transition(all 1s ease);
+        	}
+
+        	.leader-subsection {
+        		flex-grow: 1;
+        		border: 1px solid black;
+        	}
+        }
+    }
+}

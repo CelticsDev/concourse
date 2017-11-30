@@ -1,0 +1,60 @@
+<img class="silo appended" src="http://io.cnn.net/nba/nba/.element/media/2.0/teamsites/celtics/media/silo-466x591-' + rosterObj[selectedPlayer].pid + '.png" />
+<div class="top appended">
+    <div class="player-name-wrap">
+        <p class="player-name"><span>' + rosterObj[selectedPlayer].fn.toUpperCase() + '</span>
+            <br> ' + rosterObj[selectedPlayer].ln.toUpperCase() + '</p>
+    </div>
+    <p class="player-number">' + rosterObj[selectedPlayer].num + '</br><span>' + rosterObj[selectedPlayer].pos + '</span>
+    </p>
+</div>
+<div class="middle appended">
+    <ul class="info clearfix">
+        <li>
+            <p>AGE<span class="sm-hide">:&nbsp;</span>
+                </br><span class="info-value">' + playerAge(rosterObj[selectedPlayer].dob) + '</span>
+            </p>
+        </li>
+        <li>
+            <p>HT<span class="sm-hide">:&nbsp;</span>
+                </br><span class="info-value">' + rosterObj[selectedPlayer].ht + '</span>
+            </p>
+        </li>
+        <li>
+            <p>WT<span class="sm-hide">:&nbsp;</span>
+                </br><span class="info-value">' + rosterObj[selectedPlayer].wt + '</span>
+            </p>
+        </li>
+    </ul>
+</div>
+<div class="bottom full clearfix sm-hide appended">
+    <table class="averages">
+        <tr class="averages-labels">
+            <td>
+                <p>GP</p>
+            </td>
+            <td>
+                <p>PPG</p>
+            </td>
+            <td>
+                <p>RPG</p>
+            </td>
+            <td>
+                <p>APG</p>
+            </td>
+        </tr>
+        <tr class="averages-season">
+            <td class="gp">
+                <p></p>
+            </td>
+            <td class="pts">
+                <p></p>
+            </td>
+            <td class="reb">
+                <p></p>
+            </td>
+            <td class="ast">
+                <p></p>
+            </td>
+        </tr>
+    </table>
+</div>

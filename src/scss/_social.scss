@@ -1,0 +1,431 @@
+/*==============================
+=            SOCIAL            =
+==============================*/
+
+.social {
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: none;
+
+    &.transition-3 {
+        padding: 0;
+    }
+
+    &.transition-1 {
+        display: none;
+    }
+
+    .block-inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+
+    .top-wrap, .bottom-wrap {
+        height: 48%;
+        width: 100%;
+    }
+
+    .top-wrap {
+        @include transition(all 1s ease);
+
+        position: relative;
+
+        &.transition-1 {
+            padding: 0;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    .bottom-wrap {
+        @include transition(all 1s ease);
+
+        &.transition-1 {
+            padding: 0;
+        }
+    }
+
+    .social-top {
+        p {
+            color: white;
+            font-size: 3.3vw;
+            text-align: left;
+            white-space: nowrap;
+            margin: 0;
+
+            &.underline {
+                border-bottom: 1px solid #dddddd;
+                display: inline-block;
+                left: 50%;
+                transform: translateX(-50%);
+                position: absolute;
+                top: 3%;
+                font-size: 2.7vw;
+
+                span {
+                    color: #62d785;
+                }
+            }
+        }
+
+        .text-wrap {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            width: 100%;
+            height: 60%;
+            top: 27%;
+        }
+
+        .text-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+            padding-right: 3%;
+
+            p {
+                align-self: flex-end;
+                color: #00da7c;
+            }
+        }
+
+        .text-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 3;
+        }
+    }
+
+    .social-bottom {
+        p {
+            color: white;
+            font-size: 3.3vw;
+            text-align: left;
+            white-space: nowrap;
+            margin: 0;
+
+            span {
+                color: #62d785;
+            }
+
+            &.underline {
+                font-size: 2.7vw;
+                border-bottom: 1px solid #dddddd;
+                display: inline-block;
+            }
+
+            &.url {
+                font-size: 1.5vw;
+            }
+        }
+
+        .text-wrap {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            left: 38%;
+            transform: translate(-50%,-50%);
+            height: 100%;
+            transform: translate(-50%, -50%);
+            justify-content: space-between;
+            padding: 4%;
+        }
+
+        .text-top {
+            display: flex;
+            flex-direction: column;
+            .underline {
+                width: 60%;
+            }
+        }
+
+        .text-bottom {
+            display: flex;
+            flex-direction: column;
+            .underline {
+                width: 80%;
+            }
+        }
+    }
+
+    .social-top, .social-bottom {
+        @include transition(all .1s ease);
+        border: 1px solid #e7e7e7;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        &.transition-1 {
+            opacity: 0;
+        }
+
+        .white-line {
+            position: absolute;
+            background-color: white;
+
+            &.vertical {
+                height: 0%;
+                width: 2px;
+
+                @include transition(all 0.2s linear);
+
+                &.transition-1 {
+                    height: 100%;
+                    width: 2px;
+                }
+            }
+
+            &.horizontal {
+                @include transition(all 0.3s ease-out);
+
+                height: 2px;
+                width: 0%;
+
+                &.transition-1 {
+                    height: 2px;
+                    width: 100%;
+                }
+            }
+
+            &:nth-child(1) {
+                left: 25%;
+            }
+
+            &:nth-child(2) {
+                left: 50%;
+                bottom: 0;
+            }
+
+            &:nth-child(3) {
+                left: 75%;
+            }
+
+            &:nth-child(4) {
+                top: 50%;
+            }
+        }
+    }
+
+    .social-top {
+        .white-line {
+            &.vertical:nth-child(even) {
+                @include transition(all 0.2s ease-out);
+            }
+        }
+    }
+
+    .social-bottom {
+        .white-line {
+            &.vertical:nth-child(odd) {
+                @include transition(all 0.2s ease-out);
+            }
+        }
+    }
+
+    .player-box-wrap {
+        width: 100%;
+        opacity: 0;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        position: absolute;
+        align-content: flex-start;
+        @include transition(all 0.2s ease-out);
+
+        &-top {
+            align-content: flex-start;
+        }
+
+        &-bottom {
+            align-content: flex-end;
+        }
+
+        &.transition-1 {
+            opacity: 1;
+        }
+
+        &.transition-2 {
+            justify-content: center;
+            align-content: center;
+        }
+
+        &.transition-3 {
+            padding: 0;
+        }
+    }
+
+    .player-box {
+        @include transition(all 0.3s ease);
+
+        width: 25%;
+        height: 24%;
+        border: 1px solid #dddddd;
+        background-color: rgba(0, 0, 0, 0.5);
+        float: left;
+        align-self: bottom;
+        overflow: hidden;
+        position: relative;
+
+        .headshot {
+            height: 100%;
+            position: absolute;
+            transform: translate3d(-18%, 0, 0);
+            opacity: 0;
+        }
+
+        &:nth-child(5) {
+            margin-bottom: 4.42%;
+        }
+
+        &.replacement {
+            opacity: 0;
+            position: absolute;
+
+            // ROW 1
+
+            &:nth-child(1) {
+                left: 0%;
+                top: -1.5%;
+            }
+
+            &:nth-child(2) {
+                left: 25%;
+                top: -1.5%;
+            }
+
+            &:nth-child(3) {
+                left: 50%;
+                top: -1.5%;
+            }
+
+            &:nth-child(4) {
+                left: 75%;
+                top: -1.5%;
+            }
+
+            // ROW 2
+
+            &:nth-child(5) {
+                left: 0%;
+                top: 24.2%;
+            }
+
+            &:nth-child(6) {
+                left: 25%;
+                top: 24.2%;
+            }
+
+            &:nth-child(7) {
+                left: 50%;
+                top: 24.2%;
+            }
+
+            &:nth-child(8) {
+                left: 75%;
+                top: 24.2%;
+            }
+
+            // ROW 3
+
+            &:nth-child(9) {
+                left: 0%;
+                top: 50%;
+            }
+
+            &:nth-child(10) {
+                left: 25%;
+                top: 50%;
+            }
+
+            &:nth-child(11) {
+                left: 50%;
+                top: 50%;
+            }
+
+            &:nth-child(12) {
+                left: 75%;
+                top: 50%;
+            }
+
+            // ROW 4
+
+            &:nth-child(13) {
+                left: 0%;
+                top: 75.8%;
+            }
+
+            &:nth-child(14) {
+                left: 25%;
+                top: 75.8%;
+            }
+
+            &:nth-child(15) {
+                left: 50%;
+                top: 75.8%;
+            }
+
+            &:nth-child(16) {
+                left: 75%;
+                top: 75.8%;
+            }
+        }
+
+        &.selected {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+            border-color: #fff;
+            opacity: 1;
+        }
+
+        &.transition-1  {
+            width: 23%;
+            height: 24%;
+            margin: 1%;
+
+            @include transition(all 0.3s ease-out);
+
+            &:nth-child(5) {
+                margin-bottom: 0;
+            }
+        }
+
+        &.transition-2 {
+            opacity: .7;
+
+            &.selected {
+                opacity: 1;
+            }
+        }
+
+        &.transition-3 {
+            top: 0% !important;
+            left: 0% !important;
+            width: 100%;
+            height: 50%;
+            margin: 0;
+            border: none;
+            background-color: #fff;
+        }
+
+        &.transition-4 {
+            opacity: 0 !important;
+        }
+    }
+
+    .social-bottom.transition-1{
+        padding: 0;
+        background: url(https://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/gameday-jersey-bg-1400x600.jpg);
+        background-size: cover;
+    }
+}
