@@ -14,7 +14,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['src/js/*.js'],
-        tasks: ['import','notify:done', 'uglify']
+        tasks: ['import','notify:done','eslint']
       },
       css: {
         files: ['src/scss/*.scss',
@@ -26,14 +26,15 @@ module.exports = function(grunt) {
     /*===================================
     =            MINIFY HTML            =
     ===================================*/
-    
-    htmlmin: {                                   
-       dist: {                                    
-         options: {                               
+
+    htmlmin: {
+       dist: {
+         options: {
            removeComments: true,
-           collapseWhitespace: true
+           collapseWhitespace: true,
+           gruntLogHeader: false,
          },
-         files: {                                  
+         files: {
            'src/html/min/_player-wrap.min.html': 'src/html/_player-wrap.html' // CHANGE TEMPLATE NAME
          }
        }
@@ -42,10 +43,11 @@ module.exports = function(grunt) {
      /*====================================
      =            COMPILE SASS            =
      ====================================*/
-       
+
     sass: {
       dist: {
         options: {
+          gruntLogHeader: false,
           sourcemap: 'none',
         },
         files: {
@@ -54,6 +56,7 @@ module.exports = function(grunt) {
       },
       min: {
         options: {
+          gruntLogHeader: false,
           sourcemap: 'none',
           style: 'compressed'
         },
@@ -65,7 +68,7 @@ module.exports = function(grunt) {
 
     /*=========================================
     =            UGLIFY JAVASCRIPT            =
-    =========================================*/ 
+    =========================================*/
 
     uglify: {
       dist: {
@@ -76,11 +79,24 @@ module.exports = function(grunt) {
     },
 
     /*==============================
+    =            ESLINT            =
+    ==============================*/
+
+    eslint: {
+      options: {
+        configFile: 'src/js/eslint.json',
+      },
+      target: ['src/js/*.js']
+    },
+
+    /*==============================
     =            IMPORT            =
     ==============================*/
-    
+
     import: {
-      options: {},
+      options: {
+        gruntLogHeader: false
+      },
       dist: {
         files: {
           'dist/js/concourse.js' : 'src/js/concourse.js',
@@ -92,21 +108,22 @@ module.exports = function(grunt) {
     /*==============================
     =            NOTIFY            =
     ==============================*/
-    
+
     notify_hooks: {
       options: {
         enabled: true,
-        max_jshint_notifications: 5, 
-        title: "concourse", 
-        success: false, 
-        duration: 1 
+        max_jshint_notifications: 5,
+        title: "concourse",
+        success: false,
+        duration: 1,
       }
     },
     notify: {
       done: {
         options: {
+          gruntLogHeader: false,
           title: 'Grunt - concourse',
-          message: 'DONE!', 
+          message: 'DONE!',
         }
       }
     }
@@ -115,14 +132,14 @@ module.exports = function(grunt) {
   /*==================================
   =            LOAD TASKS            =
   ==================================*/
-  
-  
+
+  require('grunt-log-headers')(grunt);
+  grunt.loadNpmTasks('grunt-eslint');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-import');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-notify');
-  grunt.task.run('notify_hooks');
   grunt.registerTask('default',['watch']);
 };

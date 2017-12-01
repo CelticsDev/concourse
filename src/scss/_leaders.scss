@@ -3,12 +3,13 @@
 ===============================*/
 
 .leaders {
-	padding: 4%;
-	@include transition(all 1s ease);
+    padding: 4%;
 
-	&.transition-1 {
-		padding: 0%;
-	}
+    @include transition(all 1s ease);
+
+    &.transition-1 {
+        padding: 0%;
+    }
 
     .block-inner {
         position: relative;
@@ -19,48 +20,80 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+
         @include transition(all 1s ease);
 
         &.transition-1 {
-        	background-color: rgba(255, 255, 255, 0.85);
+            background-color: rgba(255, 255, 255, 0.85);
         }
 
         .leader-section {
-        	flex-grow: 1;
-        	border: 1px solid #a2a2a2;
-        	position: relative;
-        	display: flex;
-        	flex-direction: column;
+            flex-grow: 1;
+            border: 1px solid #a7a7a7;
+            position: relative;
+            display: flex;
+            flex-direction: column;
 
-        	&.transition-1 {
-        		top: 0% !important;
-        	}
+            &.transition-1 {
+                top: 0% !important;
+            }
 
-        	&:nth-child(1) {
-        		background-color: white;
-        		top: -25%;
-        		@include transition(all 1s ease);
-        	}
+            &:nth-child(1) {
+                background-color: rbga(255, 255, 255, 0.8);
+                top: -25%;
 
-        	&:nth-child(2) {
-        		top: -50%;
-        		@include transition(all 1s ease);
-        	}
+                @include transition(all 1s ease);
+            }
 
-        	&:nth-child(3) {
-        		top: -75%;
-        		@include transition(all 1s ease);
-        	}
+            &:nth-child(2) {
+                top: -50%;
 
-        	&:nth-child(4) {
-        		top: -100%;
-        		@include transition(all 1s ease);
-        	}
+                @include transition(all 1s ease);
+            }
 
-        	.leader-subsection {
-        		flex-grow: 1;
-        		border: 1px solid black;
-        	}
+            &:nth-child(3) {
+                top: -75%;
+
+                @include transition(all 1s ease);
+            }
+
+            &:nth-child(4) {
+                top: -100%;
+
+                @include transition(all 1s ease);
+            }
+
+            .leader-subsection {
+                flex-grow: 1;
+                position: relative;
+                flex: 1;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                img {
+                    width: 15%;
+                    height: 80%;
+                    align-self: center;
+                }
+
+                p {
+                    color: white;
+                    font-weight: 500;
+                    font-size: 3.5vw;
+                    margin: 0;
+                }
+
+                &:nth-child(1) {
+                    background-color: rgba(0, 131, 72, 0.8);
+                    top: -25%;
+                    padding: 0px 2%;
+
+                    @include transition(all 1s ease);
+                }
+
+                &:nth-child(2) {}
+            }
         }
     }
 }
