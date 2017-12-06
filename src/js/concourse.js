@@ -6,11 +6,21 @@ jQuery(document).ready(function() {
                 pts: [['--','--'],['--','--'],['--','--']],
                 ast: [['--','--'],['--','--'],['--','--']],
                 reb: [['--','--'],['--','--'],['--','--']]
+            },
+            seasonLeaders : {
+                pts: [['--','--'],['--','--'],['--','--']],
+                ast: [['--','--'],['--','--'],['--','--']],
+                reb: [['--','--'],['--','--'],['--','--']]
             }
         },
         away: {
             roster: {},
             leaders : {
+                pts: [['--','--'],['--','--'],['--','--']],
+                ast: [['--','--'],['--','--'],['--','--']],
+                reb: [['--','--'],['--','--'],['--','--']]
+            },
+            seasonLeaders : {
                 pts: [['--','--'],['--','--'],['--','--']],
                 ast: [['--','--'],['--','--'],['--','--']],
                 reb: [['--','--'],['--','--'],['--','--']]
@@ -254,16 +264,16 @@ function loadRosterData(awayTeam) {
     }
     for (var team in rosterObj) {
         for (var player in rosterObj[team].roster) {
-            var ptLeaders = rosterObj[team].leaders.pts;
-            var astLeaders = rosterObj[team].leaders.ast;
-            var rebLeaders = rosterObj[team].leaders.reb;
-            for (var stat in rosterObj[team].leaders){
+            var ptLeaders = rosterObj[team].seasonLeaders.pts;
+            var astLeaders = rosterObj[team].seasonLeaders.ast;
+            var rebLeaders = rosterObj[team].seasonLeaders.reb;
+            for (var stat in rosterObj[team].seasonLeaders){
                 for (var i = 0; i < 3; i++) {
-                    if (rosterObj[team].leaders[stat][i][1] == '--' && osterObj[team].roster[player].stats[stat] > 0) {
-                        rosterObj[team].leaders[stat][i][1]  = rosterObj[team].roster[player].stats[stat];
+                    if (rosterObj[team].seasonLeaders[stat][i][1] == '--' && osterObj[team].roster[player].stats[stat] > 0) {
+                        rosterObj[team].seasonLeaders[stat][i][1]  = rosterObj[team].roster[player].stats[stat];
                     }
-                    else if (rosterObj[team].roster[player].stats[stat] > rosterObj[team].leaders[stat][i][1]  && rosterObj[team].roster[player].stats[stat] > 0 ){
-                            rosterObj[team].leaders[stat][i][1]  = rosterObj[team].roster[player].stats[stat];
+                    else if (rosterObj[team].roster[player].stats[stat] > rosterObj[team].seasonLeaders[stat][i][1]  && rosterObj[team].roster[player].stats[stat] > 0 ){
+                            rosterObj[team].seasonLeaders[stat][i][1]  = rosterObj[team].roster[player].stats[stat];
                     }
                 };
             }

@@ -5,8 +5,8 @@
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://use.typekit.net/dxx6zwc.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
-<script>
+<script type="text/javascript">try{Typekit.load({ async: true });}catch(e){}</script>
+<script type="text/javascript">
 jQuery(document).ready(function() {
     rosterObj = {
         celtics: {
@@ -268,7 +268,7 @@ function loadRosterData(awayTeam) {
             var rebLeaders = rosterObj[team].leaders.reb;
             for (var stat in rosterObj[team].leaders){
                 for (var i = 0; i < 3; i++) {
-                    if (rosterObj[team].leaders[stat][i][1] == '--' && osterObj[team].roster[player].stats[stat] > 0) {
+                    if (rosterObj[team].leaders[stat][i][1] == '--' && rosterObj[team].roster[player].stats[stat] > 0) {
                         rosterObj[team].leaders[stat][i][1]  = rosterObj[team].roster[player].stats[stat];
                     }
                     else if (rosterObj[team].roster[player].stats[stat] > rosterObj[team].leaders[stat][i][1]  && rosterObj[team].roster[player].stats[stat] > 0 ){
@@ -704,7 +704,8 @@ function aroundTheLeague() {};
     justify-content: space-between;
     height: 100%;
     width: 100%; }
-  .social .top-wrap, .social .bottom-wrap {
+  .social .top-wrap,
+  .social .bottom-wrap {
     height: 48%;
     width: 100%; }
   .social .top-wrap {
@@ -795,7 +796,8 @@ function aroundTheLeague() {};
     flex-direction: column; }
     .social .social-bottom .text-bottom .underline {
       width: 80%; }
-  .social .social-top, .social .social-bottom {
+  .social .social-top,
+  .social .social-bottom {
     -moz-transition: all 0.1s ease;
     -o-transition: all 0.1s ease;
     -webkit-transition: all 0.1s ease;
@@ -805,39 +807,49 @@ function aroundTheLeague() {};
     width: 100%;
     height: 100%;
     position: relative; }
-    .social .social-top.transition-1, .social .social-bottom.transition-1 {
+    .social .social-top.transition-1,
+    .social .social-bottom.transition-1 {
       opacity: 0; }
-    .social .social-top .white-line, .social .social-bottom .white-line {
+    .social .social-top .white-line,
+    .social .social-bottom .white-line {
       position: absolute;
       background-color: white; }
-      .social .social-top .white-line.vertical, .social .social-bottom .white-line.vertical {
+      .social .social-top .white-line.vertical,
+      .social .social-bottom .white-line.vertical {
         height: 0%;
         width: 2px;
         -moz-transition: all 0.2s linear;
         -o-transition: all 0.2s linear;
         -webkit-transition: all 0.2s linear;
         transition: all 0.2s linear; }
-        .social .social-top .white-line.vertical.transition-1, .social .social-bottom .white-line.vertical.transition-1 {
+        .social .social-top .white-line.vertical.transition-1,
+        .social .social-bottom .white-line.vertical.transition-1 {
           height: 100%;
           width: 2px; }
-      .social .social-top .white-line.horizontal, .social .social-bottom .white-line.horizontal {
+      .social .social-top .white-line.horizontal,
+      .social .social-bottom .white-line.horizontal {
         -moz-transition: all 0.3s ease-out;
         -o-transition: all 0.3s ease-out;
         -webkit-transition: all 0.3s ease-out;
         transition: all 0.3s ease-out;
         height: 2px;
         width: 0%; }
-        .social .social-top .white-line.horizontal.transition-1, .social .social-bottom .white-line.horizontal.transition-1 {
+        .social .social-top .white-line.horizontal.transition-1,
+        .social .social-bottom .white-line.horizontal.transition-1 {
           height: 2px;
           width: 100%; }
-      .social .social-top .white-line:nth-child(1), .social .social-bottom .white-line:nth-child(1) {
+      .social .social-top .white-line:nth-child(1),
+      .social .social-bottom .white-line:nth-child(1) {
         left: 25%; }
-      .social .social-top .white-line:nth-child(2), .social .social-bottom .white-line:nth-child(2) {
+      .social .social-top .white-line:nth-child(2),
+      .social .social-bottom .white-line:nth-child(2) {
         left: 50%;
         bottom: 0; }
-      .social .social-top .white-line:nth-child(3), .social .social-bottom .white-line:nth-child(3) {
+      .social .social-top .white-line:nth-child(3),
+      .social .social-bottom .white-line:nth-child(3) {
         left: 75%; }
-      .social .social-top .white-line:nth-child(4), .social .social-bottom .white-line:nth-child(4) {
+      .social .social-top .white-line:nth-child(4),
+      .social .social-bottom .white-line:nth-child(4) {
         top: 50%; }
   .social .social-top .white-line.vertical:nth-child(even) {
     -moz-transition: all 0.2s ease-out;

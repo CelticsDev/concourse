@@ -259,7 +259,7 @@ function loadRosterData(awayTeam) {
             var rebLeaders = rosterObj[team].leaders.reb;
             for (var stat in rosterObj[team].leaders){
                 for (var i = 0; i < 3; i++) {
-                    if (rosterObj[team].leaders[stat][i][1] == '--' && osterObj[team].roster[player].stats[stat] > 0) {
+                    if (rosterObj[team].leaders[stat][i][1] == '--' && rosterObj[team].roster[player].stats[stat] > 0) {
                         rosterObj[team].leaders[stat][i][1]  = rosterObj[team].roster[player].stats[stat];
                     }
                     else if (rosterObj[team].roster[player].stats[stat] > rosterObj[team].leaders[stat][i][1]  && rosterObj[team].roster[player].stats[stat] > 0 ){

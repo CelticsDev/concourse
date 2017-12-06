@@ -348,7 +348,8 @@
     justify-content: space-between;
     height: 100%;
     width: 100%; }
-  .social .top-wrap, .social .bottom-wrap {
+  .social .top-wrap,
+  .social .bottom-wrap {
     height: 48%;
     width: 100%; }
   .social .top-wrap {
@@ -439,7 +440,8 @@
     flex-direction: column; }
     .social .social-bottom .text-bottom .underline {
       width: 80%; }
-  .social .social-top, .social .social-bottom {
+  .social .social-top,
+  .social .social-bottom {
     -moz-transition: all 0.1s ease;
     -o-transition: all 0.1s ease;
     -webkit-transition: all 0.1s ease;
@@ -449,39 +451,49 @@
     width: 100%;
     height: 100%;
     position: relative; }
-    .social .social-top.transition-1, .social .social-bottom.transition-1 {
+    .social .social-top.transition-1,
+    .social .social-bottom.transition-1 {
       opacity: 0; }
-    .social .social-top .white-line, .social .social-bottom .white-line {
+    .social .social-top .white-line,
+    .social .social-bottom .white-line {
       position: absolute;
       background-color: white; }
-      .social .social-top .white-line.vertical, .social .social-bottom .white-line.vertical {
+      .social .social-top .white-line.vertical,
+      .social .social-bottom .white-line.vertical {
         height: 0%;
         width: 2px;
         -moz-transition: all 0.2s linear;
         -o-transition: all 0.2s linear;
         -webkit-transition: all 0.2s linear;
         transition: all 0.2s linear; }
-        .social .social-top .white-line.vertical.transition-1, .social .social-bottom .white-line.vertical.transition-1 {
+        .social .social-top .white-line.vertical.transition-1,
+        .social .social-bottom .white-line.vertical.transition-1 {
           height: 100%;
           width: 2px; }
-      .social .social-top .white-line.horizontal, .social .social-bottom .white-line.horizontal {
+      .social .social-top .white-line.horizontal,
+      .social .social-bottom .white-line.horizontal {
         -moz-transition: all 0.3s ease-out;
         -o-transition: all 0.3s ease-out;
         -webkit-transition: all 0.3s ease-out;
         transition: all 0.3s ease-out;
         height: 2px;
         width: 0%; }
-        .social .social-top .white-line.horizontal.transition-1, .social .social-bottom .white-line.horizontal.transition-1 {
+        .social .social-top .white-line.horizontal.transition-1,
+        .social .social-bottom .white-line.horizontal.transition-1 {
           height: 2px;
           width: 100%; }
-      .social .social-top .white-line:nth-child(1), .social .social-bottom .white-line:nth-child(1) {
+      .social .social-top .white-line:nth-child(1),
+      .social .social-bottom .white-line:nth-child(1) {
         left: 25%; }
-      .social .social-top .white-line:nth-child(2), .social .social-bottom .white-line:nth-child(2) {
+      .social .social-top .white-line:nth-child(2),
+      .social .social-bottom .white-line:nth-child(2) {
         left: 50%;
         bottom: 0; }
-      .social .social-top .white-line:nth-child(3), .social .social-bottom .white-line:nth-child(3) {
+      .social .social-top .white-line:nth-child(3),
+      .social .social-bottom .white-line:nth-child(3) {
         left: 75%; }
-      .social .social-top .white-line:nth-child(4), .social .social-bottom .white-line:nth-child(4) {
+      .social .social-top .white-line:nth-child(4),
+      .social .social-bottom .white-line:nth-child(4) {
         top: 50%; }
   .social .social-top .white-line.vertical:nth-child(even) {
     -moz-transition: all 0.2s ease-out;
