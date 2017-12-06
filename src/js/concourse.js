@@ -6,11 +6,6 @@ jQuery(document).ready(function() {
                 pts: [['--','--'],['--','--'],['--','--']],
                 ast: [['--','--'],['--','--'],['--','--']],
                 reb: [['--','--'],['--','--'],['--','--']]
-            },
-            seasonLeaders : {
-                pts: [['--','--'],['--','--'],['--','--']],
-                ast: [['--','--'],['--','--'],['--','--']],
-                reb: [['--','--'],['--','--'],['--','--']]
             }
         },
         away: {
@@ -19,15 +14,11 @@ jQuery(document).ready(function() {
                 pts: [['--','--'],['--','--'],['--','--']],
                 ast: [['--','--'],['--','--'],['--','--']],
                 reb: [['--','--'],['--','--'],['--','--']]
-            },
-            seasonLeaders : {
-                pts: [['--','--'],['--','--'],['--','--']],
-                ast: [['--','--'],['--','--'],['--','--']],
-                reb: [['--','--'],['--','--'],['--','--']]
             }
         }
     };
-    var gameDetail = '';
+    var gid = '';
+    var gameStarted = false;
     var playerSpotlightCounter = 15;
     var date = new Date();
     jQuery.ajax({
@@ -36,17 +27,11 @@ jQuery(document).ready(function() {
         success: function(todaysScoresData){
             var gid = '';
             for (var i = 0; i < todaysScoresData.gs.g.length; i++) {
-                if (todaysScoresData.gs.g[i].h.ta == 'ORL') {
+                if (todaysScoresData.gs.g[i].h.ta == 'ORL') { //CHANGE THIS
                     loadRosterData(todaysScoresData.gs.g[i].v.ta);
+                    gid = todaysScoresData.gs.g[i].gid;
                 }
             }
-            jQuery.ajax({
-                url: 'http://localhost:8888/data/mobile-stats-feed/gamedetail.json',
-                async: false,
-                success: function(gameDetailData){
-                    gamedetail = gameDetailData;
-                }
-            });
         }
     });
     //initMobileApp();*/
@@ -264,16 +249,16 @@ function loadRosterData(awayTeam) {
     }
     for (var team in rosterObj) {
         for (var player in rosterObj[team].roster) {
-            var ptLeaders = rosterObj[team].seasonLeaders.pts;
-            var astLeaders = rosterObj[team].seasonLeaders.ast;
-            var rebLeaders = rosterObj[team].seasonLeaders.reb;
-            for (var stat in rosterObj[team].seasonLeaders){
+            var ptLeaders = rosterObj[team].leaders.pts;
+            var astLeaders = rosterObj[team].leaders.ast;
+            var rebLeaders = rosterObj[team].leaders.reb;
+            for (var stat in rosterObj[team].leaders){
                 for (var i = 0; i < 3; i++) {
-                    if (rosterObj[team].seasonLeaders[stat][i][1] == '--' && osterObj[team].roster[player].stats[stat] > 0) {
-                        rosterObj[team].seasonLeaders[stat][i][1]  = rosterObj[team].roster[player].stats[stat];
+                    if (rosterObj[team].leaders[stat][i][1] == '--' && rosterObj[team].roster[player].stats[stat] > 0) {
+                        rosterObj[team].leaders[stat][i][1]  = rosterObj[team].roster[player].stats[stat];
                     }
-                    else if (rosterObj[team].roster[player].stats[stat] > rosterObj[team].seasonLeaders[stat][i][1]  && rosterObj[team].roster[player].stats[stat] > 0 ){
-                            rosterObj[team].seasonLeaders[stat][i][1]  = rosterObj[team].roster[player].stats[stat];
+                    else if (rosterObj[team].roster[player].stats[stat] > rosterObj[team].leaders[stat][i][1]  && rosterObj[team].roster[player].stats[stat] > 0 ){
+                            rosterObj[team].leaders[stat][i][1]  = rosterObj[team].roster[player].stats[stat];
                     }
                 };
             }
@@ -314,7 +299,35 @@ function loadAwayTeamData() {}
 /*====================================
 =            STAT LEADERS            =
 ====================================*/
-function leaders(gameDetail) {
+function leaders(gid) {
+    var gameDetail;
+    var detailAvailable = false;
+    jQuery.ajax({
+        url: 'http://localhost:8888/data/mobile-stats-feed/todays_scores.json',
+        async: false,
+        success: function(todaysScoresData){
+            var gid = '';
+            for (var i = 0; i < todaysScoresData.gs.g.length; i++) {
+                if (todaysScoresData.gs.g[i].h.ta == 'ORL') { //CHANGE THIS
+                    if (todaysScoresData.gs.g[i] !== 1){
+                        gameStarted = true;
+                    }
+                }
+            }
+        }
+    });
+    if (gameStarted){
+        jQuery.ajax({
+            url: 'http://data.nba.com/data/v2015/json/mobile_teams/nba/2016/scores/gamedetail/0041600101_gamedetail.json',
+            async: false,
+            success: function(data){
+                gameDetail = data;
+            }
+        });
+    }
+    else {
+
+    }
     jQuery('.leaders, .leaders .block-inner').addClass('transition-1');
     setTimeout(function() {
         jQuery('.leaders .leader-section').addClass('transition-1');

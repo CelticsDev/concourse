@@ -17,7 +17,8 @@ jQuery(document).ready(function() {
             }
         }
     };
-    var gameDetail = '';
+    var gid = '';
+    var gameStarted = false;
     var playerSpotlightCounter = 15;
     var date = new Date();
     jQuery.ajax({
@@ -26,17 +27,11 @@ jQuery(document).ready(function() {
         success: function(todaysScoresData){
             var gid = '';
             for (var i = 0; i < todaysScoresData.gs.g.length; i++) {
-                if (todaysScoresData.gs.g[i].h.ta == 'ORL') {
+                if (todaysScoresData.gs.g[i].h.ta == 'ORL') { //CHANGE THIS
                     loadRosterData(todaysScoresData.gs.g[i].v.ta);
+                    gid = todaysScoresData.gs.g[i].gid;
                 }
             }
-            jQuery.ajax({
-                url: 'http://localhost:8888/data/mobile-stats-feed/gamedetail.json',
-                async: false,
-                success: function(gameDetailData){
-                    gamedetail = gameDetailData;
-                }
-            });
         }
     });
     //initMobileApp();*/
@@ -304,7 +299,35 @@ function loadAwayTeamData() {}
 /*====================================
 =            STAT LEADERS            =
 ====================================*/
-function leaders(gameDetail) {
+function leaders(gid) {
+    var gameDetail;
+    var detailAvailable = false;
+    jQuery.ajax({
+        url: 'http://localhost:8888/data/mobile-stats-feed/todays_scores.json',
+        async: false,
+        success: function(todaysScoresData){
+            var gid = '';
+            for (var i = 0; i < todaysScoresData.gs.g.length; i++) {
+                if (todaysScoresData.gs.g[i].h.ta == 'ORL') { //CHANGE THIS
+                    if (todaysScoresData.gs.g[i] !== 1){
+                        gameStarted = true;
+                    }
+                }
+            }
+        }
+    });
+    if (gameStarted){
+        jQuery.ajax({
+            url: 'http://data.nba.com/data/v2015/json/mobile_teams/nba/2016/scores/gamedetail/0041600101_gamedetail.json',
+            async: false,
+            success: function(data){
+                gameDetail = data;
+            }
+        });
+    }
+    else {
+
+    }
     jQuery('.leaders, .leaders .block-inner').addClass('transition-1');
     setTimeout(function() {
         jQuery('.leaders .leader-section').addClass('transition-1');
