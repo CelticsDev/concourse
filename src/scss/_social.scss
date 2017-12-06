@@ -27,7 +27,8 @@
         width: 100%;
     }
 
-    .top-wrap, .bottom-wrap {
+    .top-wrap,
+    .bottom-wrap {
         height: 48%;
         width: 100%;
     }
@@ -133,7 +134,7 @@
             position: absolute;
             top: 50%;
             left: 38%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             height: 100%;
             transform: translate(-50%, -50%);
             justify-content: space-between;
@@ -157,7 +158,8 @@
         }
     }
 
-    .social-top, .social-bottom {
+    .social-top,
+    .social-bottom {
         @include transition(all .1s ease);
         border: 1px solid #e7e7e7;
         background-color: rgba(0, 0, 0, 0.5);
@@ -290,10 +292,7 @@
 
         &.replacement {
             opacity: 0;
-            position: absolute;
-
-            // ROW 1
-
+            position: absolute; // ROW 1
             &:nth-child(1) {
                 left: 0%;
                 top: -1.5%;
@@ -312,10 +311,7 @@
             &:nth-child(4) {
                 left: 75%;
                 top: -1.5%;
-            }
-
-            // ROW 2
-
+            } // ROW 2
             &:nth-child(5) {
                 left: 0%;
                 top: 24.2%;
@@ -334,10 +330,7 @@
             &:nth-child(8) {
                 left: 75%;
                 top: 24.2%;
-            }
-
-            // ROW 3
-
+            } // ROW 3
             &:nth-child(9) {
                 left: 0%;
                 top: 50%;
@@ -356,10 +349,7 @@
             &:nth-child(12) {
                 left: 75%;
                 top: 50%;
-            }
-
-            // ROW 4
-
+            } // ROW 4
             &:nth-child(13) {
                 left: 0%;
                 top: 75.8%;
@@ -388,7 +378,7 @@
             opacity: 1;
         }
 
-        &.transition-1  {
+        &.transition-1 {
             width: 23%;
             height: 24%;
             margin: 1%;
@@ -423,7 +413,7 @@
         }
     }
 
-    .social-bottom.transition-1{
+    .social-bottom.transition-1 {
         padding: 0;
         background: url(https://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/gameday-jersey-bg-1400x600.jpg);
         background-size: cover;
