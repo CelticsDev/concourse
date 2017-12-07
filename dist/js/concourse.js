@@ -4,19 +4,19 @@ jQuery(document).ready(function() {
             roster: {},
             leaders: {
                 pts: [
-                    ['--', '--'],
-                    ['--', '--'],
-                    ['--', '--']
+                    ['--', '--','--', '--'],
+                    ['--', '--','--', '--'],
+                    ['--', '--','--', '--']
                 ],
                 ast: [
-                    ['--', '--'],
-                    ['--', '--'],
-                    ['--', '--']
+                    ['--', '--','--', '--'],
+                    ['--', '--','--', '--'],
+                    ['--', '--','--', '--']
                 ],
                 reb: [
-                    ['--', '--'],
-                    ['--', '--'],
-                    ['--', '--']
+                    ['--', '--','--', '--'],
+                    ['--', '--','--', '--'],
+                    ['--', '--','--', '--']
                 ]
             }
         },
@@ -24,19 +24,19 @@ jQuery(document).ready(function() {
             roster: {},
             leaders: {
                 pts: [
-                    ['--', '--'],
-                    ['--', '--'],
-                    ['--', '--']
+                    ['--', '--','--', '--'],
+                    ['--', '--','--', '--'],
+                    ['--', '--','--', '--']
                 ],
                 ast: [
-                    ['--', '--'],
-                    ['--', '--'],
-                    ['--', '--']
+                    ['--', '--','--', '--'],
+                    ['--', '--','--', '--'],
+                    ['--', '--','--', '--']
                 ],
                 reb: [
-                    ['--', '--'],
-                    ['--', '--'],
-                    ['--', '--']
+                    ['--', '--','--', '--'],
+                    ['--', '--','--', '--'],
+                    ['--', '--','--', '--']
                 ]
             }
         }
@@ -285,7 +285,7 @@ function loadRosterData(awayTeam) {
         var pid = awayRoster.t.pl[i].pid;
         rosterObj.away.roster[pid] = awayRoster.t.pl[i];
         jQuery.ajax({
-            url: 'http://localhost:8888/data/mobile-stats-feed/playercards/playercard-202330.json',
+            url: 'http://localhost:8888/data/mobile-stats-feed/playercards/playercard-202330.json', // CHANGE PID
             async: false,
             success: function(data) {
                 rosterObj.away.roster[pid].stats = data.pl.ca;
@@ -300,10 +300,18 @@ function loadRosterData(awayTeam) {
             var rebLeaders = rosterObj[team].leaders.reb;
             for (var stat in rosterObj[team].leaders) {
                 for (var i = 0; i < 3; i++) {
-                    if (rosterObj[team].leaders[stat][i][1] == '--' && rosterObj[team].roster[player].stats[stat] > 0) {
-                        rosterObj[team].leaders[stat][i][1] = rosterObj[team].roster[player].stats[stat];
-                    } else if (rosterObj[team].roster[player].stats[stat] > rosterObj[team].leaders[stat][i][1] && rosterObj[team].roster[player].stats[stat] > 0) {
-                        rosterObj[team].leaders[stat][i][1] = rosterObj[team].roster[player].stats[stat];
+                    if (rosterObj[team].leaders[stat][i][2] == '--' && rosterObj[team].roster[player].stats[stat] > 0) {
+                        rosterObj[team].leaders[stat][i][0] = rosterObj[team].roster[player].fn.toUpperCase();
+                        rosterObj[team].leaders[stat][i][1] = rosterObj[team].roster[player].ln.toUpperCase();
+                        rosterObj[team].leaders[stat][i][2] = rosterObj[team].roster[player].stats[stat];
+                        rosterObj[team].leaders[stat][i][3] = rosterObj[team].roster[player].pid;
+                        break;
+                    } else if (rosterObj[team].roster[player].stats[stat] > rosterObj[team].leaders[stat][i][2] && rosterObj[team].roster[player].stats[stat] > 0) {
+                        rosterObj[team].leaders[stat][i][0] = rosterObj[team].roster[player].fn.toUpperCase();
+                        rosterObj[team].leaders[stat][i][1] = rosterObj[team].roster[player].ln.toUpperCase();
+                        rosterObj[team].leaders[stat][i][2] = rosterObj[team].roster[player].stats[stat];
+                        rosterObj[team].leaders[stat][i][3] = rosterObj[team].roster[player].pid;
+                        break;
                     }
                 };
             }
@@ -347,23 +355,39 @@ function loadAwayTeamData() {}
 function leaders(gid, gameStarted) {
     var gameDetail = '';
     var detailAvailable = false;
-    gameStarted = true // DELETE THIS WHEN ONLINE. JUST FOR TESTING PURPOSES RN
+    gameStarted = true; // DO: DELETE THIS WHEN ONLINE. JUST FOR TESTING PURPOSES RN
     if (gameStarted) {
         jQuery.ajax({
-            url: 'http://data.nba.com/data/v2015/json/mobile_teams/nba/2016/scores/gamedetail/0041600101_gamedetail.json',
+            url: 'http://localhost:8888/data/mobile-stats-feed/gamedetail.json',
             async: false,
             success: function(data) {
-                // UPDATE THE LEADER OBJECTS
+                // DO: UPDATE THE LEADER OBJECTS
                 gameDetail = data;
             }
         });
     }
-    // APPEND LEADER HTML yeeeaahh
-
+    for (var team in rosterObj){
+        for (var i = 0; i < 3; i++){
+            for (var stat in rosterObj[team].leaders){
+                // LEADER STAT VALUE
+                jQuery('.leader-section.' + team + ':nth-of-type(' + (i + 2) + ') .' + stat + ' .stat').append('<span>' + rosterObj[team].leaders[stat][i][2] + '</span> ' + stat.toUpperCase());
+                // LEADER NAME
+                if (rosterObj[team].leaders[stat][i][0].length + rosterObj[team].leaders[stat][i][1].length >= 15){
+                    rosterObj[team].leaders[stat][i][0] = rosterObj[team].leaders[stat][i][0].substr(0,1) + '.';
+                }
+                jQuery('.leader-section.' + team + ':nth-of-type(' + (i + 2) + ') .' + stat + ' .name').append('<span>' + rosterObj[team].leaders[stat][i][0] + '</span> ' + rosterObj[team].leaders[stat][i][1]);
+                // LEADER HEADSHOT
+                jQuery('.leader-section.' + team + ':nth-of-type(' + (i + 2) + ') .' + stat + ' .headshot').attr('src','https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/1040x760/' + rosterObj[team].leaders[stat][i][3] + '.png');
+            }
+        }
+    }
     jQuery('.leaders, .leaders .block-inner').addClass('transition-1');
     setTimeout(function() {
         jQuery('.leaders .leader-section').addClass('transition-1');
     }, 800);
+    setTimeout(function() {
+        jQuery('.leaders .leader-section .leader-stat-wrap').addClass('transition-1');
+    }, 2000);
 };
 /*==============================
 =            SOCIAL            =
