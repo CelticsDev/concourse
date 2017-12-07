@@ -358,7 +358,7 @@ function leaders(gid, gameStarted) {
             }
         });
     }
-    // APPEND LEADER HTML
+    // APPEND LEADER HTML yeeeaahh
 
     jQuery('.leaders, .leaders .block-inner').addClass('transition-1');
     setTimeout(function() {
