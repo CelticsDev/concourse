@@ -2,18 +2,42 @@ jQuery(document).ready(function() {
     rosterObj = {
         celtics: {
             roster: {},
-            leaders : {
-                pts: [['--','--'],['--','--'],['--','--']],
-                ast: [['--','--'],['--','--'],['--','--']],
-                reb: [['--','--'],['--','--'],['--','--']]
+            leaders: {
+                pts: [
+                    ['--', '--'],
+                    ['--', '--'],
+                    ['--', '--']
+                ],
+                ast: [
+                    ['--', '--'],
+                    ['--', '--'],
+                    ['--', '--']
+                ],
+                reb: [
+                    ['--', '--'],
+                    ['--', '--'],
+                    ['--', '--']
+                ]
             }
         },
         away: {
             roster: {},
-            leaders : {
-                pts: [['--','--'],['--','--'],['--','--']],
-                ast: [['--','--'],['--','--'],['--','--']],
-                reb: [['--','--'],['--','--'],['--','--']]
+            leaders: {
+                pts: [
+                    ['--', '--'],
+                    ['--', '--'],
+                    ['--', '--']
+                ],
+                ast: [
+                    ['--', '--'],
+                    ['--', '--'],
+                    ['--', '--']
+                ],
+                reb: [
+                    ['--', '--'],
+                    ['--', '--'],
+                    ['--', '--']
+                ]
             }
         }
     };
@@ -24,7 +48,7 @@ jQuery(document).ready(function() {
     jQuery.ajax({
         url: 'http://localhost:8888/data/mobile-stats-feed/todays_scores.json',
         async: false,
-        success: function(todaysScoresData){
+        success: function(todaysScoresData) {
             var gid = '';
             for (var i = 0; i < todaysScoresData.gs.g.length; i++) {
                 if (todaysScoresData.gs.g[i].h.ta == 'ORL') { //CHANGE THIS
@@ -34,10 +58,11 @@ jQuery(document).ready(function() {
             }
         }
     });
-    //initMobileApp();*/
-    /*playerSpotlight(rosterObj, playerSpotlightCounter);*/
-    /*mobileApp();*/
-    setTimeout(leaders(gameDetail), 400);
+    // loadRosterData(); ONLY ONCE
+    // initMobileApp();
+    // playerSpotlight(rosterObj, playerSpotlightCounter);
+    // mobileApp();
+    setTimeout(leaders(gid, gameStarted), 400);
 });
 /*======================================
 =            MISC FUNCTIONS            =
@@ -87,6 +112,27 @@ function generateTimeline(selectedPlayer) {
     }
     jQuery(".timeline-wrap").html('<div class="timeline appended">' + timelineHTML + '</div><div class="season-year appended">' + seasonYearHTML + '</div>');
 }
+/*==================================
+=            INITIALIZE            =
+==================================*/
+function init() {
+    if (!gameStarted) {
+        jQuery.ajax({
+            url: 'http://localhost:8888/data/mobile-stats-feed/todays_scores.json',
+            async: false,
+            success: function(todaysScoresData) {
+                var gid = '';
+                for (var i = 0; i < todaysScoresData.gs.g.length; i++) {
+                    if (todaysScoresData.gs.g[i].h.ta == 'ORL') { // CHANGE THIS TO 'BOS' WHEN THE TIME COMES
+                        if (todaysScoresData.gs.g[i] !== 1) {
+                            gameStarted = true;
+                        }
+                    }
+                }
+            }
+        });
+    }
+};
 /*========================================
 =            PLAYER SPOTLIGHT            =
 ========================================*/
@@ -252,13 +298,12 @@ function loadRosterData(awayTeam) {
             var ptLeaders = rosterObj[team].leaders.pts;
             var astLeaders = rosterObj[team].leaders.ast;
             var rebLeaders = rosterObj[team].leaders.reb;
-            for (var stat in rosterObj[team].leaders){
+            for (var stat in rosterObj[team].leaders) {
                 for (var i = 0; i < 3; i++) {
                     if (rosterObj[team].leaders[stat][i][1] == '--' && rosterObj[team].roster[player].stats[stat] > 0) {
-                        rosterObj[team].leaders[stat][i][1]  = rosterObj[team].roster[player].stats[stat];
-                    }
-                    else if (rosterObj[team].roster[player].stats[stat] > rosterObj[team].leaders[stat][i][1]  && rosterObj[team].roster[player].stats[stat] > 0 ){
-                            rosterObj[team].leaders[stat][i][1]  = rosterObj[team].roster[player].stats[stat];
+                        rosterObj[team].leaders[stat][i][1] = rosterObj[team].roster[player].stats[stat];
+                    } else if (rosterObj[team].roster[player].stats[stat] > rosterObj[team].leaders[stat][i][1] && rosterObj[team].roster[player].stats[stat] > 0) {
+                        rosterObj[team].leaders[stat][i][1] = rosterObj[team].roster[player].stats[stat];
                     }
                 };
             }
@@ -299,35 +344,22 @@ function loadAwayTeamData() {}
 /*====================================
 =            STAT LEADERS            =
 ====================================*/
-function leaders(gid) {
-    var gameDetail;
+function leaders(gid, gameStarted) {
+    var gameDetail = '';
     var detailAvailable = false;
-    jQuery.ajax({
-        url: 'http://localhost:8888/data/mobile-stats-feed/todays_scores.json',
-        async: false,
-        success: function(todaysScoresData){
-            var gid = '';
-            for (var i = 0; i < todaysScoresData.gs.g.length; i++) {
-                if (todaysScoresData.gs.g[i].h.ta == 'ORL') { //CHANGE THIS
-                    if (todaysScoresData.gs.g[i] !== 1){
-                        gameStarted = true;
-                    }
-                }
-            }
-        }
-    });
-    if (gameStarted){
+    gameStarted = true // DELETE THIS WHEN ONLINE. JUST FOR TESTING PURPOSES RN
+    if (gameStarted) {
         jQuery.ajax({
             url: 'http://data.nba.com/data/v2015/json/mobile_teams/nba/2016/scores/gamedetail/0041600101_gamedetail.json',
             async: false,
-            success: function(data){
+            success: function(data) {
+                // UPDATE THE LEADER OBJECTS
                 gameDetail = data;
             }
         });
     }
-    else {
+    // APPEND LEADER HTML yeeeaahh
 
-    }
     jQuery('.leaders, .leaders .block-inner').addClass('transition-1');
     setTimeout(function() {
         jQuery('.leaders .leader-section').addClass('transition-1');
