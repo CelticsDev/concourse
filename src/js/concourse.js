@@ -370,24 +370,38 @@ function leaders(gid, gameStarted) {
         for (var i = 0; i < 3; i++){
             for (var stat in rosterObj[team].leaders){
                 // LEADER STAT VALUE
-                jQuery('.leader-section.' + team + ':nth-of-type(' + (i + 2) + ') .' + stat + ' .stat').append('<span>' + rosterObj[team].leaders[stat][i][2] + '</span> ' + stat.toUpperCase());
+                jQuery('.leader-section:nth-of-type(' + (i + 2) + ') .' + stat + '.' + team + ' .stat').append('<span>' + rosterObj[team].leaders[stat][i][2] + '</span> ' + stat.toUpperCase());
                 // LEADER NAME
                 if (rosterObj[team].leaders[stat][i][0].length + rosterObj[team].leaders[stat][i][1].length >= 15){
                     rosterObj[team].leaders[stat][i][0] = rosterObj[team].leaders[stat][i][0].substr(0,1) + '.';
                 }
-                jQuery('.leader-section.' + team + ':nth-of-type(' + (i + 2) + ') .' + stat + ' .name').append('<span>' + rosterObj[team].leaders[stat][i][0] + '</span> ' + rosterObj[team].leaders[stat][i][1]);
+                jQuery('.leader-section:nth-of-type(' + (i + 2) + ') .' + stat + '.' + team + ' .name').append('<span>' + rosterObj[team].leaders[stat][i][0] + '</span> ' + rosterObj[team].leaders[stat][i][1]);
                 // LEADER HEADSHOT
-                jQuery('.leader-section.' + team + ':nth-of-type(' + (i + 2) + ') .' + stat + ' .headshot').attr('src','https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/1040x760/' + rosterObj[team].leaders[stat][i][3] + '.png');
+                jQuery('.leader-section:nth-of-type(' + (i + 2) + ') .' + stat + '.' + team + ' .headshot').attr('src','https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/1040x760/' + rosterObj[team].leaders[stat][i][3] + '.png');
             }
         }
     }
+    var timeBetween = 1000;
     jQuery('.leaders, .leaders .block-inner').addClass('transition-1');
     setTimeout(function() {
         jQuery('.leaders .leader-section').addClass('transition-1');
+        jQuery('.leader-subsection.bottom p:nth-of-type(1)').addClass('transition-1');
     }, 800);
-    setTimeout(function() {
-        jQuery('.leaders .leader-section .leader-stat-wrap').addClass('transition-1');
-    }, 2000);
+    var transitionCounter = 1;
+    for (var i=1; i <= 6; i++){
+        setTimeout(function(numberString) {
+            jQuery('.leaders .leader-section .leader-stat-wrap').addClass('transition-' + transitionCounter);
+            jQuery('.leader-subsection.bottom p').removeClass('transition-' + transitionCounter);
+            if (transitionCounter % 2 == 0){
+                console.log(transitionCounter/2);
+                setTimeout(function(){
+                    jQuery('.leaders .leader-section .underline').addClass('transition-' + (transitionCounter/2));
+                    jQuery('.leader-subsection.bottom p:nth-of-type(2)').addClass('transition-' + (transitionCounter/2));
+                }, 400);
+            }
+            transitionCounter++;
+        }, (2000 * i));
+    }
 };
 /*==============================
 =            SOCIAL            =

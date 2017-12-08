@@ -25,11 +25,12 @@
 
         &.transition-1 {
             background-color: rgba(255, 255, 255, 0.85);
+            border: none;
         }
 
         .leader-section {
             flex-grow: 1;
-            border-bottom: 1px solid #a7a7a7;
+            border-bottom: .002vw solid #a7a7a7;
             position: relative;
             display: flex;
             overflow: hidden;
@@ -77,12 +78,11 @@
                 position: relative;
                 flex: 1;
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
 
                 img {
                     width: 15%;
-                    height: 80%;
+                    height: 75%;
                     align-self: center;
                 }
 
@@ -93,21 +93,64 @@
                     margin: 0;
                 }
 
-                &:nth-child(1) {
-                    background-color: #008348;
+                .leaders-title {
+                    padding-left: 0%;
+                    font-size: 3.9vw;
+                    white-space: nowrap;
+                    font-weight: 700;
+                }
+
+                &.top {
+                    padding: 0% 3%;
+                    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#008348+0,008348+100&1+0,1+42,0.52+100 */
+                    background: -moz-linear-gradient(left, rgba(0,131,72,1) 0%, rgba(0,131,72,1) 42%, rgba(0,131,72,0.52) 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(left, rgba(0,131,72,1) 0%,rgba(0,131,72,1) 42%,rgba(0,131,72,0.52) 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(to right, rgba(0,131,72,1) 0%,rgba(0,131,72,1) 42%,rgba(0,131,72,0.52) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008348', endColorstr='#85008348',GradientType=1 ); /* IE6-9 */
                     top: -25%;
-                    padding: 0px 2%;
 
                     @include transition(all 1s ease);
                 }
 
-                &:nth-child(2) {
-                    background-color: rgba(255,255,255,0.8);
+                &.bottom {
+                    padding: 0px 20%;
+                    justify-content: space-between;
+                    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.46+0,1+51,1+100 */
+                    background: -moz-linear-gradient(left, rgba(255,255,255,0.46) 0%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(left, rgba(255,255,255,0.46) 0%,rgba(255,255,255,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(to right, rgba(255,255,255,0.46) 0%,rgba(255,255,255,1) 51%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
                     p {
                         color: #dbdbdb;
+                        @include transition(all 1s ease);
 
-                        &.active {
+                        &.transition-1 {
                             color: #121212;
+                        }
+                    }
+
+                    .underline {
+                        @include transition(all 0.5s ease-out);
+                        display: inline-block;
+                        text-decoration: none;
+                        height: 5%;
+                        width: 10%;
+                        background-color: #008348;
+                        overflow: hidden;
+                        position: absolute;
+                        height: 5%;
+                        width: 10%;
+                        top: 78%;
+                        left: 20%;
+
+                        &.transition-1 {
+                            width: 13%;
+                            left: 43%;
+                        }
+
+                        &.transition-2 {
+                            width: 11%;
+                            left: 69%;
                         }
                     }
                 }
@@ -129,12 +172,13 @@
                     margin:0;
                 }
 
+                /* SLIDING */
+
                 &:nth-child(1) {
                     left: 0%;
-                   &.transition-1 {
-                        left: -100%;
-                        opacity: 0;
-                   }
+                    &.transition-1 {
+                         left: -100%;
+                    }
                 }
 
                 &:nth-child(2) {
@@ -142,20 +186,54 @@
                     &.transition-1 {
                          left: 0%;
                     }
+                    &.transition-2 {
+                         left: -100%;
+                    }
                 }
 
                 &:nth-child(3) {
-                    left: 200%;
-                    &.transition-1 {
-                         left: 100%;
+                    left: 100%;
+                    &.transition-2 {
+                         left: 0%;
+                    }
+                    &.transition-3 {
+                         left: -100%;
+                    }
+                }
+
+                &:nth-child(4) {
+                    left: 100%;
+                    &.transition-3 {
+                         left: 0%;
+                    }
+                    &.transition-4 {
+                         left: -100%;
+                    }
+                }
+
+                &:nth-child(5) {
+                    left: 100%;
+                    &.transition-4 {
+                         left: 0%;
+                    }
+                    &.transition-5 {
+                         left: -100%;
+                    }
+                }
+
+                &:nth-child(6) {
+                    left: 100%;
+                    &.transition-5 {
+                         left: 0%;
                     }
                 }
 
                 .stat {
-                    font-size: 4.2vw;
+                    font-size: 3.4vw;
                     span {
                         color: #008348;
                         font-weight: bold;
+                        font-size: 4.2vw;
                     }
                 }
 

@@ -379,24 +379,38 @@ function leaders(gid, gameStarted) {
         for (var i = 0; i < 3; i++){
             for (var stat in rosterObj[team].leaders){
                 // LEADER STAT VALUE
-                jQuery('.leader-section.' + team + ':nth-of-type(' + (i + 2) + ') .' + stat + ' .stat').append('<span>' + rosterObj[team].leaders[stat][i][2] + '</span> ' + stat.toUpperCase());
+                jQuery('.leader-section:nth-of-type(' + (i + 2) + ') .' + stat + '.' + team + ' .stat').append('<span>' + rosterObj[team].leaders[stat][i][2] + '</span> ' + stat.toUpperCase());
                 // LEADER NAME
                 if (rosterObj[team].leaders[stat][i][0].length + rosterObj[team].leaders[stat][i][1].length >= 15){
                     rosterObj[team].leaders[stat][i][0] = rosterObj[team].leaders[stat][i][0].substr(0,1) + '.';
                 }
-                jQuery('.leader-section.' + team + ':nth-of-type(' + (i + 2) + ') .' + stat + ' .name').append('<span>' + rosterObj[team].leaders[stat][i][0] + '</span> ' + rosterObj[team].leaders[stat][i][1]);
+                jQuery('.leader-section:nth-of-type(' + (i + 2) + ') .' + stat + '.' + team + ' .name').append('<span>' + rosterObj[team].leaders[stat][i][0] + '</span> ' + rosterObj[team].leaders[stat][i][1]);
                 // LEADER HEADSHOT
-                jQuery('.leader-section.' + team + ':nth-of-type(' + (i + 2) + ') .' + stat + ' .headshot').attr('src','https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/1040x760/' + rosterObj[team].leaders[stat][i][3] + '.png');
+                jQuery('.leader-section:nth-of-type(' + (i + 2) + ') .' + stat + '.' + team + ' .headshot').attr('src','https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/1040x760/' + rosterObj[team].leaders[stat][i][3] + '.png');
             }
         }
     }
+    var timeBetween = 1000;
     jQuery('.leaders, .leaders .block-inner').addClass('transition-1');
     setTimeout(function() {
         jQuery('.leaders .leader-section').addClass('transition-1');
+        jQuery('.leader-subsection.bottom p:nth-of-type(1)').addClass('transition-1');
     }, 800);
-    setTimeout(function() {
-        jQuery('.leaders .leader-section .leader-stat-wrap').addClass('transition-1');
-    }, 2000);
+    var transitionCounter = 1;
+    for (var i=1; i <= 6; i++){
+        setTimeout(function(numberString) {
+            jQuery('.leaders .leader-section .leader-stat-wrap').addClass('transition-' + transitionCounter);
+            jQuery('.leader-subsection.bottom p').removeClass('transition-' + transitionCounter);
+            if (transitionCounter % 2 == 0){
+                console.log(transitionCounter/2);
+                setTimeout(function(){
+                    jQuery('.leaders .leader-section .underline').addClass('transition-' + (transitionCounter/2));
+                    jQuery('.leader-subsection.bottom p:nth-of-type(2)').addClass('transition-' + (transitionCounter/2));
+                }, 400);
+            }
+            transitionCounter++;
+        }, (2000 * i));
+    }
 };
 /*==============================
 =            SOCIAL            =
@@ -1476,10 +1490,11 @@ function aroundTheLeague() {};
     -webkit-transition: all 1s ease;
     transition: all 1s ease; }
     .leaders .block-inner.transition-1 {
-      background-color: rgba(255, 255, 255, 0.85); }
+      background-color: rgba(255, 255, 255, 0.85);
+      border: none; }
     .leaders .block-inner .leader-section {
       flex-grow: 1;
-      border-bottom: 1px solid #a7a7a7;
+      border-bottom: .002vw solid #a7a7a7;
       position: relative;
       display: flex;
       overflow: hidden; }
@@ -1524,31 +1539,79 @@ function aroundTheLeague() {};
         position: relative;
         flex: 1;
         display: flex;
-        justify-content: space-between;
         align-items: center; }
         .leaders .block-inner .leader-section .leader-subsection img {
           width: 15%;
-          height: 80%;
+          height: 75%;
           align-self: center; }
         .leaders .block-inner .leader-section .leader-subsection p {
           color: white;
           font-weight: 500;
           font-size: 3.5vw;
           margin: 0; }
-        .leaders .block-inner .leader-section .leader-subsection:nth-child(1) {
-          background-color: #008348;
+        .leaders .block-inner .leader-section .leader-subsection .leaders-title {
+          padding-left: 0%;
+          font-size: 3.9vw;
+          white-space: nowrap;
+          font-weight: 700; }
+        .leaders .block-inner .leader-section .leader-subsection.top {
+          padding: 0% 3%;
+          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#008348+0,008348+100&1+0,1+42,0.52+100 */
+          background: -moz-linear-gradient(left, #008348 0%, #008348 42%, rgba(0, 131, 72, 0.52) 100%);
+          /* FF3.6-15 */
+          background: -webkit-linear-gradient(left, #008348 0%, #008348 42%, rgba(0, 131, 72, 0.52) 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to right, #008348 0%, #008348 42%, rgba(0, 131, 72, 0.52) 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008348', endColorstr='#85008348',GradientType=1 );
+          /* IE6-9 */
           top: -25%;
-          padding: 0px 2%;
           -moz-transition: all 1s ease;
           -o-transition: all 1s ease;
           -webkit-transition: all 1s ease;
           transition: all 1s ease; }
-        .leaders .block-inner .leader-section .leader-subsection:nth-child(2) {
-          background-color: rgba(255, 255, 255, 0.8); }
-          .leaders .block-inner .leader-section .leader-subsection:nth-child(2) p {
-            color: #dbdbdb; }
-            .leaders .block-inner .leader-section .leader-subsection:nth-child(2) p.active {
+        .leaders .block-inner .leader-section .leader-subsection.bottom {
+          padding: 0px 20%;
+          justify-content: space-between;
+          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.46+0,1+51,1+100 */
+          background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.46) 0%, white 51%, white 100%);
+          /* FF3.6-15 */
+          background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.46) 0%, white 51%, white 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to right, rgba(255, 255, 255, 0.46) 0%, white 51%, white 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75ffffff', endColorstr='#ffffff',GradientType=1 );
+          /* IE6-9 */ }
+          .leaders .block-inner .leader-section .leader-subsection.bottom p {
+            color: #dbdbdb;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+            transition: all 1s ease; }
+            .leaders .block-inner .leader-section .leader-subsection.bottom p.transition-1 {
               color: #121212; }
+          .leaders .block-inner .leader-section .leader-subsection.bottom .underline {
+            -moz-transition: all 0.5s ease-out;
+            -o-transition: all 0.5s ease-out;
+            -webkit-transition: all 0.5s ease-out;
+            transition: all 0.5s ease-out;
+            display: inline-block;
+            text-decoration: none;
+            height: 5%;
+            width: 10%;
+            background-color: #008348;
+            overflow: hidden;
+            position: absolute;
+            height: 5%;
+            width: 10%;
+            top: 78%;
+            left: 20%; }
+            .leaders .block-inner .leader-section .leader-subsection.bottom .underline.transition-1 {
+              width: 13%;
+              left: 43%; }
+            .leaders .block-inner .leader-section .leader-subsection.bottom .underline.transition-2 {
+              width: 11%;
+              left: 69%; }
       .leaders .block-inner .leader-section .leader-stat-wrap {
         position: absolute;
         display: flex;
@@ -1561,28 +1624,49 @@ function aroundTheLeague() {};
         -moz-transition: all 1s ease;
         -o-transition: all 1s ease;
         -webkit-transition: all 1s ease;
-        transition: all 1s ease; }
+        transition: all 1s ease;
+        /* SLIDING */ }
         .leaders .block-inner .leader-section .leader-stat-wrap p {
           position: absolute;
           margin: 0; }
         .leaders .block-inner .leader-section .leader-stat-wrap:nth-child(1) {
           left: 0%; }
           .leaders .block-inner .leader-section .leader-stat-wrap:nth-child(1).transition-1 {
-            left: -100%;
-            opacity: 0; }
+            left: -100%; }
         .leaders .block-inner .leader-section .leader-stat-wrap:nth-child(2) {
           left: 100%; }
           .leaders .block-inner .leader-section .leader-stat-wrap:nth-child(2).transition-1 {
             left: 0%; }
+          .leaders .block-inner .leader-section .leader-stat-wrap:nth-child(2).transition-2 {
+            left: -100%; }
         .leaders .block-inner .leader-section .leader-stat-wrap:nth-child(3) {
-          left: 200%; }
-          .leaders .block-inner .leader-section .leader-stat-wrap:nth-child(3).transition-1 {
-            left: 100%; }
+          left: 100%; }
+          .leaders .block-inner .leader-section .leader-stat-wrap:nth-child(3).transition-2 {
+            left: 0%; }
+          .leaders .block-inner .leader-section .leader-stat-wrap:nth-child(3).transition-3 {
+            left: -100%; }
+        .leaders .block-inner .leader-section .leader-stat-wrap:nth-child(4) {
+          left: 100%; }
+          .leaders .block-inner .leader-section .leader-stat-wrap:nth-child(4).transition-3 {
+            left: 0%; }
+          .leaders .block-inner .leader-section .leader-stat-wrap:nth-child(4).transition-4 {
+            left: -100%; }
+        .leaders .block-inner .leader-section .leader-stat-wrap:nth-child(5) {
+          left: 100%; }
+          .leaders .block-inner .leader-section .leader-stat-wrap:nth-child(5).transition-4 {
+            left: 0%; }
+          .leaders .block-inner .leader-section .leader-stat-wrap:nth-child(5).transition-5 {
+            left: -100%; }
+        .leaders .block-inner .leader-section .leader-stat-wrap:nth-child(6) {
+          left: 100%; }
+          .leaders .block-inner .leader-section .leader-stat-wrap:nth-child(6).transition-5 {
+            left: 0%; }
         .leaders .block-inner .leader-section .leader-stat-wrap .stat {
-          font-size: 4.2vw; }
+          font-size: 3.4vw; }
           .leaders .block-inner .leader-section .leader-stat-wrap .stat span {
             color: #008348;
-            font-weight: bold; }
+            font-weight: bold;
+            font-size: 4.2vw; }
         .leaders .block-inner .leader-section .leader-stat-wrap .name {
           color: #848484; }
           .leaders .block-inner .leader-section .leader-stat-wrap .name span {
@@ -1799,31 +1883,45 @@ body {
       <div class="block-wrap leaders">
         <div class="block-inner">
           <div class="leader-section">
-            <div class="leader-subsection">
+            <div class="leader-subsection top">
                 <p class="leaders-title"> SEASON LEADERS </p>
                 <p class="clock"></p>
             </div>
-            <div class="leader-subsection">
-              <img src="http://stats.nba.com/media/img/teams/logos/BOS_logo.svg"/>
+            <div class="leader-subsection bottom">
               <p class="active">PTS</p>
               <p>AST</p>
               <p>REB</p>
-              <img src="http://stats.nba.com/media/img/teams/logos/MIA_logo.svg"/>
+              <div class="underline"></div>
             </div>
           </div>
           <!-- CELTICS - FIRST -->
           <div class="leader-section celtics">
-            <div class="leader-stat-wrap pts">
+            <div class="leader-stat-wrap pts celtics">
               <p class='stat'></p><br>
               <p class='name'></p>
               <img class="headshot" src=""/>
             </div>
-            <div class="leader-stat-wrap ast">
+            <div class="leader-stat-wrap pts away">
               <p class='stat'></p><br>
               <p class='name'></p>
               <img class="headshot" src=""/>
             </div>
-            <div class="leader-stat-wrap reb">
+            <div class="leader-stat-wrap ast celtics">
+              <p class='stat'></p><br>
+              <p class='name'></p>
+              <img class="headshot" src=""/>
+            </div>
+            <div class="leader-stat-wrap ast away">
+              <p class='stat'></p><br>
+              <p class='name'></p>
+              <img class="headshot" src=""/>
+            </div>
+            <div class="leader-stat-wrap reb celtics">
+              <p class='stat'></p><br>
+              <p class='name'></p>
+              <img class="headshot" src=""/>
+            </div>
+            <div class="leader-stat-wrap reb away">
               <p class='stat'></p><br>
               <p class='name'></p>
               <img class="headshot" src=""/>
@@ -1831,17 +1929,32 @@ body {
           </div>
           <!-- CELTICS - SECOND -->
           <div class="leader-section celtics">
-            <div class="leader-stat-wrap pts">
+            <div class="leader-stat-wrap pts celtics">
               <p class='stat'></p><br>
               <p class='name'></p>
               <img class="headshot" src=""/>
             </div>
-            <div class="leader-stat-wrap ast">
+            <div class="leader-stat-wrap pts away">
               <p class='stat'></p><br>
               <p class='name'></p>
               <img class="headshot" src=""/>
             </div>
-            <div class="leader-stat-wrap reb">
+            <div class="leader-stat-wrap ast celtics">
+              <p class='stat'></p><br>
+              <p class='name'></p>
+              <img class="headshot" src=""/>
+            </div>
+            <div class="leader-stat-wrap ast away">
+              <p class='stat'></p><br>
+              <p class='name'></p>
+              <img class="headshot" src=""/>
+            </div>
+            <div class="leader-stat-wrap reb celtics">
+              <p class='stat'></p><br>
+              <p class='name'></p>
+              <img class="headshot" src=""/>
+            </div>
+            <div class="leader-stat-wrap reb away">
               <p class='stat'></p><br>
               <p class='name'></p>
               <img class="headshot" src=""/>
@@ -1849,25 +1962,37 @@ body {
           </div>
           <!-- CELTICS - THIRD -->
           <div class="leader-section celtics">
-            <div class="leader-stat-wrap pts">
+            <div class="leader-stat-wrap pts celtics">
               <p class='stat'></p><br>
               <p class='name'></p>
               <img class="headshot" src=""/>
             </div>
-            <div class="leader-stat-wrap ast">
+            <div class="leader-stat-wrap pts away">
               <p class='stat'></p><br>
               <p class='name'></p>
               <img class="headshot" src=""/>
             </div>
-            <div class="leader-stat-wrap reb">
+            <div class="leader-stat-wrap ast celtics">
+              <p class='stat'></p><br>
+              <p class='name'></p>
+              <img class="headshot" src=""/>
+            </div>
+            <div class="leader-stat-wrap ast away">
+              <p class='stat'></p><br>
+              <p class='name'></p>
+              <img class="headshot" src=""/>
+            </div>
+            <div class="leader-stat-wrap reb celtics">
+              <p class='stat'></p><br>
+              <p class='name'></p>
+              <img class="headshot" src=""/>
+            </div>
+            <div class="leader-stat-wrap reb away">
               <p class='stat'></p><br>
               <p class='name'></p>
               <img class="headshot" src=""/>
             </div>
           </div>
-          <!-- AWAY - FIRST -->
-          <!-- AWAY - SECOND -->
-          <!-- AWAY - THIRD -->
         </div>
       </div>
       <!-- VIDEO BACKGROUND -->
