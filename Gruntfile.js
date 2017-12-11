@@ -14,7 +14,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['src/js/*.js'],
-        tasks: ['import','notify:done','eslint']
+        tasks: ['browserify', 'import', 'notify:done','eslint']
       },
       css: {
         files: ['src/scss/*.scss',
@@ -99,10 +99,26 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/js/concourse.js' : 'src/js/concourse.js',
           'dist/concourse.ready.html' : 'src/concourse.html'
         }
       }
+    },
+
+    /*==================================
+    =            BROWSERIFY            =
+    ==================================*/
+
+    browserify: {
+        dev: {
+            src: [
+                "src/js/concourse.js"
+            ],
+            dest: 'dist/js/concourse.js',
+            options: {
+                browserifyOptions: { debug: true },
+                transform: [["babelify", { "presets": ["env"] }]],
+            }
+        }
     },
 
     /*==============================
@@ -134,6 +150,7 @@ module.exports = function(grunt) {
   ==================================*/
 
   require('grunt-log-headers')(grunt);
+  grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-eslint');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-watch');

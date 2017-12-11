@@ -1,46 +1,23 @@
-jQuery(document).ready(function() {
-    rosterObj = {
-        celtics: {
-            roster: {},
-            leaders: {
-                pts: [
-                    ['--', '--','--', '--'],
-                    ['--', '--','--', '--'],
-                    ['--', '--','--', '--']
-                ],
-                ast: [
-                    ['--', '--','--', '--'],
-                    ['--', '--','--', '--'],
-                    ['--', '--','--', '--']
-                ],
-                reb: [
-                    ['--', '--','--', '--'],
-                    ['--', '--','--', '--'],
-                    ['--', '--','--', '--']
-                ]
-            }
-        },
-        away: {
-            roster: {},
-            leaders: {
-                pts: [
-                    ['--', '--','--', '--'],
-                    ['--', '--','--', '--'],
-                    ['--', '--','--', '--']
-                ],
-                ast: [
-                    ['--', '--','--', '--'],
-                    ['--', '--','--', '--'],
-                    ['--', '--','--', '--']
-                ],
-                reb: [
-                    ['--', '--','--', '--'],
-                    ['--', '--','--', '--'],
-                    ['--', '--','--', '--']
-                ]
-            }
+var rosterObj = {
+    celtics: {
+        roster: {},
+        leaders: {
+            pts: [['--', '--', '--', '--'], ['--', '--', '--', '--'], ['--', '--', '--', '--']],
+            ast: [['--', '--', '--', '--'], ['--', '--', '--', '--'], ['--', '--', '--', '--']],
+            reb: [['--', '--', '--', '--'], ['--', '--', '--', '--'], ['--', '--', '--', '--']]
         }
-    };
+    },
+    away: {
+        roster: {},
+        leaders: {
+            pts: [['--', '--', '--', '--'], ['--', '--', '--', '--'], ['--', '--', '--', '--']],
+            ast: [['--', '--', '--', '--'], ['--', '--', '--', '--'], ['--', '--', '--', '--']],
+            reb: [['--', '--', '--', '--'], ['--', '--', '--', '--'], ['--', '--', '--', '--']]
+        }
+    }
+};
+
+jQuery(document).ready(function() {
     var gid = '';
     var gameStarted = false;
     var playerSpotlightCounter = 15;
@@ -352,6 +329,9 @@ function loadAwayTeamData() {}
 /*====================================
 =            STAT LEADERS            =
 ====================================*/
+
+const test = '';
+
 function leaders(gid, gameStarted) {
     var gameDetail = '';
     var detailAvailable = false;
@@ -388,19 +368,19 @@ function leaders(gid, gameStarted) {
         jQuery('.leader-subsection.bottom p:nth-of-type(1)').addClass('transition-1');
     }, 800);
     var transitionCounter = 1;
-    for (var i=1; i <= 6; i++){
+    for (let i=1; i <= 6; i++){
         setTimeout(function(numberString) {
-            jQuery('.leaders .leader-section .leader-stat-wrap').addClass('transition-' + transitionCounter);
-            jQuery('.leader-subsection.bottom p').removeClass('transition-' + transitionCounter);
+            jQuery('.leaders .leader-section .leader-stat-wrap').addClass('transition-' + i);
+            jQuery('.leader-subsection.bottom p').removeClass('transition-' + i);
             if (transitionCounter % 2 == 0){
-                console.log(transitionCounter/2);
                 setTimeout(function(){
-                    jQuery('.leaders .leader-section .underline').addClass('transition-' + (transitionCounter/2));
-                    jQuery('.leader-subsection.bottom p:nth-of-type(2)').addClass('transition-' + (transitionCounter/2));
+                    console.log(i);
+                    jQuery('.leaders .leader-section .underline').addClass('transition-' + (i/2));
+                    jQuery('.leader-subsection.bottom p:nth-of-type(2)').addClass('transition-' + (i/2));
                 }, 400);
             }
             transitionCounter++;
-        }, (2000 * i));
+        }, 2000 * i);
     }
 };
 /*==============================
