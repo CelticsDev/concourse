@@ -3,6 +3,7 @@
 ===============================*/
 
 .leaders {
+    display: none;
     padding: 4%;
 
     @include transition(all 1s ease);

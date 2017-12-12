@@ -354,12 +354,12 @@
 =            SOCIAL            =
 ==============================*/
 .social {
+  display: none;
   padding: 4%;
-  display: flex;
+  /*     display: flex; */
   flex-direction: column;
   justify-content: space-between;
-  flex-wrap: wrap;
-  display: none; }
+  flex-wrap: wrap; }
   .social.transition-3 {
     padding: 0; }
   .social.transition-1 {
@@ -1043,6 +1043,7 @@
 =            LEADERS            =
 ===============================*/
 .leaders {
+  display: none;
   padding: 4%;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -1250,6 +1251,138 @@
           position: absolute;
           right: 2%;
           bottom: 0px; }
+
+/*========================================
+=                STANDINGS               =
+========================================*/
+.standings {
+  width: 100%;
+  height: 100%;
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .standings .top-wrap {
+    height: 5%;
+    width: 100%; }
+  .standings .bottom-wrap {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    background-color: white; }
+    .standings .bottom-wrap .active {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#008348+0,008348+100&0.35+0,0.35+32,0.2+100 */
+      background: -moz-linear-gradient(left, rgba(0, 131, 72, 0.35) 0%, rgba(0, 131, 72, 0.35) 32%, rgba(0, 131, 72, 0.2) 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, rgba(0, 131, 72, 0.35) 0%, rgba(0, 131, 72, 0.35) 32%, rgba(0, 131, 72, 0.2) 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, rgba(0, 131, 72, 0.35) 0%, rgba(0, 131, 72, 0.35) 32%, rgba(0, 131, 72, 0.2) 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59008348', endColorstr='#33008348',GradientType=1 );
+      /* IE6-9 */ }
+    .standings .bottom-wrap .active-away {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9c9c9+0,bfbfbf+100&0.66+0,0.66+18,0.3+100 */
+      background: -moz-linear-gradient(left, rgba(201, 201, 201, 0.66) 0%, rgba(199, 199, 199, 0.66) 18%, rgba(191, 191, 191, 0.3) 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, rgba(201, 201, 201, 0.66) 0%, rgba(199, 199, 199, 0.66) 18%, rgba(191, 191, 191, 0.3) 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, rgba(201, 201, 201, 0.66) 0%, rgba(199, 199, 199, 0.66) 18%, rgba(191, 191, 191, 0.3) 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8c9c9c9', endColorstr='#4dbfbfbf',GradientType=1 );
+      /* IE6-9 */ }
+    .standings .bottom-wrap .east {
+      border-right: 1px solid #212121;
+      display: flex;
+      height: 100%;
+      width: 50%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin: 0 0 3em 0;
+      padding: 0;
+      flex-direction: column; }
+      .standings .bottom-wrap .east > div {
+        display: flex;
+        flex-grow: 1;
+        background-color: #fff;
+        padding-right: 2%; }
+        .standings .bottom-wrap .east > div:nth-child(even) {
+          background-color: #fafafa; }
+        .standings .bottom-wrap .east > div:nth-child(9) {
+          border-bottom: 2px solid black; }
+        .standings .bottom-wrap .east > div div {
+          flex-basis: 0;
+          display: flex;
+          align-items: center;
+          font-size: 1.5vw;
+          justify-content: center; }
+      .standings .bottom-wrap .east .standings-header {
+        background-color: #2a65a7;
+        color: white;
+        padding-left: 6%; }
+        .standings .bottom-wrap .east .standings-header div:first-child {
+          font-weight: bold;
+          flex-grow: 2.8; }
+    .standings .bottom-wrap .west {
+      display: flex;
+      height: 100%;
+      width: 50%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin: 0 0 3em 0;
+      padding: 0;
+      flex-direction: column; }
+      .standings .bottom-wrap .west > div {
+        display: flex;
+        flex-grow: 1;
+        background-color: #fff;
+        padding-right: 2%; }
+        .standings .bottom-wrap .west > div:nth-child(even) {
+          background-color: #fafafa; }
+        .standings .bottom-wrap .west > div:nth-child(9) {
+          border-bottom: 2px solid black; }
+        .standings .bottom-wrap .west > div div {
+          flex-basis: 0;
+          display: flex;
+          align-items: center;
+          font-size: 1.5vw;
+          justify-content: center; }
+      .standings .bottom-wrap .west .standings-header {
+        background-color: #da3550;
+        color: white;
+        padding-left: 6%; }
+        .standings .bottom-wrap .west .standings-header div:first-child {
+          font-weight: bold;
+          flex-grow: 2.8; }
+    .standings .bottom-wrap .place {
+      flex-grow: .6;
+      font-weight: 500;
+      color: #b5b5b5; }
+    .standings .bottom-wrap .logo-wrap {
+      flex-grow: 1;
+      justify-content: flex-start !important; }
+      .standings .bottom-wrap .logo-wrap .logo {
+        width: 6%;
+        position: absolute; }
+    .standings .bottom-wrap .team {
+      padding-right: 7%;
+      font-weight: bold;
+      flex-grow: .9; }
+    .standings .bottom-wrap .wins {
+      flex-grow: 1; }
+    .standings .bottom-wrap .losses {
+      flex-grow: 1; }
+    .standings .bottom-wrap .percentage {
+      flex-grow: 1; }
+    .standings .bottom-wrap .games-behind {
+      flex-grow: 1; }
+    .standings .bottom-wrap .streak {
+      flex-grow: 1; }
 
 * {
   box-sizing: border-box;

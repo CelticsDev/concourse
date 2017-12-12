@@ -3,12 +3,12 @@
 ==============================*/
 
 .social {
+    display: none;
     padding: 4%;
-    display: flex;
+/*     display: flex; */
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
-    display: none;
 
     &.transition-3 {
         padding: 0;
