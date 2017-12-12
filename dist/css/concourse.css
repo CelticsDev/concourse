@@ -16,95 +16,98 @@
 
 */
 /* DEFINE TEAM COLORS */
+/*===============================
+=            PRIMARY            =
+===============================*/
 .ATL {
-  color: #e13a3e; }
+  color: #e13a3e !important; }
 
 .BKN {
-  color: #000000; }
+  color: #000000 !important; }
 
 .BOS {
-  color: #008348; }
+  color: #008348 !important; }
 
 .CHA {
-  color: #211646; }
+  color: #211646 !important; }
 
 .CHI {
-  color: #ce1141; }
+  color: #ce1141 !important; }
 
 .CLE {
-  color: #860038; }
+  color: #860038 !important; }
 
 .DAL {
-  color: #006bb6; }
+  color: #006bb6 !important; }
 
 .DEN {
-  color: #4d90cd; }
+  color: #4d90cd !important; }
 
 .DET {
-  color: #ed174c; }
+  color: #ed174c !important; }
 
 .GSW {
-  color: #0067b1; }
+  color: #0067b1 !important; }
 
 .HOU {
-  color: #ce1141; }
+  color: #ce1141 !important; }
 
 .IND {
-  color: #00285d; }
+  color: #00285d !important; }
 
 .LAC {
-  color: #ed174f; }
+  color: #ed174f !important; }
 
 .LAL {
-  color: #552582; }
+  color: #552582 !important; }
 
 .MEM {
-  color: #002b5c; }
+  color: #002b5c !important; }
 
 .MIA {
-  color: #98012e; }
+  color: #98012e !important; }
 
 .MIL {
-  color: #004812; }
+  color: #004812 !important; }
 
 .MIN {
-  color: #005085; }
+  color: #005085 !important; }
 
 .NOP {
-  color: #002d5c; }
+  color: #002d5c !important; }
 
 .NYK {
-  color: #f68428; }
+  color: #f68428 !important; }
 
 .OKC {
-  color: #007dc3; }
+  color: #007dc3 !important; }
 
 .ORL {
-  color: #0077c0; }
+  color: #0077c0 !important; }
 
 .PHI {
-  color: #ed174f; }
+  color: #ed174f !important; }
 
 .PHX {
-  color: #e56020; }
+  color: #e56020 !important; }
 
 .POR {
-  color: #e3373d; }
+  color: #e3373d !important; }
 
 .SAC {
-  color: #393996; }
+  color: #393996 !important; }
 
 .SAS {
-  color: #000000; }
+  color: #000000 !important; }
 
 .TOR {
-  color: #d31245; }
+  color: #d31245 !important; }
 
 .UTA {
-  color: #002b5c; }
+  color: #002b5c !important; }
 
 .WAS {
-  color: #002a5c; }
+  color: #002a5c !important; }
 
 .NJN {
   color: #15224c; }
@@ -118,197 +121,203 @@
 .SEA {
   color: #005831; }
 
+/*==================================
+=            BACKGROUND            =
+==================================*/
 .ATL-bg {
-  background-color: #e13a3e; }
+  background-color: #e13a3e !important; }
 
 .BKN-bg {
-  background-color: #000000; }
+  background-color: #000000 !important; }
 
 .BOS-bg {
-  background-color: #008348; }
+  background-color: #008348 !important; }
 
 .CHA-bg {
-  background-color: #211646; }
+  background-color: #211646 !important; }
 
 .CHI-bg {
-  background-color: #ce1141; }
+  background-color: #ce1141 !important; }
 
 .CLE-bg {
-  background-color: #860038; }
+  background-color: #860038 !important; }
 
 .DAL-bg {
-  background-color: #006bb6; }
+  background-color: #006bb6 !important; }
 
 .DEN-bg {
-  background-color: #4d90cd; }
+  background-color: #4d90cd !important; }
 
 .DET-bg {
-  background-color: #ed174c; }
+  background-color: #ed174c !important; }
 
 .GSW-bg {
-  background-color: #0067b1; }
+  background-color: #0067b1 !important; }
 
 .HOU-bg {
-  background-color: #ce1141; }
+  background-color: #ce1141 !important; }
 
 .IND-bg {
-  background-color: #00285d; }
+  background-color: #00285d !important; }
 
 .LAC-bg {
-  background-color: #ed174f; }
+  background-color: #ed174f !important; }
 
 .LAL-bg {
-  background-color: #552582; }
+  background-color: #552582 !important; }
 
 .MEM-bg {
-  background-color: #002b5c; }
+  background-color: #002b5c !important; }
 
 .MIA-bg {
-  background-color: #98012e; }
+  background-color: #98012e !important; }
 
 .MIL-bg {
-  background-color: #004812; }
+  background-color: #004812 !important; }
 
 .MIN-bg {
-  background-color: #005085; }
+  background-color: #005085 !important; }
 
 .NOP-bg {
-  background-color: #002d5c; }
+  background-color: #002d5c !important; }
 
 .NYK-bg {
-  background-color: #f68428; }
+  background-color: #f68428 !important; }
 
 .OKC-bg {
-  background-color: #007dc3; }
+  background-color: #007dc3 !important; }
 
 .ORL-bg {
-  background-color: #0077c0; }
+  background-color: #0077c0 !important; }
 
 .PHI-bg {
-  background-color: #ed174f; }
+  background-color: #ed174f !important; }
 
 .PHX-bg {
-  background-color: #e56020; }
+  background-color: #e56020 !important; }
 
 .POR-bg {
-  background-color: #e3373d; }
+  background-color: #e3373d !important; }
 
 .SAC-bg {
-  background-color: #393996; }
+  background-color: #393996 !important; }
 
 .SAS-bg {
-  background-color: #000000; }
+  background-color: #000000 !important; }
 
 .TOR-bg {
-  background-color: #d31245; }
+  background-color: #d31245 !important; }
 
 .UTA-bg {
-  background-color: #002b5c; }
+  background-color: #002b5c !important; }
 
 .WAS-bg {
-  background-color: #002a5c; }
+  background-color: #002a5c !important; }
 
 .NJN-bg {
-  background-color: #15224c; }
+  background-color: #15224c !important; }
 
 .CHB-bg {
-  background-color: #0c2340; }
+  background-color: #0c2340 !important; }
 
 .NOH-bg {
-  background-color: #008cc1; }
+  background-color: #008cc1 !important; }
 
 .SEA-bg {
-  background-color: #005831; }
+  background-color: #005831 !important; }
 
+/*=============================
+=            LIGHT            =
+=============================*/
 .ATL-light {
-  color: #e13a3e; }
+  color: #e13a3e !important; }
 
 .BKN-light {
-  color: #FFFFFF; }
+  color: #FFFFFF !important; }
 
 .BOS-light {
-  color: #008348; }
+  color: #008348 !important; }
 
 .CHA-light {
-  color: #00788C; }
+  color: #00788C !important; }
 
 .CHI-light {
-  color: #ce1141; }
+  color: #ce1141 !important; }
 
 .CLE-light {
-  color: #FDBB30; }
+  color: #FDBB30 !important; }
 
 .DAL-light {
-  color: #006bb6; }
+  color: #006bb6 !important; }
 
 .DEN-light {
-  color: #4d90cd; }
+  color: #4d90cd !important; }
 
 .DET-light {
-  color: #ed174c; }
+  color: #ed174c !important; }
 
 .GSW-light {
-  color: #FDB927; }
+  color: #FDB927 !important; }
 
 .HOU-light {
-  color: #ce1141; }
+  color: #ce1141 !important; }
 
 .IND-light {
-  color: #FDBB30; }
+  color: #FDBB30 !important; }
 
 .LAC-light {
-  color: #ed174f; }
+  color: #ed174f !important; }
 
 .LAL-light {
-  color: #FDB927; }
+  color: #FDB927 !important; }
 
 .MEM-light {
-  color: #6189B9; }
+  color: #6189B9 !important; }
 
 .MIA-light {
-  color: #98012e; }
+  color: #98012e !important; }
 
 .MIL-light {
-  color: #EEE1C6; }
+  color: #EEE1C6 !important; }
 
 .MIN-light {
-  color: #C4CED4; }
+  color: #C4CED4 !important; }
 
 .NOP-light {
-  color: #B4975A; }
+  color: #B4975A !important; }
 
 .NYK-light {
-  color: #f68428; }
+  color: #f68428 !important; }
 
 .OKC-light {
-  color: #007dc3; }
+  color: #007dc3 !important; }
 
 .ORL-light {
-  color: #0077c0; }
+  color: #0077c0 !important; }
 
 .PHI-light {
-  color: #ed174f; }
+  color: #ed174f !important; }
 
 .PHX-light {
-  color: #e56020; }
+  color: #e56020 !important; }
 
 .POR-light {
-  color: #e3373d; }
+  color: #e3373d !important; }
 
 .SAC-light {
-  color: #63727A; }
+  color: #63727A !important; }
 
 .SAS-light {
-  color: #c4ced4; }
+  color: #c4ced4 !important; }
 
 .TOR-light {
-  color: #d31245; }
+  color: #d31245 !important; }
 
 .UTA-light {
-  color: #F9A01B; }
+  color: #F9A01B !important; }
 
 .WAS-light {
-  color: #E31837; }
+  color: #E31837 !important; }
 
 .NJN-light {
   color: #cd1041; }
@@ -321,6 +330,20 @@
 
 .SEA-light {
   color: #ffc121; }
+
+/*================================
+=            GRADIENT            =
+================================*/
+.MIA-grad {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#98012e+0,98012e+100&1+0,1+42,0.52+100 */
+  background: -moz-linear-gradient(left, #98012e 0%, #98012e 42%, rgba(152, 1, 46, 0.52) 100%) !important;
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #98012e 0%, #98012e 42%, rgba(152, 1, 46, 0.52) 100%) !important;
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #98012e 0%, #98012e 42%, rgba(152, 1, 46, 0.52) 100%) !important;
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#98012e', endColorstr='#8598012e',GradientType=1 ) !important;
+  /* IE6-9 */ }
 
 /***** USAGE *****
 	.example {
@@ -1107,16 +1130,16 @@
           font-weight: 700; }
         .leaders .block-inner .leader-section .leader-subsection.top {
           padding: 0% 3%;
-          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#008348+0,008348+100&1+0,1+42,0.52+100 */
-          background: -moz-linear-gradient(left, #008348 0%, #008348 42%, rgba(0, 131, 72, 0.52) 100%);
-          /* FF3.6-15 */
-          background: -webkit-linear-gradient(left, #008348 0%, #008348 42%, rgba(0, 131, 72, 0.52) 100%);
-          /* Chrome10-25,Safari5.1-6 */
-          background: linear-gradient(to right, #008348 0%, #008348 42%, rgba(0, 131, 72, 0.52) 100%);
-          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008348', endColorstr='#85008348',GradientType=1 );
-          /* IE6-9 */
           top: -25%;
+          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,0.4+68,0.5+100 */
+          background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 68%, rgba(255, 255, 255, 0.5) 100%);
+          /* FF3.6-15 */
+          background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 68%, rgba(255, 255, 255, 0.5) 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 68%, rgba(255, 255, 255, 0.5) 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#80ffffff',GradientType=1 );
+          /* IE6-9 */
           -moz-transition: all 1s ease;
           -o-transition: all 1s ease;
           -webkit-transition: all 1s ease;
@@ -1142,10 +1165,10 @@
             .leaders .block-inner .leader-section .leader-subsection.bottom p.transition-1 {
               color: #121212; }
           .leaders .block-inner .leader-section .leader-subsection.bottom .underline {
-            -moz-transition: all 0.5s ease-out;
-            -o-transition: all 0.5s ease-out;
-            -webkit-transition: all 0.5s ease-out;
-            transition: all 0.5s ease-out;
+            -moz-transition: all 0.6s ease-out;
+            -o-transition: all 0.6s ease-out;
+            -webkit-transition: all 0.6s ease-out;
+            transition: all 0.6s ease-out;
             display: inline-block;
             text-decoration: none;
             height: 5%;

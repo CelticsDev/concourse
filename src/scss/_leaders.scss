@@ -51,7 +51,9 @@
 
             &:nth-child(2) {
                 top: -50%;
+
                 @include transition(all 1s ease-out);
+
                 .leader-stat-wrap {
                     transition-delay: 0.15s;
                 }
@@ -59,7 +61,9 @@
 
             &:nth-child(3) {
                 top: -75%;
+
                 @include transition(all 1s ease-out);
+
                 .leader-stat-wrap {
                     transition-delay: 0.1s;
                 }
@@ -67,7 +71,9 @@
 
             &:nth-child(4) {
                 top: -100%;
+
                 @include transition(all 1s ease-out);
+
                 .leader-stat-wrap {
                     transition-delay: 0.05s;
                 }
@@ -102,26 +108,44 @@
 
                 &.top {
                     padding: 0% 3%;
-                    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#008348+0,008348+100&1+0,1+42,0.52+100 */
-                    background: -moz-linear-gradient(left, rgba(0,131,72,1) 0%, rgba(0,131,72,1) 42%, rgba(0,131,72,0.52) 100%); /* FF3.6-15 */
-                    background: -webkit-linear-gradient(left, rgba(0,131,72,1) 0%,rgba(0,131,72,1) 42%,rgba(0,131,72,0.52) 100%); /* Chrome10-25,Safari5.1-6 */
-                    background: linear-gradient(to right, rgba(0,131,72,1) 0%,rgba(0,131,72,1) 42%,rgba(0,131,72,0.52) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008348', endColorstr='#85008348',GradientType=1 ); /* IE6-9 */
                     top: -25%;
 
+                    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,0.4+68,0.5+100 */
+                    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 68%, rgba(255, 255, 255, 0.5) 100%);
+
+                    /* FF3.6-15 */
+                    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 68%, rgba(255, 255, 255, 0.5) 100%);
+
+                    /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 68%, rgba(255, 255, 255, 0.5) 100%);
+
+                    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#80ffffff',GradientType=1 );
+
+                    /* IE6-9 */
                     @include transition(all 1s ease);
                 }
 
                 &.bottom {
                     padding: 0px 20%;
                     justify-content: space-between;
+
                     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.46+0,1+51,1+100 */
-                    background: -moz-linear-gradient(left, rgba(255,255,255,0.46) 0%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
-                    background: -webkit-linear-gradient(left, rgba(255,255,255,0.46) 0%,rgba(255,255,255,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-                    background: linear-gradient(to right, rgba(255,255,255,0.46) 0%,rgba(255,255,255,1) 51%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+                    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, 1) 100%);
+
+                    /* FF3.6-15 */
+                    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, 1) 100%);
+
+                    /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(to right, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, 1) 100%);
+
+                    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75ffffff', endColorstr='#ffffff',GradientType=1 );
+
+                    /* IE6-9 */
                     p {
                         color: #dbdbdb;
+
                         @include transition(all 1s ease);
 
                         &.transition-1 {
@@ -130,7 +154,8 @@
                     }
 
                     .underline {
-                        @include transition(all 0.5s ease-out);
+                        @include transition(all 0.6s ease-out);
+
                         display: inline-block;
                         text-decoration: none;
                         height: 5%;
@@ -165,71 +190,83 @@
                 line-height: 1.2;
                 font-weight: 500;
                 padding: 5% 3%;
+
                 @include transition(all 1s ease);
 
                 p {
                     position: absolute;
-                    margin:0;
+                    margin: 0;
                 }
 
                 /* SLIDING */
 
                 &:nth-child(1) {
                     left: 0%;
+
                     &.transition-1 {
-                         left: -100%;
+                        left: -100%;
                     }
                 }
 
                 &:nth-child(2) {
                     left: 100%;
+
                     &.transition-1 {
-                         left: 0%;
+                        left: 0%;
                     }
+
                     &.transition-2 {
-                         left: -100%;
+                        left: -100%;
                     }
                 }
 
                 &:nth-child(3) {
                     left: 100%;
+
                     &.transition-2 {
-                         left: 0%;
+                        left: 0%;
                     }
+
                     &.transition-3 {
-                         left: -100%;
+                        left: -100%;
                     }
                 }
 
                 &:nth-child(4) {
                     left: 100%;
+
                     &.transition-3 {
-                         left: 0%;
+                        left: 0%;
                     }
+
                     &.transition-4 {
-                         left: -100%;
+                        left: -100%;
                     }
                 }
 
                 &:nth-child(5) {
                     left: 100%;
+
                     &.transition-4 {
-                         left: 0%;
+                        left: 0%;
                     }
+
                     &.transition-5 {
-                         left: -100%;
+                        left: -100%;
                     }
                 }
 
                 &:nth-child(6) {
                     left: 100%;
+
                     &.transition-5 {
-                         left: 0%;
+                        left: 0%;
                     }
                 }
 
                 .stat {
                     font-size: 3.4vw;
+
                     span {
                         color: #008348;
                         font-weight: bold;
@@ -239,6 +276,7 @@
 
                 .name {
                     color: #848484;
+
                     span {
                         font-weight: 400;
                     }
@@ -246,7 +284,7 @@
 
                 .headshot {
                     height: 90%;
-                    position:absolute;
+                    position: absolute;
                     right: 2%;
                     bottom: 0px;
                 }
