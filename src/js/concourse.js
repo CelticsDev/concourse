@@ -28,7 +28,7 @@ jQuery(document).ready(function() {
         async: false,
         success: function(todaysScoresData) {
             for (var i = 0; i < todaysScoresData.gs.g.length; i++) {
-                if (todaysScoresData.gs.g[i].h.ta == 'ORL') { //CHANGE THIS
+                if (todaysScoresData.gs.g[i].h.ta == 'BKN') { //CHANGE THIS
                     awayTeam = todaysScoresData.gs.g[i].v.ta;
                     loadRosterData(awayTeam);
                     gid = todaysScoresData.gs.g[i].gid;

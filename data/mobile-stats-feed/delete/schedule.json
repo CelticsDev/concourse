@@ -1,0 +1,5133 @@
+{
+    "gscd": {
+        "tid": 1610612738,
+        "g": [{
+            "gid": "0021600006",
+            "gcode": "20161026/BKNBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-10-26",
+            "htm": "2016-10-26T19:30:00",
+            "vtm": "2016-10-26T19:30:00",
+            "etm": "2016-10-26T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "YES",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "100.7 WZLX",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "WFAN",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612751,
+                "re": "0-1",
+                "ta": "BKN",
+                "tn": "Nets",
+                "tc": "Brooklyn",
+                "s": "117"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "1-0",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "122"
+            },
+            "gdtutc": "2016-10-26",
+            "utctm": "23:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600015",
+            "gcode": "20161027/BOSCHI",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-10-27",
+            "htm": "2016-10-27T19:00:00",
+            "vtm": "2016-10-27T20:00:00",
+            "etm": "2016-10-27T20:00:00",
+            "an": "United Center",
+            "ac": "Chicago",
+            "as": "IL",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "TNT",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "TSN2",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "WLS-AM 890 / WRTO 1200 (ESP)",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "1-1",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "99"
+            },
+            "h": {
+                "tid": 1610612741,
+                "re": "1-0",
+                "ta": "CHI",
+                "tn": "Bulls",
+                "tc": "Chicago",
+                "s": "105"
+            },
+            "gdtutc": "2016-10-28",
+            "utctm": "00:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600027",
+            "gcode": "20161029/BOSCHA",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-10-29",
+            "htm": "2016-10-29T19:00:00",
+            "vtm": "2016-10-29T19:00:00",
+            "etm": "2016-10-29T19:00:00",
+            "an": "Spectrum Center",
+            "ac": "Charlotte",
+            "as": "NC",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "Fox Sports Southeast - Charlotte",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "WFNZ 610 AM",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "2-1",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "104"
+            },
+            "h": {
+                "tid": 1610612766,
+                "re": "2-1",
+                "ta": "CHA",
+                "tn": "Hornets",
+                "tc": "Charlotte",
+                "s": "98"
+            },
+            "gdtutc": "2016-10-29",
+            "utctm": "23:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600061",
+            "gcode": "20161102/CHIBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-11-02",
+            "htm": "2016-11-02T20:00:00",
+            "vtm": "2016-11-02T19:00:00",
+            "etm": "2016-11-02T20:00:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "ESPN",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "WGN-TV",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "WLS 890AM",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612741,
+                "re": "3-1",
+                "ta": "CHI",
+                "tn": "Bulls",
+                "tc": "Chicago",
+                "s": "100"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "3-1",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "107"
+            },
+            "gdtutc": "2016-11-03",
+            "utctm": "00:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600068",
+            "gcode": "20161103/BOSCLE",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-11-03",
+            "htm": "2016-11-03T20:00:00",
+            "vtm": "2016-11-03T20:00:00",
+            "etm": "2016-11-03T20:00:00",
+            "an": "Quicken Loans Arena",
+            "ac": "Cleveland",
+            "as": "OH",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "TNT",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "TSN1/4",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "WTAM 1100 / 100.7 WMMS / 87.7 FM (ESP)",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "3-2",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "122"
+            },
+            "h": {
+                "tid": 1610612739,
+                "re": "5-0",
+                "ta": "CLE",
+                "tn": "Cavaliers",
+                "tc": "Cleveland",
+                "s": "128"
+            },
+            "gdtutc": "2016-11-04",
+            "utctm": "00:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600091",
+            "gcode": "20161106/DENBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-11-06",
+            "htm": "2016-11-06T19:30:00",
+            "vtm": "2016-11-06T17:30:00",
+            "etm": "2016-11-06T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "Altitude2",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "KKSE 950AM",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612743,
+                "re": "3-3",
+                "ta": "DEN",
+                "tn": "Nuggets",
+                "tc": "Denver",
+                "s": "123"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "3-3",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "107"
+            },
+            "gdtutc": "2016-11-07",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600107",
+            "gcode": "20161109/BOSWAS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-11-09",
+            "htm": "2016-11-09T19:00:00",
+            "vtm": "2016-11-09T19:00:00",
+            "etm": "2016-11-09T19:00:00",
+            "an": "Verizon Center",
+            "ac": "Washington",
+            "as": "DC",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSN",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "1500 AM",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "3-4",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "93"
+            },
+            "h": {
+                "tid": 1610612764,
+                "re": "2-5",
+                "ta": "WAS",
+                "tn": "Wizards",
+                "tc": "Washington",
+                "s": "118"
+            },
+            "gdtutc": "2016-11-10",
+            "utctm": "00:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600125",
+            "gcode": "20161111/NYKBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-11-11",
+            "htm": "2016-11-11T19:30:00",
+            "vtm": "2016-11-11T19:30:00",
+            "etm": "2016-11-11T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "MSG",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "ESPN NY 98.7",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612752,
+                "re": "3-5",
+                "ta": "NYK",
+                "tn": "Knicks",
+                "tc": "New York",
+                "s": "87"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "4-4",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "115"
+            },
+            "gdtutc": "2016-11-12",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600130",
+            "gcode": "20161112/BOSIND",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-11-12",
+            "htm": "2016-11-12T19:00:00",
+            "vtm": "2016-11-12T19:00:00",
+            "etm": "2016-11-12T19:00:00",
+            "an": "Bankers Life Fieldhouse",
+            "ac": "Indianapolis",
+            "as": "IN",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "FSI",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "1070 The Fan",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "5-4",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "105"
+            },
+            "h": {
+                "tid": 1610612754,
+                "re": "4-6",
+                "ta": "IND",
+                "tn": "Pacers",
+                "tc": "Indiana",
+                "s": "99"
+            },
+            "gdtutc": "2016-11-13",
+            "utctm": "00:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600148",
+            "gcode": "20161114/BOSNOP",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-11-14",
+            "htm": "2016-11-14T19:00:00",
+            "vtm": "2016-11-14T20:00:00",
+            "etm": "2016-11-14T20:00:00",
+            "an": "Smoothie King Center",
+            "ac": "New Orleans",
+            "as": "LA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "FSNOLA",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "WRNO 99.5FM",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "5-5",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "105"
+            },
+            "h": {
+                "tid": 1610612740,
+                "re": "2-9",
+                "ta": "NOP",
+                "tn": "Pelicans",
+                "tc": "New Orleans",
+                "s": "106"
+            },
+            "gdtutc": "2016-11-15",
+            "utctm": "01:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600161",
+            "gcode": "20161116/DALBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-11-16",
+            "htm": "2016-11-16T19:30:00",
+            "vtm": "2016-11-16T18:30:00",
+            "etm": "2016-11-16T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "FSSW",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "103.3 ESPN",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612742,
+                "re": "2-8",
+                "ta": "DAL",
+                "tn": "Mavericks",
+                "tc": "Dallas",
+                "s": "83"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "6-5",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "90"
+            },
+            "gdtutc": "2016-11-17",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600179",
+            "gcode": "20161118/GSWBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-11-18",
+            "htm": "2016-11-18T20:00:00",
+            "vtm": "2016-11-18T17:00:00",
+            "etm": "2016-11-18T20:00:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "ESPN",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "NBCS - BA",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "95.7 The Game",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612744,
+                "re": "10-2",
+                "ta": "GSW",
+                "tn": "Warriors",
+                "tc": "Golden State",
+                "s": "104"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "6-6",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "88"
+            },
+            "gdtutc": "2016-11-19",
+            "utctm": "01:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600188",
+            "gcode": "20161119/BOSDET",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-11-19",
+            "htm": "2016-11-19T19:00:00",
+            "vtm": "2016-11-19T19:00:00",
+            "etm": "2016-11-19T19:00:00",
+            "an": "Palace of Auburn Hills",
+            "ac": "Detroit",
+            "as": "MI",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "FS Detroit",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "105.1 WMGC-FM",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "7-6",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "94"
+            },
+            "h": {
+                "tid": 1610612765,
+                "re": "6-8",
+                "ta": "DET",
+                "tn": "Pistons",
+                "tc": "Detroit",
+                "s": "92"
+            },
+            "gdtutc": "2016-11-20",
+            "utctm": "00:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600205",
+            "gcode": "20161121/BOSMIN",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-11-21",
+            "htm": "2016-11-21T19:00:00",
+            "vtm": "2016-11-21T20:00:00",
+            "etm": "2016-11-21T20:00:00",
+            "an": "Target Center",
+            "ac": "Minneapolis",
+            "as": "MN",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "Fox Sports North Plus",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "830 WCCO",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "8-6",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "99"
+            },
+            "h": {
+                "tid": 1610612750,
+                "re": "4-9",
+                "ta": "MIN",
+                "tn": "Timberwolves",
+                "tc": "Minnesota",
+                "s": "93"
+            },
+            "gdtutc": "2016-11-22",
+            "utctm": "01:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600217",
+            "gcode": "20161123/BOSBKN",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-11-23",
+            "htm": "2016-11-23T19:30:00",
+            "vtm": "2016-11-23T19:30:00",
+            "etm": "2016-11-23T19:30:00",
+            "an": "Barclays Center",
+            "ac": "Brooklyn",
+            "as": "NY",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "YES",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "WCBS 880 AM",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "9-6",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "111"
+            },
+            "h": {
+                "tid": 1610612751,
+                "re": "4-10",
+                "ta": "BKN",
+                "tn": "Nets",
+                "tc": "Brooklyn",
+                "s": "92"
+            },
+            "gdtutc": "2016-11-24",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600225",
+            "gcode": "20161125/SASBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-11-25",
+            "htm": "2016-11-25T13:00:00",
+            "vtm": "2016-11-25T12:00:00",
+            "etm": "2016-11-25T13:00:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "FSSW",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "WOAI 1200AM",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612759,
+                "re": "13-3",
+                "ta": "SAS",
+                "tn": "Spurs",
+                "tc": "San Antonio",
+                "s": "109"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "9-7",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "103"
+            },
+            "gdtutc": "2016-11-25",
+            "utctm": "18:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600256",
+            "gcode": "20161128/BOSMIA",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-11-28",
+            "htm": "2016-11-28T19:30:00",
+            "vtm": "2016-11-28T19:30:00",
+            "etm": "2016-11-28T19:30:00",
+            "an": "AmericanAirlines Arena",
+            "ac": "Miami",
+            "as": "FL",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "NBATV",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "FS-SUN",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "790 The Ticket / S: WAQI 710 AM",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "10-7",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "112"
+            },
+            "h": {
+                "tid": 1610612748,
+                "re": "5-12",
+                "ta": "MIA",
+                "tn": "Heat",
+                "tc": "Miami",
+                "s": "104"
+            },
+            "gdtutc": "2016-11-29",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600267",
+            "gcode": "20161130/DETBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-11-30",
+            "htm": "2016-11-30T19:30:00",
+            "vtm": "2016-11-30T19:30:00",
+            "etm": "2016-11-30T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "NBATV",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "FS Detroit",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "105.1 WMGC-FM",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612765,
+                "re": "10-10",
+                "ta": "DET",
+                "tn": "Pistons",
+                "tc": "Detroit",
+                "s": "121"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "10-8",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "114"
+            },
+            "gdtutc": "2016-12-01",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600283",
+            "gcode": "20161202/SACBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-12-02",
+            "htm": "2016-12-02T19:30:00",
+            "vtm": "2016-12-02T16:30:00",
+            "etm": "2016-12-02T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "NBCS-CA",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "KHTK Sports 1140 AM",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612758,
+                "re": "7-12",
+                "ta": "SAC",
+                "tn": "Kings",
+                "tc": "Sacramento",
+                "s": "92"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "11-8",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "97"
+            },
+            "gdtutc": "2016-12-03",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600294",
+            "gcode": "20161203/BOSPHI",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-12-03",
+            "htm": "2016-12-03T19:30:00",
+            "vtm": "2016-12-03T19:30:00",
+            "etm": "2016-12-03T19:30:00",
+            "an": "Wells Fargo Center",
+            "ac": "Philadelphia",
+            "as": "PA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSN",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "97.5 The Fanatic",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "12-8",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "107"
+            },
+            "h": {
+                "tid": 1610612755,
+                "re": "4-16",
+                "ta": "PHI",
+                "tn": "76ers",
+                "tc": "Philadelphia",
+                "s": "106"
+            },
+            "gdtutc": "2016-12-04",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600311",
+            "gcode": "20161205/BOSHOU",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-12-05",
+            "htm": "2016-12-05T19:00:00",
+            "vtm": "2016-12-05T20:00:00",
+            "etm": "2016-12-05T20:00:00",
+            "an": "Toyota Center",
+            "ac": "Houston",
+            "as": "TX",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "NBATV",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "ROOT",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "790 AM",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "12-9",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "106"
+            },
+            "h": {
+                "tid": 1610612745,
+                "re": "14-7",
+                "ta": "HOU",
+                "tn": "Rockets",
+                "tc": "Houston",
+                "s": "107"
+            },
+            "gdtutc": "2016-12-06",
+            "utctm": "01:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600322",
+            "gcode": "20161207/BOSORL",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-12-07",
+            "htm": "2016-12-07T19:00:00",
+            "vtm": "2016-12-07T19:00:00",
+            "etm": "2016-12-07T19:00:00",
+            "an": "Amway Center",
+            "ac": "Orlando",
+            "as": "FL",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "FS Florida",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "ESPN 580 / Salsa 98.1 FM (ESP)",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "13-9",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "117"
+            },
+            "h": {
+                "tid": 1610612753,
+                "re": "10-13",
+                "ta": "ORL",
+                "tn": "Magic",
+                "tc": "Orlando",
+                "s": "87"
+            },
+            "gdtutc": "2016-12-08",
+            "utctm": "00:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600339",
+            "gcode": "20161209/TORBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-12-09",
+            "htm": "2016-12-09T19:30:00",
+            "vtm": "2016-12-09T19:30:00",
+            "etm": "2016-12-09T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "Sportsnet One",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "Sportsnet One",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "TSN Radio 1050 Toronto",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612761,
+                "re": "16-7",
+                "ta": "TOR",
+                "tn": "Raptors",
+                "tc": "Toronto",
+                "s": "101"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "13-10",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "94"
+            },
+            "gdtutc": "2016-12-10",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600357",
+            "gcode": "20161211/BOSOKC",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-12-11",
+            "htm": "2016-12-11T18:00:00",
+            "vtm": "2016-12-11T19:00:00",
+            "etm": "2016-12-11T19:00:00",
+            "an": "Chesapeake Energy Arena",
+            "ac": "Oklahoma City",
+            "as": "OK",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "FS Oklahoma HD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "WWLS 98.1FM OKC / 930AM (ESP)",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "13-11",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "96"
+            },
+            "h": {
+                "tid": 1610612760,
+                "re": "15-9",
+                "ta": "OKC",
+                "tn": "Thunder",
+                "tc": "Oklahoma City",
+                "s": "99"
+            },
+            "gdtutc": "2016-12-12",
+            "utctm": "00:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600383",
+            "gcode": "20161214/BOSSAS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-12-14",
+            "htm": "2016-12-14T20:30:00",
+            "vtm": "2016-12-14T21:30:00",
+            "etm": "2016-12-14T21:30:00",
+            "an": "AT&T Center",
+            "ac": "San Antonio",
+            "as": "TX",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "ESPN",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "FSSW",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "SN",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "WOAI 1200AM",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 6,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "13-12",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "101"
+            },
+            "h": {
+                "tid": 1610612759,
+                "re": "20-5",
+                "ta": "SAS",
+                "tn": "Spurs",
+                "tc": "San Antonio",
+                "s": "108"
+            },
+            "gdtutc": "2016-12-15",
+            "utctm": "02:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600391",
+            "gcode": "20161216/CHABOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-12-16",
+            "htm": "2016-12-16T19:30:00",
+            "vtm": "2016-12-16T19:30:00",
+            "etm": "2016-12-16T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "Fox Sports Southeast - Charlotte",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "WFNZ 610 AM",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612766,
+                "re": "14-13",
+                "ta": "CHA",
+                "tn": "Hornets",
+                "tc": "Charlotte",
+                "s": "88"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "14-12",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "96"
+            },
+            "gdtutc": "2016-12-17",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600410",
+            "gcode": "20161218/BOSMIA",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-12-18",
+            "htm": "2016-12-18T18:00:00",
+            "vtm": "2016-12-18T18:00:00",
+            "etm": "2016-12-18T18:00:00",
+            "an": "AmericanAirlines Arena",
+            "ac": "Miami",
+            "as": "FL",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "FS-SUN",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "790 The Ticket / S: WAQI 710 AM",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "15-12",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "105"
+            },
+            "h": {
+                "tid": 1610612748,
+                "re": "9-19",
+                "ta": "MIA",
+                "tn": "Heat",
+                "tc": "Miami",
+                "s": "95"
+            },
+            "gdtutc": "2016-12-18",
+            "utctm": "23:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600424",
+            "gcode": "20161220/BOSMEM",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-12-20",
+            "htm": "2016-12-20T19:00:00",
+            "vtm": "2016-12-20T20:00:00",
+            "etm": "2016-12-20T20:00:00",
+            "an": "FedExForum",
+            "ac": "Memphis",
+            "as": "TN",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "Fox Sports Southeast",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "WMFS",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "16-12",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "112"
+            },
+            "h": {
+                "tid": 1610612763,
+                "re": "18-12",
+                "ta": "MEM",
+                "tn": "Grizzlies",
+                "tc": "Memphis",
+                "s": "109"
+            },
+            "gdtutc": "2016-12-21",
+            "utctm": "01:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600440",
+            "gcode": "20161222/BOSIND",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-12-22",
+            "htm": "2016-12-22T19:00:00",
+            "vtm": "2016-12-22T19:00:00",
+            "etm": "2016-12-22T19:00:00",
+            "an": "Bankers Life Fieldhouse",
+            "ac": "Indianapolis",
+            "as": "IN",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "FSI",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "1070 The Fan",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "17-12",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "109"
+            },
+            "h": {
+                "tid": 1610612754,
+                "re": "15-16",
+                "ta": "IND",
+                "tn": "Pacers",
+                "tc": "Indiana",
+                "s": "102"
+            },
+            "gdtutc": "2016-12-23",
+            "utctm": "00:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600445",
+            "gcode": "20161223/OKCBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-12-23",
+            "htm": "2016-12-23T19:30:00",
+            "vtm": "2016-12-23T18:30:00",
+            "etm": "2016-12-23T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "NBATV",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "FS Oklahoma HD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "100.7 WZLX",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "WWLS 98.1FM OKC / 930AM (ESP)",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612760,
+                "re": "18-12",
+                "ta": "OKC",
+                "tn": "Thunder",
+                "tc": "Oklahoma City",
+                "s": "117"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "17-13",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "112"
+            },
+            "gdtutc": "2016-12-24",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600456",
+            "gcode": "20161225/BOSNYK",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-12-25",
+            "htm": "2016-12-25T12:00:00",
+            "vtm": "2016-12-25T12:00:00",
+            "etm": "2016-12-25T12:00:00",
+            "an": "Madison Square Garden",
+            "ac": "New York",
+            "as": "NY",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "ESPN",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "MSG",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "TSNN",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "ESPN NY 98.7",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 6,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "18-13",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "119"
+            },
+            "h": {
+                "tid": 1610612752,
+                "re": "16-14",
+                "ta": "NYK",
+                "tn": "Knicks",
+                "tc": "New York",
+                "s": "114"
+            },
+            "gdtutc": "2016-12-25",
+            "utctm": "17:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600472",
+            "gcode": "20161227/MEMBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-12-27",
+            "htm": "2016-12-27T19:30:00",
+            "vtm": "2016-12-27T18:30:00",
+            "etm": "2016-12-27T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "Fox Sports Southeast",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "100.7 WZLX",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "WMFS",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612763,
+                "re": "20-14",
+                "ta": "MEM",
+                "tn": "Grizzlies",
+                "tc": "Memphis",
+                "s": "103"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "19-13",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "113"
+            },
+            "gdtutc": "2016-12-28",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600488",
+            "gcode": "20161229/BOSCLE",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-12-29",
+            "htm": "2016-12-29T20:00:00",
+            "vtm": "2016-12-29T20:00:00",
+            "etm": "2016-12-29T20:00:00",
+            "an": "Quicken Loans Arena",
+            "ac": "Cleveland",
+            "as": "OH",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "TNT",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "FSOhio",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "WTAM 1100 / 100.7 WMMS / 87.7 FM (ESP)",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "19-14",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "118"
+            },
+            "h": {
+                "tid": 1610612739,
+                "re": "24-7",
+                "ta": "CLE",
+                "tn": "Cavaliers",
+                "tc": "Cleveland",
+                "s": "124"
+            },
+            "gdtutc": "2016-12-30",
+            "utctm": "01:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600494",
+            "gcode": "20161230/MIABOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2016-12-30",
+            "htm": "2016-12-30T19:30:00",
+            "vtm": "2016-12-30T19:30:00",
+            "etm": "2016-12-30T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "FS-SUN",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "790 The Ticket / S: WAQI 710 AM",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612748,
+                "re": "10-24",
+                "ta": "MIA",
+                "tn": "Heat",
+                "tc": "Miami",
+                "s": "114"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "20-14",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "117"
+            },
+            "gdtutc": "2016-12-31",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600522",
+            "gcode": "20170103/UTABOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-01-03",
+            "htm": "2017-01-03T19:30:00",
+            "vtm": "2017-01-03T17:30:00",
+            "etm": "2017-01-03T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "NBATV",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "ROOT",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "KZNS",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612762,
+                "re": "22-14",
+                "ta": "UTA",
+                "tn": "Jazz",
+                "tc": "Utah",
+                "s": "104"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "21-14",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "115"
+            },
+            "gdtutc": "2017-01-04",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600546",
+            "gcode": "20170106/PHIBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-01-06",
+            "htm": "2017-01-06T19:30:00",
+            "vtm": "2017-01-06T19:30:00",
+            "etm": "2017-01-06T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSN",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "97.5 The Fanatic",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612755,
+                "re": "9-25",
+                "ta": "PHI",
+                "tn": "76ers",
+                "tc": "Philadelphia",
+                "s": "106"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "22-14",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "110"
+            },
+            "gdtutc": "2017-01-07",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600553",
+            "gcode": "20170107/NOPBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-01-07",
+            "htm": "2017-01-07T19:30:00",
+            "vtm": "2017-01-07T18:30:00",
+            "etm": "2017-01-07T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "FSNOLA",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "100.7 WZLX",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "WRNO 99.5FM",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612740,
+                "re": "14-24",
+                "ta": "NOP",
+                "tn": "Pelicans",
+                "tc": "New Orleans",
+                "s": "108"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "23-14",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "117"
+            },
+            "gdtutc": "2017-01-08",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600572",
+            "gcode": "20170110/BOSTOR",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-01-10",
+            "htm": "2017-01-10T19:30:00",
+            "vtm": "2017-01-10T19:30:00",
+            "etm": "2017-01-10T19:30:00",
+            "an": "Air Canada Centre",
+            "ac": "Toronto",
+            "as": "ON",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "NBATV",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "Sportsnet One",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "Sportsnet One",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "Sportsnet 590 The FAN",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 6,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "23-15",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "106"
+            },
+            "h": {
+                "tid": 1610612761,
+                "re": "25-13",
+                "ta": "TOR",
+                "tn": "Raptors",
+                "tc": "Toronto",
+                "s": "114"
+            },
+            "gdtutc": "2017-01-11",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600583",
+            "gcode": "20170111/WASBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-01-11",
+            "htm": "2017-01-11T20:00:00",
+            "vtm": "2017-01-11T20:00:00",
+            "etm": "2017-01-11T20:00:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSN",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "1500 AM",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612764,
+                "re": "19-19",
+                "ta": "WAS",
+                "tn": "Wizards",
+                "tc": "Washington",
+                "s": "108"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "24-15",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "117"
+            },
+            "gdtutc": "2017-01-12",
+            "utctm": "01:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600597",
+            "gcode": "20170113/BOSATL",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-01-13",
+            "htm": "2017-01-13T20:00:00",
+            "vtm": "2017-01-13T20:00:00",
+            "etm": "2017-01-13T20:00:00",
+            "an": "Philips Arena",
+            "ac": "Atlanta",
+            "as": "GA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "ESPN",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "FOX Sports Southeast",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "92.9 FM \"The Game\"",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "25-15",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "103"
+            },
+            "h": {
+                "tid": 1610612737,
+                "re": "22-17",
+                "ta": "ATL",
+                "tn": "Hawks",
+                "tc": "Atlanta",
+                "s": "101"
+            },
+            "gdtutc": "2017-01-14",
+            "utctm": "01:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600618",
+            "gcode": "20170116/CHABOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-01-16",
+            "htm": "2017-01-16T19:30:00",
+            "vtm": "2017-01-16T19:30:00",
+            "etm": "2017-01-16T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "Fox Sports Southeast - Charlotte",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "WFNZ 610 AM",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612766,
+                "re": "20-21",
+                "ta": "CHA",
+                "tn": "Hornets",
+                "tc": "Charlotte",
+                "s": "98"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "26-15",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "108"
+            },
+            "gdtutc": "2017-01-17",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600630",
+            "gcode": "20170118/NYKBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-01-18",
+            "htm": "2017-01-18T19:30:00",
+            "vtm": "2017-01-18T19:30:00",
+            "etm": "2017-01-18T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "MSG",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "100.7 WZLX",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "ESPN NY 98.7",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612752,
+                "re": "19-24",
+                "ta": "NYK",
+                "tn": "Knicks",
+                "tc": "New York",
+                "s": "117"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "26-16",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "106"
+            },
+            "gdtutc": "2017-01-19",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600650",
+            "gcode": "20170121/PORBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-01-21",
+            "htm": "2017-01-21T17:00:00",
+            "vtm": "2017-01-21T14:00:00",
+            "etm": "2017-01-21T17:00:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNNWHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "TSN2",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "Rip City Radio 620",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612757,
+                "re": "19-27",
+                "ta": "POR",
+                "tn": "Trail Blazers",
+                "tc": "Portland",
+                "s": "127"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "26-17",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "123"
+            },
+            "gdtutc": "2017-01-21",
+            "utctm": "22:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600676",
+            "gcode": "20170124/BOSWAS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-01-24",
+            "htm": "2017-01-24T19:00:00",
+            "vtm": "2017-01-24T19:00:00",
+            "etm": "2017-01-24T19:00:00",
+            "an": "Verizon Center",
+            "ac": "Washington",
+            "as": "DC",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSN",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "1500 AM",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "26-18",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "108"
+            },
+            "h": {
+                "tid": 1610612764,
+                "re": "25-20",
+                "ta": "WAS",
+                "tn": "Wizards",
+                "tc": "Washington",
+                "s": "123"
+            },
+            "gdtutc": "2017-01-25",
+            "utctm": "00:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600681",
+            "gcode": "20170125/HOUBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-01-25",
+            "htm": "2017-01-25T19:30:00",
+            "vtm": "2017-01-25T18:30:00",
+            "etm": "2017-01-25T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "ROOT",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "790 AM",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612745,
+                "re": "34-15",
+                "ta": "HOU",
+                "tn": "Rockets",
+                "tc": "Houston",
+                "s": "109"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "27-18",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "120"
+            },
+            "gdtutc": "2017-01-26",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600697",
+            "gcode": "20170127/ORLBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-01-27",
+            "htm": "2017-01-27T19:30:00",
+            "vtm": "2017-01-27T19:30:00",
+            "etm": "2017-01-27T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "FS Florida",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "ESPN 580 / Salsa 98.1 FM (ESP)",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612753,
+                "re": "18-30",
+                "ta": "ORL",
+                "tn": "Magic",
+                "tc": "Orlando",
+                "s": "98"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "28-18",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "128"
+            },
+            "gdtutc": "2017-01-28",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600706",
+            "gcode": "20170128/BOSMIL",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-01-28",
+            "htm": "2017-01-28T19:00:00",
+            "vtm": "2017-01-28T20:00:00",
+            "etm": "2017-01-28T20:00:00",
+            "an": "BMO Harris Bradley Center",
+            "ac": "Milwaukee",
+            "as": "WI",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "Fox Sports Wisconsin",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "AM 620 WTMJ",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "29-18",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "112"
+            },
+            "h": {
+                "tid": 1610612749,
+                "re": "21-26",
+                "ta": "MIL",
+                "tn": "Bucks",
+                "tc": "Milwaukee",
+                "s": "108"
+            },
+            "gdtutc": "2017-01-29",
+            "utctm": "01:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600721",
+            "gcode": "20170130/DETBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-01-30",
+            "htm": "2017-01-30T20:00:00",
+            "vtm": "2017-01-30T20:00:00",
+            "etm": "2017-01-30T20:00:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "TNT",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "TSNN",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "105.1 WMGC-FM",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612765,
+                "re": "21-27",
+                "ta": "DET",
+                "tn": "Pistons",
+                "tc": "Detroit",
+                "s": "109"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "30-18",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "113"
+            },
+            "gdtutc": "2017-01-31",
+            "utctm": "01:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600732",
+            "gcode": "20170201/TORBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-02-01",
+            "htm": "2017-02-01T19:30:00",
+            "vtm": "2017-02-01T19:30:00",
+            "etm": "2017-02-01T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "Sportsnet One",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "Sportsnet One",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "100.7 WZLX",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "TSN Radio 1050 Toronto",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612761,
+                "re": "30-20",
+                "ta": "TOR",
+                "tn": "Raptors",
+                "tc": "Toronto",
+                "s": "104"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "31-18",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "109"
+            },
+            "gdtutc": "2017-02-02",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600751",
+            "gcode": "20170203/LALBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-02-03",
+            "htm": "2017-02-03T20:00:00",
+            "vtm": "2017-02-03T17:00:00",
+            "etm": "2017-02-03T20:00:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "ESPN",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "SpecSN/SpecD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "710 AM ESPN / 1330 AM ESPN DEPORTES",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612747,
+                "re": "17-36",
+                "ta": "LAL",
+                "tn": "Lakers",
+                "tc": "Los Angeles",
+                "s": "107"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "32-18",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "113"
+            },
+            "gdtutc": "2017-02-04",
+            "utctm": "01:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600766",
+            "gcode": "20170205/LACBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-02-05",
+            "htm": "2017-02-05T14:00:00",
+            "vtm": "2017-02-05T11:00:00",
+            "etm": "2017-02-05T14:00:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "ABC",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "ESPNR",
+                    "scope": "natl",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "AM 570 LA SPORTS",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612746,
+                "re": "31-20",
+                "ta": "LAC",
+                "tn": "Clippers",
+                "tc": "LA",
+                "s": "102"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "33-18",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "107"
+            },
+            "gdtutc": "2017-02-05",
+            "utctm": "19:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600793",
+            "gcode": "20170208/BOSSAC",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-02-08",
+            "htm": "2017-02-08T19:30:00",
+            "vtm": "2017-02-08T22:30:00",
+            "etm": "2017-02-08T22:30:00",
+            "an": "Golden 1 Center",
+            "ac": "Sacramento",
+            "as": "CA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "NBCS-CA",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "NBATV Canada",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "KHTK Sports 1140 AM",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "33-19",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "92"
+            },
+            "h": {
+                "tid": 1610612758,
+                "re": "21-32",
+                "ta": "SAC",
+                "tn": "Kings",
+                "tc": "Sacramento",
+                "s": "108"
+            },
+            "gdtutc": "2017-02-09",
+            "utctm": "03:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600798",
+            "gcode": "20170209/BOSPOR",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-02-09",
+            "htm": "2017-02-09T19:30:00",
+            "vtm": "2017-02-09T22:30:00",
+            "etm": "2017-02-09T22:30:00",
+            "an": "Moda Center",
+            "ac": "Portland",
+            "as": "OR",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "TNT",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "SN",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "Rip City Radio 620",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "34-19",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "120"
+            },
+            "h": {
+                "tid": 1610612757,
+                "re": "23-31",
+                "ta": "POR",
+                "tn": "Trail Blazers",
+                "tc": "Portland",
+                "s": "111"
+            },
+            "gdtutc": "2017-02-10",
+            "utctm": "03:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600815",
+            "gcode": "20170211/BOSUTA",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-02-11",
+            "htm": "2017-02-11T20:00:00",
+            "vtm": "2017-02-11T22:00:00",
+            "etm": "2017-02-11T22:00:00",
+            "an": "Vivint Smart Home Arena",
+            "ac": "Salt Lake City",
+            "as": "UT",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "ROOT",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "NBATV Canada",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "KZNS",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "35-19",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "112"
+            },
+            "h": {
+                "tid": 1610612762,
+                "re": "34-21",
+                "ta": "UTA",
+                "tn": "Jazz",
+                "tc": "Utah",
+                "s": "104"
+            },
+            "gdtutc": "2017-02-12",
+            "utctm": "03:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600826",
+            "gcode": "20170213/BOSDAL",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-02-13",
+            "htm": "2017-02-13T19:30:00",
+            "vtm": "2017-02-13T20:30:00",
+            "etm": "2017-02-13T20:30:00",
+            "an": "American Airlines Center",
+            "ac": "Dallas",
+            "as": "TX",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "FSSW",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "103.3 ESPN",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "36-19",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "111"
+            },
+            "h": {
+                "tid": 1610612742,
+                "re": "22-33",
+                "ta": "DAL",
+                "tn": "Mavericks",
+                "tc": "Dallas",
+                "s": "98"
+            },
+            "gdtutc": "2017-02-14",
+            "utctm": "01:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600836",
+            "gcode": "20170215/PHIBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-02-15",
+            "htm": "2017-02-15T19:30:00",
+            "vtm": "2017-02-15T19:30:00",
+            "etm": "2017-02-15T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSN",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "97.5 The Fanatic",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612755,
+                "re": "21-35",
+                "ta": "PHI",
+                "tn": "76ers",
+                "tc": "Philadelphia",
+                "s": "108"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "37-19",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "116"
+            },
+            "gdtutc": "2017-02-16",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600849",
+            "gcode": "20170216/BOSCHI",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-02-16",
+            "htm": "2017-02-16T19:00:00",
+            "vtm": "2017-02-16T20:00:00",
+            "etm": "2017-02-16T20:00:00",
+            "an": "United Center",
+            "ac": "Chicago",
+            "as": "IL",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "TNT",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "SN",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "WLS-AM 890 / WRTO 1200 (ESP)",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "37-20",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "103"
+            },
+            "h": {
+                "tid": 1610612741,
+                "re": "28-29",
+                "ta": "CHI",
+                "tn": "Bulls",
+                "tc": "Chicago",
+                "s": "104"
+            },
+            "gdtutc": "2017-02-17",
+            "utctm": "01:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600858",
+            "gcode": "20170224/BOSTOR",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-02-24",
+            "htm": "2017-02-24T20:00:00",
+            "vtm": "2017-02-24T20:00:00",
+            "etm": "2017-02-24T20:00:00",
+            "an": "Air Canada Centre",
+            "ac": "Toronto",
+            "as": "ON",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "ESPN",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "Sportsnet One",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "Sportsnet One",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "Sportsnet 590 The FAN",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 6,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "37-21",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "97"
+            },
+            "h": {
+                "tid": 1610612761,
+                "re": "34-24",
+                "ta": "TOR",
+                "tn": "Raptors",
+                "tc": "Toronto",
+                "s": "107"
+            },
+            "gdtutc": "2017-02-25",
+            "utctm": "01:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600879",
+            "gcode": "20170226/BOSDET",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-02-26",
+            "htm": "2017-02-26T18:00:00",
+            "vtm": "2017-02-26T18:00:00",
+            "etm": "2017-02-26T18:00:00",
+            "an": "Palace of Auburn Hills",
+            "ac": "Detroit",
+            "as": "MI",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "FS Detroit",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "105.1 WMGC-FM",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "38-21",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "104"
+            },
+            "h": {
+                "tid": 1610612765,
+                "re": "28-31",
+                "ta": "DET",
+                "tn": "Pistons",
+                "tc": "Detroit",
+                "s": "98"
+            },
+            "gdtutc": "2017-02-26",
+            "utctm": "23:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600885",
+            "gcode": "20170227/ATLBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-02-27",
+            "htm": "2017-02-27T19:30:00",
+            "vtm": "2017-02-27T19:30:00",
+            "etm": "2017-02-27T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "FOX Sports Southeast",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "92.9 FM \"The Game\"",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612737,
+                "re": "33-26",
+                "ta": "ATL",
+                "tn": "Hawks",
+                "tc": "Atlanta",
+                "s": "114"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "38-22",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "98"
+            },
+            "gdtutc": "2017-02-28",
+            "utctm": "00:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600901",
+            "gcode": "20170301/CLEBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-03-01",
+            "htm": "2017-03-01T20:00:00",
+            "vtm": "2017-03-01T20:00:00",
+            "etm": "2017-03-01T20:00:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "ESPN",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "FSOhio",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "WTAM 1100 / 100.7 WMMS / 87.7 FM (ESP)",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612739,
+                "re": "41-18",
+                "ta": "CLE",
+                "tn": "Cavaliers",
+                "tc": "Cleveland",
+                "s": "99"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "39-22",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "103"
+            },
+            "gdtutc": "2017-03-02",
+            "utctm": "01:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600918",
+            "gcode": "20170303/BOSLAL",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-03-03",
+            "htm": "2017-03-03T19:30:00",
+            "vtm": "2017-03-03T22:30:00",
+            "etm": "2017-03-03T22:30:00",
+            "an": "Staples Center",
+            "ac": "Los Angeles",
+            "as": "CA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "SpecSN/SpecD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "NBATV Canada",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "710 AM ESPN / 1330 AM ESPN DEPORTES",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "40-22",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "115"
+            },
+            "h": {
+                "tid": 1610612747,
+                "re": "19-43",
+                "ta": "LAL",
+                "tn": "Lakers",
+                "tc": "Los Angeles",
+                "s": "95"
+            },
+            "gdtutc": "2017-03-04",
+            "utctm": "03:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600929",
+            "gcode": "20170305/BOSPHX",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-03-05",
+            "htm": "2017-03-05T15:00:00",
+            "vtm": "2017-03-05T17:00:00",
+            "etm": "2017-03-05T17:00:00",
+            "an": "Talking Stick Resort Arena",
+            "ac": "Phoenix",
+            "as": "AZ",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "FSAZ",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "SN",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "Arizona Sports 98.7FM / KSUN 1400AM (ES)",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "40-23",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "106"
+            },
+            "h": {
+                "tid": 1610612756,
+                "re": "21-42",
+                "ta": "PHX",
+                "tn": "Suns",
+                "tc": "Phoenix",
+                "s": "109"
+            },
+            "gdtutc": "2017-03-05",
+            "utctm": "22:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600945",
+            "gcode": "20170306/BOSLAC",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-03-06",
+            "htm": "2017-03-06T19:30:00",
+            "vtm": "2017-03-06T22:30:00",
+            "etm": "2017-03-06T22:30:00",
+            "an": "Staples Center",
+            "ac": "Los Angeles",
+            "as": "CA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "TNT",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "PRIME TICKET",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "SN",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "AM 570 LA SPORTS",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 6,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "40-24",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "102"
+            },
+            "h": {
+                "tid": 1610612746,
+                "re": "38-25",
+                "ta": "LAC",
+                "tn": "Clippers",
+                "tc": "LA",
+                "s": "116"
+            },
+            "gdtutc": "2017-03-07",
+            "utctm": "03:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600959",
+            "gcode": "20170308/BOSGSW",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-03-08",
+            "htm": "2017-03-08T19:30:00",
+            "vtm": "2017-03-08T22:30:00",
+            "etm": "2017-03-08T22:30:00",
+            "an": "ORACLE Arena",
+            "ac": "Oakland",
+            "as": "CA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "ESPN",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "NBCS - BA",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "SN",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "95.7 The Game",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 6,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "41-24",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "99"
+            },
+            "h": {
+                "tid": 1610612744,
+                "re": "52-12",
+                "ta": "GSW",
+                "tn": "Warriors",
+                "tc": "Golden State",
+                "s": "86"
+            },
+            "gdtutc": "2017-03-09",
+            "utctm": "03:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600970",
+            "gcode": "20170310/BOSDEN",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-03-10",
+            "htm": "2017-03-10T19:00:00",
+            "vtm": "2017-03-10T21:00:00",
+            "etm": "2017-03-10T21:00:00",
+            "an": "Pepsi Center",
+            "ac": "Denver",
+            "as": "CO",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "Altitude",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "KKSE 950AM",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "41-25",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "99"
+            },
+            "h": {
+                "tid": 1610612743,
+                "re": "30-35",
+                "ta": "DEN",
+                "tn": "Nuggets",
+                "tc": "Denver",
+                "s": "119"
+            },
+            "gdtutc": "2017-03-11",
+            "utctm": "02:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021600985",
+            "gcode": "20170312/CHIBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-03-12",
+            "htm": "2017-03-12T15:30:00",
+            "vtm": "2017-03-12T14:30:00",
+            "etm": "2017-03-12T15:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "ABC",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "ESPNR",
+                    "scope": "natl",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "WLS 890AM",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612741,
+                "re": "31-35",
+                "ta": "CHI",
+                "tn": "Bulls",
+                "tc": "Chicago",
+                "s": "80"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "42-25",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "100"
+            },
+            "gdtutc": "2017-03-12",
+            "utctm": "19:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021601006",
+            "gcode": "20170315/MINBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-03-15",
+            "htm": "2017-03-15T19:30:00",
+            "vtm": "2017-03-15T18:30:00",
+            "etm": "2017-03-15T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "FS North",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "100.7 WZLX",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "830 WCCO",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612750,
+                "re": "28-39",
+                "ta": "MIN",
+                "tn": "Timberwolves",
+                "tc": "Minnesota",
+                "s": "104"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "43-25",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "117"
+            },
+            "gdtutc": "2017-03-15",
+            "utctm": "23:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021601022",
+            "gcode": "20170317/BOSBKN",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-03-17",
+            "htm": "2017-03-17T19:30:00",
+            "vtm": "2017-03-17T19:30:00",
+            "etm": "2017-03-17T19:30:00",
+            "an": "Barclays Center",
+            "ac": "Brooklyn",
+            "as": "NY",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "YES",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "WCBS 880 AM",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "44-25",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "98"
+            },
+            "h": {
+                "tid": 1610612751,
+                "re": "13-55",
+                "ta": "BKN",
+                "tn": "Nets",
+                "tc": "Brooklyn",
+                "s": "95"
+            },
+            "gdtutc": "2017-03-17",
+            "utctm": "23:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021601037",
+            "gcode": "20170319/BOSPHI",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-03-19",
+            "htm": "2017-03-19T13:00:00",
+            "vtm": "2017-03-19T13:00:00",
+            "etm": "2017-03-19T13:00:00",
+            "an": "Wells Fargo Center",
+            "ac": "Philadelphia",
+            "as": "PA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSN",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "97.5 The Fanatic",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "44-26",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "99"
+            },
+            "h": {
+                "tid": 1610612755,
+                "re": "26-43",
+                "ta": "PHI",
+                "tn": "76ers",
+                "tc": "Philadelphia",
+                "s": "105"
+            },
+            "gdtutc": "2017-03-19",
+            "utctm": "17:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021601047",
+            "gcode": "20170320/WASBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-03-20",
+            "htm": "2017-03-20T19:30:00",
+            "vtm": "2017-03-20T19:30:00",
+            "etm": "2017-03-20T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSN",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "NBATV Canada",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "100.7 WZLX",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "1500 AM",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612764,
+                "re": "42-28",
+                "ta": "WAS",
+                "tn": "Wizards",
+                "tc": "Washington",
+                "s": "102"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "45-26",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "110"
+            },
+            "gdtutc": "2017-03-20",
+            "utctm": "23:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021601060",
+            "gcode": "20170322/INDBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-03-22",
+            "htm": "2017-03-22T19:30:00",
+            "vtm": "2017-03-22T19:30:00",
+            "etm": "2017-03-22T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "FSI",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "1070 The Fan",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612754,
+                "re": "36-35",
+                "ta": "IND",
+                "tn": "Pacers",
+                "tc": "Indiana",
+                "s": "100"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "46-26",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "109"
+            },
+            "gdtutc": "2017-03-22",
+            "utctm": "23:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021601076",
+            "gcode": "20170324/PHXBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-03-24",
+            "htm": "2017-03-24T19:30:00",
+            "vtm": "2017-03-24T16:30:00",
+            "etm": "2017-03-24T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "FSAZ",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "Arizona Sports 98.7FM / KSUN 1400AM (ES)",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612756,
+                "re": "22-51",
+                "ta": "PHX",
+                "tn": "Suns",
+                "tc": "Phoenix",
+                "s": "120"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "47-26",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "130"
+            },
+            "gdtutc": "2017-03-24",
+            "utctm": "23:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021601093",
+            "gcode": "20170326/MIABOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-03-26",
+            "htm": "2017-03-26T18:00:00",
+            "vtm": "2017-03-26T18:00:00",
+            "etm": "2017-03-26T18:00:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "FS-SUN",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "SN",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "790 The Ticket / S: WAQI 710 AM",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612748,
+                "re": "35-38",
+                "ta": "MIA",
+                "tn": "Heat",
+                "tc": "Miami",
+                "s": "108"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "48-26",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "112"
+            },
+            "gdtutc": "2017-03-26",
+            "utctm": "22:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021601113",
+            "gcode": "20170329/MILBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-03-29",
+            "htm": "2017-03-29T19:30:00",
+            "vtm": "2017-03-29T18:30:00",
+            "etm": "2017-03-29T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "Fox Sports Wisconsin",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "AM 620 WTMJ",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612749,
+                "re": "39-36",
+                "ta": "MIL",
+                "tn": "Bucks",
+                "tc": "Milwaukee",
+                "s": "103"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "48-27",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "100"
+            },
+            "gdtutc": "2017-03-29",
+            "utctm": "23:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021601129",
+            "gcode": "20170331/ORLBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-03-31",
+            "htm": "2017-03-31T19:30:00",
+            "vtm": "2017-03-31T19:30:00",
+            "etm": "2017-03-31T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "FS Florida",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "ESPN 580 / Salsa 98.1 FM (ESP)",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612753,
+                "re": "27-49",
+                "ta": "ORL",
+                "tn": "Magic",
+                "tc": "Orlando",
+                "s": "116"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "49-27",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "117"
+            },
+            "gdtutc": "2017-03-31",
+            "utctm": "23:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021601145",
+            "gcode": "20170402/BOSNYK",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-04-02",
+            "htm": "2017-04-02T13:00:00",
+            "vtm": "2017-04-02T13:00:00",
+            "etm": "2017-04-02T13:00:00",
+            "an": "Madison Square Garden",
+            "ac": "New York",
+            "as": "NY",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "ABC",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "ESPNR",
+                    "scope": "natl",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "ESPN NY 98.7",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "50-27",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "110"
+            },
+            "h": {
+                "tid": 1610612752,
+                "re": "29-48",
+                "ta": "NYK",
+                "tn": "Knicks",
+                "tc": "New York",
+                "s": "94"
+            },
+            "gdtutc": "2017-04-02",
+            "utctm": "17:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021601169",
+            "gcode": "20170405/CLEBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-04-05",
+            "htm": "2017-04-05T20:00:00",
+            "vtm": "2017-04-05T20:00:00",
+            "etm": "2017-04-05T20:00:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "ESPN",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "FSOhio",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "100.7 WMMS / 87.7 FM (ESP)",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612739,
+                "re": "51-27",
+                "ta": "CLE",
+                "tn": "Cavaliers",
+                "tc": "Cleveland",
+                "s": "114"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "50-28",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "91"
+            },
+            "gdtutc": "2017-04-06",
+            "utctm": "00:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021601177",
+            "gcode": "20170406/BOSATL",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-04-06",
+            "htm": "2017-04-06T20:00:00",
+            "vtm": "2017-04-06T20:00:00",
+            "etm": "2017-04-06T20:00:00",
+            "an": "Philips Arena",
+            "ac": "Atlanta",
+            "as": "GA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "TNT",
+                    "scope": "natl",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "SN",
+                    "scope": "can",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "ESPNR",
+                    "scope": "natl",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "92.9 FM \"The Game\"",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 5,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "50-29",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "116"
+            },
+            "h": {
+                "tid": 1610612737,
+                "re": "40-38",
+                "ta": "ATL",
+                "tn": "Hawks",
+                "tc": "Atlanta",
+                "s": "123"
+            },
+            "gdtutc": "2017-04-07",
+            "utctm": "00:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021601189",
+            "gcode": "20170408/BOSCHA",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-04-08",
+            "htm": "2017-04-08T18:00:00",
+            "vtm": "2017-04-08T18:00:00",
+            "etm": "2017-04-08T18:00:00",
+            "an": "Spectrum Center",
+            "ac": "Charlotte",
+            "as": "NC",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "Fox Sports Southeast - Charlotte",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "CSNHD",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "WFNZ 610 AM",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "100.7 WZLX",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612738,
+                "re": "51-29",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "121"
+            },
+            "h": {
+                "tid": 1610612766,
+                "re": "36-44",
+                "ta": "CHA",
+                "tn": "Hornets",
+                "tc": "Charlotte",
+                "s": "114"
+            },
+            "gdtutc": "2017-04-08",
+            "utctm": "22:00",
+            "ppdst": "I"
+        }, {
+            "gid": "0021601204",
+            "gcode": "20170410/BKNBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-04-10",
+            "htm": "2017-04-10T19:30:00",
+            "vtm": "2017-04-10T19:30:00",
+            "etm": "2017-04-10T19:30:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "YES",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "WFAN",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612751,
+                "re": "20-61",
+                "ta": "BKN",
+                "tn": "Nets",
+                "tc": "Brooklyn",
+                "s": "105"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "52-29",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "114"
+            },
+            "gdtutc": "2017-04-10",
+            "utctm": "23:30",
+            "ppdst": "I"
+        }, {
+            "gid": "0021601219",
+            "gcode": "20170412/MILBOS",
+            "seri": "",
+            "is": 1,
+            "gdte": "2017-04-12",
+            "htm": "2017-04-12T20:00:00",
+            "vtm": "2017-04-12T19:00:00",
+            "etm": "2017-04-12T20:00:00",
+            "an": "TD Garden",
+            "ac": "Boston",
+            "as": "MA",
+            "st": "3",
+            "stt": "Final",
+            "bd": {
+                "b": [{
+                    "seq": 1,
+                    "disp": "CSNHD",
+                    "scope": "home",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 2,
+                    "disp": "Fox Sports Wisconsin",
+                    "scope": "away",
+                    "type": "tv",
+                    "lan": "English"
+                }, {
+                    "seq": 3,
+                    "disp": "98.5 The Sports Hub",
+                    "scope": "home",
+                    "type": "radio",
+                    "lan": "English"
+                }, {
+                    "seq": 4,
+                    "disp": "105.7 FM The Fan",
+                    "scope": "away",
+                    "type": "radio",
+                    "lan": "English"
+                }]
+            },
+            "v": {
+                "tid": 1610612749,
+                "re": "42-40",
+                "ta": "MIL",
+                "tn": "Bucks",
+                "tc": "Milwaukee",
+                "s": "94"
+            },
+            "h": {
+                "tid": 1610612738,
+                "re": "53-29",
+                "ta": "BOS",
+                "tn": "Celtics",
+                "tc": "Boston",
+                "s": "112"
+            },
+            "gdtutc": "2017-04-13",
+            "utctm": "00:00",
+            "ppdst": "I"
+        }],
+        "ta": "BOS",
+        "tn": "Celtics",
+        "tc": "Boston"
+    }
+}
