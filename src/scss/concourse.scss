@@ -5,6 +5,7 @@
 @import "app";
 @import "leaders";
 @import "standings";
+@import "scores";
 
 * {
     box-sizing: border-box;
@@ -38,10 +39,40 @@ body {
 
 .left-wrap {
     width: 50%;
-    height: 100%;
+    height: 90%;
     z-index: 100;
     position: relative;
-    background: url(http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/celtics-mobile-tile-2.png);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1d569b+29,141414+100 */
+    background: rgb(29,86,155); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(29,86,155,1) 29%, rgba(20,20,20,1) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(29,86,155,1) 29%,rgba(20,20,20,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(29,86,155,1) 29%,rgba(20,20,20,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d569b', endColorstr='#141414',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    .top-wrap {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 4%;
+
+        img {
+            width: 8%;
+            margin-right: 1%;
+        }
+
+        p {
+            font-size: 4.1vw;
+            color: white;
+            font-weight: 600;
+            margin-top: -2px;
+            text-align: center;
+            margin: 0;
+            line-height: 85%;
+        }
+    }
+
 }
 
 .right-wrap {
@@ -54,6 +85,11 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
+    padding: 4%;
+
+    &.left {
+        padding: 0%;
+    }
 }
 
 #video-background {
@@ -65,3 +101,39 @@ body {
     position: absolute;
     z-index: -100;
 }
+
+.ATL-light{color:#e13a3e;}
+.BKN-light{color:#FFFFFF;}
+.BOS-light{color:#008348;}
+.CHA-light{color:#00788C;}
+.CHI-light{color:#ce1141;}
+.CLE-light{color:#FDBB30;}
+.DAL-light{color:#006bb6;}
+.DEN-light{color:#4d90cd;}
+.DET-light{color:#ed174c;}
+.GSW-light{color:#FDB927;}
+.HOU-light{color:#ce1141;}
+.IND-light{color:#FDBB30;}
+.LAC-light{color:#ed174f;}
+.LAL-light{color:#FDB927;}
+.MEM-light{color:#6189B9;}
+.MIA-light{color:#98012e;}
+.MIL-light{color:#EEE1C6;}
+.MIN-light{color:#C4CED4;}
+.NOP-light{color:#B4975A;}
+.NYK-light{color:#f68428;}
+.OKC-light{color:#007dc3;}
+.ORL-light{color:#0077c0;}
+.PHI-light{color:#ed174f;}
+.PHX-light{color:#e56020;}
+.POR-light{color:#e3373d;}
+.SAC-light{color:#63727A;}
+.SAS-light{color:#c4ced4;}
+.TOR-light{color:#d31245;}
+.UTA-light{color:#F9A01B;}
+.WAS-light{color:#E31837;}
+
+.NJN-light{color:#cd1041}
+.CHB-light{color:#e35205}
+.NOH-light{color:#008cc1}
+.SEA-light{color:#ffc121}

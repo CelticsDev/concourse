@@ -2,27 +2,51 @@ var rosterObj = {
     celtics: {
         roster: {},
         leaders: {
-            pts: [['--', '--', '--', '--'], ['--', '--', '--', '--'], ['--', '--', '--', '--']],
-            ast: [['--', '--', '--', '--'], ['--', '--', '--', '--'], ['--', '--', '--', '--']],
-            reb: [['--', '--', '--', '--'], ['--', '--', '--', '--'], ['--', '--', '--', '--']]
+            pts: [
+                ['--', '--', '--', '--'],
+                ['--', '--', '--', '--'],
+                ['--', '--', '--', '--']
+            ],
+            ast: [
+                ['--', '--', '--', '--'],
+                ['--', '--', '--', '--'],
+                ['--', '--', '--', '--']
+            ],
+            reb: [
+                ['--', '--', '--', '--'],
+                ['--', '--', '--', '--'],
+                ['--', '--', '--', '--']
+            ]
         }
     },
     away: {
         roster: {},
         leaders: {
-            pts: [['--', '--', '--', '--'], ['--', '--', '--', '--'], ['--', '--', '--', '--']],
-            ast: [['--', '--', '--', '--'], ['--', '--', '--', '--'], ['--', '--', '--', '--']],
-            reb: [['--', '--', '--', '--'], ['--', '--', '--', '--'], ['--', '--', '--', '--']]
+            pts: [
+                ['--', '--', '--', '--'],
+                ['--', '--', '--', '--'],
+                ['--', '--', '--', '--']
+            ],
+            ast: [
+                ['--', '--', '--', '--'],
+                ['--', '--', '--', '--'],
+                ['--', '--', '--', '--']
+            ],
+            reb: [
+                ['--', '--', '--', '--'],
+                ['--', '--', '--', '--'],
+                ['--', '--', '--', '--']
+            ]
         }
     }
 };
-
 jQuery(document).ready(function() {
     var gid = '';
     var awayTeam = '';
     var gameStarted = false;
     var playerSpotlightCounter = 10;
     var date = new Date();
+    var leftWrapCounter = false;
     jQuery.ajax({
         url: 'http://localhost:8888/data/mobile-stats-feed/todays_scores.json',
         async: false,
@@ -31,17 +55,19 @@ jQuery(document).ready(function() {
                 if (todaysScoresData.gs.g[i].h.ta == 'BKN') { //CHANGE THIS
                     awayTeam = todaysScoresData.gs.g[i].v.ta;
                     loadRosterData(awayTeam);
+                    scoresInit(todaysScoresData);
+                    standingsInit(awayTeam);
+/*                    setInterval(leftWrap, 3000);*/
                     gid = todaysScoresData.gs.g[i].gid;
                     initMobileApp();
                     mobileApp();
-                    standings(awayTeam);
-/*                    playerSpotlight(rosterObj, playerSpotlightCounter);*/
+                    /*                    playerSpotlight(rosterObj, playerSpotlightCounter);*/
                 }
             }
         }
     });
     // loadRosterData(); ONLY ONCE
-/*    setTimeout(leaders(gid, gameStarted), 400);*/
+    /*    setTimeout(leaders(gid, gameStarted), 400);*/
 });
 /*======================================
 =            MISC FUNCTIONS            =
@@ -109,9 +135,150 @@ function init() {
         });
     }
 };
-/*========================================
-=            PLAYER SPOTLIGHT            =
-========================================*/
+
+function initMobileApp() {
+    var counter = 1;
+    setInterval(function() {
+        jQuery('.app .bottom-wrap img').removeClass('active');
+        jQuery('.app .feature-list p').removeClass('active');
+        jQuery('.app .feature-list p:nth-of-type(' + counter + ')').addClass('active');
+        jQuery('.app .bottom-wrap img:nth-of-type(' + counter + ')').addClass('active');
+        if (counter == 5) {
+            counter = 1;
+        } else {
+            counter++;
+        }
+    }, 2000);
+};
+
+/*============================================================
+=            LOAD ROSTER INFO (build rosterObj)              =
+============================================================*/
+
+function loadRosterData(awayTeam) {
+    var roster = '';
+    jQuery.ajax({
+        url: 'http://localhost:8888/data/mobile-stats-feed/celtics_roster.json',
+        async: false,
+        success: function(data) {
+            roster = data;
+            for (var property in roster.t) {
+                if (property !== 'pl') {
+                    rosterObj.celtics[property] = roster.t[property];
+                }
+            }
+        },
+        error: function() {}
+    });
+    var awayRoster = '';
+    jQuery.ajax({
+        url: 'http://localhost:8888/data/mobile-stats-feed/away_roster.json',
+        async: false,
+        success: function(data) {
+            awayRoster = data;
+            for (var property in awayRoster.t) {
+                if (property !== 'pl') {
+                    rosterObj.away[property] = awayRoster.t[property];
+                }
+            }
+        },
+        error: function() {}
+    });
+    var bioData = '';
+    jQuery.ajax({
+        url: 'http://localhost:8888/data/bio-data.json',
+        async: false,
+        success: function(data) {
+            bioData = data;
+        },
+        error: function() {}
+    });
+    for (var i = 0; i < roster.t.pl.length; i++) {
+        var pid = roster.t.pl[i].pid;
+        rosterObj.celtics.roster[pid] = roster.t.pl[i];
+        for (var property in bioData[pid]) {
+            rosterObj.celtics.roster[pid].bio = bioData[pid];
+        };
+        jQuery.ajax({
+            url: 'http://localhost:8888/data/mobile-stats-feed/playercards/playercard-' + pid + '.json',
+            async: false,
+            success: function(data) {
+                rosterObj.celtics.roster[pid].stats = data.pl.ca;
+            },
+            error: function() {}
+        });
+    }
+    for (var i = 0; i < awayRoster.t.pl.length; i++) {
+        var pid = awayRoster.t.pl[i].pid;
+        rosterObj.away.roster[pid] = awayRoster.t.pl[i];
+        jQuery.ajax({
+            url: 'http://localhost:8888/data/mobile-stats-feed/playercards/playercard-202330.json', // CHANGE PID
+            async: false,
+            success: function(data) {
+                rosterObj.away.roster[pid].stats = data.pl.ca;
+            },
+            error: function() {}
+        });
+    }
+    for (var team in rosterObj) {
+        for (var player in rosterObj[team].roster) {
+            var ptLeaders = rosterObj[team].leaders.pts;
+            var astLeaders = rosterObj[team].leaders.ast;
+            var rebLeaders = rosterObj[team].leaders.reb;
+            for (var stat in rosterObj[team].leaders) {
+                for (var i = 0; i < 3; i++) {
+                    if (rosterObj[team].leaders[stat][i][2] == '--' && rosterObj[team].roster[player].stats[stat] > 0) {
+                        rosterObj[team].leaders[stat][i][0] = rosterObj[team].roster[player].fn.toUpperCase();
+                        rosterObj[team].leaders[stat][i][1] = rosterObj[team].roster[player].ln.toUpperCase();
+                        rosterObj[team].leaders[stat][i][2] = rosterObj[team].roster[player].stats[stat];
+                        rosterObj[team].leaders[stat][i][3] = rosterObj[team].roster[player].pid;
+                        break;
+                    } else if (rosterObj[team].roster[player].stats[stat] > rosterObj[team].leaders[stat][i][2] && rosterObj[team].roster[player].stats[stat] > 0) {
+                        rosterObj[team].leaders[stat][i][0] = rosterObj[team].roster[player].fn.toUpperCase();
+                        rosterObj[team].leaders[stat][i][1] = rosterObj[team].roster[player].ln.toUpperCase();
+                        rosterObj[team].leaders[stat][i][2] = rosterObj[team].roster[player].stats[stat];
+                        rosterObj[team].leaders[stat][i][3] = rosterObj[team].roster[player].pid;
+                        break;
+                    }
+                };
+            }
+        }
+    }
+    console.log(rosterObj);
+};
+
+function statsNotAvailable(pid) {
+    rosterObj[pid].stats = {};
+    rosterObj[pid].stats.sa = [{}];
+    rosterObj[pid].stats.hasStats = false;
+    var caIndex = ['gp', 'gs', 'min', 'fgp', 'tpp', 'ftp', 'oreb', 'dreb', 'reb', 'ast', 'stl', 'blk', 'tov', 'pf', 'pts', 'nostats'];
+    var saIndex = ['tid', 'val', 'gp', 'gs', 'min', 'fgp', 'tpp', 'ftp', 'oreb', 'dreb', 'reb', 'ast', 'stl', 'blk', 'tov', 'pf', 'pts', 'spl', 'ta', 'tn', 'tc'];
+    for (var i = 0; i < saIndex.length; i++) {
+        rosterObj[pid].stats.sa[0][saIndex[i]] = "N/A";
+        if (i === 1) {
+            rosterObj[pid].stats.sa[0][saIndex[i]] = playerCardYear.toString().substr(2, 2) + "-" + (playerCardYear + 1).toString().substr(2, 2);
+        }
+        if (i === 17) {
+            rosterObj[pid].stats.sa[0][saIndex[i]] = [];
+        }
+        if (i === 18) {
+            rosterObj[pid].stats.sa[0][saIndex[i]] = 'BOS';
+        }
+    }
+    for (var i = 0; i < caIndex.length; i++) {
+        rosterObj[pid].stats[caIndex[i]] = "N/A";
+        if (i === 15) {
+            rosterObj[pid].stats[caIndex[i]] = true;
+        }
+    }
+};
+
+function loadGameDetail(gid) {};
+
+function loadAwayTeamData() {}
+/*==================================
+=            RIGHT WRAP            =
+==================================*/
 function playerSpotlight(rosterObj, playerSpotlightCounter) {
     /* 1 - WHITE LINE HORIZTONAL */
     setTimeout(function() {
@@ -212,133 +379,6 @@ function playerSpotlight(rosterObj, playerSpotlightCounter) {
         jQuery('.transition, .transition-1, .transition-2, .transition-3, .transition-4').removeClass('transition transition-1 transition-2 transition-3 transition-4');
     }, 7000);
 }
-/*=====================================================
-=            LOAD ROSTER INFO => rosterObj            =
-=====================================================*/
-function loadRosterData(awayTeam) {
-    var roster = '';
-    jQuery.ajax({
-        url: 'http://localhost:8888/data/mobile-stats-feed/celtics_roster.json',
-        async: false,
-        success: function(data) {
-            roster = data;
-            for (var property in roster.t){
-                if (property !== 'pl'){
-                    rosterObj.celtics[property] = roster.t[property];
-                }
-            }
-        },
-        error: function() {}
-    });
-    var awayRoster = '';
-    jQuery.ajax({
-        url: 'http://localhost:8888/data/mobile-stats-feed/away_roster.json',
-        async: false,
-        success: function(data) {
-            awayRoster = data;
-            for (var property in awayRoster.t){
-                if (property !== 'pl'){
-                    rosterObj.away[property] = awayRoster.t[property];
-                }
-            }
-        },
-        error: function() {}
-    });
-    var bioData = '';
-    jQuery.ajax({
-        url: 'http://localhost:8888/data/bio-data.json',
-        async: false,
-        success: function(data) {
-            bioData = data;
-        },
-        error: function() {}
-    });
-    for (var i = 0; i < roster.t.pl.length; i++) {
-        var pid = roster.t.pl[i].pid;
-        rosterObj.celtics.roster[pid] = roster.t.pl[i];
-        for (var property in bioData[pid]) {
-            rosterObj.celtics.roster[pid].bio = bioData[pid];
-        };
-        jQuery.ajax({
-            url: 'http://localhost:8888/data/mobile-stats-feed/playercards/playercard-' + pid + '.json',
-            async: false,
-            success: function(data) {
-                rosterObj.celtics.roster[pid].stats = data.pl.ca;
-            },
-            error: function() {}
-        });
-    }
-    for (var i = 0; i < awayRoster.t.pl.length; i++) {
-        var pid = awayRoster.t.pl[i].pid;
-        rosterObj.away.roster[pid] = awayRoster.t.pl[i];
-        jQuery.ajax({
-            url: 'http://localhost:8888/data/mobile-stats-feed/playercards/playercard-202330.json', // CHANGE PID
-            async: false,
-            success: function(data) {
-                rosterObj.away.roster[pid].stats = data.pl.ca;
-            },
-            error: function() {}
-        });
-    }
-    for (var team in rosterObj) {
-        for (var player in rosterObj[team].roster) {
-            var ptLeaders = rosterObj[team].leaders.pts;
-            var astLeaders = rosterObj[team].leaders.ast;
-            var rebLeaders = rosterObj[team].leaders.reb;
-            for (var stat in rosterObj[team].leaders) {
-                for (var i = 0; i < 3; i++) {
-                    if (rosterObj[team].leaders[stat][i][2] == '--' && rosterObj[team].roster[player].stats[stat] > 0) {
-                        rosterObj[team].leaders[stat][i][0] = rosterObj[team].roster[player].fn.toUpperCase();
-                        rosterObj[team].leaders[stat][i][1] = rosterObj[team].roster[player].ln.toUpperCase();
-                        rosterObj[team].leaders[stat][i][2] = rosterObj[team].roster[player].stats[stat];
-                        rosterObj[team].leaders[stat][i][3] = rosterObj[team].roster[player].pid;
-                        break;
-                    } else if (rosterObj[team].roster[player].stats[stat] > rosterObj[team].leaders[stat][i][2] && rosterObj[team].roster[player].stats[stat] > 0) {
-                        rosterObj[team].leaders[stat][i][0] = rosterObj[team].roster[player].fn.toUpperCase();
-                        rosterObj[team].leaders[stat][i][1] = rosterObj[team].roster[player].ln.toUpperCase();
-                        rosterObj[team].leaders[stat][i][2] = rosterObj[team].roster[player].stats[stat];
-                        rosterObj[team].leaders[stat][i][3] = rosterObj[team].roster[player].pid;
-                        break;
-                    }
-                };
-            }
-        }
-    }
-    console.log(rosterObj);
-};
-
-function statsNotAvailable(pid) {
-    rosterObj[pid].stats = {};
-    rosterObj[pid].stats.sa = [{}];
-    rosterObj[pid].stats.hasStats = false;
-    var caIndex = ['gp', 'gs', 'min', 'fgp', 'tpp', 'ftp', 'oreb', 'dreb', 'reb', 'ast', 'stl', 'blk', 'tov', 'pf', 'pts', 'nostats'];
-    var saIndex = ['tid', 'val', 'gp', 'gs', 'min', 'fgp', 'tpp', 'ftp', 'oreb', 'dreb', 'reb', 'ast', 'stl', 'blk', 'tov', 'pf', 'pts', 'spl', 'ta', 'tn', 'tc'];
-    for (var i = 0; i < saIndex.length; i++) {
-        rosterObj[pid].stats.sa[0][saIndex[i]] = "N/A";
-        if (i === 1) {
-            rosterObj[pid].stats.sa[0][saIndex[i]] = playerCardYear.toString().substr(2, 2) + "-" + (playerCardYear + 1).toString().substr(2, 2);
-        }
-        if (i === 17) {
-            rosterObj[pid].stats.sa[0][saIndex[i]] = [];
-        }
-        if (i === 18) {
-            rosterObj[pid].stats.sa[0][saIndex[i]] = 'BOS';
-        }
-    }
-    for (var i = 0; i < caIndex.length; i++) {
-        rosterObj[pid].stats[caIndex[i]] = "N/A";
-        if (i === 15) {
-            rosterObj[pid].stats[caIndex[i]] = true;
-        }
-    }
-};
-
-function loadGameDetail(gid) {};
-
-function loadAwayTeamData() {}
-/*====================================
-=            STAT LEADERS            =
-====================================*/
 
 function leaders(gid, gameStarted) {
     var gameDetail = '';
@@ -354,18 +394,18 @@ function leaders(gid, gameStarted) {
             }
         });
     }
-    for (var team in rosterObj){
-        for (var i = 0; i < 3; i++){
-            for (var stat in rosterObj[team].leaders){
+    for (var team in rosterObj) {
+        for (var i = 0; i < 3; i++) {
+            for (var stat in rosterObj[team].leaders) {
                 // LEADER STAT VALUE
-                jQuery('.leader-section:nth-of-type(' + (i + 2) + ') .' + stat + '.' + team + ' .stat').append('<span class="' + rosterObj[team].ta +'">' + rosterObj[team].leaders[stat][i][2] + '</span> ' + stat.toUpperCase());
+                jQuery('.leader-section:nth-of-type(' + (i + 2) + ') .' + stat + '.' + team + ' .stat').append('<span class="' + rosterObj[team].ta + '">' + rosterObj[team].leaders[stat][i][2] + '</span> ' + stat.toUpperCase());
                 // LEADER NAME
-                if (rosterObj[team].leaders[stat][i][0].length + rosterObj[team].leaders[stat][i][1].length >= 15){
-                    rosterObj[team].leaders[stat][i][0] = rosterObj[team].leaders[stat][i][0].substr(0,1) + '.';
+                if (rosterObj[team].leaders[stat][i][0].length + rosterObj[team].leaders[stat][i][1].length >= 15) {
+                    rosterObj[team].leaders[stat][i][0] = rosterObj[team].leaders[stat][i][0].substr(0, 1) + '.';
                 }
                 jQuery('.leader-section:nth-of-type(' + (i + 2) + ') .' + stat + '.' + team + ' .name').append('<span>' + rosterObj[team].leaders[stat][i][0] + '</span> ' + rosterObj[team].leaders[stat][i][1]);
                 // LEADER HEADSHOT
-                jQuery('.leader-section:nth-of-type(' + (i + 2) + ') .' + stat + '.' + team + ' .headshot').attr('src','https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/1040x760/' + rosterObj[team].leaders[stat][i][3] + '.png');
+                jQuery('.leader-section:nth-of-type(' + (i + 2) + ') .' + stat + '.' + team + ' .headshot').attr('src', 'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/1040x760/' + rosterObj[team].leaders[stat][i][3] + '.png');
             }
         }
     }
@@ -377,73 +417,70 @@ function leaders(gid, gameStarted) {
         jQuery('.leaders .leader-section .underline, .leaders .leader-subsection.top').addClass(rosterObj.celtics.ta + '-bg');
     }, 800);
     var transitionCounter = 1;
-    for (let i=1; i <= 6; i++){
+    for (let i = 1; i <= 6; i++) {
         setTimeout(function(numberString) {
             jQuery('.leaders .leader-section .leader-stat-wrap').addClass('transition-' + i);
             jQuery('.leaders .leader-section .underline, .leaders .leader-subsection.top').removeClass(rosterObj.celtics.ta + '-bg');
             jQuery('.leaders .leader-section .underline, .leaders .leader-subsection.top').addClass(rosterObj.away.ta + '-bg');
-            if (transitionCounter % 2 == 0){
-                setTimeout(function(){
-
+            if (transitionCounter % 2 == 0) {
+                setTimeout(function() {
                     jQuery('.leaders .leader-section .underline, .leaders .leader-subsection.top').removeClass(rosterObj.away.ta + '-bg');
                     jQuery('.leaders .leader-section .underline, .leaders .leader-subsection.top').addClass(rosterObj.celtics.ta + '-bg');
                     jQuery('.leader-subsection.bottom p').removeClass('transition-1');
-                    jQuery('.leaders .leader-section .underline').addClass('transition-' + (i/2));
-                    jQuery('.leader-subsection.bottom p:nth-of-type(' + (i-(i/2)+1) + ')').addClass('transition-1'); // lol
+                    jQuery('.leaders .leader-section .underline').addClass('transition-' + (i / 2));
+                    jQuery('.leader-subsection.bottom p:nth-of-type(' + (i - (i / 2) + 1) + ')').addClass('transition-1'); // lol
                 }, 200);
             }
             transitionCounter++;
         }, 2000 * i);
     }
 };
-/*==============================
-=            SOCIAL            =
-==============================*/
+
 function social(roster) {};
-/*==================================
-=            MOBILE APP            =
-==================================*/
-function initMobileApp() {
-    var counter = 1;
-    setInterval(function() {
-        jQuery('.app .bottom-wrap img').removeClass('active');
-        jQuery('.app .feature-list p').removeClass('active');
-        jQuery('.app .feature-list p:nth-of-type(' + counter + ')').addClass('active');
-        jQuery('.app .bottom-wrap img:nth-of-type(' + counter + ')').addClass('active');
-        if (counter == 5) {
-            counter = 1;
-        } else {
-            counter++;
-        }
-    }, 2000);
-};
 
 function mobileApp() {
     jQuery('.app').show();
 };
 /*=================================
-=            STANDINGS            =
+=            LEFT WRAP            =
 =================================*/
-function standings(awayTeam) {
+
+function leftWrap() {
+    if (jQuery('.left-wrap .standings').hasClass('transition-1')){
+        jQuery('.left-wrap .standings').removeClass('transition-1');
+    }
+    else {
+        jQuery('.left-wrap .standings').addClass('transition-1');
+    }
+
+    if (jQuery('.left-wrap .scores').hasClass('transition-1')){
+        jQuery('.left-wrap .scores').removeClass('transition-1');
+    }
+    else {
+        jQuery('.left-wrap .scores').addClass('transition-1');
+    }
+}
+
+
+function standingsInit(awayTeam) {
     jQuery.ajax({
         url: 'http://localhost:8888/data/mobile-stats-feed/standings.json',
         async: false,
         success: function(standingsData) {
-            console.log("YEAAAAH");
-            for (let i = 0; i < standingsData.sta.co.length; i++){
-                for (let x = 0; x < standingsData.sta.co[i].di.length; x++){
-                    for (let t = 0; t < standingsData.sta.co[i].di[x].t.length; t++){
-                        var conferences = ['.east','.west'];
+            for (let i = 0; i < standingsData.sta.co.length; i++) {
+                for (let x = 0; x < standingsData.sta.co[i].di.length; x++) {
+                    for (let t = 0; t < standingsData.sta.co[i].di[x].t.length; t++) {
+                        var conferences = ['.east', '.west'];
                         var place = standingsData.sta.co[i].di[x].t[t].see;
                         var seed = '';
                         var activeStatus = '';
-                        if (standingsData.sta.co[i].di[x].t[t].see <= 8){
+                        if (standingsData.sta.co[i].di[x].t[t].see <= 8) {
                             seed = standingsData.sta.co[i].di[x].t[t].see;
                         }
-                        if (standingsData.sta.co[i].di[x].t[t].ta == 'BOS'){
+                        if (standingsData.sta.co[i].di[x].t[t].ta == 'BOS') {
                             activeStatus = 'active';
                         }
-                        if (standingsData.sta.co[i].di[x].t[t].ta == awayTeam){
+                        if (standingsData.sta.co[i].di[x].t[t].ta == awayTeam) {
                             activeStatus = 'active-away';
                         }
                         var rowHTML = '<div class="place">' + seed + '</div><div class="logo-wrap"><img class="logo" src=http://i.cdn.turner.com/nba/nba/assets/logos/teams/primary/web/' + standingsData.sta.co[i].di[x].t[t].ta + '.svg></div><div class="team + ' + standingsData.sta.co[i].di[x].t[t].ta + '">' + standingsData.sta.co[i].di[x].t[t].ta + '</div><div class="wins">' + standingsData.sta.co[i].di[x].t[t].w + '</div><div class="losses">' + standingsData.sta.co[i].di[x].t[t].l + '</div><div class="games-behind">' + standingsData.sta.co[i].di[x].t[t].gb + '</div>';
@@ -455,7 +492,77 @@ function standings(awayTeam) {
         }
     });
 };
-/*=========================================
-=            AROUND THE LEAGUE            =
-=========================================*/
-function scores() {};
+
+function scoresInit(todaysScoresData) {
+    var liveScores = todaysScoresData.gs.g;
+    if (liveScores.length != 0) {
+        var seasonType = '';
+        if (liveScores[0].gid.substr(0, 3) == '001') {
+            seasonType = 'pre';
+        } else if (liveScores[0].gid.substr(0, 3) == '004') {
+            seasonType = 'post';
+        }
+        if (liveScores.length > 1 || (liveScores.length == 1 && liveScores[0].h.ta != 'BOS')) {
+            var statusCodes = ['1st Qtr', '2nd Qtr', '3rd Qtr', '4th Qtr', '1st OT', '2nd OT', '3rd OT', '4th OT', '5th OT', '6th OT', '7th OT', '8th OT', '9th OT', '10th OT'];
+            var scoresHTML = '';
+            for (var i = liveScores.length - 1; i >= 0; i--) {
+                if (liveScores[i].h.ta !== 'BOS') {
+                    var vScore = '';
+                    var hScore = '';
+                    if (liveScores[i].st != 1) {
+                        vScore = liveScores[i].v.s;
+                        hScore = liveScores[i].h.s;
+                    }
+                    var sText = liveScores[i].stt;
+                    if (statusCodes.indexOf(liveScores[i].stt) !== -1) {
+                        sText = liveScores[i].stt + ' - ' + liveScores[i].cl;
+                    }
+                    scoresHTML += '<div class="score-wrap"><div class="score-status">' + sText + '</div><div class="' + liveScores[i].v.ta + '"><img src="http://stats.nba.com/media/img/teams/logos/' + liveScores[i].v.ta.toUpperCase() + '_logo.svg"> ' + liveScores[i].v.tc.toUpperCase() + ' ' + liveScores[i].v.tn.toUpperCase() + ' <div class="score-num">' + vScore + '</div></div><div class="' + liveScores[i].h.ta + '"><img src="http://stats.nba.com/media/img/teams/logos/' + liveScores[i].h.ta.toUpperCase() + '_logo.svg"> ' + liveScores[i].h.tc.toUpperCase() + ' ' + liveScores[i].h.tn.toUpperCase() + ' <div class="score-num">' + hScore + '</div></div></div>';
+                }
+            }
+            jQuery('.scores').empty().append(scoresHTML);
+            if (jQuery('.score-wrap').length <= 6 && jQuery('.lleader-header').length === 0) {
+                addLeagueLeaders(seasonType);
+            }
+        }
+    }
+}
+
+function updateLeagueScores(todaysScoresData) {
+    var liveScores = todaysScoresData.gs.g;
+    if (liveScores.length != 0) {
+        var seasonType = '';
+        if (liveScores[0].gid.substr(0,3) == '001') {
+            seasonType = 'pre';
+        }
+        else if (liveScores[0].gid.substr(0,3) == '004') {
+            seasonType = 'post';
+        }
+        if (liveScores.length > 1 || (liveScores.length == 1 && liveScores[0].h.ta != 'BOS')) {
+            var statusCodes = ['1st Qtr','2nd Qtr','3rd Qtr','4th Qtr','1st OT','2nd OT','3rd OT','4th OT','5th OT','6th OT','7th OT','8th OT','9th OT','10th OT'];
+            var scoresHTML = '';
+            if (jQuery('.atl-header').length === 0) {
+                jQuery('#leftwrap').prepend('<img class="atl-header" src="http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/signage-atl-960x135.png">');
+            }
+            for (var i = liveScores.length - 1; i >= 0; i--) {
+                if (liveScores[i].h.ta !== 'BOS') {
+                    var vScore = '';
+                    var hScore = '';
+                    if (liveScores[i].st != 1) {
+                        vScore = liveScores[i].v.s;
+                        hScore = liveScores[i].h.s;
+                    }
+                    var sText = liveScores[i].stt;
+                    if (statusCodes.indexOf(liveScores[i].stt) !== -1) {
+                        sText = liveScores[i].stt + ' - ' + liveScores[i].cl;
+                    }
+                    scoresHTML += '<div class="score-wrap"><div class="score-container"><div class="' + liveScores[i].v.ta + '"><img src="http://stats.nba.com/media/img/teams/logos/' + liveScores[i].v.ta.toUpperCase() + '_logo.svg"> ' + liveScores[i].v.tc.toUpperCase() + ' ' + liveScores[i].v.tn.toUpperCase() + ' <div class="score-num">' + vScore + '</div></div><div class="' + liveScores[i].h.ta + '"><img src="http://stats.nba.com/media/img/teams/logos/' + liveScores[i].h.ta.toUpperCase() + '_logo.svg"> ' + liveScores[i].h.tc.toUpperCase() + ' ' + liveScores[i].h.tn.toUpperCase() + ' <div class="score-num">' + hScore + '</div></div><div class="score-status">' + sText + '</div></div></div>';
+                }
+            }
+            jQuery('.scores').empty().append(scoresHTML);
+            if (jQuery('.score-wrap').length <= 6 && jQuery('.lleader-header').length === 0) {
+                addLeagueLeaders(seasonType);
+            }
+        }
+    }
+}

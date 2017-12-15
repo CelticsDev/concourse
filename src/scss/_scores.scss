@@ -1,0 +1,79 @@
+/*==============================
+=            SCORES            =
+==============================*/
+
+.scores {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    position: absolute;
+    padding: 4%;
+    left: -100%;
+
+    @include transition(all 1s ease);
+
+    &.transition-1 {
+        left: 0%;
+    }
+
+    .score-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 16%;
+        width: 48%;
+        min-width: 48%;
+        background-color: white;
+        border-radius: 2px;
+        font-size: 1.3vw;
+        font-weight: 600;
+        padding: 1% 2% 2% 2%;
+        margin-bottom: 4%;
+
+        .score-status {
+            font-size: 1.1vw;
+        }
+
+        img {
+            height: 35%;
+            margin-right: 2%;
+        }
+
+        .score-num {
+            color: #212121 !important;
+            margin-left: auto;
+        }
+
+        & > div {
+            display: flex;
+            font-size: 1.2vw;
+            font-weight: 600;
+            align-items: center;
+        }
+    }
+
+    .atl-wrap, .ll-wrap {}
+
+    .score-wrap:nth-of-type(odd) {}
+
+    .score-wrap:nth-of-type(even) {}
+
+    .score-container {}
+
+    .score-container > div {}
+
+    .score-container > div:first-child {}
+
+    .score-container > div.score-status {}
+
+    .score-container > div .score-num {}
+
+    .score-container img {}
+
+    .atl-header, .lleader-header, .draft-header {}
+
+    .atl-wrap, .ll-wrap {}
+}
