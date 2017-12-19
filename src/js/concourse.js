@@ -52,7 +52,7 @@ jQuery(document).ready(function() {
         async: false,
         success: function(todaysScoresData) {
             for (var i = 0; i < todaysScoresData.gs.g.length; i++) {
-                if (todaysScoresData.gs.g[i].h.ta == 'BKN') { //CHANGE THIS
+                if (todaysScoresData.gs.g[i].h.ta == 'IND') { //CHANGE THIS
                     awayTeam = todaysScoresData.gs.g[i].v.ta;
                     loadRosterData(awayTeam);
                     scoresInit(todaysScoresData);
@@ -524,6 +524,12 @@ function scoresInit(todaysScoresData) {
             if (jQuery('.score-wrap').length <= 6 && jQuery('.lleader-header').length === 0) {
                 addLeagueLeaders(seasonType);
             }
+        }
+        if (liveScores < 5){
+            jQuery('.league-leaders').show();
+        }
+        else {
+            jQuery('.league-leaders').hide();
         }
     }
 }

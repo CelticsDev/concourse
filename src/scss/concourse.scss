@@ -27,6 +27,16 @@ body {
     margin: 0;
 }
 
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    z-index: 100000;
+    transform: translateY(-50%);
+}
+
 .screen-wrap {
     @include aspect-ratio(16, 9);
 
@@ -39,7 +49,7 @@ body {
 
 .left-wrap {
     width: 50%;
-    height: 90%;
+    height: 100%;
     z-index: 100;
     position: relative;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1d569b+29,141414+100 */
