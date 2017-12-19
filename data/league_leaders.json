@@ -1,0 +1,93 @@
+{
+    "resource": "homepagev2",
+    "parameters": {
+        "LeagueID": "00",
+        "Season": "2017-18",
+        "SeasonType": "Regular Season",
+        "GameScope": "Season",
+        "PlayerScope": "All Players",
+        "PlayerOrTeam": "Player",
+        "StatType": "Traditional"
+    },
+    "resultSets": [{
+        "name": "HomePageStat1",
+        "headers": ["RANK", "PLAYER_ID", "PLAYER", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "JERSEY_NUM", "PLAYER_POSITION", "PTS"],
+        "rowSet": [
+            [1, 201935, "James Harden", 1610612745, "HOU", "Houston Rockets", "13", "G", 31.300000],
+            [2, 203507, "Giannis Antetokounmpo", 1610612749, "MIL", "Milwaukee Bucks", "34", "F", 29.800000],
+            [3, 2544, "LeBron James", 1610612739, "CLE", "Cleveland Cavaliers", "23", "F-G", 27.800000],
+            [4, 201142, "Kevin Durant", 1610612744, "GSW", "Golden State Warriors", "35", "F", 26.500000],
+            [5, 201939, "Stephen Curry", 1610612744, "GSW", "Golden State Warriors", "30", "G", 26.300000]
+        ]
+    }, {
+        "name": "HomePageStat2",
+        "headers": ["RANK", "PLAYER_ID", "PLAYER", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "JERSEY_NUM", "PLAYER_POSITION", "REB"],
+        "rowSet": [
+            [1, 203083, "Andre Drummond", 1610612765, "DET", "Detroit Pistons", "0", "C", 14.900000],
+            [2, 201599, "DeAndre Jordan", 1610612746, "LAC", "LA Clippers", "6", "C", 14.800000],
+            [3, 2730, "Dwight Howard", 1610612766, "CHA", "Charlotte Hornets", "12", "C", 12.600000],
+            [4, 202326, "DeMarcus Cousins", 1610612740, "NOP", "New Orleans Pelicans", "0", "C", 12.200000],
+            [5, 1626157, "Karl-Anthony Towns", 1610612750, "MIN", "Minnesota Timberwolves", "32", "C", 11.700000]
+        ]
+    }, {
+        "name": "HomePageStat3",
+        "headers": ["RANK", "PLAYER_ID", "PLAYER", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "JERSEY_NUM", "PLAYER_POSITION", "AST"],
+        "rowSet": [
+            [1, 201566, "Russell Westbrook", 1610612760, "OKC", "Oklahoma City Thunder", "0", "G", 9.800000],
+            [2, 2544, "LeBron James", 1610612739, "CLE", "Cleveland Cavaliers", "23", "F-G", 9.300000],
+            [3, 201935, "James Harden", 1610612745, "HOU", "Houston Rockets", "13", "G", 9.000000],
+            [4, 1627732, "Ben Simmons", 1610612755, "PHI", "Philadelphia 76ers", "25", "G-F", 7.900000],
+            [5, 203110, "Draymond Green", 1610612744, "GSW", "Golden State Warriors", "23", "F", 7.300000]
+        ]
+    }, {
+        "name": "HomePageStat4",
+        "headers": ["RANK", "PLAYER_ID", "PLAYER", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "JERSEY_NUM", "PLAYER_POSITION", "STL"],
+        "rowSet": [
+            [1, 202331, "Paul George", 1610612760, "OKC", "Oklahoma City Thunder", "13", "F", 2.460000],
+            [2, 1627732, "Ben Simmons", 1610612755, "PHI", "Philadelphia 76ers", "25", "G-F", 2.040000],
+            [3, 201566, "Russell Westbrook", 1610612760, "OKC", "Oklahoma City Thunder", "0", "G", 2.030000],
+            [4, 1627739, "Kris Dunn", 1610612741, "CHI", "Chicago Bulls", "32", "G", 2.000000],
+            [5, 202339, "Eric Bledsoe", 1610612749, "MIL", "Milwaukee Bucks", "6", "G", 1.950000]
+        ]
+    }, {
+        "name": "HomePageStat5",
+        "headers": ["RANK", "PLAYER_ID", "PLAYER", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "JERSEY_NUM", "PLAYER_POSITION", "FG_PCT"],
+        "rowSet": [
+            [1, 203991, "Clint Capela", 1610612745, "HOU", "Houston Rockets", "15", "C", 0.694000],
+            [2, 201599, "DeAndre Jordan", 1610612746, "LAC", "LA Clippers", "6", "C", 0.651000],
+            [3, 203500, "Steven Adams", 1610612760, "OKC", "Oklahoma City Thunder", "12", "C", 0.635000],
+            [4, 202683, "Enes Kanter", 1610612752, "NYK", "New York Knicks", "00", "C", 0.603000],
+            [5, 1628381, "John Collins", 1610612737, "ATL", "Atlanta Hawks", "20", "F-C", 0.597000]
+        ]
+    }, {
+        "name": "HomePageStat6",
+        "headers": ["RANK", "PLAYER_ID", "PLAYER", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "JERSEY_NUM", "PLAYER_POSITION", "FT_PCT"],
+        "rowSet": [
+            [1, 201158, "Marco Belinelli", 1610612737, "ATL", "Atlanta Hawks", "3", "G-F", 0.952000],
+            [2, 200755, "JJ Redick", 1610612755, "PHI", "Philadelphia 76ers", "17", "F-G", 0.948000],
+            [3, 201584, "Courtney Lee", 1610612752, "NYK", "New York Knicks", "5", "G", 0.944000],
+            [4, 2037, "Jamal Crawford", 1610612750, "MIN", "Minnesota Timberwolves", "11", "G", 0.941000],
+            [5, 1627750, "Jamal Murray", 1610612743, "DEN", "Denver Nuggets", "27", "G", 0.937000]
+        ]
+    }, {
+        "name": "HomePageStat7",
+        "headers": ["RANK", "PLAYER_ID", "PLAYER", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "JERSEY_NUM", "PLAYER_POSITION", "FG3_PCT"],
+        "rowSet": [
+            [1, 1628369, "Jayson Tatum", 1610612738, "BOS", "Boston Celtics", "0", "F", 0.515000],
+            [2, 202329, "Al-Farouq Aminu", 1610612757, "POR", "Portland Trail Blazers", "8", "F", 0.481000],
+            [3, 201588, "George Hill", 1610612758, "SAC", "Sacramento Kings", "3", "G", 0.479000],
+            [4, 203503, "Tony Snell", 1610612749, "MIL", "Milwaukee Bucks", "21", "G", 0.476000],
+            [5, 202734, "E'Twaun Moore", 1610612740, "NOP", "New Orleans Pelicans", "55", "G", 0.475000]
+        ]
+    }, {
+        "name": "HomePageStat8",
+        "headers": ["RANK", "PLAYER_ID", "PLAYER", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "JERSEY_NUM", "PLAYER_POSITION", "BLK"],
+        "rowSet": [
+            [1, 1626167, "Myles Turner", 1610612754, "IND", "Indiana Pacers", "33", "C", 2.290000],
+            [2, 201142, "Kevin Durant", 1610612744, "GSW", "Golden State Warriors", "35", "F", 2.160000],
+            [3, 204001, "Kristaps Porzingis", 1610612752, "NYK", "New York Knicks", "6", "F-C", 2.080000],
+            [4, 203076, "Anthony Davis", 1610612740, "NOP", "New Orleans Pelicans", "23", "F-C", 2.000000],
+            [5, 203954, "Joel Embiid", 1610612755, "PHI", "Philadelphia 76ers", "21", "C", 1.910000]
+        ]
+    }]
+}

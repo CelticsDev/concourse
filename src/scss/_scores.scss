@@ -57,25 +57,11 @@
         }
     }
 
-    .atl-wrap, .ll-wrap {}
+    .league-leaders {
+        .leader-wrap {
+            width: 100%;
+            height: 20px;
+        }
 
-    .score-wrap:nth-of-type(odd) {}
-
-    .score-wrap:nth-of-type(even) {}
-
-    .score-container {}
-
-    .score-container > div {}
-
-    .score-container > div:first-child {}
-
-    .score-container > div.score-status {}
-
-    .score-container > div .score-num {}
-
-    .score-container img {}
-
-    .atl-header, .lleader-header, .draft-header {}
-
-    .atl-wrap, .ll-wrap {}
+    }
 }
