@@ -54,15 +54,26 @@ $(document).ready(function() {
             for (var i = 0; i < todaysScoresData.gs.g.length; i++) {
                 if (todaysScoresData.gs.g[i].h.ta == 'BOS') { //CHANGE THIS
                     awayTeam = todaysScoresData.gs.g[i].v.ta;
+                    gid = todaysScoresData.gs.g[i].gid;
                     loadRosterData(awayTeam);
                     scoresInit(todaysScoresData);
                     standingsInit(awayTeam);
+                    mobileAppInit();
                     leagueLeaders();
-/*                    setInterval(leftWrap, 3000);*/
-                    gid = todaysScoresData.gs.g[i].gid;
-/*                    initMobileApp();
-                    mobileApp();*/
-                    /*                    playerSpotlight(rosterObj, playerSpotlightCounter);*/
+                    leftWrap();
+
+                    // TRANSITIONS
+                    setInterval(function(){
+                        mobileApp();
+                        setTimeout(leaders, 3000); //
+                        setTimeout(social, 28000);
+                        setTimeout(function(){
+                            playerSpotlight(rosterObj, playerSpotlightCounter);
+                        }, 35500);
+                    },44500);
+/*                    playerSpotlight(rosterObj, playerSpotlightCounter);
+                    allStar();
+                    highlights();*/
                 }
             }
         }
@@ -120,6 +131,14 @@ function createIndex(keys, array) {
     var newArr = keys.map(item => array.indexOf(item));
     return newArr;
 }
+
+function round(number) {
+    if (typeof number !== "number" || number == undefined) {
+        return number;
+    } else {
+        return number.toFixed(1);
+    }
+}
 /*==================================
 =            INITIALIZE            =
 ==================================*/
@@ -141,22 +160,6 @@ function init() {
         });
     }
 };
-
-function initMobileApp() {
-    var counter = 1;
-    setInterval(function() {
-        $('.app .bottom-wrap img').removeClass('active');
-        $('.app .feature-list p').removeClass('active');
-        $('.app .feature-list p:nth-of-type(' + counter + ')').addClass('active');
-        $('.app .bottom-wrap img:nth-of-type(' + counter + ')').addClass('active');
-        if (counter == 5) {
-            counter = 1;
-        } else {
-            counter++;
-        }
-    }, 2000);
-};
-
 /*============================================================
 =            LOAD ROSTER INFO (build rosterObj)              =
 ============================================================*/
@@ -285,6 +288,8 @@ function loadAwayTeamData() {}
 /*==================================
 =            RIGHT WRAP            =
 ==================================*/
+
+
 function playerSpotlight(rosterObj, playerSpotlightCounter) {
     /* 1 - WHITE LINE HORIZTONAL */
     setTimeout(function() {
@@ -322,7 +327,7 @@ function playerSpotlight(rosterObj, playerSpotlightCounter) {
             delay += 30;
             forinCounter++;
         }
-    }, 1300);
+    }, 3000);
     /* 5 - PLAYER SELECT */
     var selectedPlayer = '';
     setTimeout(function() {
@@ -331,12 +336,12 @@ function playerSpotlight(rosterObj, playerSpotlightCounter) {
         selectedPlayer = $('.player-box:nth-child(' + (playerSpotlightCounter + 1) + ')').attr('data-pid');
         console.log(selectedPlayer);
         $('.player-box').not('.replacement.selected').delay(500).addClass('transition-4');
-    }, 2000);
+    }, 4000);
     /* 6 - PLAYER BOX EXPAND */
     setTimeout(function() {
         $('.block-wrap.social').addClass('transition-3');
         $('.player-box.replacement.selected').addClass('transition-3');
-    }, 3000);
+    }, 5000);
     /* 7 - SPOTLIGHT HTML */
     setTimeout(function() {
         generateTimeline(selectedPlayer);
@@ -346,7 +351,7 @@ function playerSpotlight(rosterObj, playerSpotlightCounter) {
         $('.block-wrap.social').addClass('transition-1');
         var stats = rosterObj.celtics.roster[selectedPlayer].stats;
         $('.player-spotlight .top-wrap .player-top').append('<img class="silo appended" src="http://io.cnn.net/nba/nba/.element/media/2.0/teamsites/celtics/media/silo-466x591-' + rosterObj.celtics.roster[selectedPlayer].pid + '.png" /><div class="top appended"><div class="player-name-wrap"><p class="player-name"><span>' + rosterObj.celtics.roster[selectedPlayer].fn.toUpperCase() + '</span> <br> ' + rosterObj.celtics.roster[selectedPlayer].ln.toUpperCase() + '</p></div><p class="player-number">' + rosterObj.celtics.roster[selectedPlayer].num + '</br><span>' + rosterObj.celtics.roster[selectedPlayer].pos + '</span></p></div><div class="middle appended"><ul class="info clearfix"><li><p>AGE<span class="sm-hide">:&nbsp;</span> </br><span class="info-value">' + playerAge(rosterObj.celtics.roster[selectedPlayer].dob) + '</span></p></li><li><p>HT<span class="sm-hide">:&nbsp;</span> </br><span class="info-value">' + rosterObj.celtics.roster[selectedPlayer].ht + '</span></p></li><li><p>WT<span class="sm-hide">:&nbsp;</span> </br><span class="info-value">' + rosterObj.celtics.roster[selectedPlayer].wt + '</span></p></li></ul></div><div class="bottom full clearfix sm-hide appended"><table class="averages"><tr class="averages-labels"><td><p>GP</p></td><td><p>PPG</p></td><td><p>RPG</p></td><td><p>APG</p></td></tr><tr class="averages-season"><td class="gp"><p></p></td><td class="pts"><p></p></td><td class="reb"><p></p></td><td class="ast"><p></p></td></tr></table></div>');
-        $(".player-spotlight .averages-season").html('<td><p>' + stats.sa[0].gp + '</p></td><td><p>' + stats.sa[0].pts + '</p></td><td><p>' + stats.sa[0].reb + '</p></td><td><p>' + stats.sa[0].ast + '</p></td>');
+        $(".player-spotlight .averages-season").html('<td class="appended"><p>' + stats.sa[0].gp + '</p></td><td class="appended"><p>' + stats.sa[0].pts + '</p></td><td class="appended"><p>' + stats.sa[0].reb + '</p></td><td class="appended"><p>' + stats.sa[0].ast + '</p></td>');
         $('.player-spotlight .player-name').fadeTo(200, 1);
         var playerFacts = rosterObj.celtics.roster[selectedPlayer].bio.personal;
         for (var i = 0; i < 3; i++) {
@@ -362,7 +367,7 @@ function playerSpotlight(rosterObj, playerSpotlightCounter) {
             $('.player-spotlight .bottom-wrap .dyk-box:nth-of-type(3)').addClass('transition-2');
             $('.player-spotlight .bottom-wrap .dyk-box:nth-of-type(4)').addClass('transition-1');
         }, 1500);
-    }, 3600);
+    }, 6000);
     /* 8 - SPOTLIGHT SLIDE IN */
     setTimeout(function() {
         $('.player-spotlight .player-top .player-name, .player-spotlight .player-name-wrap, .player-spotlight .headshot, .player-spotlight .info, .player-spotlight .silo, .player-spotlight .averages, .player-spotlight .player-number').addClass('transition-1');
@@ -374,19 +379,23 @@ function playerSpotlight(rosterObj, playerSpotlightCounter) {
         } else {
             playerSpotlightCounter = 0;
         }
-    }, 4100);
+    }, 7000);
     /* 9 - SPOTLIGHT SLIDE OUT */
     setTimeout(function() {
         $('.player-spotlight .bottom-wrap, .player-spotlight .top-wrap').addClass('transition-2');
-    }, 6000);
-    /* 10 - DONE. REMOVE THAT SHIT */
+    }, 8000);
+    /* 10 - DONE. REMOVE */
     setTimeout(function() {
-        $('.appended').remove();
-        $('.transition, .transition-1, .transition-2, .transition-3, .transition-4').removeClass('transition transition-1 transition-2 transition-3 transition-4');
-    }, 7000);
+        $(' .player-spotlight .appended').remove();
+        $(' .player-spotlight .selected').removeClass('selected');
+        for (var i = 1; i < 10; i++){
+            $('.transition-' + i).removeClass('transition-' + i);
+        }
+    }, 9000);
 }
 
 function leaders(gid, gameStarted) {
+    $('.leaders').addClass('active');
     var gameDetail = '';
     var detailAvailable = false;
     gameStarted = true; // DO: DELETE THIS WHEN ONLINE. JUST FOR TESTING PURPOSES RN
@@ -404,67 +413,120 @@ function leaders(gid, gameStarted) {
         for (var i = 0; i < 3; i++) {
             for (var stat in rosterObj[team].leaders) {
                 // LEADER STAT VALUE
-                $('.leader-section:nth-of-type(' + (i + 2) + ') .' + stat + '.' + team + ' .stat').append('<span class="' + rosterObj[team].ta + '">' + rosterObj[team].leaders[stat][i][2] + '</span> ' + stat.toUpperCase());
+                $('.leader-section:nth-of-type(' + (i + 2) + ') .' + stat + '.' + team + ' .stat').html('<span class="appended ' + rosterObj[team].ta + '">' + rosterObj[team].leaders[stat][i][2] + '</span> ' + stat.toUpperCase());
                 // LEADER NAME
                 if (rosterObj[team].leaders[stat][i][0].length + rosterObj[team].leaders[stat][i][1].length >= 15) {
                     rosterObj[team].leaders[stat][i][0] = rosterObj[team].leaders[stat][i][0].substr(0, 1) + '.';
                 }
-                $('.leader-section:nth-of-type(' + (i + 2) + ') .' + stat + '.' + team + ' .name').append('<span>' + rosterObj[team].leaders[stat][i][0] + '</span> ' + rosterObj[team].leaders[stat][i][1]);
+                $('.leader-section:nth-of-type(' + (i + 2) + ') .' + stat + '.' + team + ' .name').html('<span class="appended">' + rosterObj[team].leaders[stat][i][0] + '</span> ' + rosterObj[team].leaders[stat][i][1]);
                 // LEADER HEADSHOT
                 $('.leader-section:nth-of-type(' + (i + 2) + ') .' + stat + '.' + team + ' .headshot').attr('src', 'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/1040x760/' + rosterObj[team].leaders[stat][i][3] + '.png');
             }
         }
     }
-    var timeBetween = 1000;
-    $('.leaders, .leaders .block-inner').addClass('transition-1');
+    setTimeout(function() {
+        $('.leaders, .leaders .block-inner').addClass('transition-1');
+    }, 1000);
     setTimeout(function() {
         $('.leaders .leader-section').addClass('transition-1');
         $('.leader-subsection.bottom p:nth-of-type(1)').addClass('transition-1');
         $('.leaders .leader-section .underline, .leaders .leader-subsection.top').addClass(rosterObj.celtics.ta + '-bg');
-    }, 800);
+    }, 2000);
+    setTimeout(function() {
+        $('.leaders .leader-section').addClass('transition-2');
+        $('.leaders .block-inner').addClass('transition-2');
+    }, 3000);
     var transitionCounter = 1;
-    for (let i = 1; i <= 6; i++) {
-        setTimeout(function(numberString) {
-            $('.leaders .leader-section .leader-stat-wrap').addClass('transition-' + i);
-            $('.leaders .leader-section .underline, .leaders .leader-subsection.top').removeClass(rosterObj.celtics.ta + '-bg');
-            $('.leaders .leader-section .underline, .leaders .leader-subsection.top').addClass(rosterObj.away.ta + '-bg');
-            if (transitionCounter % 2 == 0) {
-                setTimeout(function() {
-                    $('.leaders .leader-section .underline, .leaders .leader-subsection.top').removeClass(rosterObj.away.ta + '-bg');
-                    $('.leaders .leader-section .underline, .leaders .leader-subsection.top').addClass(rosterObj.celtics.ta + '-bg');
-                    $('.leader-subsection.bottom p').removeClass('transition-1');
-                    $('.leaders .leader-section .underline').addClass('transition-' + (i / 2));
-                    $('.leader-subsection.bottom p:nth-of-type(' + (i - (i / 2) + 1) + ')').addClass('transition-1'); // lol
-                }, 200);
-            }
-            transitionCounter++;
-        }, 2000 * i);
-    }
+    setTimeout(function(){
+        for (let i = 1; i < 6; i++) {
+            setTimeout(function(numberString) {
+                $('.leaders .leader-section .leader-stat-wrap').addClass('transition-' + i);
+                $('.leaders .leader-section .underline, .leaders .leader-subsection.top').removeClass(rosterObj.celtics.ta + '-bg');
+                $('.leaders .leader-section .underline, .leaders .leader-subsection.top').addClass(rosterObj.away.ta + '-bg');
+                if (transitionCounter % 2 == 0) {
+                    setTimeout(function() {
+                        $('.leaders .leader-section .underline, .leaders .leader-subsection.top').removeClass(rosterObj.away.ta + '-bg');
+                        $('.leaders .leader-section .underline, .leaders .leader-subsection.top').addClass(rosterObj.celtics.ta + '-bg');
+                        $('.leader-subsection.bottom p').removeClass('transition-1');
+                        $('.leaders .leader-section .underline').addClass('transition-' + (i / 2));
+                        $('.leader-subsection.bottom p:nth-of-type(' + (i - (i / 2) + 1) + ')').addClass('transition-1'); // lol
+                    }, 200);
+                }
+                transitionCounter++;
+            }, 3500 * i);
+        }
+    },1000);
+    setTimeout(function() {
+        $('.leaders .leader-section, .leaders .leader-subsection').addClass('transition-3');
+    }, 25000);
+    setTimeout(function() {
+        $('.leaders').addClass('transition-2');
+    }, 25000);
+    setTimeout(function() {
+        $('.leaders').removeClass('active');
+        $('.leaders .appended').remove();
+        for (var i = 1; i < 10; i++){
+            $('.transition-' + i).removeClass('transition-' + i);
+        }
+    }, 30000);
 };
 
-function social(roster) {};
+function social() {
+    $('.social .text-wrap, .social .underline').removeClass('transition-1');
+    $('.social').addClass('active');
+    setTimeout(function(){
+        $('.social .text-wrap, .social .underline').addClass('transition-1');
+    }, 2500);
+/*    setTimeout(function(){
+        $('.social').removeClass('active');
+    }, 3000);*/
+};
+
+function mobileAppInit() {
+    var counter = 1;
+    setInterval(function() {
+        $('.app .bottom-wrap img').removeClass('active');
+        $('.app .feature-list p').removeClass('active');
+        $('.app .feature-list p:nth-of-type(' + counter + ')').addClass('active');
+        $('.app .bottom-wrap img:nth-of-type(' + counter + ')').addClass('active');
+        if (counter == 5) {
+            counter = 1;
+        } else {
+            counter++;
+        }
+    }, 2000);
+};
 
 function mobileApp() {
-    $('.app').show();
+    $('.app .block-inner').removeClass('transition-1');
+    $('.app').addClass('active');
+    setTimeout(function(){
+        $('.app .block-inner').addClass('transition-1');
+    }, 2500);
+    setTimeout(function(){
+        $('.app').removeClass('active');
+    }, 3000);
 };
 /*=================================
 =            LEFT WRAP            =
 =================================*/
 
 function leftWrap() {
-    if ($('.left-wrap .standings').hasClass('transition-1')){
-        $('.left-wrap .standings').removeClass('transition-1');
-    }
-    else {
-        $('.left-wrap .standings').addClass('transition-1');
-    }
+    setInterval(function(){
+        if ($('.left-wrap .standings').hasClass('transition-1')){
+            $('.left-wrap .standings').removeClass('transition-1');
+        }
+        else {
+            $('.left-wrap .standings').addClass('transition-1');
+        }
 
-    if ($('.left-wrap .scores-and-leaders').hasClass('transition-1')){
-        $('.left-wrap .scores-and-leaders').removeClass('transition-1');
-    }
-    else {
-        $('.left-wrap .scores-and-leaders').addClass('transition-1');
-    }
+        if ($('.left-wrap .scores-and-leaders').hasClass('transition-1')){
+            $('.left-wrap .scores-and-leaders').removeClass('transition-1');
+        }
+        else {
+            $('.left-wrap .scores-and-leaders').addClass('transition-1');
+        }
+    }, 45000);
 }
 
 
@@ -577,7 +639,7 @@ function updateLeagueScores(todaysScoresData) {
 }
 
 function leagueLeaders(){
-    var leagueLeadersHTML = '<div class="title"><p>LEADERS</p><p>PTS</p><p>REB</p><p>AST</p><p>STL</p><p>BLK</p></div>';
+    var leagueLeadersHTML = '<div class="title"><p>LEAGUE LEADERS</p><p>PTS</p><p>REB</p><p>AST</p><p>STL</p><p>BLK</p></div>';
     var statType = '';
     var dataIndex = ["RANK","PLAYER_ID","PLAYER","TEAM_ID","TEAM_ABBREVIATION"];
 
@@ -589,10 +651,12 @@ function leagueLeaders(){
             for (let i = 0; i < leadersData.length; i++){
                 var index = createIndex(dataIndex, leadersData[i].headers);
                 var rows = '';
-                for (let x = 0; x < leadersData[i].rowSet.length; x++){
-                    rows += '<div class="row"><div class="left"><div class="place">' + leadersData[i].rowSet[x][0] + '</div><div class="logo-wrap"><img class="logo" src="http://stats.nba.com/media/img/teams/logos/' + leadersData[i].rowSet[x][4] + '_logo.svg"/></div><div class="name">' + leadersData[i].rowSet[x][2].toUpperCase() + '</div></div><div class="right"><div class="value">' + leadersData[i].rowSet[x][8] + '</div></div></div>';
+                if (["PTS","REB","AST","STL","BLK"].indexOf(leadersData[i].headers[8]) !== -1){
+                    for (let x = 0; x < leadersData[i].rowSet.length; x++){
+                        rows += '<div class="row"><div class="left"><div class="place">' + leadersData[i].rowSet[x][0] + '</div><div class="logo-wrap"><img class="logo" src="http://stats.nba.com/media/img/teams/logos/' + leadersData[i].rowSet[x][4] + '_logo.svg"/></div><div class="name">' + leadersData[i].rowSet[x][2].toUpperCase() + '</div></div><div class="right"><div class="value">' + round(leadersData[i].rowSet[x][8]) + '</div></div></div>';
+                    }
+                    leagueLeadersHTML += '<div class="league-leaders-wrap">' + rows + '</div>';
                 }
-                leagueLeadersHTML += '<div class="league-leaders-wrap">' + rows + '</div>';
             }
         }
     });

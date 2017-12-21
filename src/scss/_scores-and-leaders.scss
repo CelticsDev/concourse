@@ -10,7 +10,7 @@
     justify-content: space-between;
     padding: 4%;
     position: absolute;
-    left: 0%; //
+    left: -100%; //
     opacity: 1;
 
     @include transition(all 1s ease);
@@ -120,14 +120,15 @@
 
             .left {
                 display: flex;
-                flex-basis: 80%
+                flex-basis: 90%
             }
 
             .right {
                 flex-grow: 1;
                 display: flex;
                 justify-content: flex-end;
-                flex-basis: 20%
+                flex-basis: 10%;
+                justify-content: center;
             }
 
             .row {

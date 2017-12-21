@@ -3,8 +3,12 @@
 ===========================*/
 
 .app {
-	display: none;
+	opacity: 0;
     padding: 4%;
+
+    &.active {
+        opacity: 1;
+    }
 
     .block-inner {
         position: relative;
@@ -15,6 +19,17 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        @include transition(all 1s ease);
+
+        * {
+            @include transition(all 1s ease);
+        }
+
+        &.transition-1 {
+            * {
+                opacity: 0;
+            }
+        }
 
         & > p {
             text-align: center;

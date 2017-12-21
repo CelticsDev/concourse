@@ -5,13 +5,19 @@
 .leaders {
     display: none;
     padding: 4%;
-
+    opacity: 1;
     @include transition(all 1s ease);
 
+    &.active {
+        display: block;
+    }
     &.transition-1 {
         padding: 0%;
     }
-
+    &.transition-2 {
+        @include transition(all 1s ease);
+        opacity: 0;
+    }
     .block-inner {
         position: relative;
         height: 100%;
@@ -29,15 +35,22 @@
             border: none;
         }
 
+        &.transition-2 {
+            background-color: transparent;
+            @include transition(all 0s ease);
+        }
+
         .leader-section {
             flex-grow: 1;
             border-bottom: .002vw solid #a7a7a7;
             position: relative;
             display: flex;
             overflow: hidden;
+            opacity: 0;
 
             &.transition-1 {
                 top: 0% !important;
+                opacity: 1;
             }
 
             &:nth-child(1) {
@@ -46,37 +59,72 @@
                 flex-direction: column;
                 border: none;
                 box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+                left: 0%;
 
                 @include transition(all 1s ease);
             }
 
             &:nth-child(2) {
                 top: -50%;
+                left: 0%;
 
                 @include transition(all 1s ease-out);
 
                 .leader-stat-wrap {
                     transition-delay: 0.15s;
                 }
+
+                &.transition-2 {
+                    background-color: rgba(255, 255, 255, 0.85);
+                    transition-delay: 0;
+                    @include transition(all 0s ease-out);
+                }
+                &.transition-3 {
+                    left: 100%;
+                    @include transition(all 1s ease-out);
+                }
             }
 
             &:nth-child(3) {
                 top: -75%;
+                left: 0%;
 
                 @include transition(all 1s ease-out);
 
                 .leader-stat-wrap {
                     transition-delay: 0.1s;
                 }
+
+                &.transition-2 {
+                    background-color: rgba(255, 255, 255, 0.85);
+                    transition-delay: 0;
+                    @include transition(all 0s ease-out);
+                }
+                &.transition-3 {
+                    left: -100%;
+                    @include transition(all 1s ease-out);
+                }
             }
 
             &:nth-child(4) {
                 top: -100%;
+                left: 0%;
 
                 @include transition(all 1s ease-out);
 
                 .leader-stat-wrap {
                     transition-delay: 0.05s;
+                }
+
+                &.transition-2 {
+                    background-color: rgba(255, 255, 255, 0.85);
+                    transition-delay: 0;
+                    @include transition(all 0s ease-out);
+                }
+
+                &.transition-3 {
+                    left: 100%;
+                    @include transition(all 1s ease-out);
                 }
             }
 
@@ -86,6 +134,8 @@
                 flex: 1;
                 display: flex;
                 align-items: center;
+
+
 
                 img {
                     width: 15%;
@@ -110,7 +160,8 @@
                 &.top {
                     padding: 0% 3%;
                     top: -25%;
-
+                    left: 0%;
+                    @include transition(all 1s ease-out);
                     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,0.4+68,0.5+100 */
                     background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 68%, rgba(255, 255, 255, 0.5) 100%);
 
@@ -125,25 +176,23 @@
 
                     /* IE6-9 */
                     @include transition(all 1s ease);
+
+                    &.transition-3 {
+                        left: 100%;
+                    }
                 }
 
                 &.bottom {
                     padding: 0px 20%;
                     justify-content: space-between;
+                    background-color: white;
+                    left: 0%;
+                    @include transition(all 1s ease-out);
 
-                    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.46+0,1+51,1+100 */
-                    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, 1) 100%);
+                    &.transition-3 {
+                        left: -100%;
+                    }
 
-                    /* FF3.6-15 */
-                    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, 1) 100%);
-
-                    /* Chrome10-25,Safari5.1-6 */
-                    background: linear-gradient(to right, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, 1) 100%);
-
-                    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75ffffff', endColorstr='#ffffff',GradientType=1 );
-
-                    /* IE6-9 */
                     p {
                         color: #dbdbdb;
 
