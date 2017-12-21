@@ -74,6 +74,7 @@
         display: flex;
         flex-direction: column;
         flex-basis: 50%;
+        position: relative;
 
         .title {
             display: flex;
@@ -85,23 +86,36 @@
                 font-size: 2.3vw;
                 font-weight: 400;
 
+                @include transition(all 1s ease);
+
                 &:nth-child(1) {
                     margin-right: 10%;
                     font-weight: 600;
+                    opacity: 1;
+                }
+
+                opacity: .1;
+
+                &.active {
+                    opacity: 1;
                 }
             }
         }
 
         .league-leaders-wrap {
             width: 100%;
-            display: none;
+            opacity: 0;
             flex-direction: column;
-            flex-grow: 1;
             border: 1px solid white;
             border-radius: 2px;
+            display: flex;
+            position: absolute;
+            height: 83%;
+            bottom: 0;
+            @include transition(all 1s ease);
 
-            &:nth-of-type(2){
-                display: flex;
+            &.active {
+                opacity: 1;
             }
 
             .left {

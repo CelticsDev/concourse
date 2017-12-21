@@ -1416,7 +1416,8 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    flex-basis: 50%; }
+    flex-basis: 50%;
+    position: relative; }
     .scores-and-leaders .league-leaders .title {
       display: flex;
       justify-content: space-between;
@@ -1425,19 +1426,34 @@
         margin: 1% 0%;
         color: white;
         font-size: 2.3vw;
-        font-weight: 400; }
+        font-weight: 400;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease;
+        opacity: .1; }
         .scores-and-leaders .league-leaders .title p:nth-child(1) {
           margin-right: 10%;
-          font-weight: 600; }
+          font-weight: 600;
+          opacity: 1; }
+        .scores-and-leaders .league-leaders .title p.active {
+          opacity: 1; }
     .scores-and-leaders .league-leaders .league-leaders-wrap {
       width: 100%;
-      display: none;
+      opacity: 0;
       flex-direction: column;
-      flex-grow: 1;
       border: 1px solid white;
-      border-radius: 2px; }
-      .scores-and-leaders .league-leaders .league-leaders-wrap:nth-of-type(2) {
-        display: flex; }
+      border-radius: 2px;
+      display: flex;
+      position: absolute;
+      height: 83%;
+      bottom: 0;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease; }
+      .scores-and-leaders .league-leaders .league-leaders-wrap.active {
+        opacity: 1; }
       .scores-and-leaders .league-leaders .league-leaders-wrap .left {
         display: flex;
         flex-basis: 80%; }

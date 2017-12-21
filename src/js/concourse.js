@@ -52,7 +52,7 @@ $(document).ready(function() {
         async: false,
         success: function(todaysScoresData) {
             for (var i = 0; i < todaysScoresData.gs.g.length; i++) {
-                if (todaysScoresData.gs.g[i].h.ta == 'IND') { //CHANGE THIS
+                if (todaysScoresData.gs.g[i].h.ta == 'BOS') { //CHANGE THIS
                     awayTeam = todaysScoresData.gs.g[i].v.ta;
                     loadRosterData(awayTeam);
                     scoresInit(todaysScoresData);
@@ -511,8 +511,10 @@ function scoresInit(todaysScoresData) {
         if (liveScores.length > 1 || (liveScores.length == 1 && liveScores[0].h.ta != 'BOS')) {
             var statusCodes = ['1st Qtr', '2nd Qtr', '3rd Qtr', '4th Qtr', '1st OT', '2nd OT', '3rd OT', '4th OT', '5th OT', '6th OT', '7th OT', '8th OT', '9th OT', '10th OT'];
             var scoresHTML = '';
+            var added = 0;
             for (var i = liveScores.length - 1; i >= 0; i--) {
-                if (liveScores[i].h.ta !== 'BOS') {
+                if (liveScores[i].h.ta !== 'BOS' && i < 11) {
+                    added++;
                     var vScore = '';
                     var hScore = '';
                     if (liveScores[i].st != 1) {
@@ -528,7 +530,7 @@ function scoresInit(todaysScoresData) {
             }
             $('.scores').empty().append(scoresHTML);
         }
-        if (liveScores.length < 5){
+        if (added < 5){
             $('.league-leaders').show();
         }
         else {
@@ -595,4 +597,15 @@ function leagueLeaders(){
         }
     });
     $('.league-leaders').empty().append(leagueLeadersHTML);
+    var counter = 2;
+    setInterval(function(){
+        jQuery('.league-leaders-wrap, .league-leaders .title p').removeClass('active');
+        jQuery('.league-leaders-wrap:nth-of-type(' + counter + '), .league-leaders .title p:nth-of-type(' + counter + ')').addClass('active');
+        if (counter == 6) {
+            counter = 2;
+        }
+        else {
+            counter++;
+        }
+    }, 4000);
 }
