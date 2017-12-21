@@ -115,6 +115,11 @@ function generateTimeline(selectedPlayer) {
     }
     $(".timeline-wrap").html('<div class="timeline appended">' + timelineHTML + '</div><div class="season-year appended">' + seasonYearHTML + '</div>');
 }
+
+function createIndex(keys, array) {
+    var newArr = keys.map(item => array.indexOf(item));
+    return newArr;
+}
 /*==================================
 =            INITIALIZE            =
 ==================================*/
@@ -454,11 +459,11 @@ function leftWrap() {
         $('.left-wrap .standings').addClass('transition-1');
     }
 
-    if ($('.left-wrap .scores').hasClass('transition-1')){
-        $('.left-wrap .scores').removeClass('transition-1');
+    if ($('.left-wrap .scores-and-leaders').hasClass('transition-1')){
+        $('.left-wrap .scores-and-leaders').removeClass('transition-1');
     }
     else {
-        $('.left-wrap .scores').addClass('transition-1');
+        $('.left-wrap .scores-and-leaders').addClass('transition-1');
     }
 }
 
@@ -521,9 +526,9 @@ function scoresInit(todaysScoresData) {
                     scoresHTML += '<div class="score-wrap"><div class="score-status">' + sText + '</div><div class="' + liveScores[i].v.ta + '"><img src="http://stats.nba.com/media/img/teams/logos/' + liveScores[i].v.ta.toUpperCase() + '_logo.svg"> ' + liveScores[i].v.tc.toUpperCase() + ' ' + liveScores[i].v.tn.toUpperCase() + ' <div class="score-num">' + vScore + '</div></div><div class="' + liveScores[i].h.ta + '"><img src="http://stats.nba.com/media/img/teams/logos/' + liveScores[i].h.ta.toUpperCase() + '_logo.svg"> ' + liveScores[i].h.tc.toUpperCase() + ' ' + liveScores[i].h.tn.toUpperCase() + ' <div class="score-num">' + hScore + '</div></div></div>';
                 }
             }
-            $('.scores').empty().append(scoresHTML + '<div class="league-leaders"></div>');
+            $('.scores').empty().append(scoresHTML);
         }
-        if (liveScores < 5){
+        if (liveScores.length < 5){
             $('.league-leaders').show();
         }
         else {
@@ -570,22 +575,24 @@ function updateLeagueScores(todaysScoresData) {
 }
 
 function leagueLeaders(){
-    var leagueLeadersHTML = '';
+    var leagueLeadersHTML = '<div class="title"><p>LEADERS</p><p>PTS</p><p>REB</p><p>AST</p><p>STL</p><p>BLK</p></div>';
     var statType = '';
+    var dataIndex = ["RANK","PLAYER_ID","PLAYER","TEAM_ID","TEAM_ABBREVIATION"];
+
     $.ajax({
         url: 'http://localhost:8888/data/league_leaders.json',
+        async: false,
         success: function(data) {
             var leadersData = data.resultSets;
             for (let i = 0; i < leadersData.length; i++){
-                statType = leadersData[i].headers[(leadersData[i].headers.length - 1)];
-                console.log(statType);
+                var index = createIndex(dataIndex, leadersData[i].headers);
+                var rows = '';
                 for (let x = 0; x < leadersData[i].rowSet.length; x++){
-                    leaderHTML = '<p>' + leadersData[i].rowSet[x][3] + '</p>';
-                    $('.league-leaders-wrap div[data-stat-type="' + statType + '"]').append(leaderHTML);
+                    rows += '<div class="row"><div class="left"><div class="place">' + leadersData[i].rowSet[x][0] + '</div><div class="logo-wrap"><img class="logo" src="http://stats.nba.com/media/img/teams/logos/' + leadersData[i].rowSet[x][4] + '_logo.svg"/></div><div class="name">' + leadersData[i].rowSet[x][2].toUpperCase() + '</div></div><div class="right"><div class="value">' + leadersData[i].rowSet[x][8] + '</div></div></div>';
                 }
+                leagueLeadersHTML += '<div class="league-leaders-wrap">' + rows + '</div>';
             }
-            $('.league-leaders-wrap div[data-stat-type="' + statType + '"]').html(leaderHTML);
         }
     });
-    $('.league-leaders').html(leagueLeadersHTML);
+    $('.league-leaders').empty().append(leagueLeadersHTML);
 }

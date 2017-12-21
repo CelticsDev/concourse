@@ -1358,53 +1358,120 @@
 /*==============================
 =            SCORES            =
 ==============================*/
-.scores {
+.scores-and-leaders {
   display: flex;
   width: 100%;
   height: 90%;
+  flex-direction: column;
   justify-content: space-between;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  position: absolute;
   padding: 4%;
+  position: absolute;
   left: 0%;
   opacity: 1;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   -webkit-transition: all 1s ease;
   transition: all 1s ease; }
-  .scores.transition-1 {
+  .scores-and-leaders.transition-1 {
     left: 0%;
     opacity: 1; }
-  .scores .score-wrap {
+  .scores-and-leaders .scores {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    left: 0%;
+    opacity: 1;
+    flex-grow: 1;
+    flex-basis: 40%; }
+    .scores-and-leaders .scores .score-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 16%;
+      width: 48%;
+      min-width: 48%;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 2px;
+      font-size: 1.3vw;
+      font-weight: 600;
+      padding: 1% 2% 2% 2%;
+      margin-bottom: 4%; }
+      .scores-and-leaders .scores .score-wrap .score-status {
+        font-size: 1.1vw; }
+      .scores-and-leaders .scores .score-wrap img {
+        height: 35%;
+        margin-right: 2%; }
+      .scores-and-leaders .scores .score-wrap .score-num {
+        color: #212121 !important;
+        margin-left: auto; }
+      .scores-and-leaders .scores .score-wrap > div {
+        display: flex;
+        font-size: 1.2vw;
+        font-weight: 600;
+        align-items: center; }
+  .scores-and-leaders .league-leaders {
+    width: 100%;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 16%;
-    width: 48%;
-    min-width: 48%;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 2px;
-    font-size: 1.3vw;
-    font-weight: 600;
-    padding: 1% 2% 2% 2%;
-    margin-bottom: 4%; }
-    .scores .score-wrap .score-status {
-      font-size: 1.1vw; }
-    .scores .score-wrap img {
-      height: 35%;
-      margin-right: 2%; }
-    .scores .score-wrap .score-num {
-      color: #212121 !important;
-      margin-left: auto; }
-    .scores .score-wrap > div {
+    flex-basis: 50%; }
+    .scores-and-leaders .league-leaders .title {
       display: flex;
-      font-size: 1.2vw;
-      font-weight: 600;
-      align-items: center; }
-  .scores .league-leaders .leader-wrap {
-    width: 100%;
-    height: 20px; }
+      justify-content: space-between;
+      padding: 0% 2%; }
+      .scores-and-leaders .league-leaders .title p {
+        margin: 1% 0%;
+        color: white;
+        font-size: 2.3vw;
+        font-weight: 400; }
+        .scores-and-leaders .league-leaders .title p:nth-child(1) {
+          margin-right: 10%;
+          font-weight: 600; }
+    .scores-and-leaders .league-leaders .league-leaders-wrap {
+      width: 100%;
+      display: none;
+      flex-direction: column;
+      flex-grow: 1;
+      border: 1px solid white;
+      border-radius: 2px; }
+      .scores-and-leaders .league-leaders .league-leaders-wrap:nth-of-type(2) {
+        display: flex; }
+      .scores-and-leaders .league-leaders .league-leaders-wrap .left {
+        display: flex;
+        flex-basis: 80%; }
+      .scores-and-leaders .league-leaders .league-leaders-wrap .right {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+        flex-basis: 20%; }
+      .scores-and-leaders .league-leaders .league-leaders-wrap .row {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        padding: 0% 4%;
+        background-color: rgba(255, 255, 255, 0.2);
+        align-items: center;
+        color: white; }
+        .scores-and-leaders .league-leaders .league-leaders-wrap .row:nth-child(even) {
+          background-color: rgba(255, 255, 255, 0.3); }
+        .scores-and-leaders .league-leaders .league-leaders-wrap .row div {
+          margin: 0;
+          font-size: 2vw;
+          /*                     &:nth-child(3) {
+                                  align-self: flex-end;
+                              } */ }
+        .scores-and-leaders .league-leaders .league-leaders-wrap .row .place {
+          padding-right: 2%; }
+        .scores-and-leaders .league-leaders .league-leaders-wrap .row .logo-wrap {
+          width: 14%;
+          display: flex;
+          align-items: center;
+          padding-right: 8%; }
+          .scores-and-leaders .league-leaders .league-leaders-wrap .row .logo-wrap .logo {
+            width: 6%;
+            position: absolute; }
 
 * {
   box-sizing: border-box;
