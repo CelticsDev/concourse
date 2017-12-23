@@ -25,6 +25,7 @@
         border: 1px solid #8a8a8a;
 
         .active {
+            font-weight: 500;
             /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#008348+0,008348+100&0.35+0,0.35+32,0.2+100 */
             background: -moz-linear-gradient(left, rgba(0, 131, 72, 0.35) 0%, rgba(0, 131, 72, 0.35) 32%, rgba(0, 131, 72, 0.2) 100%);
             background: -webkit-linear-gradient(left, rgba(0, 131, 72, 0.35) 0%, rgba(0, 131, 72, 0.35) 32%, rgba(0, 131, 72, 0.2) 100%);
@@ -33,11 +34,12 @@
         }
 
         .active-away {
-            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9c9c9+0,bfbfbf+100&0.66+0,0.66+18,0.3+100 */
-            background: -moz-linear-gradient(left, rgba(201, 201, 201, 0.66) 0%, rgba(199, 199, 199, 0.66) 18%, rgba(191, 191, 191, 0.3) 100%);
-            background: -webkit-linear-gradient(left, rgba(201, 201, 201, 0.66) 0%, rgba(199, 199, 199, 0.66) 18%, rgba(191, 191, 191, 0.3) 100%);
-            background: linear-gradient(to right, rgba(201, 201, 201, 0.66) 0%, rgba(199, 199, 199, 0.66) 18%, rgba(191, 191, 191, 0.3) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8c9c9c9', endColorstr='#4dbfbfbf',GradientType=1 );
+            font-weight: 500;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#afafaf+0,b5b5b5+100&0.8+0,0.8+18,0.4+100 */
+            background: -moz-linear-gradient(left,  rgba(175,175,175,0.8) 0%, rgba(176,176,176,0.8) 18%, rgba(181,181,181,0.4) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left,  rgba(175,175,175,0.8) 0%,rgba(176,176,176,0.8) 18%,rgba(181,181,181,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right,  rgba(175,175,175,0.8) 0%,rgba(176,176,176,0.8) 18%,rgba(181,181,181,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccafafaf', endColorstr='#66b5b5b5',GradientType=1 ); /* IE6-9 */
         }
 
         .conference {

@@ -10,7 +10,7 @@
     justify-content: space-between;
     padding: 4%;
     position: absolute;
-    left: -100%; //
+    left: 0%;
     opacity: 1;
 
     @include transition(all 1s ease);
@@ -57,10 +57,10 @@
             .score-num {
                 color: #212121 !important;
                 margin-left: auto;
+            }
 
-                &.loser {
-                    opacity: 0.5;
-                }
+            .score-num.winner {
+                font-size: 30vw !important;
             }
 
             & > div {
@@ -124,15 +124,14 @@
 
             .left {
                 display: flex;
-                flex-basis: 90%
+                flex-basis: 80%
             }
 
             .right {
                 flex-grow: 1;
                 display: flex;
                 justify-content: flex-end;
-                flex-basis: 10%;
-                justify-content: center;
+                flex-basis: 20%
             }
 
             .row {
@@ -174,9 +173,7 @@
                 }
 
                 .name {
-                    span {
-                        font-weight: 300;
-                    }
+
                 }
             }
         }
