@@ -1,0 +1,702 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install', 'node' ]
+2 info using npm@2.15.9
+3 info using node@v4.6.0
+4 verbose install initial load of /Users/kyle/Dropbox/CELTICS/projects/concourse/package.json
+5 warn package.json concourse@1.0.0 No description
+6 warn package.json concourse@1.0.0 No repository field.
+7 warn package.json concourse@1.0.0 No README data
+8 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/JSONStream/package.json
+9 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/abbrev/package.json
+10 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/acorn/package.json
+11 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/acorn-jsx/package.json
+12 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/ajv/package.json
+13 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/ajv-keywords/package.json
+14 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/ansi-escapes/package.json
+15 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/ansi-regex/package.json
+16 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/ansi-styles/package.json
+17 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/anymatch/package.json
+18 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/argparse/package.json
+19 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/arr-diff/package.json
+20 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/arr-flatten/package.json
+21 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/array-filter/package.json
+22 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/array-find-index/package.json
+23 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/array-map/package.json
+24 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/array-reduce/package.json
+25 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/array-union/package.json
+26 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/array-uniq/package.json
+27 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/array-unique/package.json
+28 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/arrify/package.json
+29 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/asn1.js/package.json
+30 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/assert/package.json
+31 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/astw/package.json
+32 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/async/package.json
+33 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/async-each/package.json
+34 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-code-frame/package.json
+35 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-core/package.json
+36 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-generator/package.json
+37 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-helper-builder-binary-assignment-operator-visitor/package.json
+38 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-helper-call-delegate/package.json
+39 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-helper-define-map/package.json
+40 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-helper-explode-assignable-expression/package.json
+41 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-helper-function-name/package.json
+42 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-helper-get-function-arity/package.json
+43 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-helper-hoist-variables/package.json
+44 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-helper-optimise-call-expression/package.json
+45 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-helper-regex/package.json
+46 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-helper-remap-async-to-generator/package.json
+47 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-helper-replace-supers/package.json
+48 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-helpers/package.json
+49 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-messages/package.json
+50 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-check-es2015-constants/package.json
+51 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-syntax-async-functions/package.json
+52 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-syntax-exponentiation-operator/package.json
+53 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-syntax-trailing-function-commas/package.json
+54 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-async-to-generator/package.json
+55 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-arrow-functions/package.json
+56 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-block-scoped-functions/package.json
+57 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-block-scoping/package.json
+58 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-classes/package.json
+59 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-computed-properties/package.json
+60 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-destructuring/package.json
+61 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-duplicate-keys/package.json
+62 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-for-of/package.json
+63 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-function-name/package.json
+64 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-literals/package.json
+65 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-modules-amd/package.json
+66 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-modules-commonjs/package.json
+67 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-modules-systemjs/package.json
+68 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-modules-umd/package.json
+69 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-object-super/package.json
+70 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-parameters/package.json
+71 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-shorthand-properties/package.json
+72 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-spread/package.json
+73 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-sticky-regex/package.json
+74 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-template-literals/package.json
+75 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-typeof-symbol/package.json
+76 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-es2015-unicode-regex/package.json
+77 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-exponentiation-operator/package.json
+78 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-regenerator/package.json
+79 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-plugin-transform-strict-mode/package.json
+80 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-preset-env/package.json
+81 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-register/package.json
+82 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-runtime/package.json
+83 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-template/package.json
+84 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-traverse/package.json
+85 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babel-types/package.json
+86 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babelify/package.json
+87 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/babylon/package.json
+88 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/balanced-match/package.json
+89 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/base64-js/package.json
+90 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/binary-extensions/package.json
+91 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/bn.js/package.json
+92 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/body-parser/package.json
+93 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/brace-expansion/package.json
+94 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/braces/package.json
+95 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/brorand/package.json
+96 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/browser-pack/package.json
+97 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/browser-resolve/package.json
+98 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/browserify/package.json
+99 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/browserify-aes/package.json
+100 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/browserify-cache-api/package.json
+101 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/browserify-cipher/package.json
+102 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/browserify-des/package.json
+103 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/browserify-incremental/package.json
+104 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/browserify-rsa/package.json
+105 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/browserify-sign/package.json
+106 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/browserify-zlib/package.json
+107 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/browserslist/package.json
+108 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/buffer/package.json
+109 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/buffer-xor/package.json
+110 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/builtin-modules/package.json
+111 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/builtin-status-codes/package.json
+112 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/bytes/package.json
+113 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/cached-path-relative/package.json
+114 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/caller-path/package.json
+115 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/callsites/package.json
+116 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/camel-case/package.json
+117 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/camelcase/package.json
+118 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/camelcase-keys/package.json
+119 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/caniuse-lite/package.json
+120 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/chalk/package.json
+121 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/chardet/package.json
+122 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/chokidar/package.json
+123 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/cipher-base/package.json
+124 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/circular-json/package.json
+125 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/clean-css/package.json
+126 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/cli-cursor/package.json
+127 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/cli-width/package.json
+128 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/co/package.json
+129 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/coffee-script/package.json
+130 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/color-convert/package.json
+131 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/color-name/package.json
+132 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/colors/package.json
+133 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/combine-source-map/package.json
+134 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/commander/package.json
+135 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/concat-map/package.json
+136 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/concat-stream/package.json
+137 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/console-browserify/package.json
+138 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/constants-browserify/package.json
+139 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/content-type/package.json
+140 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/convert-source-map/package.json
+141 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/core-js/package.json
+142 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/core-util-is/package.json
+143 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/create-ecdh/package.json
+144 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/create-hash/package.json
+145 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/create-hmac/package.json
+146 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/cross-spawn/package.json
+147 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/crypto-browserify/package.json
+148 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/currently-unhandled/package.json
+149 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/dargs/package.json
+150 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/date-now/package.json
+151 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/dateformat/package.json
+152 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/debug/package.json
+153 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/decamelize/package.json
+154 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/deep-is/package.json
+155 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/defined/package.json
+156 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/del/package.json
+157 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/depd/package.json
+158 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/deps-sort/package.json
+159 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/des.js/package.json
+160 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/detect-indent/package.json
+161 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/detective/package.json
+162 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/diffie-hellman/package.json
+163 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/doctrine/package.json
+164 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/domain-browser/package.json
+165 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/duplexer2/package.json
+166 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/ee-first/package.json
+167 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/electron-releases/package.json
+168 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/electron-to-chromium/package.json
+169 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/elliptic/package.json
+170 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/error-ex/package.json
+171 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/escape-string-regexp/package.json
+172 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/eslint/package.json
+173 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/eslint-scope/package.json
+174 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/espree/package.json
+175 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/esprima/package.json
+176 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/esquery/package.json
+177 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/esrecurse/package.json
+178 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/estraverse/package.json
+179 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/esutils/package.json
+180 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/eventemitter2/package.json
+181 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/events/package.json
+182 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/evp_bytestokey/package.json
+183 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/exit/package.json
+184 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/expand-brackets/package.json
+185 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/expand-range/package.json
+186 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/external-editor/package.json
+187 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/extglob/package.json
+188 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/fast-deep-equal/package.json
+189 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/fast-json-stable-stringify/package.json
+190 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/fast-levenshtein/package.json
+191 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/faye-websocket/package.json
+192 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/figures/package.json
+193 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/file-entry-cache/package.json
+194 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/filename-regex/package.json
+195 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/fill-range/package.json
+196 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/find-up/package.json
+197 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/findup-sync/package.json
+198 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/flat-cache/package.json
+199 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/for-in/package.json
+200 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/for-own/package.json
+201 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/fs.realpath/package.json
+202 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/fsevents/package.json
+203 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/function-bind/package.json
+204 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/functional-red-black-tree/package.json
+205 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/gaze/package.json
+206 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/get-stdin/package.json
+207 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/getobject/package.json
+208 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/glob/package.json
+209 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/glob-base/package.json
+210 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/glob-parent/package.json
+211 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/globals/package.json
+212 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/globby/package.json
+213 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/globule/package.json
+214 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/graceful-fs/package.json
+215 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/grunt/package.json
+216 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/grunt-browserify/package.json
+217 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/grunt-contrib-htmlmin/package.json
+218 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/grunt-contrib-sass/package.json
+219 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/grunt-contrib-uglify/package.json
+220 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/grunt-contrib-watch/package.json
+221 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/grunt-eslint/package.json
+222 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/grunt-import/package.json
+223 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/grunt-known-options/package.json
+224 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/grunt-legacy-log/package.json
+225 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/grunt-legacy-log-utils/package.json
+226 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/grunt-legacy-util/package.json
+227 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/grunt-log-headers/package.json
+228 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/grunt-notify/package.json
+229 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/gzip-size/package.json
+230 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/has/package.json
+231 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/has-ansi/package.json
+232 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/has-flag/package.json
+233 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/hash-base/package.json
+234 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/hash.js/package.json
+235 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/he/package.json
+236 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/hmac-drbg/package.json
+237 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/home-or-tmp/package.json
+238 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/hooker/package.json
+239 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/hosted-git-info/package.json
+240 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/html-minifier/package.json
+241 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/htmlescape/package.json
+242 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/http-errors/package.json
+243 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/http-parser-js/package.json
+244 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/https-browserify/package.json
+245 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/iconv-lite/package.json
+246 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/ieee754/package.json
+247 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/ignore/package.json
+248 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/imurmurhash/package.json
+249 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/indent-string/package.json
+250 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/indexof/package.json
+251 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/inflight/package.json
+252 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/inherits/package.json
+253 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/inline-source-map/package.json
+254 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/inquirer/package.json
+255 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/insert-module-globals/package.json
+256 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/invariant/package.json
+257 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-arrayish/package.json
+258 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-binary-path/package.json
+259 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-buffer/package.json
+260 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-builtin-module/package.json
+261 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-dotfile/package.json
+262 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-equal-shallow/package.json
+263 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-extendable/package.json
+264 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-extglob/package.json
+265 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-finite/package.json
+266 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-fullwidth-code-point/package.json
+267 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-glob/package.json
+268 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-number/package.json
+269 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-path-cwd/package.json
+270 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-path-in-cwd/package.json
+271 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-path-inside/package.json
+272 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-posix-bracket/package.json
+273 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-primitive/package.json
+274 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-promise/package.json
+275 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-resolvable/package.json
+276 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/is-utf8/package.json
+277 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/isarray/package.json
+278 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/isexe/package.json
+279 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/isobject/package.json
+280 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/js-tokens/package.json
+281 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/js-yaml/package.json
+282 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/jsesc/package.json
+283 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/json-schema-traverse/package.json
+284 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/json-stable-stringify/package.json
+285 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/json-stable-stringify-without-jsonify/package.json
+286 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/json5/package.json
+287 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/jsonify/package.json
+288 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/jsonparse/package.json
+289 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/kind-of/package.json
+290 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/labeled-stream-splicer/package.json
+291 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/levn/package.json
+292 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/lexical-scope/package.json
+293 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/livereload-js/package.json
+294 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/load-json-file/package.json
+295 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/lodash/package.json
+296 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/lodash.memoize/package.json
+297 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/loose-envify/package.json
+298 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/loud-rejection/package.json
+299 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/lower-case/package.json
+300 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/lru-cache/package.json
+301 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/map-obj/package.json
+302 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/maxmin/package.json
+303 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/md5.js/package.json
+304 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/media-typer/package.json
+305 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/meow/package.json
+306 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/micromatch/package.json
+307 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/miller-rabin/package.json
+308 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/mime-db/package.json
+309 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/mime-types/package.json
+310 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/mimic-fn/package.json
+311 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/minimalistic-assert/package.json
+312 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/minimalistic-crypto-utils/package.json
+313 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/minimatch/package.json
+314 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/minimist/package.json
+315 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/mkdirp/package.json
+316 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/module-deps/package.json
+317 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/ms/package.json
+318 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/mute-stream/package.json
+319 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/nan/package.json
+320 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/natural-compare/package.json
+321 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/ncname/package.json
+322 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/no-case/package.json
+323 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/nopt/package.json
+324 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/normalize-package-data/package.json
+325 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/normalize-path/package.json
+326 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/number-is-nan/package.json
+327 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/object-assign/package.json
+328 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/object.omit/package.json
+329 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/on-finished/package.json
+330 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/once/package.json
+331 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/onetime/package.json
+332 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/optionator/package.json
+333 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/os-browserify/package.json
+334 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/os-homedir/package.json
+335 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/os-tmpdir/package.json
+336 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/outpipe/package.json
+337 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/pako/package.json
+338 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/param-case/package.json
+339 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/parents/package.json
+340 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/parse-asn1/package.json
+341 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/parse-glob/package.json
+342 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/parse-json/package.json
+343 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/parseurl/package.json
+344 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/path-browserify/package.json
+345 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/path-exists/package.json
+346 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/path-is-absolute/package.json
+347 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/path-is-inside/package.json
+348 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/path-platform/package.json
+349 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/path-type/package.json
+350 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/pbkdf2/package.json
+351 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/pify/package.json
+352 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/pinkie/package.json
+353 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/pinkie-promise/package.json
+354 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/pluralize/package.json
+355 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/prelude-ls/package.json
+356 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/preserve/package.json
+357 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/pretty-bytes/package.json
+358 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/private/package.json
+359 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/process/package.json
+360 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/process-nextick-args/package.json
+361 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/progress/package.json
+362 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/pseudomap/package.json
+363 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/public-encrypt/package.json
+364 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/punycode/package.json
+365 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/qs/package.json
+366 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/querystring/package.json
+367 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/querystring-es3/package.json
+368 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/randomatic/package.json
+369 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/randombytes/package.json
+370 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/randomfill/package.json
+371 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/raw-body/package.json
+372 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/read-only-stream/package.json
+373 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/read-pkg/package.json
+374 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/read-pkg-up/package.json
+375 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/readable-stream/package.json
+376 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/readdirp/package.json
+377 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/redent/package.json
+378 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/regenerate/package.json
+379 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/regenerator-runtime/package.json
+380 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/regenerator-transform/package.json
+381 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/regex-cache/package.json
+382 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/regexpu-core/package.json
+383 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/regjsgen/package.json
+384 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/regjsparser/package.json
+385 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/relateurl/package.json
+386 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/remove-trailing-separator/package.json
+387 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/repeat-element/package.json
+388 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/repeat-string/package.json
+389 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/repeating/package.json
+390 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/require-uncached/package.json
+391 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/resolve/package.json
+392 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/resolve-from/package.json
+393 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/restore-cursor/package.json
+394 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/rimraf/package.json
+395 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/ripemd160/package.json
+396 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/run-async/package.json
+397 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/rx-lite/package.json
+398 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/rx-lite-aggregates/package.json
+399 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/safe-buffer/package.json
+400 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/semver/package.json
+401 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/set-immediate-shim/package.json
+402 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/sha.js/package.json
+403 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/shasum/package.json
+404 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/shebang-command/package.json
+405 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/shebang-regex/package.json
+406 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/shell-quote/package.json
+407 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/signal-exit/package.json
+408 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/slash/package.json
+409 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/slice-ansi/package.json
+410 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/source-map/package.json
+411 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/source-map-support/package.json
+412 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/spdx-correct/package.json
+413 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/spdx-expression-parse/package.json
+414 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/spdx-license-ids/package.json
+415 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/sprintf-js/package.json
+416 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/stack-parser/package.json
+417 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/statuses/package.json
+418 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/stream-browserify/package.json
+419 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/stream-combiner2/package.json
+420 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/stream-http/package.json
+421 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/stream-splicer/package.json
+422 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/string-width/package.json
+423 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/string_decoder/package.json
+424 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/strip-ansi/package.json
+425 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/strip-bom/package.json
+426 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/strip-indent/package.json
+427 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/strip-json-comments/package.json
+428 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/subarg/package.json
+429 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/supports-color/package.json
+430 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/syntax-error/package.json
+431 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/table/package.json
+432 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/text-table/package.json
+433 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/through/package.json
+434 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/through2/package.json
+435 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/timers-browserify/package.json
+436 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/tiny-lr/package.json
+437 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/tmp/package.json
+438 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/to-arraybuffer/package.json
+439 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/to-fast-properties/package.json
+440 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/trim-newlines/package.json
+441 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/trim-right/package.json
+442 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/tty-browserify/package.json
+443 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/type-check/package.json
+444 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/type-is/package.json
+445 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/typedarray/package.json
+446 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/uglify-js/package.json
+447 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/umd/package.json
+448 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/underscore.string/package.json
+449 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/unpipe/package.json
+450 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/upper-case/package.json
+451 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/uri-path/package.json
+452 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/url/package.json
+453 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/util/package.json
+454 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/util-deprecate/package.json
+455 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/validate-npm-package-license/package.json
+456 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/vm-browserify/package.json
+457 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/watchify/package.json
+458 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/websocket-driver/package.json
+459 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/websocket-extensions/package.json
+460 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/which/package.json
+461 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/wordwrap/package.json
+462 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/wrappy/package.json
+463 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/write/package.json
+464 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/xml-char-classes/package.json
+465 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/xtend/package.json
+466 verbose installManyTop reading scoped package data from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/yallist/package.json
+467 info package.json array-unique@0.2.1 license should be a valid SPDX license expression
+468 info package.json assert@1.4.1 assert is also the name of a node core module.
+469 info package.json buffer@5.0.8 buffer is also the name of a node core module.
+470 info package.json console-browserify@1.1.0 No license field.
+471 info package.json date-now@0.1.4 No license field.
+472 info package.json deep-is@0.1.3 license should be a valid SPDX license expression
+473 info package.json esquery@1.0.0 license should be a valid SPDX license expression
+474 info package.json esutils@2.0.2 No license field.
+475 info package.json events@1.1.1 events is also the name of a node core module.
+476 info package.json exit@0.1.2 No license field.
+477 info package.json findup-sync@0.3.0 No license field.
+478 info package.json getobject@0.1.0 No license field.
+479 info package.json glob-base@0.3.0 license should be a valid SPDX license expression
+480 info package.json grunt-import@1.0.3 No license field.
+481 info package.json has@1.0.1 No license field.
+482 info package.json hooker@0.2.3 No license field.
+483 info package.json indexof@0.0.1 No repository field.
+484 info package.json indexof@0.0.1 No license field.
+485 info package.json is-primitive@2.0.0 license should be a valid SPDX license expression
+486 info package.json jsonify@0.0.0 license should be a valid SPDX license expression
+487 info package.json prelude-ls@1.1.2 No license field.
+488 info package.json preserve@0.2.0 license should be a valid SPDX license expression
+489 info package.json process@0.11.10 process is also the name of a node core module.
+490 info package.json punycode@1.4.1 punycode is also the name of a node core module.
+491 info package.json querystring@0.2.0 querystring is also the name of a node core module.
+492 info package.json querystring@0.2.0 No license field.
+493 info package.json querystring-es3@0.2.1 No license field.
+494 info package.json regjsparser@0.1.5 license should be a valid SPDX license expression
+495 info package.json regenerator-transform@0.10.1 license should be a valid SPDX license expression
+496 info package.json rimraf@2.2.8 license should be a valid SPDX license expression
+497 info package.json rx-lite@4.0.8 No license field.
+498 info package.json repeat-element@1.1.2 license should be a valid SPDX license expression
+499 info package.json rx-lite-aggregates@4.0.8 No license field.
+500 info package.json stack-parser@0.0.1 license should be a valid SPDX license expression
+501 info package.json string_decoder@1.0.3 string_decoder is also the name of a node core module.
+502 info package.json timers-browserify@1.4.2 No license field.
+503 info package.json util@0.10.3 util is also the name of a node core module.
+504 info package.json url@0.11.0 url is also the name of a node core module.
+505 verbose readDependencies loading dependencies from /Users/kyle/Dropbox/CELTICS/projects/concourse/package.json
+506 silly cache add args [ 'node', null ]
+507 verbose cache add spec node
+508 silly cache add parsed spec Result {
+508 silly cache add   raw: 'node',
+508 silly cache add   scope: null,
+508 silly cache add   name: 'node',
+508 silly cache add   rawSpec: '',
+508 silly cache add   spec: 'latest',
+508 silly cache add   type: 'tag' }
+509 silly addNamed node@latest
+510 verbose addNamed "latest" is being treated as a dist-tag for node
+511 info addNameTag [ 'node', 'latest' ]
+512 silly mapToRegistry name node
+513 silly mapToRegistry using default registry
+514 silly mapToRegistry registry https://registry.npmjs.org/
+515 silly mapToRegistry data Result {
+515 silly mapToRegistry   raw: 'node',
+515 silly mapToRegistry   scope: null,
+515 silly mapToRegistry   name: 'node',
+515 silly mapToRegistry   rawSpec: '',
+515 silly mapToRegistry   spec: 'latest',
+515 silly mapToRegistry   type: 'tag' }
+516 silly mapToRegistry uri https://registry.npmjs.org/node
+517 verbose addNameTag registry:https://registry.npmjs.org/node not in flight; fetching
+518 verbose request uri https://registry.npmjs.org/node
+519 verbose request no auth needed
+520 info attempt registry request try #1 at 6:17:40 PM
+521 verbose request id 4ea7dd2bf1faf7ae
+522 http request GET https://registry.npmjs.org/node
+523 http 200 https://registry.npmjs.org/node
+524 verbose headers { 'content-type': 'application/json; charset=UTF-8',
+524 verbose headers   server: 'UploadServer',
+524 verbose headers   'cache-control': 'max-age=300',
+524 verbose headers   'last-modified': 'Tue, 19 Dec 2017 21:46:10 GMT',
+524 verbose headers   etag: '"5a3988a2-52e36"',
+524 verbose headers   'content-encoding': 'gzip',
+524 verbose headers   'content-length': '55162',
+524 verbose headers   'accept-ranges': 'bytes',
+524 verbose headers   date: 'Sat, 23 Dec 2017 23:17:41 GMT',
+524 verbose headers   via: '1.1 varnish',
+524 verbose headers   age: '0',
+524 verbose headers   connection: 'keep-alive',
+524 verbose headers   'x-served-by': 'cache-bos8234-BOS',
+524 verbose headers   'x-cache': 'MISS',
+524 verbose headers   'x-cache-hits': '0',
+524 verbose headers   'x-timer': 'S1514071061.812651,VS0,VE242',
+524 verbose headers   vary: 'Accept-Encoding, Accept' }
+525 silly get cb [ 200,
+525 silly get   { 'content-type': 'application/json; charset=UTF-8',
+525 silly get     server: 'UploadServer',
+525 silly get     'cache-control': 'max-age=300',
+525 silly get     'last-modified': 'Tue, 19 Dec 2017 21:46:10 GMT',
+525 silly get     etag: '"5a3988a2-52e36"',
+525 silly get     'content-encoding': 'gzip',
+525 silly get     'content-length': '55162',
+525 silly get     'accept-ranges': 'bytes',
+525 silly get     date: 'Sat, 23 Dec 2017 23:17:41 GMT',
+525 silly get     via: '1.1 varnish',
+525 silly get     age: '0',
+525 silly get     connection: 'keep-alive',
+525 silly get     'x-served-by': 'cache-bos8234-BOS',
+525 silly get     'x-cache': 'MISS',
+525 silly get     'x-cache-hits': '0',
+525 silly get     'x-timer': 'S1514071061.812651,VS0,VE242',
+525 silly get     vary: 'Accept-Encoding, Accept' } ]
+526 verbose get saving node to /Users/kyle/.npm/registry.npmjs.org/node/.cache.json
+527 verbose correctMkdir /Users/kyle/.npm correctMkdir not in flight; initializing
+528 silly addNameTag next cb for node with tag latest
+529 silly addNamed node@9.3.0
+530 verbose addNamed "9.3.0" is a plain semver version for node
+531 silly mapToRegistry name node
+532 silly mapToRegistry using default registry
+533 silly mapToRegistry registry https://registry.npmjs.org/
+534 silly mapToRegistry data Result {
+534 silly mapToRegistry   raw: 'node',
+534 silly mapToRegistry   scope: null,
+534 silly mapToRegistry   name: 'node',
+534 silly mapToRegistry   rawSpec: '',
+534 silly mapToRegistry   spec: 'latest',
+534 silly mapToRegistry   type: 'tag' }
+535 silly mapToRegistry uri https://registry.npmjs.org/node
+536 verbose addRemoteTarball https://registry.npmjs.org/node/-/node-9.3.0.tgz not in flight; adding
+537 verbose addRemoteTarball [ 'https://registry.npmjs.org/node/-/node-9.3.0.tgz',
+537 verbose addRemoteTarball   'a71d437ff95cb028c87f07ff8fc5365a80fa3bd9' ]
+538 info retry fetch attempt 1 at 6:17:41 PM
+539 info attempt registry request try #1 at 6:17:41 PM
+540 http fetch GET https://registry.npmjs.org/node/-/node-9.3.0.tgz
+541 http fetch 200 https://registry.npmjs.org/node/-/node-9.3.0.tgz
+542 silly fetchAndShaCheck shasum a71d437ff95cb028c87f07ff8fc5365a80fa3bd9
+543 verbose addTmpTarball /var/folders/p6/qvccvn855zj2h6p3f1_y_r780000gn/T/npm-37819-4a3387d9/registry.npmjs.org/node/-/node-9.3.0.tgz not in flight; adding
+544 verbose addTmpTarball already have metadata; skipping unpack for node@9.3.0
+545 verbose correctMkdir /Users/kyle/.npm correctMkdir not in flight; initializing
+546 silly cache afterAdd node@9.3.0
+547 verbose afterAdd /Users/kyle/.npm/node/9.3.0/package/package.json not in flight; writing
+548 verbose correctMkdir /Users/kyle/.npm correctMkdir not in flight; initializing
+549 verbose afterAdd /Users/kyle/.npm/node/9.3.0/package/package.json written
+550 silly install resolved [ { name: 'node',
+550 silly install resolved     version: '9.3.0',
+550 silly install resolved     description: 'node',
+550 silly install resolved     main: 'index.js',
+550 silly install resolved     keywords: [ 'runtime' ],
+550 silly install resolved     repository:
+550 silly install resolved      { type: 'git',
+550 silly install resolved        url: 'git+https://github.com/aredridel/node-bin-gen.git' },
+550 silly install resolved     scripts: { preinstall: 'node installArchSpecificPackage' },
+550 silly install resolved     bin: { node: 'bin/node' },
+550 silly install resolved     dependencies: { 'node-bin-setup': '^1.0.0' },
+550 silly install resolved     license: 'ISC',
+550 silly install resolved     author: '',
+550 silly install resolved     engines: { npm: '>=5.0.0' },
+550 silly install resolved     bugs: { url: 'https://github.com/aredridel/node-bin-gen/issues' },
+550 silly install resolved     homepage: 'https://github.com/aredridel/node-bin-gen#readme',
+550 silly install resolved     _id: 'node@9.3.0',
+550 silly install resolved     _npmVersion: '5.6.0',
+550 silly install resolved     _nodeVersion: '8.9.3',
+550 silly install resolved     _npmUser: { name: 'aredridel', email: 'aredridel@dinhe.net' },
+550 silly install resolved     dist:
+550 silly install resolved      { integrity: 'sha512-mzd/bye/4HE8QbguOcpk7x38h9+ULo3WesRps8g+C89j/KLJgQs0FBQ2TPHR6SDf1+rWNJ/klaE22FDRpw2ddQ==',
+550 silly install resolved        shasum: 'a71d437ff95cb028c87f07ff8fc5365a80fa3bd9',
+550 silly install resolved        tarball: 'https://registry.npmjs.org/node/-/node-9.3.0.tgz' },
+550 silly install resolved     maintainers: [ [Object], [Object] ],
+550 silly install resolved     _npmOperationalInternal:
+550 silly install resolved      { host: 's3://npm-registry-packages',
+550 silly install resolved        tmp: 'tmp/node-9.3.0.tgz_1513314462027_0.628224415704608' },
+550 silly install resolved     directories: {},
+550 silly install resolved     _shasum: 'a71d437ff95cb028c87f07ff8fc5365a80fa3bd9',
+550 silly install resolved     _resolved: 'https://registry.npmjs.org/node/-/node-9.3.0.tgz',
+550 silly install resolved     _from: 'node@latest' } ]
+551 info install node@9.3.0 into /Users/kyle/Dropbox/CELTICS/projects/concourse
+552 info installOne node@9.3.0
+553 verbose installOne of node to /Users/kyle/Dropbox/CELTICS/projects/concourse not in flight; installing
+554 verbose correctMkdir /Users/kyle/.npm/_locks correctMkdir not in flight; initializing
+555 verbose lock using /Users/kyle/.npm/_locks/node-1fde69edb3a5f439.lock for /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/node
+556 warn engine node@9.3.0: wanted: {"npm":">=5.0.0"} (current: {"node":"4.6.0","npm":"2.15.9"})
+557 silly install write writing node 9.3.0 to /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/node
+558 verbose unbuild node_modules/node
+559 silly gentlyRm /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/node is being purged from base /Users/kyle/Dropbox/CELTICS/projects/concourse
+560 verbose gentlyRm don't care about contents; nuking /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/node
+561 verbose tar unpack /Users/kyle/.npm/node/9.3.0/package.tgz
+562 verbose tar unpacking to /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/node
+563 silly gentlyRm /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/node is being purged
+564 verbose gentlyRm don't care about contents; nuking /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/node
+565 silly gunzTarPerm modes [ '755', '644' ]
+566 silly gunzTarPerm extractEntry package.json
+567 silly gunzTarPerm extractEntry installArchSpecificPackage.js
+568 silly gunzTarPerm extractEntry README.md
+569 verbose write writing to /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/node/package.json
+570 info preinstall node@9.3.0
+571 verbose unsafe-perm in lifecycle true
+572 info node@9.3.0 Failed to exec preinstall script
+573 verbose unlock done using /Users/kyle/.npm/_locks/node-1fde69edb3a5f439.lock for /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/node
+574 verbose stack Error: node@9.3.0 preinstall: `node installArchSpecificPackage`
+574 verbose stack Exit status 1
+574 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:217:16)
+574 verbose stack     at emitTwo (events.js:87:13)
+574 verbose stack     at EventEmitter.emit (events.js:172:7)
+574 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+574 verbose stack     at emitTwo (events.js:87:13)
+574 verbose stack     at ChildProcess.emit (events.js:172:7)
+574 verbose stack     at maybeClose (internal/child_process.js:829:16)
+574 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+575 verbose pkgid node@9.3.0
+576 verbose cwd /Users/kyle/Dropbox/CELTICS/projects/concourse
+577 error Darwin 15.6.0
+578 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "node"
+579 error node v4.6.0
+580 error npm  v2.15.9
+581 error code ELIFECYCLE
+582 error node@9.3.0 preinstall: `node installArchSpecificPackage`
+582 error Exit status 1
+583 error Failed at the node@9.3.0 preinstall script 'node installArchSpecificPackage'.
+583 error This is most likely a problem with the node package,
+583 error not with npm itself.
+583 error Tell the author that this fails on your system:
+583 error     node installArchSpecificPackage
+583 error You can get information on how to open an issue for this project with:
+583 error     npm bugs node
+583 error Or if that isn't available, you can get their info via:
+583 error
+583 error     npm owner ls node
+583 error There is likely additional logging output above.
+584 verbose exit [ 1, true ]
+585 verbose unbuild node_modules/node
+586 info preuninstall node@9.3.0
+587 info uninstall node@9.3.0
+588 verbose unbuild rmStuff node@9.3.0 from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules
+589 silly gentlyRm /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/.bin/node is being gently removed
+590 silly gentlyRm verifying /Users/kyle/Dropbox/CELTICS/projects/concourse is an npm working directory
+591 silly gentlyRm containing path /Users/kyle/Dropbox/CELTICS/projects/concourse is under npm's control, in /Users/kyle/Dropbox/CELTICS/projects/concourse
+592 silly gentlyRm deletion target /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/.bin/node is under /Users/kyle/Dropbox/CELTICS/projects/concourse
+593 verbose gentlyRm vacuuming from /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/.bin/node up to /Users/kyle/Dropbox/CELTICS/projects/concourse
+594 info postuninstall node@9.3.0
+595 silly gentlyRm /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/node is being purged from base /Users/kyle/Dropbox/CELTICS/projects/concourse
+596 verbose gentlyRm don't care about contents; nuking /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/node
+597 silly vacuum-fs purging /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules/node
+598 silly vacuum-fs quitting because other entries in /Users/kyle/Dropbox/CELTICS/projects/concourse/node_modules

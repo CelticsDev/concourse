@@ -67,8 +67,8 @@ var rosterObj = {
 var feeds = {
     todaysScores: 'http://data.nba.com/data/v2015/json/mobile_teams/nba/2017/scores/00_todays_scores.json',
     celticsRoster: 'http://data.nba.com/data/v2015/json/mobile_teams/nba/2017/teams/celtics_roster.json',
-    awayRoster: function(tn){
-        return 'http://data.nba.com/data/v2015/json/mobile_teams/nba/2017/teams/' + tn + '_roster.json';
+    awayRoster: function(awayTn){
+        return 'http://data.nba.com/data/v2015/json/mobile_teams/nba/2017/teams/' + awayTn + '_roster.json';
     },
     bioData: 'http://io.cnn.net/nba/nba/.element/media/2.0/teamsites/celtics/json/bio-data.json',
     playercard: function(pid){
@@ -87,7 +87,7 @@ var feeds = {
 jQuery(document).ready(function() {
     var gid = '';
     var awayTeam = '';
-    var gameStarted = false;
+    var awayTn = '';
     var date = new Date();
     var leftWrapCounter = false;
     jQuery.ajax({
@@ -97,7 +97,8 @@ jQuery(document).ready(function() {
             for (var i = 0; i < todaysScoresData.gs.g.length; i++) {
                 if (todaysScoresData.gs.g[i].h.ta == 'BOS') { //CHANGE THIS
                     awayTeam = todaysScoresData.gs.g[i].v.ta;
-                    awayTn = todaysScoresData.gs.g[i].v.tn;
+                    awayTn = todaysScoresData.gs.g[i].v.tn.toLowerCase();
+                    console.log(awayTn);
                     gid = todaysScoresData.gs.g[i].gid;
                     loadRosterData(awayTeam, awayTn);
                     scoresInit(todaysScoresData);
@@ -105,19 +106,20 @@ jQuery(document).ready(function() {
 /*                    mobileAppInit();*/
                     leagueLeaders();
                     leftWrap();
-
                     // TRANSITIONS
                     let playerSpotlightCounter = 1;
                     function cycle() {
                         mobileApp(); // DURATION: 25s
-                        setTimeout(leaders, 25000);
+                        setTimeout(function(){
+                            leaders(gid);
+                        }, 25000);
                         setTimeout(social, 69000);
                         setTimeout(function(){
                             playerSpotlight(rosterObj, playerSpotlightCounter);
-                        }, 45500);
+                        }, 75000);
                     }
                     cycle();
-                    setInterval(cycle, 80000);
+                    setInterval(cycle, 90000);
                 }
             }
         }
@@ -198,7 +200,7 @@ function init() {
             success: function(todaysScoresData) {
                 var gid = '';
                 for (var i = 0; i < todaysScoresData.gs.g.length; i++) {
-                    if (todaysScoresData.gs.g[i].h.ta == 'ORL') { // CHANGE THIS TO 'BOS' WHEN THE TIME COMES
+                    if (todaysScoresData.gs.g[i].h.ta == 'BOS') { // CHANGE THIS TO 'BOS' WHEN THE TIME COMES
                         if (todaysScoresData.gs.g[i] !== 1) {
                             gameStarted = true;
                         }
@@ -228,6 +230,7 @@ function loadRosterData(awayTeam, awayTn) {
         error: function() {}
     });
     var awayRoster = '';
+    console.log('ajax' + awayTn);
     jQuery.ajax({
         url: feeds.awayRoster(awayTn),
         async: false,
