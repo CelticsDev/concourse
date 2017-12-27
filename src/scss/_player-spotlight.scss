@@ -67,6 +67,7 @@
         .player-top {
             display: flex;
             flex-direction: column;
+            height: 100%;
 
             .silo {
                 @include transition(all 0.5s ease);
@@ -335,6 +336,8 @@
         }
 
         .timeline-outer-wrap {
+            height: 30%;
+            margin-bottom: 7%;
         }
 
         .timeline-wrap {
@@ -342,7 +345,7 @@
             -js-display: flex;
             flex-direction: column;
             width: 100%;
-            height: 35%;
+            height: 100%;
 
             div {
                 display: flex;

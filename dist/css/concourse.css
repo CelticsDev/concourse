@@ -359,7 +359,7 @@
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
-  opacity: 0;
+  opacity: 1;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   -webkit-transition: all 1s ease;
@@ -741,7 +741,8 @@
       transform: translate3d(0, -100%, 0); }
     .block-wrap.player-spotlight .top-wrap .player-top {
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      height: 100%; }
       .block-wrap.player-spotlight .top-wrap .player-top .silo {
         -moz-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
@@ -941,12 +942,15 @@
       font-size: 1.6vw;
       text-align: center;
       font-family: 'Roboto', Helvetica, sans-serif; }
+    .block-wrap.player-spotlight .bottom-wrap .timeline-outer-wrap {
+      height: 30%;
+      margin-bottom: 7%; }
     .block-wrap.player-spotlight .bottom-wrap .timeline-wrap {
       display: flex;
       -js-display: flex;
       flex-direction: column;
       width: 100%;
-      height: 35%; }
+      height: 100%; }
       .block-wrap.player-spotlight .bottom-wrap .timeline-wrap div {
         display: flex;
         -js-display: flex; }
@@ -1436,14 +1440,14 @@
     .standings .bottom-wrap .east {
       border-right: 1px solid #212121; }
       .standings .bottom-wrap .east .standings-header {
-        background-color: rgba(201, 68, 83, 0.8);
+        background-color: rgba(58, 99, 162, 0.8);
         color: white;
         padding-left: 6%; }
         .standings .bottom-wrap .east .standings-header div:first-child {
           font-weight: bold;
           flex-grow: 2.2; }
     .standings .bottom-wrap .west .standings-header {
-      background-color: rgba(58, 99, 162, 0.8);
+      background-color: rgba(201, 68, 83, 0.8);
       color: white;
       padding-left: 6%; }
       .standings .bottom-wrap .west .standings-header div:first-child {
@@ -1508,7 +1512,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 36%;
       width: 48%;
       min-width: 48%;
       background-color: rgba(255, 255, 255, 0.9);
@@ -1518,7 +1521,8 @@
       padding: 1% 2% 2% 2%;
       margin-bottom: 4%; }
       .scores-and-leaders .scores .score-wrap .score-status {
-        font-size: 1.1vw; }
+        font-size: 1.1vw;
+        margin-bottom: 2%; }
       .scores-and-leaders .scores .score-wrap img {
         height: 2.3vw;
         margin-right: 2%; }
@@ -1613,6 +1617,9 @@
             position: absolute; }
         .scores-and-leaders .league-leaders .league-leaders-wrap .row .name span {
           font-weight: 300; }
+
+html, body {
+  height: 100%; }
 
 * {
   box-sizing: border-box;
