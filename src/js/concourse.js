@@ -45,7 +45,7 @@ var rosterObj = {
 /*var feeds = {
     todaysScores: 'http://localhost:8888/data/mobile-stats-feed/todays_scores.json',
     celticsRoster: 'http://localhost:8888/data/mobile-stats-feed/celtics_roster.json',
-    awayRoster: function(tn){
+    awayRoster: function(awayTn){
         return 'http://localhost:8888/data/mobile-stats-feed/away_roster.json';
     },
     bioData: 'http://localhost:8888/data/bio-data.json',
@@ -60,8 +60,8 @@ var rosterObj = {
     },
     standings: 'http://localhost:8888/data/mobile-stats-feed/standings.json',
     leagueLeaders: 'http://localhost:8888/data/league_leaders.json'
-};*/
-
+};
+*/
 // ONLINE
 
 var feeds = {
@@ -84,6 +84,9 @@ var feeds = {
     leagueLeaders: 'http://stats.nba.com/stats/homepagev2?GameScope=Season&LeagueID=00&PlayerOrTeam=Player&PlayerScope=All+Players&Season=2017-18&SeasonType=Regular+Season&StatType=Traditional&callback=?'
 };
 
+var gameStarted = false;
+let playerSpotlightCounter = 1;
+
 jQuery(document).ready(function() {
     var gid = '';
     var awayTeam = '';
@@ -98,7 +101,6 @@ jQuery(document).ready(function() {
                 if (todaysScoresData.gs.g[i].h.ta == 'BOS') { //CHANGE THIS
                     awayTeam = todaysScoresData.gs.g[i].v.ta;
                     awayTn = todaysScoresData.gs.g[i].v.tn.toLowerCase();
-                    console.log(awayTn);
                     gid = todaysScoresData.gs.g[i].gid;
                     loadRosterData(awayTeam, awayTn);
                     scoresInit(todaysScoresData);
@@ -107,19 +109,18 @@ jQuery(document).ready(function() {
                     leagueLeaders();
                     leftWrap();
                     // TRANSITIONS
-                    let playerSpotlightCounter = 1;
                     function cycle() {
                         mobileApp(); // DURATION: 25s
                         setTimeout(function(){
                             leaders(gid);
                         }, 25000);
                         setTimeout(social, 69000);
-                        setTimeout(function(){
-                            playerSpotlight(rosterObj, playerSpotlightCounter);
-                        }, 75000);
+/*                        setTimeout(function(){
+                            playerSpotlight(rosterObj);
+                        }, 79000);*/
                     }
                     cycle();
-                    setInterval(cycle, 90000);
+                    setInterval(cycle, 85000);
                 }
             }
         }
@@ -192,7 +193,7 @@ function round(number) {
 /*==================================
 =            INITIALIZE            =
 ==================================*/
-function init() {
+function checkGameStatus() {
     if (!gameStarted) {
         jQuery.ajax({
             url: feeds.todaysScores,
@@ -200,7 +201,7 @@ function init() {
             success: function(todaysScoresData) {
                 var gid = '';
                 for (var i = 0; i < todaysScoresData.gs.g.length; i++) {
-                    if (todaysScoresData.gs.g[i].h.ta == 'BOS') { // CHANGE THIS TO 'BOS' WHEN THE TIME COMES
+                    if (todaysScoresData.gs.g[i].h.ta == 'BOS') {
                         if (todaysScoresData.gs.g[i] !== 1) {
                             gameStarted = true;
                         }
@@ -209,6 +210,7 @@ function init() {
             }
         });
     }
+    return true;
 };
 /*============================================================
 =            LOAD ROSTER INFO (build rosterObj)              =
@@ -230,7 +232,6 @@ function loadRosterData(awayTeam, awayTn) {
         error: function() {}
     });
     var awayRoster = '';
-    console.log('ajax' + awayTn);
     jQuery.ajax({
         url: feeds.awayRoster(awayTn),
         async: false,
@@ -263,7 +264,12 @@ function loadRosterData(awayTeam, awayTn) {
             url: feeds.playercard(pid),
             async: false,
             success: function(data) {
-                rosterObj.celtics.roster[pid].stats = data.pl.ca;
+                if (data.pl.ca.hasOwnProperty('sa')){
+                    rosterObj.celtics.roster[pid].stats = data.pl.ca.sa[(data.pl.ca.sa.length - 1)];
+                }
+                else {
+                    rosterObj.celtics.roster[pid].stats = data.pl.ca;
+                }
             },
             error: function() {}
         });
@@ -275,7 +281,12 @@ function loadRosterData(awayTeam, awayTn) {
             url: feeds.playercardAway(pid), // CHANGE PID
             async: false,
             success: function(data) {
-                rosterObj.away.roster[pid].stats = data.pl.ca;
+                if (data.pl.ca.hasOwnProperty('sa')){
+                    rosterObj.away.roster[pid].stats = data.pl.ca.sa[(data.pl.ca.sa.length - 1)];
+                }
+                else {
+                    rosterObj.away.roster[pid].stats = data.pl.ca;
+                }
             },
             error: function() {}
         });
@@ -338,7 +349,7 @@ function loadAwayTeamData() {}
 ==================================*/
 
 
-function playerSpotlight(rosterObj, playerSpotlightCounter) {
+function playerSpotlight(rosterObj) {
     /* 1 - WHITE LINE HORIZTONAL */
     setTimeout(function() {
         jQuery('.white-line.horizontal').addClass('transition-1');
@@ -381,7 +392,6 @@ function playerSpotlight(rosterObj, playerSpotlightCounter) {
         jQuery('.player-box').addClass('transition-2');
         jQuery('.player-box:nth-child(' + (playerSpotlightCounter) + ')').addClass('selected');
         selectedPlayer = jQuery('.player-box:nth-child(' + (playerSpotlightCounter) + ')').attr('data-pid');
-        console.log(selectedPlayer);
         jQuery('.player-box').not('.replacement.selected').delay(500).addClass('transition-4');
     }, 4000);
     /* 6 - PLAYER BOX EXPAND */
@@ -445,15 +455,13 @@ function leaders(gid, gameStarted) {
     jQuery('.leaders').addClass('active');
     var gameDetail = '';
     var detailAvailable = false;
-    gameStarted = true; // DO: DELETE THIS WHEN ONLINE. JUST FOR TESTING PURPOSES RN
     var leadersTitle = 'SEASON LEADERS';
-    if (gameStarted) {
+    if (checkGameStatus()) {
         leadersTitle = 'GAME LEADERS';
         jQuery.ajax({
              url: feeds.gamedetail(gid),
              async: false,
              success: function(data) {
-                 // DO: UPDATE THE LEADER OBJECTS
                  var teamLineScore = ["hls","vls"];
                  for (var x = 0; x < teamLineScore.length; x++){
                      var stats = data.g[teamLineScore[x]];
@@ -469,7 +477,7 @@ function leaders(gid, gameStarted) {
                      }
                      for (var p = 0; p < stats.pstsg.length; p++) {
                          for (var stat in rosterObj[team].leaders) {
-                             for (var i = 0; i < 3; i++) {
+                             for (var i = 0; i >= 0; i++) {
                                  if (rosterObj[team].leaders[stat][i][2] == '--' && stats.pstsg[p][stat] > 0) {
                                      rosterObj[team].leaders[stat][i][0] = stats.pstsg[p].fn.toUpperCase();
                                      rosterObj[team].leaders[stat][i][1] = stats.pstsg[p].ln.toUpperCase();
@@ -488,7 +496,6 @@ function leaders(gid, gameStarted) {
                          }
                      }
                  }
-                 console.log(rosterObj);
              }
          });
     }
@@ -562,7 +569,7 @@ function social() {
     jQuery('.social').addClass('active');
     setTimeout(function(){
         jQuery('.social .text-wrap, .social .underline').addClass('transition-1');
-    }, 10000);
+    }, 15000);
    setTimeout(function(){
         jQuery('.social .appended').remove();
         jQuery('.social .selected').removeClass('selected');
@@ -621,14 +628,14 @@ function leftWrap() {
         else {
             jQuery('.left-wrap .standings').addClass('transition-1');
         }
-
         if (jQuery('.left-wrap .scores-and-leaders').hasClass('transition-1')){
             jQuery('.left-wrap .scores-and-leaders').removeClass('transition-1');
+            updateLeagueScores();
         }
         else {
             jQuery('.left-wrap .scores-and-leaders').addClass('transition-1');
         }
-    }, 45000);
+    }, 50000);
 }
 
 
@@ -711,41 +718,14 @@ function scoresInit(todaysScoresData) {
     }
 }
 
-function updateLeagueScores(todaysScoresData) {
-    var liveScores = todaysScoresData.gs.g;
-    if (liveScores.length != 0) {
-        var seasonType = 'Regular+Season';
-        if (liveScores[0].gid.substr(0,3) == '001') {
-            seasonType = 'Pre+Season';
+function updateLeagueScores() {
+    jQuery.ajax({
+        url: feeds.todaysScores,
+        async: false,
+        success: function(data) {
+            scoresInit(data);
         }
-        else if (liveScores[0].gid.substr(0,3) == '004') {
-            seasonType = 'Playoffs';
-        }
-        if (liveScores.length > 1 || (liveScores.length == 1 && liveScores[0].h.ta != 'BOS')) {
-            var statusCodes = ['1st Qtr','2nd Qtr','3rd Qtr','4th Qtr','1st OT','2nd OT','3rd OT','4th OT','5th OT','6th OT','7th OT','8th OT','9th OT','10th OT'];
-            var scoresHTML = '';
-            if (jQuery('.atl-header').length === 0) {
-                jQuery('#leftwrap').prepend('<img class="atl-header" src="http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/signage-atl-960x135.png">');
-            }
-            for (var i = liveScores.length - 1; i >= 0; i--) {
-                if (liveScores[i].h.ta !== 'BOS') {
-                    var vScore = '';
-                    var hScore = '';
-                    if (liveScores[i].st != 1) {
-                        vScore = liveScores[i].v.s;
-                        hScore = liveScores[i].h.s;
-                    }
-                    var sText = liveScores[i].stt;
-                    if (statusCodes.indexOf(liveScores[i].stt) !== -1) {
-                        sText = liveScores[i].stt + ' - ' + liveScores[i].cl;
-                    }
-                    scoresHTML += '<div class="score-wrap"><div class="score-container"><div class="' + liveScores[i].v.ta + '"><img src="http://stats.nba.com/media/img/teams/logos/' + liveScores[i].v.ta.toUpperCase() + '_logo.svg"> ' + liveScores[i].v.tc.toUpperCase() + ' ' + liveScores[i].v.tn.toUpperCase() + ' <div class="score-num">' + vScore + '</div></div><div class="' + liveScores[i].h.ta + '"><img src="http://stats.nba.com/media/img/teams/logos/' + liveScores[i].h.ta.toUpperCase() + '_logo.svg"> ' + liveScores[i].h.tc.toUpperCase() + ' ' + liveScores[i].h.tn.toUpperCase() + ' <div class="score-num">' + hScore + '</div></div><div class="score-status">' + sText + '</div></div></div>';
-                }
-            }
-            jQuery('.scores').empty().append(scoresHTML);
-            leagueLeaders(seasonType);
-        }
-    }
+    });
 }
 
 function leagueLeaders(){
@@ -755,6 +735,7 @@ function leagueLeaders(){
 
     jQuery.ajax({
         url: feeds.leagueLeaders,
+        dataType: 'jsonp',
         async: false,
         success: function(data) {
             var leadersData = data.resultSets;
@@ -771,9 +752,9 @@ function leagueLeaders(){
                     leagueLeadersHTML += '<div class="league-leaders-wrap">' + rows + '</div>';
                 }
             }
+            jQuery('.league-leaders').empty().append(leagueLeadersHTML);
         }
     });
-    jQuery('.league-leaders').empty().append(leagueLeadersHTML);
     var counter = 2;
     setInterval(function(){
         jQuery('.league-leaders-wrap, .league-leaders .title p').removeClass('active');
@@ -784,5 +765,5 @@ function leagueLeaders(){
         else {
             counter++;
         }
-    }, 4000);
+    }, 10000);
 }

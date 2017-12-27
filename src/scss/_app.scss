@@ -5,6 +5,7 @@
 .app {
 	opacity: 0;
     padding: 4%;
+    @include transition(all 1s ease);
 
     &.active {
         opacity: 1;
