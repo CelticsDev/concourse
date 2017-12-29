@@ -98,7 +98,7 @@ jQuery(document).ready(function() {
         async: false,
         success: function(todaysScoresData) {
             for (var i = 0; i < todaysScoresData.gs.g.length; i++) {
-                if (todaysScoresData.gs.g[i].h.ta == 'CHA') { //CHANGE THIS
+                if (todaysScoresData.gs.g[i].h.ta == 'BOS') { //CHANGE THIS
                     awayTeam = todaysScoresData.gs.g[i].v.ta;
                     awayTn = todaysScoresData.gs.g[i].v.tn.toLowerCase();
                     gid = todaysScoresData.gs.g[i].gid;
@@ -109,17 +109,18 @@ jQuery(document).ready(function() {
                     leftWrap();
                     // TRANSITIONS
                     function cycle() {
-/*                        mobileApp(); // DURATION: 25000
-                        setTimeout(function() {
+/*                        mobileApp();*/ // DURATION: 25000
+                        setTimeout(allStar, 0);
+/*                        setTimeout(function() {
                             leaders(gid);
-                        }, 25000); // DURATION: 44100
-                        setTimeout(social, 69000); //DURATION: 150000*/
-                        setTimeout(function(){
+                        }, 25000);*/ // DURATION: 44100
+/*                         setTimeout(social, 69000); *///DURATION: 150000
+/*                         setTimeout(function(){
                             playerSpotlight(rosterObj);
-                        }, 1000); //DURATION: 9000...
+                        },85000)*/; //DURATION: 40000
                     }
                     cycle();
-/*                    setInterval(cycle, 91000);*/
+/*                    setInterval(cycle, 123000);*/
                 }
             }
         }
@@ -189,7 +190,6 @@ function round(number) {
 =            INITIALIZE            =
 ==================================*/
 function checkGameStatus() {
-    var check = false;
     if (!gameStarted) {
         jQuery.ajax({
             url: feeds.todaysScores,
@@ -197,15 +197,15 @@ function checkGameStatus() {
             success: function(datadata) {
                 var gid = '';
                 for (var i = 0; i < 5; i++) {
-                    if (datadata.gs.g[i].h.ta == 'CHA' && datadata.gs.g[i].st !== "1") {
-                        check = true;
+                    if (datadata.gs.g[i].h.ta == 'BOS' && datadata.gs.g[i].st == 2) {
                         gameStarted = true;
+                        console.log('gamestarted');
                     }
                 }
             }
         });
     }
-    return check;
+    return gameStarted;
 };
 /*============================================================
 =            LOAD ROSTER INFO (build rosterObj)              =
@@ -264,6 +264,9 @@ function loadRosterData(awayTeam, awayTn) {
                 } else {
                     rosterObj.celtics.roster[pid].stats = data.pl.ca;
                 }
+                rosterObj.celtics.roster[pid].stats.pts = round(rosterObj.celtics.roster[pid].stats.pts);
+                rosterObj.celtics.roster[pid].stats.ast = round(rosterObj.celtics.roster[pid].stats.ast);
+                rosterObj.celtics.roster[pid].stats.reb = round(rosterObj.celtics.roster[pid].stats.reb);
             },
             error: function() {}
         });
@@ -281,6 +284,9 @@ function loadRosterData(awayTeam, awayTn) {
                 } else {
                     rosterObj.away.roster[pid].stats = data.pl.ca;
                 }
+                rosterObj.away.roster[pid].stats.pts = round(rosterObj.away.roster[pid].stats.pts);
+                rosterObj.away.roster[pid].stats.ast = round(rosterObj.away.roster[pid].stats.ast);
+                rosterObj.away.roster[pid].stats.reb = round(rosterObj.away.roster[pid].stats.reb);
             },
             error: function() {}
         });
@@ -318,7 +324,7 @@ function statsNotAvailable(pid) {
             rosterObj[pid].stats.sa[0][saIndex[i]] = [];
         }
         if (i === 18) {
-            rosterObj[pid].stats.sa[0][saIndex[i]] = 'CHA';
+            rosterObj[pid].stats.sa[0][saIndex[i]] = 'BOS';
         }
     }
     for (var i = 0; i < caIndex.length; i++) {
@@ -380,13 +386,13 @@ function playerSpotlight(rosterObj) {
         selectedPlayer = jQuery('.player-box:nth-child(' + (playerSpotlightCounter) + ')').attr('data-pid');
         setTimeout(function(){
             jQuery('.player-box').not('.replacement.selected').addClass('transition-4');
-        },500);
+        },800);
     }, 3000);
     /* 6 - PLAYER BOX EXPAND */
     setTimeout(function() {
         jQuery('.block-wrap.social').addClass('transition-3');
         jQuery('.player-box.replacement.selected').addClass('transition-3');
-    }, 3800);
+    }, 4000);
     /* 7 - SPOTLIGHT HTML */
     setTimeout(function() {
         generateTimeline(selectedPlayer);
@@ -400,35 +406,40 @@ function playerSpotlight(rosterObj) {
         jQuery('.player-spotlight .player-name').fadeTo(200, 1);
         var playerFacts = rosterObj.celtics.roster[selectedPlayer].bio.personal;
         for (var i = 0; i < 3; i++) {
-            var factIndex = Math.floor(Math.random() * playerFacts.length);
-            jQuery('.player-spotlight .bottom-wrap').append('<div class="dyk-box appended"><p>' + playerFacts[factIndex] + '</p></div>');
+            if (i <= rosterObj.celtics.roster[selectedPlayer].bio.personal.length){
+                jQuery('.player-spotlight .bottom-wrap').append('<div class="dyk-box appended"><p>' + playerFacts[i] + '</p></div>');
+            }
         };
         jQuery('.player-spotlight .bottom-wrap').addClass('transition-1');
-        setTimeout(function() {
-            jQuery('.player-spotlight .bottom-wrap .dyk-box:nth-of-type(2)').addClass('transition-2');
-            jQuery('.player-spotlight .bottom-wrap .dyk-box:nth-of-type(3)').addClass('transition-1');
-        }, 1000);
-        setTimeout(function() {
-            jQuery('.player-spotlight .bottom-wrap .dyk-box:nth-of-type(3)').addClass('transition-2');
-            jQuery('.player-spotlight .bottom-wrap .dyk-box:nth-of-type(4)').addClass('transition-1');
-        }, 1500);
-    }, 6000);
+        if (jQuery('.player-spotlight .bottom-wrap .dyk-box').length > 1) {
+            setTimeout(function() {
+                jQuery('.player-spotlight .bottom-wrap .dyk-box:nth-of-type(2)').addClass('transition-2');
+                jQuery('.player-spotlight .bottom-wrap .dyk-box:nth-of-type(3)').addClass('transition-1');
+            }, 10000);
+        }
+        if (jQuery('.player-spotlight .bottom-wrap .dyk-box').length > 2) {
+            setTimeout(function() {
+                jQuery('.player-spotlight .bottom-wrap .dyk-box:nth-of-type(3)').addClass('transition-2');
+                jQuery('.player-spotlight .bottom-wrap .dyk-box:nth-of-type(4)').addClass('transition-1');
+            }, 20000);
+        }
+    }, 5000);
     /* 8 - SPOTLIGHT SLIDE IN */
     setTimeout(function() {
         jQuery('.player-spotlight .player-top .player-name, .player-spotlight .player-name-wrap, .player-spotlight .headshot, .player-spotlight .info, .player-spotlight .silo, .player-spotlight .averages, .player-spotlight .player-number').addClass('transition-1');
         setTimeout(function() {
             jQuery('.block-wrap.player-spotlight .player-box').remove();
-        }, 4000);
+        }, 15000);
         if (playerSpotlightCounter < 16) {
             playerSpotlightCounter++;
         } else {
             playerSpotlightCounter = 0;
         }
-    }, 7000);
+    }, 6000);
     /* 9 - SPOTLIGHT SLIDE OUT */
     setTimeout(function() {
         jQuery('.player-spotlight .bottom-wrap, .player-spotlight .top-wrap').addClass('transition-2');
-    }, 8000);
+    }, 40000);
     /* 10 - DONE. REMOVE */
     setTimeout(function() {
         jQuery(' .player-spotlight .appended').remove();
@@ -436,7 +447,7 @@ function playerSpotlight(rosterObj) {
         for (var i = 1; i < 10; i++) {
             jQuery('.right-wrap .transition-' + i).removeClass('transition-' + i);
         }
-    }, 9000);
+    }, 45000);
 }
 
 function leaders(gid, gameStarted) {
@@ -454,7 +465,7 @@ function leaders(gid, gameStarted) {
                 for (var x = 0; x < teamLineScore.length; x++) {
                     var stats = data.g[teamLineScore[x]];
                     var team = '';
-                    if (stats.ta === 'CHA') {
+                    if (stats.ta === 'BOS') {
                         team = 'celtics';
                     } else {
                         team = 'away';
@@ -603,6 +614,18 @@ function mobileApp() {
         clearInterval(rotateScreens);
     }, 25000);
 };
+
+function allStar(){
+    jQuery('.all-star .block-inner').removeClass('transition-1');
+    jQuery('.all-star').addClass('active');
+/*    setTimeout(function() {
+        jQuery('.all-star .block-inner').addClass('transition-1');
+    }, 24000);
+    setTimeout(function() {
+        jQuery('.all-star').removeClass('active');
+        clearInterval(rotateScreens);
+    }, 25000);*/
+}
 /*=================================
 =            LEFT WRAP            =
 =================================*/
@@ -637,7 +660,7 @@ function standingsInit(awayTeam) {
                         if (standingsData.sta.co[i].di[x].t[t].see <= 8) {
                             seed = standingsData.sta.co[i].di[x].t[t].see;
                         }
-                        if (standingsData.sta.co[i].di[x].t[t].ta == 'CHA') {
+                        if (standingsData.sta.co[i].di[x].t[t].ta == 'BOS') {
                             activeStatus = 'active';
                         }
                         if (standingsData.sta.co[i].di[x].t[t].ta == awayTeam) {
@@ -662,20 +685,22 @@ function scoresInit(todaysScoresData) {
         } else if (liveScores[0].gid.substr(0, 3) == '004') {
             seasonType = 'post';
         }
-        if (liveScores.length > 1 || (liveScores.length == 1 && liveScores[0].h.ta != 'CHA')) {
+        if (liveScores.length > 1 || (liveScores.length == 1 && liveScores[0].h.ta != 'BOS')) {
             var statusCodes = ['1st Qtr', '2nd Qtr', '3rd Qtr', '4th Qtr', '1st OT', '2nd OT', '3rd OT', '4th OT', '5th OT', '6th OT', '7th OT', '8th OT', '9th OT', '10th OT'];
             var scoresHTML = '';
             var added = 0;
             for (var i = liveScores.length - 1; i >= 0; i--) {
-                if (liveScores[i].h.ta !== 'CHA' && i < 11) {
+                if (liveScores[i].h.ta !== 'BOS' && i < 11) {
                     added++;
                     var vScore = '';
                     var hScore = '';
                     var vResult = '';
                     var hResult = '';
+                    var isLive = '';
                     if (liveScores[i].st != 1) {
                         vScore = liveScores[i].v.s;
                         hScore = liveScores[i].h.s;
+                        isLive = "live";
                     }
                     var sText = liveScores[i].stt;
                     if (statusCodes.indexOf(liveScores[i].stt) !== -1) {
@@ -686,12 +711,12 @@ function scoresInit(todaysScoresData) {
                     } else if (liveScores[i].st == 3 && hScore < vScore) {
                         hResult = 'loser';
                     }
-                    scoresHTML += '<div class="score-wrap"><div class="score-status">' + sText + '</div><div class="' + liveScores[i].v.ta + '"><img src="http://stats.nba.com/media/img/teams/logos/' + liveScores[i].v.ta.toUpperCase() + '_logo.svg"> ' + liveScores[i].v.tc.toUpperCase() + ' ' + liveScores[i].v.tn.toUpperCase() + ' <div class="score-num ' + vResult + '">' + vScore + '</div></div><div class="' + liveScores[i].h.ta + '"><img src="http://stats.nba.com/media/img/teams/logos/' + liveScores[i].h.ta.toUpperCase() + '_logo.svg"> ' + liveScores[i].h.tc.toUpperCase() + ' ' + liveScores[i].h.tn.toUpperCase() + ' <div class="score-num ' + hResult + '">' + hScore + '</div></div></div>';
+                    scoresHTML += '<div class="score-wrap"><div class="score-status ' + isLive + '">' + sText.toUpperCase() + '</div><div class="' + liveScores[i].v.ta + '"><img src="http://stats.nba.com/media/img/teams/logos/' + liveScores[i].v.ta.toUpperCase() + '_logo.svg"> ' + liveScores[i].v.tc.toUpperCase() + ' ' + liveScores[i].v.tn.toUpperCase() + ' <div class="score-num ' + vResult + '">' + vScore + '</div></div><div class="' + liveScores[i].h.ta + '"><img src="http://stats.nba.com/media/img/teams/logos/' + liveScores[i].h.ta.toUpperCase() + '_logo.svg"> ' + liveScores[i].h.tc.toUpperCase() + ' ' + liveScores[i].h.tn.toUpperCase() + ' <div class="score-num ' + hResult + '">' + hScore + '</div></div></div>';
                 }
             }
             jQuery('.scores').empty().append(scoresHTML);
         }
-        if (added <= 5) {
+        if (added < 6) {
             jQuery('.league-leaders').show();
         } else {
             jQuery('.league-leaders').hide();

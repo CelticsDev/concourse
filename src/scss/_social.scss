@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
-    opacity: 1;
+    opacity: 0;
 
     @include transition(all 1s ease);
 

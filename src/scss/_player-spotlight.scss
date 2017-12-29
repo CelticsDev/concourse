@@ -189,12 +189,12 @@
                         }
 
                         p {
-                            font-weight: 500 !important;
+                            font-weight: 400 !important;
                             color: #939393;
 
                             span {
-                                color: black;
-                                font-weight: 400 !important;
+                                color: #212121;
+                                font-weight: 500 !important;
 
                                 &.info-value {}
                             }
@@ -227,7 +227,8 @@
                     td {
                         border: 1px solid #dddddd;
                         background-color: #f2f2f2;
-                        color: black;
+                        color: #212121;
+                        font-weight: 500;
 
                         &:first-child {
                             @media (max-width: 550px) {
@@ -238,7 +239,7 @@
 
                     th {
                         background-color: #dddddd !important;
-                        color: black;
+                        color: #212121;
                         font-weight: 800px;
                         text-align: left;
                         width: 20%;
@@ -253,6 +254,8 @@
                             text-align: center;
                             padding: 0;
                             border-bottom: none;
+                            padding: 2% 0px 0px 0px;
+                            font-weight: 400;
 
                             p {
                                 margin: 0;
@@ -307,13 +310,13 @@
 
             border-radius: 5px;
             border: 1px solid #dddddd;
-            background-color: white;
+            background-color: rgba(255,255,255,0.6);
             width: 90%;
             position: absolute;
             left: 50%;
             padding: 2% 4%;
             transform: translate3d(65%, 0, 0);
-            max-height: 35%;
+            max-height: 40%;
 
             &:nth-of-type(2){
                 transform: translate3d(-50%, 0, 0);
@@ -381,7 +384,7 @@
                             text-align: center;
                             color: white;
                             font-family: 'futura-pt';
-                            font-weight: bold;
+                            font-weight: 600;
                             font-size: 1.4vw;
                         }
                     }
@@ -403,7 +406,7 @@
                     flex-basis: auto;
 
                     p {
-                        font-size: 1.2vw;
+                        font-size: 1.1vw;
                     }
                 }
             }

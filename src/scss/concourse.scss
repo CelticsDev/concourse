@@ -6,6 +6,7 @@
 @import "leaders";
 @import "standings";
 @import "scores-and-leaders";
+@import "all-star";
 
 html, body { height: 100% }
 
@@ -43,6 +44,7 @@ body {
     @include aspect-ratio(16, 9);
 
     width: 100%;
+    overflow: hidden;
 
     .screen {
         display: flex;
@@ -59,7 +61,7 @@ body {
     background: -moz-radial-gradient(center, ellipse cover, rgba(29,86,155,1) 29%, rgba(20,20,20,1) 100%); /* FF3.6-15 */
     background: -webkit-radial-gradient(center, ellipse cover, rgba(29,86,155,1) 29%,rgba(20,20,20,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: radial-gradient(ellipse at center, rgba(29,86,155,1) 29%,rgba(20,20,20,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d569b', endColorstr='#141414',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d569b', endColorstr='#141414',GradientType=1 ); /*IE6-9 fallback on horizontal gradient */
 
     .top-wrap {
         height: 10%;

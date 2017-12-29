@@ -47,6 +47,10 @@
             .score-status {
                 font-size: 1.1vw;
                 margin-bottom: 2%;
+
+                &.live {
+                    color: #bd2d45;
+                }
             }
 
             img {

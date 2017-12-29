@@ -359,7 +359,7 @@
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
-  opacity: 1;
+  opacity: 0;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   -webkit-transition: all 1s ease;
@@ -840,11 +840,11 @@
             .block-wrap.player-spotlight .top-wrap .player-top .middle .info li:last-child {
               padding-right: 0px; }
             .block-wrap.player-spotlight .top-wrap .player-top .middle .info li p {
-              font-weight: 500 !important;
+              font-weight: 400 !important;
               color: #939393; }
               .block-wrap.player-spotlight .top-wrap .player-top .middle .info li p span {
-                color: black;
-                font-weight: 400 !important; }
+                color: #212121;
+                font-weight: 500 !important; }
       .block-wrap.player-spotlight .top-wrap .player-top .bottom {
         padding: 5% 5%; }
         .block-wrap.player-spotlight .top-wrap .player-top .bottom .averages {
@@ -865,13 +865,14 @@
           .block-wrap.player-spotlight .top-wrap .player-top .bottom .averages td {
             border: 1px solid #dddddd;
             background-color: #f2f2f2;
-            color: black; }
+            color: #212121;
+            font-weight: 500; }
             @media (max-width: 550px) {
               .block-wrap.player-spotlight .top-wrap .player-top .bottom .averages td:first-child {
                 display: none; } }
           .block-wrap.player-spotlight .top-wrap .player-top .bottom .averages th {
             background-color: #dddddd !important;
-            color: black;
+            color: #212121;
             font-weight: 800px;
             text-align: left;
             width: 20%;
@@ -882,7 +883,9 @@
             .block-wrap.player-spotlight .top-wrap .player-top .bottom .averages-labels td {
               text-align: center;
               padding: 0;
-              border-bottom: none; }
+              border-bottom: none;
+              padding: 2% 0px 0px 0px;
+              font-weight: 400; }
               .block-wrap.player-spotlight .top-wrap .player-top .bottom .averages-labels td p {
                 margin: 0;
                 color: #8a8d8f; }
@@ -924,13 +927,13 @@
       transition: all 0.5s ease;
       border-radius: 5px;
       border: 1px solid #dddddd;
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0.6);
       width: 90%;
       position: absolute;
       left: 50%;
       padding: 2% 4%;
       transform: translate3d(65%, 0, 0);
-      max-height: 35%; }
+      max-height: 40%; }
       .block-wrap.player-spotlight .bottom-wrap .dyk-box:nth-of-type(2) {
         transform: translate3d(-50%, 0, 0); }
       .block-wrap.player-spotlight .bottom-wrap .dyk-box.transition-1 {
@@ -980,7 +983,7 @@
               text-align: center;
               color: white;
               font-family: 'futura-pt';
-              font-weight: bold;
+              font-weight: 600;
               font-size: 1.4vw; }
           .block-wrap.player-spotlight .bottom-wrap .timeline-wrap div .segment p {
             text-align: center; }
@@ -992,7 +995,7 @@
           border: 1px solid transparent;
           flex-basis: auto; }
           .block-wrap.player-spotlight .bottom-wrap .timeline-wrap .season-year .segment p {
-            font-size: 1.2vw; }
+            font-size: 1.1vw; }
 
 /*===========================
 =            APP            =
@@ -1523,6 +1526,8 @@
       .scores-and-leaders .scores .score-wrap .score-status {
         font-size: 1.1vw;
         margin-bottom: 2%; }
+        .scores-and-leaders .scores .score-wrap .score-status.live {
+          color: #bd2d45; }
       .scores-and-leaders .scores .score-wrap img {
         height: 2.3vw;
         margin-right: 2%; }
@@ -1618,6 +1623,122 @@
         .scores-and-leaders .league-leaders .league-leaders-wrap .row .name span {
           font-weight: 300; }
 
+/*================================
+=            ALL STAR            =
+================================*/
+.all-star {
+  opacity: 0;
+  padding: 4%;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease; }
+  .all-star.active {
+    opacity: 1; }
+  .all-star .block-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #e7e7e7;
+    background: rgba(239, 239, 239, 0.9) url("https://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/concourse_allstar-bg.png") no-repeat center;
+    background-size: cover;
+    background-size: 165%;
+    background-position: 50% 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    /*         * {
+                @include transition(all 1s ease);
+            } */ }
+    .all-star .block-inner.transition-1 * {
+      opacity: 0; }
+  .all-star .phone-wrap {
+    width: 35%;
+    position: relative; }
+    .all-star .phone-wrap .phone {
+      height: 90%;
+      align-self: center;
+      opacity: 0;
+      position: absolute;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+      -webkit-transform: translateZ(0); }
+      .all-star .phone-wrap .phone.active {
+        opacity: 1; }
+  .all-star .svg-wrap {
+    position: absolute;
+    width: 108%;
+    height: 105%;
+    top: -5%;
+    overflow: hidden; }
+    .all-star .svg-wrap .al-layup {
+      height: 53%;
+      top: 1%;
+      left: -12%;
+      position: absolute; }
+    .all-star .svg-wrap .kyrie-jumper {
+      height: 50%;
+      top: 54%;
+      left: 58%;
+      position: absolute; }
+  .all-star .vote-al {
+    height: 10%;
+    top: 4%;
+    left: 29%;
+    position: absolute; }
+  .all-star .logo {
+    height: 23%;
+    top: 20%;
+    left: 41%;
+    position: absolute; }
+  .all-star .vote-kyrie {
+    height: 9%;
+    top: 54%;
+    left: 4%;
+    position: absolute; }
+  .all-star .vote {
+    text-align: center;
+    color: #212121;
+    position: absolute;
+    font-size: 2.5vw;
+    line-height: 1.1em;
+    font-weight: 500;
+    top: 73%;
+    left: 7%;
+    margin: 0; }
+    .all-star .vote span {
+      color: #008348;
+      font-size: 3.6vw;
+      font-weight: 700; }
+  .all-star .phone {
+    width: 13%;
+    position: absolute;
+    top: 70%;
+    left: 55%; }
+  .all-star .google-play {
+    position: absolute;
+    width: 21%;
+    top: 85%;
+    left: 6%; }
+  .all-star .app-store {
+    position: absolute;
+    width: 21%;
+    top: 85%;
+    left: 30%; }
+  .all-star .bottom-wrap {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    align-self: flex-end;
+    margin-top: auto;
+    width: 100%; }
+
 html, body {
   height: 100%; }
 
@@ -1648,7 +1769,8 @@ body {
 
 .screen-wrap {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
   .screen-wrap:before {
     display: block;
     content: " ";
@@ -1678,7 +1800,7 @@ body {
   background: radial-gradient(ellipse at center, #1d569b 29%, #141414 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d569b', endColorstr='#141414',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */ }
+  /*IE6-9 fallback on horizontal gradient */ }
   .left-wrap .top-wrap {
     height: 10%;
     width: 100%;

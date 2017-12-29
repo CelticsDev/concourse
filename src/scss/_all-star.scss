@@ -1,0 +1,151 @@
+/*================================
+=            ALL STAR            =
+================================*/
+
+.all-star {
+    opacity: 0;
+    padding: 4%;
+
+    @include transition(all 1s ease);
+
+    &.active {
+        opacity: 1;
+    }
+
+    .block-inner {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        border: 1px solid #e7e7e7;
+        background: rgba(239, 239, 239, 0.9) url('https://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/concourse_allstar-bg.png') no-repeat center;
+        background-size: cover;
+        background-size: 165%;
+        background-position: 50% 80%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        @include transition(all 1s ease);
+
+/*         * {
+            @include transition(all 1s ease);
+        } */
+
+        &.transition-1 {
+            * {
+                opacity: 0;
+            }
+        }
+    }
+
+    .phone-wrap {
+        width: 35%;
+        position: relative;
+
+        .phone {
+            height: 90%;
+            align-self: center;
+            opacity: 0;
+            position: absolute;
+
+            @include transition(all 1s ease);
+
+            -webkit-transform: translateZ(0);
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .svg-wrap {
+        position: absolute;
+        width: 108%;
+        height: 105%;
+        top: -5%;
+        overflow: hidden;
+
+        .al-layup {
+            height: 53%;
+            top: 1%;
+            left: -12%;
+            position: absolute;
+        }
+
+        .kyrie-jumper {
+            height: 50%;
+            top: 54%;
+            left: 58%;
+            position: absolute;
+        }
+    }
+
+    .vote-al {
+        height: 10%;
+        top: 4%;
+        left: 29%;
+        position: absolute;
+    }
+
+    .logo {
+        height: 23%;
+        top: 20%;
+        left: 41%;
+        position: absolute;
+    }
+
+    .vote-kyrie {
+        height: 9%;
+        top: 54%;
+        left: 4%;
+        position: absolute;
+    }
+
+    .vote {
+        text-align: center;
+        color: #212121;
+        position: absolute;
+        font-size: 2.5vw;
+        line-height: 1.1em;
+        font-weight: 500;
+        top: 73%;
+        left: 7%;
+        margin: 0;
+
+        span {
+            color: #008348;
+            font-size: 3.6vw;
+            font-weight: 700;
+        }
+    }
+
+    .phone {
+        width: 13%;
+        position: absolute;
+        top: 70%;
+        left: 55%;
+    }
+
+    .google-play {
+        position: absolute;
+        width: 21%;
+        top: 85%;
+        left: 6%;
+    }
+
+    .app-store {
+        position: absolute;
+            width: 21%;
+            top: 85%;
+            left: 30%;
+    }
+
+    .bottom-wrap {
+        display: flex;
+        flex-direction: row;
+        height: 50%;
+        align-self: flex-end;
+        margin-top: auto;
+        width: 100%;
+    }
+}
