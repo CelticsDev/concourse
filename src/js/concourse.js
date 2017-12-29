@@ -88,6 +88,7 @@ else {
 var gameStarted = false;
 let playerSpotlightCounter = 1;
 jQuery(document).ready(function() {
+    allStar();
     var gid = '';
     var awayTeam = '';
     var awayTn = '';
@@ -110,7 +111,7 @@ jQuery(document).ready(function() {
                     // TRANSITIONS
                     function cycle() {
 /*                        mobileApp();*/ // DURATION: 25000
-                        setTimeout(allStar, 0);
+/*                        setTimeout(allStar, 0);*/
 /*                        setTimeout(function() {
                             leaders(gid);
                         }, 25000);*/ // DURATION: 44100
